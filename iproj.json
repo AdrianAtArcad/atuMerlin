@@ -1,0 +1,20 @@
+{
+    "description": "AdrianAtArcad",
+    "version": "0.0.1",
+    "includePath": [
+        "ATU_SRC/QPROTOSRC"
+    ],
+    "repository": "git@github.com:AdrianAtArcad/atuMerlin.git",
+    "objlib": "&verlibatu",
+    "curlib": "*CRTDFT",
+    "extensions": {
+        "arcad": {
+            "code": "ATU",
+            "libraryPrefix": "ATU",
+            "iasp": "*SYSBAS",
+            "validated": true
+        }
+    },
+    "buildCommand": "elias compile {branch}",
+    "compileCommand": "elias compile {branch} -f {filename}"
+}
