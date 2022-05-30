@@ -53,8 +53,8 @@
      d count           s              3i 0
      d mode            s              3
 
-     d crt             c                   'CRT'
-     d upd             c                   'UPD'
+     d crt             c                   'crt' 
+     d upd             c                   'upd'
      d prp             c                   'prp'
      d lod             c                   'lod'
      d dsp             c                   'dsp'
