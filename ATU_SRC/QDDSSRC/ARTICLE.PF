@@ -20,7 +20,7 @@
                                             EDTCDE(2)
                   ARMINQTY  R               REFFLD(QUANTITY)
                                             TEXT('MINIMUM STOCK')
-                                            COLHDG('MINIMUM' 'STOCK')
+                                            COLHDG('MIN' 'STOCK')
                                             EDTCDE(2)
                   ARCUSQTY  R               REFFLD(QUANTITY)
                                             TEXT('CUSTOMER ORDER QUANTITY')
