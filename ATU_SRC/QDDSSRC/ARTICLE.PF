@@ -34,6 +34,6 @@
                                             COLHDG('CREATION' 'DATE')
                   ARMOD           Z         TEXT('LAST MODIFICATION')
                                             COLHDG('LAST' 'MODIFICATION')
-                  ARMODID       10          TEXT('LAS MOD BY')
+                  ARMODID       10          TEXT('LASt MOD BY')
                                             COLHDG('LAST' 'MODIF.' 'BY')
                   ARDEL     R               REFFLD(DLCODE)
