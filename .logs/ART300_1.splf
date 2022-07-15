@@ -1,0 +1,437 @@
+Attributes of the executed compilation command :
+  -  CRTRPGMOD   MODULE(ATUDSB0002/ART300) SRCFILE(ATUDSB0002/QRPGLESRC) OPTION(*EVEN
+     TF)
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      2
+  Command  . . . . . . . . . . . . :   CRTRPGMOD
+    Issued by  . . . . . . . . . . :     ATULLY
+  Module . . . . . . . . . . . . . :   ART300
+    Library  . . . . . . . . . . . :     ATUDSB0002
+  Text 'description' . . . . . . . :   *SRCMBRTXT
+  Source Member  . . . . . . . . . :   ART300
+  Source File  . . . . . . . . . . :   QRPGLESRC
+    Library  . . . . . . . . . . . :     ATUDSB0002
+    CCSID  . . . . . . . . . . . . :     297
+  Text 'description' . . . . . . . :   Function Article
+  Last Change  . . . . . . . . . . :   07/15/22  14:11:37
+  Generation severity level  . . . :   10
+  Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY
+                                       *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT
+                                       *DEBUGIO   *UNREF     *EVENTF
+  Debugging views  . . . . . . . . :   *STMT
+  Debug encryption key . . . . . . :   *NONE
+  Output . . . . . . . . . . . . . :   *PRINT
+  Optimization level . . . . . . . :   *NONE
+  Source listing indentation . . . :   *NONE
+  Type conversion options  . . . . :   *NONE
+  Sort sequence  . . . . . . . . . :   *HEX
+  Language identifier  . . . . . . :   *JOBRUN
+  Replace module . . . . . . . . . :   *YES
+  Authority  . . . . . . . . . . . :   *LIBCRTAUT
+  Truncate numeric . . . . . . . . :   *YES
+  Fix numeric  . . . . . . . . . . :   *NONE
+  Target release . . . . . . . . . :   *CURRENT
+  Allow null values  . . . . . . . :   *NO
+  Storage model . . .  . . . . . . :   *INHERIT
+  Binding directory  . . . . . . . :   *NONE
+  Define condition names . . . . . :   *NONE
+  Enable performance collection  . :   *PEP
+  Profiling data . . . . . . . . . :   *NOCOL
+  Licensed Internal Code options . :
+  Generate program interface . . . :   *NO
+  Include directory  . . . . . . . :
+  Preprocessor options . . . . . . :   *NONE
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      3
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+                          S o u r c e   L i s t i n g
+     1  *%METADATA                                                                          *                    000000     000100
+     2  * %TEXT Function Article                                                            *                    000000     000200
+     3  *%EMETADATA                                                                         *                    000000     000300
+     4 h nomain                                                                                                  000000     000400
+     5                                                                                                           000000     000500
+     6 FARTICLE1  if   e           k disk    usropn                                                              000000     000600
+     7                                                                                                           000000     000700
+     8  /COPY QPROTOSRC,ARTICLE                                                                                  000000     000800
+        *--------------------------------------------------------------------------------------------*
+        * RPG member name  . . . . . :  ARTICLE                                                      *                     1
+        * External name  . . . . . . :  ATU_SRC/QPROTOSRC(ARTICLE)                                   *                     1
+        * Last change  . . . . . . . :  05/23/22  14:55:56                                           *                     1
+        * Text 'description' . . . . :  Function Article                                             *                     1
+        *--------------------------------------------------------------------------------------------*
+     9+ *=============================================                                                           000000    1000100
+    10+ * Get ARTICLE DESCRPTION                                                                                 000000    1000200
+    11+ *=============================================                                                           000000    1000300
+        *--------------------------------------------------------------------------------------------*
+        *                               RPG name         External name                               *
+        * File name. . . . . . . . . :  ARTICLE1         ATU_DTA/ARTICLE1                            *
+        * Record format(s) . . . . . :  FARTI            FARTI                                       *
+        *--------------------------------------------------------------------------------------------*
+    12+DGetArtDesc       PR            50A                                                                       000000    1000400
+    13+D ARID                           6A    value                                                              000000    1000500
+    14+ *=============================================                                                           000000    1000600
+    15+ * Get REF SALE PRICE                                                                                     000000    1000700
+    16+ *=============================================                                                           000000    1000800
+    17+DGetArtRefSalPrice...                                                                                     161025    1000900
+    18+D                 pr             7P 2                                                                     161129    1001000
+    19+D ARID                           6A    value                                                              000000    1001100
+    20+ *=============================================                                                           000000    1001200
+    21+ * Get STOCK PRICE                                                                                        000000    1001300
+    22+ *=============================================                                                           000000    1001400
+    23+DGetArtStockPrice...                                                                                      161025    1001500
+    24+D                 PR             7P 2                                                                     161129    1001600
+    25+D ARID                           6A    value                                                              000000    1001700
+    26+ *=============================================                                                           000000    1001800
+    27+ * Get FAMILLY ID                                                                                         000000    1001900
+    28+ *=============================================                                                           000000    1002000
+    29+DGetArtFam        PR             3A                                                                       000000    1002100
+    30+D ARID                           6A    value                                                              000000    1002200
+    31+ *=============================================                                                           000000    1002300
+    32+ * Get STOCK                                                                                              000000    1002400
+    33+ *=============================================                                                           000000    1002500
+    34+DGetArtStock      PR             5P 0                                                                     000000    1002600
+    35+D ARID                           6A    value                                                              000000    1002700
+    36+ *=============================================                                                           000000    1002800
+    37+ * Get MINIMUM STOCK                                                                                      000000    1002900
+    38+ *=============================================                                                           000000    1003000
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      4
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+    39+DGetArtMinStock   PR             5P 0                                                                     000000    1003100
+    40+D ARID                           6A    value                                                              000000    1003200
+    41+ *=============================================                                                           161027    1003201
+    42+ * Get VAT code                                                                                           161027    1003202
+    43+ *=============================================                                                           161027    1003203
+    44+DGetArtVatCode    Pr             1A                                                                       161027    1003204
+    45+D P_ARID                         6A    value                                                              161027    1003205
+    46+ *=============================================                                                           000000    1003300
+    47+ * Check if article exist                                                                                 161025    1003400
+    48+ *=============================================                                                           000000    1003500
+    49+D ExistArt        PR              n                                                                       161025    1003600
+    50+D ARID                           6A    value                                                              000000    1003700
+    51+ *=============================================                                                           161025    1003800
+    52+ * Get DELETE CODE X=DELETED                                                                              161025    1003900
+    53+ *=============================================                                                           161025    1004000
+    54+DIsArtDeleted     PR              n                                                                       161025    1004100
+    55+D ARID                           6A    value                                                              161025    1004200
+    56+ *=============================================                                                           161129    1004201
+    57+ * Select an article                                                                                      161129    1004202
+    58+ *=============================================                                                           161129    1004203
+    59+D SltArticle      PR             6                                                                        161129    1004204
+    60+D ARID                           6A    value                                                              161129    1004205
+    61+ *=============================================                                                           170303    1004206
+    62+ * Get ARTICLE Info                                                                                       170303    1004207
+    63+ *=============================================                                                           170303    1004208
+    64+DGetArtInfo       PR          1520A                                                                       170303    1004209
+    65+D ARID                           6A    value                                                              170303    1004210
+    66+ *=============================================                                                           000000    1004300
+    67+ * Close ARTICLE1                                                                                         000000    1004400
+    68+ *=============================================                                                           000000    1004500
+    69+D CloseARTICLE1   PR                                                                                      000000    1004600
+    70                                                                                                           000000     000900
+    71 d chainARTICLE1   pr                                                                                      000000     001000
+    72 D P_ARID                         6A    value                                                              000000     001100
+    73                                                                                                           000000     001200
+    74 D K_ARID          S                   LIKE(ARID)                                                          000000     001300
+    75                                                                                                           000000     001400
+    76=IFARTI                                                                                                              2000001
+        *--------------------------------------------------------------------------------------------*                     2
+        * RPG record format  . . . . :  FARTI                                                        *                     2
+        * External format  . . . . . :  FARTI : ATU_DTA/ARTICLE1                                     *                     2
+        *--------------------------------------------------------------------------------------------*                     2
+    77=I                             A    1    6  ARID                            ARTICLE ID                               2000002
+    78=I                             A    7   56  ARDESC                          ARTICLE DESCRPTION                       2000003
+    79=I                             P   57   60 2ARSALEPR                        REF SALE PRICE                           2000004
+    80=I                             P   61   64 2ARWHSPR                         STOCK PRICE                              2000005
+    81=I                             A   65   67  ARTIFA                          FAMILLY ID                               2000006
+    82=I                             P   68   70 0ARSTOCK                         STOCK                                    2000007
+    83=I                             P   71   73 0ARMINQTY                        MINIMUM STOCK                            2000008
+    84=I                             P   74   76 0ARCUSQTY                        CUSTOMER ORDER QUANTITY                  2000009
+    85=I                             P   77   79 0ARPURQTY                        PURCHASE ORDER QUANTITY                  2000010
+    86=I                             A   80   80  ARVATCD                         VAT CODE                                 2000011
+    87=I                        *ISO-D   81   90  ARCREA                          CREATION DATE                            2000012
+    88=I                             Z   91  116  ARMOD                           LAST MODIFICATION                        2000013
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      5
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+    89=I                             A  117  126  ARMODID                         LAS MOD BY                               2000014
+    90=I                             A  127  127  ARDEL                           DELETE CODE X=DELETED                    2000015
+    91 C     kf            klist                                                                                 000000     001500
+    92 C                   KFLD                    K_ARID                                                        000000     001600
+    93                                                                                                           000000     001700
+    94  *=============================================                                                           000000     001800
+    95 PGetArtDesc       B                     export                                                            000000     001900
+    96 DGetArtDesc       PI                   like(ardesc)                                                       000000     002000
+    97 D P_ARID                         6A    value                                                              000000     002100
+    98  /free                                                                                                    000000     002200
+    99     chainARTICLE1(P_ARID                                                                                  000000     002300
+   100           );                                                                                              000000     002400
+   101     return ARDESC;                                                                                        000000     002500
+   102  /end-free                                                                                                000000     002600
+   103 pGetArtDesc       e                                                                                       000000     002700
+   104  *=============================================                                                           000000     002800
+   105 PGetArtRefSalPrice...                                                                                     000000     002900
+   106 P                 B                     export                                                            000000     003000
+   107 DGetArtRefSalPrice...                                                                                     000000     003100
+   108 D                 PI                   like(arsalepr)                                                     000000     003200
+   109 D P_ARID                         6A    value                                                              000000     003300
+   110  /free                                                                                                    000000     003400
+   111     chainARTICLE1(P_ARID                                                                                  000000     003500
+   112           );                                                                                              000000     003600
+   113     return ARSALEPR;                                                                                      000000     003700
+   114  /end-free                                                                                                000000     003800
+   115 p                 e                                                                                       000000     003900
+   116  *=============================================                                                           000000     004000
+   117 PGetArtStockPrice...                                                                                      000000     004100
+   118 P                 B                     export                                                            000000     004200
+   119 DGetArtStockPrice...                                                                                      000000     004300
+   120 D                 PI                   like(arwhspr)                                                      000000     004400
+   121 D P_ARID                         6A    value                                                              000000     004500
+   122  /free                                                                                                    000000     004600
+   123     chainARTICLE1(P_ARID                                                                                  000000     004700
+   124           );                                                                                              000000     004800
+   125     return ARWHSPR;                                                                                       000000     004900
+   126  /end-free                                                                                                000000     005000
+   127 p                 e                                                                                       000000     005100
+   128  *=============================================                                                           000000     005200
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      6
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   129 PGetArtFam        B                     export                                                            000000     005300
+   130 DGetArtFam        PI                   like(artifa)                                                       000000     005400
+   131 D P_ARID                         6A    value                                                              000000     005500
+   132  /free                                                                                                    000000     005600
+   133     chainARTICLE1(P_ARID                                                                                  000000     005700
+   134           );                                                                                              000000     005800
+   135     return ARTIFA;                                                                                        000000     005900
+   136  /end-free                                                                                                000000     006000
+   137 pGetArtFam        e                                                                                       000000     006100
+   138  *=============================================                                                           000000     006200
+   139 PGetArtStock      B                     export                                                            000000     006300
+   140 DGetArtStock      PI                   like(arstock)                                                      000000     006400
+   141 D P_ARID                         6A    value                                                              000000     006500
+   142  /free                                                                                                    000000     006600
+   143     chainARTICLE1(P_ARID                                                                                  000000     006700
+   144           );                                                                                              000000     006800
+   145     return ARSTOCK;                                                                                       000000     006900
+   146  /end-free                                                                                                000000     007000
+   147 pGetArtStock      e                                                                                       000000     007100
+   148  *=============================================                                                           000000     007200
+   149 PGetArtMinStock   B                     export                                                            000000     007300
+   150 DGetArtMinStock   PI                   like(arminqty)                                                     000000     007400
+   151 D P_ARID                         6A    value                                                              000000     007500
+   152  /free                                                                                                    000000     007600
+   153     chainARTICLE1(P_ARID                                                                                  000000     007700
+   154           );                                                                                              000000     007800
+   155     return ARMINQTY;                                                                                      000000     007900
+   156  /end-free                                                                                                000000     008000
+   157 pGetArtMinStock   e                                                                                       000000     008100
+   158  *=============================================                                                           000000     008200
+   159 PGetArtVatCode    B                     export                                                            000000     008300
+   160 DGetArtVatCode    PI                   like(arvatcd)                                                      000000     008400
+   161 D P_ARID                         6A    value                                                              000000     008500
+   162  /free                                                                                                    000000     008600
+   163     chainARTICLE1(P_ARID                                                                                  000000     008700
+   164           );                                                                                              000000     008800
+   165     return ARvatcd ;                                                                                      000000     008900
+   166  /end-free                                                                                                000000     009000
+   167 pGetArtVatCode    e                                                                                       000000     009100
+   168  *=============================================                                                           000000     009200
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      7
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   169 P ExistArt        B                     export                                                            000000     009300
+   170 D ExistArt        PI              n                                                                       000000     009400
+   171 D P_ARID                         6A    value                                                              000000     009500
+   172  /free                                                                                                    000000     009600
+   173     chainARTICLE1(P_ARID                                                                                  000000     009700
+   174           );                                                                                              000000     009800
+   175     return %found(article1) and ardel <> 'X';                                                             000000     009900
+   176  /end-free                                                                                                000000     010000
+   177 p ExistArt        e                                                                                       000000     010100
+   178                                                                                                           000000     010200
+   179  *=============================================                                                           000000     010300
+   180 PIsArtDeleted     B                     export                                                            000000     010400
+   181 DIsArtDeleted     PI              n                                                                       000000     010500
+   182 D P_ARID                         6A    value                                                              000000     010600
+   183  /free                                                                                                    000000     010700
+   184     chainARTICLE1(P_ARID                                                                                  000000     010800
+   185           );                                                                                              000000     010900
+   186     return ArDEL = 'X';                                                                                   000000     011000
+   187  /end-free                                                                                                000000     011100
+   188 pIsArtDeleted     e                                                                                       000000     011200
+   189                                                                                                           000000     011300
+   190 p chainARTICLE1   b                                                                                       000000     011400
+   191 d chainARTICLE1   pi                                                                                      000000     011500
+   192 D P_ARID                         6A    value                                                              000000     011600
+   193  /free                                                                                                    000000     011700
+   194    if not %open(ARTICLE1);                                                                      B01       000000     011800
+   195      open ARTICLE1;                                                                              01       000000     011900
+   196    endif;                                                                                       E01       000000     012000
+   197     if P_ARID <> ARID;                                                                          B01       000000     012100
+   198       K_ARID =  P_ARID;                                                                          01       000000     012200
+   199       clear *all FARTI;                                                                          01       000000     012300
+   200       chain kf ARTICLE1;                                                                         01       000000     012400
+   201     endif;                                                                                      E01       000000     012500
+   202  /end-free                                                                                                000000     012600
+   203 p chainARTICLE1   e                                                                                       000000     012700
+   204                                                                                                           000000     012800
+   205 p closeARTICLE1   b                                                                                       000000     012900
+   206 d closeARTICLE1   pi                                                                                      000000     013000
+   207  /free                                                                                                    000000     013100
+   208    if %open(ARTICLE1);                                                                          B01       000000     013200
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      8
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   209      close ARTICLE1;                                                                             01       000000     013300
+   210    endif;                                                                                       E01       000000     013400
+   211  /end-free                                                                                                000000     013500
+   212 p closeARTICLE1   e                                                                                       000000     013600
+   213                                                                                                           000000     013700
+   214                                                                                                           000000     013800
+       * * * * *   E N D   O F   S O U R C E   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      9
+          A d d i t i o n a l   D i a g n o s t i c   M e s s a g e s
+ Msg id  Sv Number Seq     Message text
+ * * * * *   E N D   O F   A D D I T I O N A L   D I A G N O S T I C   M E S S A G E S   * * * * *
+                            / C o p y   M e m b e r s
+Line   Src  RPG name   <-------- External name -------> CCSID  <- Last change ->
+Number Id              Library    File       Member            Date     Time
+     8    1 ARTICLE    ATU_SRC    QPROTOSRC  ARTICLE      297  05/23/22 14:55:56
+         * * * * *   E N D   O F   / C O P Y   M E M B E R S   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page     10
+                    K e y   F i e l d   I n f o r m a t i o n
+         File           Internal    External
+           Record       field name  field name  Attributes
+      1  ARTICLE1
+           FARTI
+                        ARID                    CHAR        6
+ * * * * *   E N D   O F   K E Y   F I E L D   I N F O R M A T I O N   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page     11
+                          C r o s s   R e f e r e n c e
+      File and Record References:
+         File              Device             References (D=Defined)
+           Record
+         ARTICLE1          DISK                    6D    175     194     195
+                                                 200     208     209
+           FARTI                                   6D     76     199M
+      Global Field References:
+         Field             Attributes         References (D=Defined M=Modified)
+*RNF7031 ARCREA            D(10*ISO-)             87D
+*RNF7031 ARCUSQTY          P(5,0)                 84D
+         ARDEL             A(1)                   90D    175     186
+         ARDESC            A(50)                  78D     96     101
+         ARID              A(6)                   74      77D    197
+         ARMINQTY          P(5,0)                 83D    150     155
+*RNF7031 ARMOD             Z(26)                  88D
+*RNF7031 ARMODID           A(10)                  89D
+*RNF7031 ARPURQTY          P(5,0)                 85D
+         ARSALEPR          P(7,2)                 79D    108     113
+         ARSTOCK           P(5,0)                 82D    140     145
+         ARTIFA            A(3)                   81D    130     135
+         ARVATCD           A(1)                   86D    160     165
+         ARWHSPR           P(7,2)                 80D    120     125
+         CHAINARTICLE1     PROTOTYPE              71D     99M    111M    123M
+                                                 133M    143M    153M    163M
+                                                 173M    184M    190     191
+                                                 203
+         CLOSEARTICLE1     PROTOTYPE              69D    205     206     212
+         EXISTART          N(1)                   49D    169     170     177
+                           PROTOTYPE
+         GETARTDESC        A(50)                  12D     95      96     103
+                           PROTOTYPE
+         GETARTFAM         A(3)                   29D    129     130     137
+                           PROTOTYPE
+*RNF7031 GETARTINFO        A(1520)                64D
+                           PROTOTYPE
+         GETARTMINSTOCK    P(5,0)                 39D    149     150     157
+                           PROTOTYPE
+         GETARTREFSALPRICE P(7,2)                 17D    105     107
+                           PROTOTYPE
+         GETARTSTOCK       P(5,0)                 34D    139     140     147
+                           PROTOTYPE
+         GETARTSTOCKPRICE  P(7,2)                 23D    117     119
+                           PROTOTYPE
+         GETARTVATCODE     A(1)                   44D    159     160     167
+                           PROTOTYPE
+         ISARTDELETED      N(1)                   54D    180     181     188
+                           PROTOTYPE
+         K_ARID            A(6)                   74D     92     198M
+         KF                KLIST                  91D    200
+*RNF7031 SLTARTICLE        A(6)                   59D
+                           PROTOTYPE
+      Field References for subprocedure GETARTDESC
+         Field             Attributes         References (D=Defined M=Modified)
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page     12
+         P_ARID            A(6)                   97D     99
+      Field References for subprocedure GETARTREFSALPRICE
+         Field             Attributes         References (D=Defined M=Modified)
+         P_ARID            A(6)                  109D    111
+      Field References for subprocedure GETARTSTOCKPRICE
+         Field             Attributes         References (D=Defined M=Modified)
+         P_ARID            A(6)                  121D    123
+      Field References for subprocedure GETARTFAM
+         Field             Attributes         References (D=Defined M=Modified)
+         P_ARID            A(6)                  131D    133
+      Field References for subprocedure GETARTSTOCK
+         Field             Attributes         References (D=Defined M=Modified)
+         P_ARID            A(6)                  141D    143
+      Field References for subprocedure GETARTMINSTOCK
+         Field             Attributes         References (D=Defined M=Modified)
+         P_ARID            A(6)                  151D    153
+      Field References for subprocedure GETARTVATCODE
+         Field             Attributes         References (D=Defined M=Modified)
+         P_ARID            A(6)                  161D    163
+      Field References for subprocedure EXISTART
+         Field             Attributes         References (D=Defined M=Modified)
+         P_ARID            A(6)                  171D    173
+      Field References for subprocedure ISARTDELETED
+         Field             Attributes         References (D=Defined M=Modified)
+         P_ARID            A(6)                  182D    184
+      Field References for subprocedure CHAINARTICLE1
+         Field             Attributes         References (D=Defined M=Modified)
+         P_ARID            A(6)                  192D    197     198
+      Field References for subprocedure CLOSEARTICLE1
+         Field             Attributes         References (D=Defined M=Modified)
+         No references in the source.
+      Indicator References:
+         Indicator                            References (D=Defined M=Modified)
+       * * * * *   E N D   O F   C R O S S   R E F E R E N C E   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page     13
+                      E x t e r n a l   R e f e r e n c e s
+      Statically bound procedures:
+         Procedure                            References
+         SLTARTICLE                               59
+         GETARTINFO                               64
+      Imported fields:
+         Field             Attributes         Defined
+         No references in the source.
+      Exported fields:
+         Field             Attributes         Defined
+         No references in the source.
+   * * * * *   E N D   O F   E X T E R N A L   R E F E R E N C E S   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page     14
+                          M e s s a g e   S u m m a r y
+ Msg id  Sv Number Message text
+*RNF7031 00      7 The name or indicator is not referenced.
+       * * * * *   E N D   O F   M E S S A G E   S U M M A R Y   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page     15
+                            F i n a l   S u m m a r y
+  Message Totals:
+    Information  (00) . . . . . . . :        7
+    Warning      (10) . . . . . . . :        0
+    Error        (20) . . . . . . . :        0
+    Severe Error (30+)  . . . . . . :        0
+    ---------------------------------  -------
+    Total . . . . . . . . . . . . . :        7
+  Source Totals:
+    Records . . . . . . . . . . . . :      214
+    Specifications  . . . . . . . . :      108
+    Data records  . . . . . . . . . :        0
+    Comments  . . . . . . . . . . . :       48
+         * * * * *   E N D   O F   F I N A L   S U M M A R Y   * * * * *
+Module ART300 placed in library ATUDSB0002. 00 highest severity. Created on 07/15/22 at 14:11:39.
+          * * * * *   E N D   O F   C O M P I L A T I O N   * * * * *
+  . . . .
+MSG1573 *** Messages sent by the Compilation ***
+RNS9305 Module ART300 placed in library ATUDSB0002. 00 highest severity. Created on 07/15/22 at 14:11:39.
+CPC0904 Data area RETURNCODE created in library QTEMP.
