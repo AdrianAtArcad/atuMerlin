@@ -1,0 +1,41 @@
+14:11:33.628 [INFO] Connecting locally to instance AD/ENG.
+14:11:34.429 [INFO] Connected to Arcad Server instance AD/ENG version 22.01.02 with CCSID 37
+14:11:34.927 [INFO] Starting project synchronization
+14:11:35.598 [INFO] Configuration summary:
+	- Repository: git@github.com:AdrianAtArcad/atuMerlin.git
+	- Branch: ft/anewhope
+	- Application: ATU
+	- Project IFS directory: /home/atully/atuMerlin
+	- Target IFS directory: /ArcADSCM/ATU/SB.00.02
+	- Target version: ATU D SB.00.02
+	- Hash comparison: MD5
+	- Synchronization type: SANDBOX
+14:11:35.598 [INFO] Preparing transfer operations
+14:11:35.941 [INFO] Created 16 transfer operation(s)
+14:11:36.059 [INFO] Transferring 1 member(s) to file QRPGLESRC; 36 skipped
+14:11:37.618 [INFO] Transfer to file QRPGLESRC complete
+14:11:37.619 [INFO] Nothing to transfer to QRPGSRC; all transfers were skipped.
+14:11:37.620 [INFO] Nothing to transfer to QMSGFSRC; all transfers were skipped.
+14:11:37.620 [INFO] Nothing to transfer to QDTASRC; all transfers were skipped.
+14:11:37.620 [INFO] Nothing to transfer to QDDSSRC; all transfers were skipped.
+14:11:37.620 [INFO] Nothing to transfer to QCLSRC; all transfers were skipped.
+14:11:37.620 [INFO] Nothing to transfer to QILESRC; all transfers were skipped.
+14:11:37.621 [INFO] Nothing to transfer to QILESRVSRC; all transfers were skipped.
+14:11:37.621 [INFO] Nothing to transfer to QPNLSRC; all transfers were skipped.
+14:11:37.621 [INFO] Nothing to transfer to QCMDSRC; all transfers were skipped.
+14:11:37.621 [INFO] Nothing to transfer to QSQLSRC; all transfers were skipped.
+14:11:37.621 [INFO] Nothing to transfer to QSRVSRC; all transfers were skipped.
+14:11:37.622 [INFO] Nothing to transfer to QTRGSRC; all transfers were skipped.
+14:11:37.622 [INFO] Nothing to transfer to QPROTOSRC; all transfers were skipped.
+14:11:37.622 [INFO] Nothing to transfer to QCBLSRC; all transfers were skipped.
+14:11:37.622 [INFO] Nothing to transfer to QBNDSRC; all transfers were skipped.
+14:11:37.751 [INFO] Exported transfers list to /ArcADSCM/ATU/SB.00.02/transfersList.json
+14:11:37.752 [INFO] Duration: 2 second(s)
+14:11:37.777 [INFO] Running unitary compilation for 1 component(s)
+14:11:38.209 [INFO] Created Smart Compiler list ATUDSB0002/SMARTCPL with 1 component(s) to compile:
+	- ART300 (RPGLE/*RPGMOD)
+14:11:38.967 [INFO] Waiting for compilations to end...
+14:11:40.494 [INFO] 1 component(s) successfully compiled
+14:11:40.495 [INFO] Writing compilation logs
+14:11:40.541 [INFO] Writing 2 spooled file(s)
+14:11:40.676 [INFO] Writing 1 event file(s)
