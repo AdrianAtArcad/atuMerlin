@@ -8,7 +8,7 @@
       /COPY ../QPROTOSRC/ARTICLE.RPGLEINC
 
      d chainARTICLE1   pr
-     D articleKey                         6A    value
+     D article                         6A    value
 
      D K_ARID          S                   LIKE(ARID)
 
@@ -18,9 +18,9 @@
       *=============================================
      PGetArtDesc       B                     export
      DGetArtDesc       PI                   like(ardesc)
-     D articleKey                         6A    value
+     D article                         6A    value
       /free
-         chainARTICLE1(articleKey
+         chainARTICLE1(article
                );
          return ARDESC;
       /end-free
@@ -30,9 +30,9 @@
      P                 B                     export
      DGetArtRefSalPrice...
      D                 PI                   like(arsalepr)
-     D articleKey                         6A    value
+     D article                         6A    value
       /free
-         chainARTICLE1(articleKey
+         chainARTICLE1(article
                );
          return ARSALEPR;
       /end-free
@@ -42,9 +42,9 @@
      P                 B                     export
      DGetArtStockPrice...
      D                 PI                   like(arwhspr)
-     D articleKey                         6A    value
+     D article                         6A    value
       /free
-         chainARTICLE1(articleKey
+         chainARTICLE1(article
                );
          return ARWHSPR;
       /end-free
@@ -52,9 +52,9 @@
       *=============================================
      PGetArtFam        B                     export
      DGetArtFam        PI                   like(artifa)
-     D articleKey                         6A    value
+     D article                         6A    value
       /free
-         chainARTICLE1(articleKey
+         chainARTICLE1(article
                );
          return ARTIFA;
       /end-free
@@ -62,9 +62,9 @@
       *=============================================
      PGetArtStock      B                     export
      DGetArtStock      PI                   like(arstock)
-     D articleKey                         6A    value
+     D article                         6A    value
       /free
-         chainARTICLE1(articleKey
+         chainARTICLE1(article
                );
          return ARSTOCK;
       /end-free
@@ -72,9 +72,9 @@
       *=============================================
      PGetArtMinStock   B                     export
      DGetArtMinStock   PI                   like(arminqty)
-     D articleKey                         6A    value
+     D article                         6A    value
       /free
-         chainARTICLE1(articleKey
+         chainARTICLE1(article
                );
          return ARMINQTY;
       /end-free
@@ -82,9 +82,9 @@
       *=============================================
      PGetArtVatCode    B                     export
      DGetArtVatCode    PI                   like(arvatcd)
-     D articleKey                         6A    value
+     D article                         6A    value
       /free
-         chainARTICLE1(articleKey
+         chainARTICLE1(article
                );
          return ARvatcd ;
       /end-free
@@ -92,9 +92,9 @@
       *=============================================
      P ExistArt        B                     export
      D ExistArt        PI              n
-     D articleKey                         6A    value
+     D article                         6A    value
       /free
-         chainARTICLE1(articleKey
+         chainARTICLE1(article
                );
          return %found(article1) and ardel <> 'X';
       /end-free
@@ -103,9 +103,9 @@
       *=============================================
      PIsArtDeleted     B                     export
      DIsArtDeleted     PI              n
-     D articleKey                         6A    value
+     D article                         6A    value
       /free
-         chainARTICLE1(articleKey
+         chainARTICLE1(article
                );
          return ArDEL = 'X';
       /end-free
@@ -113,13 +113,13 @@
 
      p chainARTICLE1   b
      d chainARTICLE1   pi
-     D articleKey        6A    value
+     D article        6A    value
       /free
         if not %open(ARTICLE1);
           open ARTICLE1;
         endif;
-         if articleKey <> ARID;
-           K_ARID =  articleKey;
+         if article <> ARID;
+           K_ARID =  article;
            clear *all FARTI;
            chain kf ARTICLE1;
          endif;
