@@ -10,10 +10,10 @@
      d chainARTICLE1   pr
      D article                         6A    value
 
-     D K_ARID          S                   LIKE(ARID)
+     D artId          S                   LIKE(ARID)
 
      C     kf            klist
-     C                   KFLD                    K_ARID
+     C                   KFLD                    artId
 
       *=============================================
      PGetArtDesc       B                     export
@@ -119,7 +119,7 @@
           open ARTICLE1;
         endif;
          if article <> ARID;
-           K_ARID =  article;
+           artId =  article;
            clear *all FARTI;
            chain kf ARTICLE1;
          endif;
