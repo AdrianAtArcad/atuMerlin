@@ -1,7 +1,7 @@
 Attributes of the executed compilation command :
   -  CRTRPGMOD   MODULE(ATUDSB0002/ART300) SRCFILE(ATUDSB0002/QRPGLESRC) OPTION(*EVEN
      TF)
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      2
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      2
   Command  . . . . . . . . . . . . :   CRTRPGMOD
     Issued by  . . . . . . . . . . :     ATULLY
   Module . . . . . . . . . . . . . :   ART300
@@ -12,7 +12,7 @@ Attributes of the executed compilation command :
     Library  . . . . . . . . . . . :     ATUDSB0002
     CCSID  . . . . . . . . . . . . :     297
   Text 'description' . . . . . . . :   Function Article
-  Last Change  . . . . . . . . . . :   07/15/22  14:11:37
+  Last Change  . . . . . . . . . . :   09/06/22  14:27:11
   Generation severity level  . . . :   10
   Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY
                                        *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT
@@ -40,7 +40,7 @@ Attributes of the executed compilation command :
   Generate program interface . . . :   *NO
   Include directory  . . . . . . . :
   Preprocessor options . . . . . . :   *NONE
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      3
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      3
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
                           S o u r c e   L i s t i n g
@@ -63,7 +63,7 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
     11+ *=============================================                                                           000000    1000300
         *--------------------------------------------------------------------------------------------*
         *                               RPG name         External name                               *
-        * File name. . . . . . . . . :  ARTICLE1         ATU_DTA/ARTICLE1                            *
+        * File name. . . . . . . . . :  ARTICLE1         ATUDSB0002/ARTICLE1                         *
         * Record format(s) . . . . . :  FARTI            FARTI                                       *
         *--------------------------------------------------------------------------------------------*
     12+DGetArtDesc       PR            50A                                                                       000000    1000400
@@ -93,7 +93,7 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
     36+ *=============================================                                                           000000    1002800
     37+ * Get MINIMUM STOCK                                                                                      000000    1002900
     38+ *=============================================                                                           000000    1003000
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      4
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      4
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
     39+DGetArtMinStock   PR             5P 0                                                                     000000    1003100
@@ -129,18 +129,30 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
     69+D CloseARTICLE1   PR                                                                                      000000    1004600
     70                                                                                                           000000     000900
     71 d chainARTICLE1   pr                                                                                      000000     001000
-    72 D P_ARID                         6A    value                                                              000000     001100
+    72 D article                         6A    value                                                             000000     001100
+======>                                  ab
+*RNF3302 20 a      001100  The Data-Type entry is not valid; defaults to blank.
+*RNF3414 20 b      001100  The Decimal-Positions entry is not valid; defaults to
+                           blanks.
     73                                                                                                           000000     001200
-    74 D K_ARID          S                   LIKE(ARID)                                                          000000     001300
+*RNF3438 30     72 001100  LIKE keyword is expected for field  but not found;
+                           definition is ignored.
+    74 D artId          S                     LIKE(ARID)                                                         000000     001300
+======>                aa
+*RNF3780 20 a      001300  Entry is not blank for parameter definition; defaults to
+                           blanks.
     75                                                                                                           000000     001400
     76=IFARTI                                                                                                              2000001
         *--------------------------------------------------------------------------------------------*                     2
         * RPG record format  . . . . :  FARTI                                                        *                     2
-        * External format  . . . . . :  FARTI : ATU_DTA/ARTICLE1                                     *                     2
+        * External format  . . . . . :  FARTI : ATUDSB0002/ARTICLE1                                  *                     2
         *--------------------------------------------------------------------------------------------*                     2
     77=I                             A    1    6  ARID                            ARTICLE ID                               2000002
     78=I                             A    7   56  ARDESC                          ARTICLE DESCRPTION                       2000003
     79=I                             P   57   60 2ARSALEPR                        REF SALE PRICE                           2000004
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      5
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
     80=I                             P   61   64 2ARWHSPR                         STOCK PRICE                              2000005
     81=I                             A   65   67  ARTIFA                          FAMILLY ID                               2000006
     82=I                             P   68   70 0ARSTOCK                         STOCK                                    2000007
@@ -150,20 +162,23 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
     86=I                             A   80   80  ARVATCD                         VAT CODE                                 2000011
     87=I                        *ISO-D   81   90  ARCREA                          CREATION DATE                            2000012
     88=I                             Z   91  116  ARMOD                           LAST MODIFICATION                        2000013
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      5
-Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
-Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
-    89=I                             A  117  126  ARMODID                         LAS MOD BY                               2000014
+    89=I                             A  117  126  ARMODID                         LASt MOD BY                              2000014
     90=I                             A  127  127  ARDEL                           DELETE CODE X=DELETED                    2000015
     91 C     kf            klist                                                                                 000000     001500
-    92 C                   KFLD                    K_ARID                                                        000000     001600
+    92 C                   KFLD                    artId                                                         000000     001600
     93                                                                                                           000000     001700
     94  *=============================================                                                           000000     001800
     95 PGetArtDesc       B                     export                                                            000000     001900
     96 DGetArtDesc       PI                   like(ardesc)                                                       000000     002000
-    97 D P_ARID                         6A    value                                                              000000     002100
+    97 D article                         6A    value                                                             000000     002100
+======>                                  ab
+*RNF3302 20 a      002100  The Data-Type entry is not valid; defaults to blank.
+*RNF3414 20 b      002100  The Decimal-Positions entry is not valid; defaults to
+                           blanks.
     98  /free                                                                                                    000000     002200
-    99     chainARTICLE1(P_ARID                                                                                  000000     002300
+*RNF3438 30     97 002100  LIKE keyword is expected for field ARTICLE but not found;
+                           definition is ignored.
+    99     chainARTICLE1(article                                                                                 000000     002300
    100           );                                                                                              000000     002400
    101     return ARDESC;                                                                                        000000     002500
    102  /end-free                                                                                                000000     002600
@@ -173,9 +188,18 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
    106 P                 B                     export                                                            000000     003000
    107 DGetArtRefSalPrice...                                                                                     000000     003100
    108 D                 PI                   like(arsalepr)                                                     000000     003200
-   109 D P_ARID                         6A    value                                                              000000     003300
+   109 D article                         6A    value                                                             000000     003300
+======>                                  ab
+*RNF3302 20 a      003300  The Data-Type entry is not valid; defaults to blank.
+*RNF3414 20 b      003300  The Decimal-Positions entry is not valid; defaults to
+                           blanks.
    110  /free                                                                                                    000000     003400
-   111     chainARTICLE1(P_ARID                                                                                  000000     003500
+*RNF3438 30    109 003300  LIKE keyword is expected for field ARTICLE but not found;
+                           definition is ignored.
+   111     chainARTICLE1(article                                                                                 000000     003500
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      6
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
    112           );                                                                                              000000     003600
    113     return ARSALEPR;                                                                                      000000     003700
    114  /end-free                                                                                                000000     003800
@@ -185,22 +209,31 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
    118 P                 B                     export                                                            000000     004200
    119 DGetArtStockPrice...                                                                                      000000     004300
    120 D                 PI                   like(arwhspr)                                                      000000     004400
-   121 D P_ARID                         6A    value                                                              000000     004500
+   121 D article                         6A    value                                                             000000     004500
+======>                                  ab
+*RNF3302 20 a      004500  The Data-Type entry is not valid; defaults to blank.
+*RNF3414 20 b      004500  The Decimal-Positions entry is not valid; defaults to
+                           blanks.
    122  /free                                                                                                    000000     004600
-   123     chainARTICLE1(P_ARID                                                                                  000000     004700
+*RNF3438 30    121 004500  LIKE keyword is expected for field ARTICLE but not found;
+                           definition is ignored.
+   123     chainARTICLE1(article                                                                                 000000     004700
    124           );                                                                                              000000     004800
    125     return ARWHSPR;                                                                                       000000     004900
    126  /end-free                                                                                                000000     005000
    127 p                 e                                                                                       000000     005100
    128  *=============================================                                                           000000     005200
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      6
-Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
-Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
    129 PGetArtFam        B                     export                                                            000000     005300
    130 DGetArtFam        PI                   like(artifa)                                                       000000     005400
-   131 D P_ARID                         6A    value                                                              000000     005500
+   131 D article                         6A    value                                                             000000     005500
+======>                                  ab
+*RNF3302 20 a      005500  The Data-Type entry is not valid; defaults to blank.
+*RNF3414 20 b      005500  The Decimal-Positions entry is not valid; defaults to
+                           blanks.
    132  /free                                                                                                    000000     005600
-   133     chainARTICLE1(P_ARID                                                                                  000000     005700
+*RNF3438 30    131 005500  LIKE keyword is expected for field ARTICLE but not found;
+                           definition is ignored.
+   133     chainARTICLE1(article                                                                                 000000     005700
    134           );                                                                                              000000     005800
    135     return ARTIFA;                                                                                        000000     005900
    136  /end-free                                                                                                000000     006000
@@ -208,9 +241,18 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
    138  *=============================================                                                           000000     006200
    139 PGetArtStock      B                     export                                                            000000     006300
    140 DGetArtStock      PI                   like(arstock)                                                      000000     006400
-   141 D P_ARID                         6A    value                                                              000000     006500
+   141 D article                         6A    value                                                             000000     006500
+======>                                  ab
+*RNF3302 20 a      006500  The Data-Type entry is not valid; defaults to blank.
+*RNF3414 20 b      006500  The Decimal-Positions entry is not valid; defaults to
+                           blanks.
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      7
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
    142  /free                                                                                                    000000     006600
-   143     chainARTICLE1(P_ARID                                                                                  000000     006700
+*RNF3438 30    141 006500  LIKE keyword is expected for field ARTICLE but not found;
+                           definition is ignored.
+   143     chainARTICLE1(article                                                                                 000000     006700
    144           );                                                                                              000000     006800
    145     return ARSTOCK;                                                                                       000000     006900
    146  /end-free                                                                                                000000     007000
@@ -218,9 +260,15 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
    148  *=============================================                                                           000000     007200
    149 PGetArtMinStock   B                     export                                                            000000     007300
    150 DGetArtMinStock   PI                   like(arminqty)                                                     000000     007400
-   151 D P_ARID                         6A    value                                                              000000     007500
+   151 D article                         6A    value                                                             000000     007500
+======>                                  ab
+*RNF3302 20 a      007500  The Data-Type entry is not valid; defaults to blank.
+*RNF3414 20 b      007500  The Decimal-Positions entry is not valid; defaults to
+                           blanks.
    152  /free                                                                                                    000000     007600
-   153     chainARTICLE1(P_ARID                                                                                  000000     007700
+*RNF3438 30    151 007500  LIKE keyword is expected for field ARTICLE but not found;
+                           definition is ignored.
+   153     chainARTICLE1(article                                                                                 000000     007700
    154           );                                                                                              000000     007800
    155     return ARMINQTY;                                                                                      000000     007900
    156  /end-free                                                                                                000000     008000
@@ -228,22 +276,34 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
    158  *=============================================                                                           000000     008200
    159 PGetArtVatCode    B                     export                                                            000000     008300
    160 DGetArtVatCode    PI                   like(arvatcd)                                                      000000     008400
-   161 D P_ARID                         6A    value                                                              000000     008500
+   161 D article                         6A    value                                                             000000     008500
+======>                                  ab
+*RNF3302 20 a      008500  The Data-Type entry is not valid; defaults to blank.
+*RNF3414 20 b      008500  The Decimal-Positions entry is not valid; defaults to
+                           blanks.
    162  /free                                                                                                    000000     008600
-   163     chainARTICLE1(P_ARID                                                                                  000000     008700
+*RNF3438 30    161 008500  LIKE keyword is expected for field ARTICLE but not found;
+                           definition is ignored.
+   163     chainARTICLE1(article                                                                                 000000     008700
    164           );                                                                                              000000     008800
    165     return ARvatcd ;                                                                                      000000     008900
    166  /end-free                                                                                                000000     009000
    167 pGetArtVatCode    e                                                                                       000000     009100
    168  *=============================================                                                           000000     009200
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      7
-Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
-Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
    169 P ExistArt        B                     export                                                            000000     009300
    170 D ExistArt        PI              n                                                                       000000     009400
-   171 D P_ARID                         6A    value                                                              000000     009500
+   171 D article                         6A    value                                                             000000     009500
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      8
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+======>                                  ab
+*RNF3302 20 a      009500  The Data-Type entry is not valid; defaults to blank.
+*RNF3414 20 b      009500  The Decimal-Positions entry is not valid; defaults to
+                           blanks.
    172  /free                                                                                                    000000     009600
-   173     chainARTICLE1(P_ARID                                                                                  000000     009700
+*RNF3438 30    171 009500  LIKE keyword is expected for field ARTICLE but not found;
+                           definition is ignored.
+   173     chainARTICLE1(article                                                                                 000000     009700
    174           );                                                                                              000000     009800
    175     return %found(article1) and ardel <> 'X';                                                             000000     009900
    176  /end-free                                                                                                000000     010000
@@ -252,9 +312,15 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
    179  *=============================================                                                           000000     010300
    180 PIsArtDeleted     B                     export                                                            000000     010400
    181 DIsArtDeleted     PI              n                                                                       000000     010500
-   182 D P_ARID                         6A    value                                                              000000     010600
+   182 D article                         6A    value                                                             000000     010600
+======>                                  ab
+*RNF3302 20 a      010600  The Data-Type entry is not valid; defaults to blank.
+*RNF3414 20 b      010600  The Decimal-Positions entry is not valid; defaults to
+                           blanks.
    183  /free                                                                                                    000000     010700
-   184     chainARTICLE1(P_ARID                                                                                  000000     010800
+*RNF3438 30    182 010600  LIKE keyword is expected for field ARTICLE but not found;
+                           definition is ignored.
+   184     chainARTICLE1(article                                                                                 000000     010800
    185           );                                                                                              000000     010900
    186     return ArDEL = 'X';                                                                                   000000     011000
    187  /end-free                                                                                                000000     011100
@@ -262,13 +328,29 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
    189                                                                                                           000000     011300
    190 p chainARTICLE1   b                                                                                       000000     011400
    191 d chainARTICLE1   pi                                                                                      000000     011500
-   192 D P_ARID                         6A    value                                                              000000     011600
+   192 D article        6A    value                                                                              000000     011600
+======>                bbaacccccccddddddd
+*RNF3738 20 a      011600  The Definition-Type entry is not valid; defaults to
+                           parameter definition.
+*RNF3780 20 b      011600  Entry is not blank for parameter definition; defaults to
+                           blanks.
+*RNF3780 20 c      011600  Entry is not blank for parameter definition; defaults to
+                           blanks.
+*RNF3402 20 d      011600  Length entry is not valid; defaults to blanks.
    193  /free                                                                                                    000000     011700
+*RNF3438 30    192 011600  LIKE keyword is expected for field ARTICLE but not found;
+                           definition is ignored.
+*RNF3774 20    192 011600  Specified passing mode is not the same on prototype and
+                           procedure interface definitions.
+*RNF3765 30    192 011600  Not enough parameters specified in the procedure interface.
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      9
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
    194    if not %open(ARTICLE1);                                                                      B01       000000     011800
    195      open ARTICLE1;                                                                              01       000000     011900
    196    endif;                                                                                       E01       000000     012000
-   197     if P_ARID <> ARID;                                                                          B01       000000     012100
-   198       K_ARID =  P_ARID;                                                                          01       000000     012200
+   197     if article <> ARID;                                                                         B01       000000     012100
+   198       artId =  article;                                                                          01       000000     012200
    199       clear *all FARTI;                                                                          01       000000     012300
    200       chain kf ARTICLE1;                                                                         01       000000     012400
    201     endif;                                                                                      E01       000000     012500
@@ -279,9 +361,6 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
    206 d closeARTICLE1   pi                                                                                      000000     013000
    207  /free                                                                                                    000000     013100
    208    if %open(ARTICLE1);                                                                          B01       000000     013200
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      8
-Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
-Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
    209      close ARTICLE1;                                                                             01       000000     013300
    210    endif;                                                                                       E01       000000     013400
    211  /end-free                                                                                                000000     013500
@@ -289,16 +368,47 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
    213                                                                                                           000000     013700
    214                                                                                                           000000     013800
        * * * * *   E N D   O F   S O U R C E   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page      9
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     10
           A d d i t i o n a l   D i a g n o s t i c   M e s s a g e s
  Msg id  Sv Number Seq     Message text
+*RNF7030 30     97 002100  The name or indicator ARTICLE is not defined.
+*RNF7030 30    109 003300  The name or indicator ARTICLE is not defined.
+*RNF7030 30    121 004500  The name or indicator ARTICLE is not defined.
+*RNF7030 30    131 005500  The name or indicator ARTICLE is not defined.
+*RNF7030 30    141 006500  The name or indicator ARTICLE is not defined.
+*RNF7030 30    151 007500  The name or indicator ARTICLE is not defined.
+*RNF7030 30    161 008500  The name or indicator ARTICLE is not defined.
+*RNF7030 30    171 009500  The name or indicator ARTICLE is not defined.
+*RNF7030 30    182 010600  The name or indicator ARTICLE is not defined.
+*RNF7030 30    192 011600  The name or indicator ARTICLE is not defined.
+*RNF7030 30     92 001600  The name or indicator ARTID is not defined.
+*RNF7503 30     99 002300  Expression contains an operand that is not defined.
+*RNF5410 30     99 002300  The prototype for the call is not defined.
+*RNF7503 30    111 003500  Expression contains an operand that is not defined.
+*RNF5410 30    111 003500  The prototype for the call is not defined.
+*RNF7503 30    123 004700  Expression contains an operand that is not defined.
+*RNF5410 30    123 004700  The prototype for the call is not defined.
+*RNF7503 30    133 005700  Expression contains an operand that is not defined.
+*RNF5410 30    133 005700  The prototype for the call is not defined.
+*RNF7503 30    143 006700  Expression contains an operand that is not defined.
+*RNF5410 30    143 006700  The prototype for the call is not defined.
+*RNF7503 30    153 007700  Expression contains an operand that is not defined.
+*RNF5410 30    153 007700  The prototype for the call is not defined.
+*RNF7503 30    163 008700  Expression contains an operand that is not defined.
+*RNF5410 30    163 008700  The prototype for the call is not defined.
+*RNF7503 30    173 009700  Expression contains an operand that is not defined.
+*RNF5410 30    173 009700  The prototype for the call is not defined.
+*RNF7503 30    184 010800  Expression contains an operand that is not defined.
+*RNF5410 30    184 010800  The prototype for the call is not defined.
+*RNF7503 30    197 012100  Expression contains an operand that is not defined.
+*RNF7503 30    198 012200  Expression contains an operand that is not defined.
  * * * * *   E N D   O F   A D D I T I O N A L   D I A G N O S T I C   M E S S A G E S   * * * * *
                             / C o p y   M e m b e r s
 Line   Src  RPG name   <-------- External name -------> CCSID  <- Last change ->
 Number Id              Library    File       Member            Date     Time
      8    1 ARTICLE    ATU_SRC    QPROTOSRC  ARTICLE      297  05/23/22 14:55:56
          * * * * *   E N D   O F   / C O P Y   M E M B E R S   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page     10
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     11
                     K e y   F i e l d   I n f o r m a t i o n
          File           Internal    External
            Record       field name  field name  Attributes
@@ -306,7 +416,7 @@ Number Id              Library    File       Member            Date     Time
            FARTI
                         ARID                    CHAR        6
  * * * * *   E N D   O F   K E Y   F I E L D   I N F O R M A T I O N   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page     11
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     12
                           C r o s s   R e f e r e n c e
       File and Record References:
          File              Device             References (D=Defined)
@@ -327,6 +437,7 @@ Number Id              Library    File       Member            Date     Time
 *RNF7031 ARPURQTY          P(5,0)                 85D
          ARSALEPR          P(7,2)                 79D    108     113
          ARSTOCK           P(5,0)                 82D    140     145
+*RNF7030 ARTID             **UNDEF**              92     198M
          ARTIFA            A(3)                   81D    130     135
          ARVATCD           A(1)                   86D    160     165
          ARWHSPR           P(7,2)                 80D    120     125
@@ -355,48 +466,47 @@ Number Id              Library    File       Member            Date     Time
                            PROTOTYPE
          ISARTDELETED      N(1)                   54D    180     181     188
                            PROTOTYPE
-         K_ARID            A(6)                   74D     92     198M
          KF                KLIST                  91D    200
 *RNF7031 SLTARTICLE        A(6)                   59D
                            PROTOTYPE
       Field References for subprocedure GETARTDESC
          Field             Attributes         References (D=Defined M=Modified)
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page     12
-         P_ARID            A(6)                   97D     99
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     13
+*RNF7030 ARTICLE           **UNDEF**              97D     99
       Field References for subprocedure GETARTREFSALPRICE
          Field             Attributes         References (D=Defined M=Modified)
-         P_ARID            A(6)                  109D    111
+*RNF7030 ARTICLE           **UNDEF**             109D    111
       Field References for subprocedure GETARTSTOCKPRICE
          Field             Attributes         References (D=Defined M=Modified)
-         P_ARID            A(6)                  121D    123
+*RNF7030 ARTICLE           **UNDEF**             121D    123
       Field References for subprocedure GETARTFAM
          Field             Attributes         References (D=Defined M=Modified)
-         P_ARID            A(6)                  131D    133
+*RNF7030 ARTICLE           **UNDEF**             131D    133
       Field References for subprocedure GETARTSTOCK
          Field             Attributes         References (D=Defined M=Modified)
-         P_ARID            A(6)                  141D    143
+*RNF7030 ARTICLE           **UNDEF**             141D    143
       Field References for subprocedure GETARTMINSTOCK
          Field             Attributes         References (D=Defined M=Modified)
-         P_ARID            A(6)                  151D    153
+*RNF7030 ARTICLE           **UNDEF**             151D    153
       Field References for subprocedure GETARTVATCODE
          Field             Attributes         References (D=Defined M=Modified)
-         P_ARID            A(6)                  161D    163
+*RNF7030 ARTICLE           **UNDEF**             161D    163
       Field References for subprocedure EXISTART
          Field             Attributes         References (D=Defined M=Modified)
-         P_ARID            A(6)                  171D    173
+*RNF7030 ARTICLE           **UNDEF**             171D    173
       Field References for subprocedure ISARTDELETED
          Field             Attributes         References (D=Defined M=Modified)
-         P_ARID            A(6)                  182D    184
+*RNF7030 ARTICLE           **UNDEF**             182D    184
       Field References for subprocedure CHAINARTICLE1
          Field             Attributes         References (D=Defined M=Modified)
-         P_ARID            A(6)                  192D    197     198
+*RNF7030 ARTICLE           **UNDEF**             192D    197     198
       Field References for subprocedure CLOSEARTICLE1
          Field             Attributes         References (D=Defined M=Modified)
          No references in the source.
       Indicator References:
          Indicator                            References (D=Defined M=Modified)
        * * * * *   E N D   O F   C R O S S   R E F E R E N C E   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page     13
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     14
                       E x t e r n a l   R e f e r e n c e s
       Statically bound procedures:
          Procedure                            References
@@ -409,29 +519,45 @@ Number Id              Library    File       Member            Date     Time
          Field             Attributes         Defined
          No references in the source.
    * * * * *   E N D   O F   E X T E R N A L   R E F E R E N C E S   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page     14
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     15
                           M e s s a g e   S u m m a r y
  Msg id  Sv Number Message text
 *RNF7031 00      7 The name or indicator is not referenced.
+*RNF3302 20     10 The Data-Type entry is not valid; defaults to blank.
+*RNF3402 20      1 Length entry is not valid; defaults to blanks.
+*RNF3414 20     10 The Decimal-Positions entry is not valid; defaults to blanks.
+*RNF3738 20      1 The Definition-Type entry is not valid; defaults to parameter
+                   definition.
+*RNF3774 20      1 Specified passing mode is not the same on prototype and
+                   procedure interface definitions.
+*RNF3780 20      3 Entry is not blank for parameter definition; defaults to
+                   blanks.
+*RNF3438 30     11 LIKE keyword is expected but not found; definition is
+                   ignored.
+*RNF3765 30      1 Not enough parameters specified in the procedure interface.
+*RNF5410 30      9 The prototype for the call is not defined.
+*RNF7030 30     11 The name or indicator is not defined.
+*RNF7503 30     11 Expression contains an operand that is not defined.
        * * * * *   E N D   O F   M E S S A G E   S U M M A R Y   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   07/15/22 14:11:39        Page     15
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     16
                             F i n a l   S u m m a r y
   Message Totals:
     Information  (00) . . . . . . . :        7
     Warning      (10) . . . . . . . :        0
-    Error        (20) . . . . . . . :        0
-    Severe Error (30+)  . . . . . . :        0
+    Error        (20) . . . . . . . :       26
+    Severe Error (30+)  . . . . . . :       43
     ---------------------------------  -------
-    Total . . . . . . . . . . . . . :        7
+    Total . . . . . . . . . . . . . :       76
   Source Totals:
     Records . . . . . . . . . . . . :      214
     Specifications  . . . . . . . . :      108
     Data records  . . . . . . . . . :        0
     Comments  . . . . . . . . . . . :       48
          * * * * *   E N D   O F   F I N A L   S U M M A R Y   * * * * *
-Module ART300 placed in library ATUDSB0002. 00 highest severity. Created on 07/15/22 at 14:11:39.
+Compilation stopped. Severity 30 errors found in program.
           * * * * *   E N D   O F   C O M P I L A T I O N   * * * * *
   . . . .
 MSG1573 *** Messages sent by the Compilation ***
-RNS9305 Module ART300 placed in library ATUDSB0002. 00 highest severity. Created on 07/15/22 at 14:11:39.
+RNS9308 Compilation stopped. Severity 30 errors found in program.
 CPC0904 Data area RETURNCODE created in library QTEMP.
+RNS9309 Compilation failed. Module ART300 not created in library ATUDSB0002.

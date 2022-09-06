@@ -1,0 +1,88 @@
+[2022-09-06-14.41.38.0490] [*IMMED ] [0] ACHKOBJREF OBJ(ART300) TYPE(RPGLE) OBJSRC(*NO) APP(ATU)
+[2022-09-06-14.41.49.0636] [MSG0233] [0] ---> RPG_FREE/0010: executed. ->
+	Sequence nb 0010 in macro-command ARCAD_PRD/RPG_FREE was executed.
+[2022-09-06-14.42.11.0569] [*IMMED ] [0] ACHKOBJVER OBJ(ART300) TYPE(RPGLE) ENV(ATU D SB.00.02) CHKREFUPD(*NO)
+[2022-09-06-14.42.28.0749] [MSG0233] [0] ---> RPG_FREE/0020: executed. ->
+	Sequence nb 0020 in macro-command ARCAD_PRD/RPG_FREE was executed.
+[2022-09-06-14.42.50.0280] [*IMMED ] [0] ACHKVER APP(ATU) ENV(D) VERSION(SB.00.02) AUT(*YES) ACTIVE(*YES)
+[2022-09-06-14.43.01.0783] [MSG0233] [0] ---> RPG_FREE/0030: executed. ->
+	Sequence nb 0030 in macro-command ARCAD_PRD/RPG_FREE was executed.
+[2022-09-06-14.43.11.0903] [*IMMED ] [0] ALICCVTRPG ACTION(*USE)
+[2022-09-06-14.43.21.0077] [MSG3565] [0] Arcad Transformer RPG can be used 999976 more time(s) under the current license.
+	The license check for Arcad Transformer RPG has been made: 
+ For system 78F3B70: 
+ - A license is active for 999999 conversions; 
+ - 23 successful conversion(s) have already been made; 
+ - You can perform 999976 further conversions.
+[2022-09-06-14.43.22.0101] [MSG0233] [0] ---> RPG_FREE/0040: executed. ->
+	Sequence nb 0040 in macro-command ARCAD_PRD/RPG_FREE was executed.
+[2022-09-06-14.43.33.0628] [*IMMED ] [0] ACHGVAR VAR(WOBJ1) VALUE(' ')
+[2022-09-06-14.43.42.0217] [MSG0233] [0] ---> RPG_FREE/0050: executed. -> (&WOBJ1=?)
+	Sequence nb 0050 in macro-command ARCAD_PRD/RPG_FREE was executed.
+[2022-09-06-14.43.54.0202] [*IMMED ] [0] ACHGVAR VAR(WOBJ1) VALUE(ART300) TYPE(*NAME)
+[2022-09-06-14.27.22.0914] [MSG0233] [0] ---> RPG_FREE/0060: executed. ->
+	Sequence nb 0060 in macro-command ARCAD_PRD/RPG_FREE was executed.
+[2022-09-06-14.27.33.0179] [*IMMED ] [0] ACHGVAR VAR(WOBJTYPE) VALUE(' ')
+[2022-09-06-14.27.41.0081] [MSG0233] [0] ---> RPG_FREE/0070: executed. -> (&WOBJTYPE=?)
+	Sequence nb 0070 in macro-command ARCAD_PRD/RPG_FREE was executed.
+[2022-09-06-14.28.01.0055] [*IMMED ] [0] AGETRTVD CMD('ARTVOBJINF OBJ(ART300) TYPE(RPGLE) APP(ATU)') VAR(WOBJTYPE) KWD(CRTTYPE)
+[2022-09-06-14.28.58.0383] [CPD4090] [10] Printer device PRT01 not found. Output queue changed to QPRINT in library QGPL.
+	
+Cause . . . . . :   The printer device PRT01 not found.  The output queue was changed for the spooled printer file QSYSPRT in library QSYS. 
+ Recovery  . . . :   Do one of the following before you run the program again: 
+       -- Change or override the printer device name for the spooled printer file QSYSPRT in library QSYS using either the Change Printer File (CHGPRTF) command or the Override Printer File (OVRPRTF) command. 
+       -- Add or create the configuration for the printer (CRTDEVPRT command).
+[2022-09-06-14.30.33.0461] [CPD4090] [10] Printer device PRT01 not found. Output queue changed to QPRINT in library QGPL.
+	
+Cause . . . . . :   The printer device PRT01 not found.  The output queue was changed for the spooled printer file QSYSPRT in library QSYS. 
+ Recovery  . . . :   Do one of the following before you run the program again: 
+       -- Change or override the printer device name for the spooled printer file QSYSPRT in library QSYS using either the Change Printer File (CHGPRTF) command or the Override Printer File (OVRPRTF) command. 
+       -- Add or create the configuration for the printer (CRTDEVPRT command).
+[2022-09-06-14.31.14.0991] [MSG0233] [0] ---> RPG_FREE/0080: executed. ->
+	Sequence nb 0080 in macro-command ARCAD_PRD/RPG_FREE was executed.
+[2022-09-06-14.31.30.0585] [*IMMED ] [0] AIF COND((*IF *MODULE *EQ ' ')) THEN(ACHGVAR VAR(WOBJTYPE) VALUE('*NONE') TYPE(*CHAR))
+[2022-09-06-14.31.38.0120] [MSG0233] [0] ---> RPG_FREE/0090: submitted. ->
+	Sequence nb 0090 in macro-command ARCAD_PRD/RPG_FREE was submitted.
+[2022-09-06-14.31.47.0338] [*IMMED ] [0] ACHGVAR VAR(WCVTCSPEC) VALUE('*FREE')
+[2022-09-06-14.31.55.0498] [MSG0233] [0] ---> RPG_FREE/0100: executed. ->
+	Sequence nb 0100 in macro-command ARCAD_PRD/RPG_FREE was executed.
+[2022-09-06-14.32.08.0264] [*IMMED ] [0] AIF COND((*IF *MODULE *EQ '*NONE')) THEN(ACHGVAR VAR(WCVTCSPEC) VALUE('*NO') TYPE(*CHAR))
+[2022-09-06-14.32.15.0082] [MSG0233] [0] ---> RPG_FREE/0110: submitted. ->
+	Sequence nb 0110 in macro-command ARCAD_PRD/RPG_FREE was submitted.
+[2022-09-06-14.32.25.0511] [*IMMED ] [0] AIF COND((*IF 'FULLYFREE(*YES)' *NE *NONE)) THEN(AGOTO STEP(PARMS))
+[2022-09-06-14.32.15.0082] [MSG0233] [0] ---> RPG_FREE/0110: submitted. ->
+	Sequence nb 0110 in macro-command ARCAD_PRD/RPG_FREE was submitted.
+[2022-09-06-14.32.25.0511] [*IMMED ] [0] AIF COND((*IF 'FULLYFREE(*YES)' *NE *NONE)) THEN(AGOTO STEP(PARMS))
+[2022-09-06-14.33.08.0689] [*IMMED ] [0] ACHGVAR VAR(WCMD) VALUE(*EXPR) EXPR('''ACVTRPGFRE SRCFILE('' *CAT ''ATUDSB0002'' *TCAT ''/'' *CAT ''QRPGLESRC'' *TCAT '') SRCMBR('' *CAT ''ART300'' *TCAT '') SRCTYPE('' *CAT ''RPGLE'' *TCAT '') OBJTYPE('' *CAT ''*MODULE'' *TCAT '') CVTCLCSPEC('' *CAT
+	ACHGVAR VAR(WCMD) VALUE(*EXPR) EXPR('''ACVTRPGFRE SRCFILE('' *CAT ''ATUDSB0002'' *TCAT ''/'' *CAT ''QRPGLESRC'' *TCAT '') SRCMBR('' *CAT ''ART300'' *TCAT '') SRCTYPE('' *CAT ''RPGLE'' *TCAT '') OBJTYPE('' *CAT ''*MODULE'' *TCAT '') CVTCLCSPEC('' *CAT ''*FREE'' *TCAT '') CVTDCLSPEC('' *CAT ''*YES'' *TCAT '') TOSRCFILE(QTEMP/'' *CAT ''QRPGLESRC'' *TCAT '') REPLACE(*YES) BATCHQTEMP(*YES) '' *CAT ''FULLYFREE(*YES)''') TYPE(*CHAR)
+[2022-09-06-14.33.17.0831] [MSG0233] [0] ---> RPG_FREE/0180: executed. ->
+	Sequence nb 0180 in macro-command ARCAD_PRD/RPG_FREE was executed.
+[2022-09-06-14.33.35.0284] [*IMMED ] [0] AINZCURENV APP(ATU) ENV(D) VERSION(SB.00.02)
+[2022-09-06-14.35.00.0377] [CPC2198] [0] Current library changed to ATUDSB0002.
+	
+Cause . . . . . :   The current library in the library list was changed to ATUDSB0002.
+[2022-09-06-14.35.03.0262] [MSG0966] [0] Environment ATU/D/SB.00.02 initialized, active version: SB.00.02.
+	For reference environments and test environments, the version # is always *NONE. The version # given here corresponds to the active version in the environment. 
+ NOTE . . . : Only the use of the incremental mode permits you to work with different versions for these environments.
+[2022-09-06-14.35.03.0839] [MSG0233] [0] ---> RPG_FREE/0190: executed. ->
+	Sequence nb 0190 in macro-command ARCAD_PRD/RPG_FREE was executed.
+[2022-09-06-14.35.17.0592] [*IMMED ] [0] ACALLPGM PGM(QCMDEXC) PARM(('ACVTRPGFRE SRCFILE(ATUDSB0002/QRPGLESRC) SRCMBR(ART300) SRCTYPE(RPGLE) OBJTYPE(*MODULE) CVTCLCSPEC(*FREE) CVTDCLSPEC(*YES) TOSRCFILE(QTEMP/QRPGLESRC) REPLACE(*YES) BATCHQTEMP(*YES) FULLYFREE(*YES)' *CHAR 2000) (2000 *DEC
+	ACALLPGM PGM(QCMDEXC) PARM(('ACVTRPGFRE SRCFILE(ATUDSB0002/QRPGLESRC) SRCMBR(ART300) SRCTYPE(RPGLE) OBJTYPE(*MODULE) CVTCLCSPEC(*FREE) CVTDCLSPEC(*YES) TOSRCFILE(QTEMP/QRPGLESRC) REPLACE(*YES) BATCHQTEMP(*YES) FULLYFREE(*YES)' *CHAR 2000) (2000 *DEC 15 5))
+[2022-09-06-14.35.42.0427] [MSG3565] [0] Arcad Transformer RPG can be used 999976 more time(s) under the current license.
+	The license check for Arcad Transformer RPG has been made: 
+ For system 78F3B70: 
+ - A license is active for 999999 conversions; 
+ - 23 successful conversion(s) have already been made; 
+ - You can perform 999976 further conversions.
+[2022-09-06-14.36.29.0339] [CPC0904] [0] Data area RETURNCODE created in library QTEMP.
+[2022-09-06-14.40.31.0135] [*IMMED ] [0] CRTRPGMOD MODULE(QTEMP/ART300) SRCFILE(ATUDSB0002/QRPGLESRC) SRCMBR(ART300) OPTION(*XREF *NOGEN *NOSRCSTMT *NOSECLVL *SHOWCPY *EXPDDS *EXT *EVENTF) DBGVIEW(*NONE) INDENT(*NONE)
+[2022-09-06-14.41.36.0770] [MSG1320] [30] * compilation of ART300 component failed.
+	If you have specified the parameter "force processing of src without object" (EXECSRC), a part of the cross reference zone may have been loaded. 
+ What to do . . . : Check the compilation result in order to analyse the origin of the error.
+[2022-09-06-14.41.49.0875] [MSG1321] [30] End of cross reference update, 0 component(s) processed, 1 component(s) not processed.
+	
+NOTE: The number 0 includes the added/changed and deleted components. 
+ Recovery . . . : Display the MODULE/QRPGLESRC list in order to determine the components by error, analyse the origin of these errors, then re-execute the command AUPDXRF with the parameter RUNAFTABN(*YES).
+[2022-09-06-14.41.51.0224] [MSG3866] [30] Error during preparation XRef calculation for ART300: impossible to convert to Free.
+	Cause . . . : to convert to Free syntax, the ACVTRPGFRE command needs to compile the source ART300, type RPGLE (object type *MODULE, source file ATUDSB0002/QRPGLESRC), without generating the object, in order to retrieve the detailed XRefs for all fields. However, this XRef calculation terminated in error. 
+ Recovery . . : Check the job log and the spool file for compilation errors.  Review also the help of the ACVTRPGFRE command which explains common causes for errors in compilation.

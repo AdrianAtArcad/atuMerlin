@@ -1,15 +1,91 @@
-TIMESTAMP  0 20220715141139
+TIMESTAMP  0 20220906142712
 PROCESSOR  0 000 1
-FILEID     0 001 000000 053 /home/atully/atuMerlin/ATU_SRC/QRPGLESRC/ART300.RPGLE 20220715141137 0
+FILEID     0 001 000000 053 /home/atully/atuMerlin/ATU_SRC/QRPGLESRC/ART300.RPGLE 20220906142711 0
 FILEID     0 002 000008 057 /home/atully/atuMerlin/ATU_SRC/QPROTOSRC/ARTICLE.RPGLEINC 20220523145556 0
 FILEEND    0 002 000061
+ERROR      0 001 1 000011 000011 040 000011 040 RNF3302 E 20 052 The Data-Type entry is not valid; defaults to blank.
+ERROR      0 001 1 000011 000011 041 000011 041 RNF3414 E 20 061 The Decimal-Positions entry is not valid; defaults to blanks.
+ERROR      0 001 1 000011 000011 008 000011 014 RNF3438 S 30 073 LIKE keyword is expected for field  but not found; definition is ignored.
+ERROR      0 001 1 000013 000013 022 000013 023 RNF3780 E 20 064 Entry is not blank for parameter definition; defaults to blanks.
+ERROR      0 001 1 000021 000021 040 000021 040 RNF3302 E 20 052 The Data-Type entry is not valid; defaults to blank.
+ERROR      0 001 1 000021 000021 041 000021 041 RNF3414 E 20 061 The Decimal-Positions entry is not valid; defaults to blanks.
+ERROR      0 001 1 000021 000021 008 000021 014 RNF3438 S 30 080 LIKE keyword is expected for field ARTICLE but not found; definition is ignored.
+ERROR      0 001 1 000033 000033 040 000033 040 RNF3302 E 20 052 The Data-Type entry is not valid; defaults to blank.
+ERROR      0 001 1 000033 000033 041 000033 041 RNF3414 E 20 061 The Decimal-Positions entry is not valid; defaults to blanks.
+ERROR      0 001 1 000033 000033 008 000033 014 RNF3438 S 30 080 LIKE keyword is expected for field ARTICLE but not found; definition is ignored.
+ERROR      0 001 1 000045 000045 040 000045 040 RNF3302 E 20 052 The Data-Type entry is not valid; defaults to blank.
+ERROR      0 001 1 000045 000045 041 000045 041 RNF3414 E 20 061 The Decimal-Positions entry is not valid; defaults to blanks.
+ERROR      0 001 1 000045 000045 008 000045 014 RNF3438 S 30 080 LIKE keyword is expected for field ARTICLE but not found; definition is ignored.
+ERROR      0 001 1 000055 000055 040 000055 040 RNF3302 E 20 052 The Data-Type entry is not valid; defaults to blank.
+ERROR      0 001 1 000055 000055 041 000055 041 RNF3414 E 20 061 The Decimal-Positions entry is not valid; defaults to blanks.
+ERROR      0 001 1 000055 000055 008 000055 014 RNF3438 S 30 080 LIKE keyword is expected for field ARTICLE but not found; definition is ignored.
+ERROR      0 001 1 000065 000065 040 000065 040 RNF3302 E 20 052 The Data-Type entry is not valid; defaults to blank.
+ERROR      0 001 1 000065 000065 041 000065 041 RNF3414 E 20 061 The Decimal-Positions entry is not valid; defaults to blanks.
+ERROR      0 001 1 000065 000065 008 000065 014 RNF3438 S 30 080 LIKE keyword is expected for field ARTICLE but not found; definition is ignored.
+ERROR      0 001 1 000075 000075 040 000075 040 RNF3302 E 20 052 The Data-Type entry is not valid; defaults to blank.
+ERROR      0 001 1 000075 000075 041 000075 041 RNF3414 E 20 061 The Decimal-Positions entry is not valid; defaults to blanks.
+ERROR      0 001 1 000075 000075 008 000075 014 RNF3438 S 30 080 LIKE keyword is expected for field ARTICLE but not found; definition is ignored.
+ERROR      0 001 1 000085 000085 040 000085 040 RNF3302 E 20 052 The Data-Type entry is not valid; defaults to blank.
+ERROR      0 001 1 000085 000085 041 000085 041 RNF3414 E 20 061 The Decimal-Positions entry is not valid; defaults to blanks.
+ERROR      0 001 1 000085 000085 008 000085 014 RNF3438 S 30 080 LIKE keyword is expected for field ARTICLE but not found; definition is ignored.
+ERROR      0 001 1 000095 000095 040 000095 040 RNF3302 E 20 052 The Data-Type entry is not valid; defaults to blank.
+ERROR      0 001 1 000095 000095 041 000095 041 RNF3414 E 20 061 The Decimal-Positions entry is not valid; defaults to blanks.
+ERROR      0 001 1 000095 000095 008 000095 014 RNF3438 S 30 080 LIKE keyword is expected for field ARTICLE but not found; definition is ignored.
+ERROR      0 001 1 000106 000106 040 000106 040 RNF3302 E 20 052 The Data-Type entry is not valid; defaults to blank.
+ERROR      0 001 1 000106 000106 041 000106 041 RNF3414 E 20 061 The Decimal-Positions entry is not valid; defaults to blanks.
+ERROR      0 001 1 000106 000106 008 000106 014 RNF3438 S 30 080 LIKE keyword is expected for field ARTICLE but not found; definition is ignored.
+ERROR      0 001 1 000116 000116 024 000116 025 RNF3738 E 20 073 The Definition-Type entry is not valid; defaults to parameter definition.
+ERROR      0 001 1 000116 000116 022 000116 023 RNF3780 E 20 064 Entry is not blank for parameter definition; defaults to blanks.
+ERROR      0 001 1 000116 000116 026 000116 032 RNF3780 E 20 064 Entry is not blank for parameter definition; defaults to blanks.
+ERROR      0 001 1 000116 000116 033 000116 039 RNF3402 E 20 046 Length entry is not valid; defaults to blanks.
+ERROR      0 001 1 000116 000116 008 000116 014 RNF3438 S 30 080 LIKE keyword is expected for field ARTICLE but not found; definition is ignored.
+ERROR      0 001 1 000116 000116 008 000116 014 RNF3774 E 20 088 Specified passing mode is not the same on prototype and procedure interface definitions.
+ERROR      0 001 1 000116 000116 008 000116 014 RNF3765 S 30 059 Not enough parameters specified in the procedure interface.
 ERROR      0 001 1 000006 000006 007 000006 014 RNF7031 I 00 047 The name or indicator ARCREA is not referenced.
 ERROR      0 001 1 000006 000006 007 000006 014 RNF7031 I 00 049 The name or indicator ARCUSQTY is not referenced.
 ERROR      0 001 1 000006 000006 007 000006 014 RNF7031 I 00 046 The name or indicator ARMOD is not referenced.
 ERROR      0 001 1 000006 000006 007 000006 014 RNF7031 I 00 048 The name or indicator ARMODID is not referenced.
 ERROR      0 001 1 000006 000006 007 000006 014 RNF7031 I 00 049 The name or indicator ARPURQTY is not referenced.
+ERROR      0 001 1 000021 000021 008 000021 014 RNF7030 S 30 045 The name or indicator ARTICLE is not defined.
+ERROR      0 001 1 000033 000033 008 000033 014 RNF7030 S 30 045 The name or indicator ARTICLE is not defined.
+ERROR      0 001 1 000045 000045 008 000045 014 RNF7030 S 30 045 The name or indicator ARTICLE is not defined.
+ERROR      0 001 1 000055 000055 008 000055 014 RNF7030 S 30 045 The name or indicator ARTICLE is not defined.
+ERROR      0 001 1 000065 000065 008 000065 014 RNF7030 S 30 045 The name or indicator ARTICLE is not defined.
+ERROR      0 001 1 000075 000075 008 000075 014 RNF7030 S 30 045 The name or indicator ARTICLE is not defined.
+ERROR      0 001 1 000085 000085 008 000085 014 RNF7030 S 30 045 The name or indicator ARTICLE is not defined.
+ERROR      0 001 1 000095 000095 008 000095 014 RNF7030 S 30 045 The name or indicator ARTICLE is not defined.
+ERROR      0 001 1 000106 000106 008 000106 014 RNF7030 S 30 045 The name or indicator ARTICLE is not defined.
+ERROR      0 001 1 000116 000116 008 000116 014 RNF7030 S 30 045 The name or indicator ARTICLE is not defined.
+ERROR      0 001 1 000016 000016 050 000016 054 RNF7030 S 30 043 The name or indicator ARTID is not defined.
 ERROR      0 002 1 000056 000056 007 000056 016 RNF7031 I 00 051 The name or indicator GETARTINFO is not referenced.
 ERROR      0 002 1 000051 000051 008 000051 017 RNF7031 I 00 051 The name or indicator SLTARTICLE is not referenced.
+ERROR      0 001 1 000023 000023 024 000023 030 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000023 000023 001 000023 000 RNF5410 S 30 042 The prototype for the call is not defined.
+ERROR      0 001 1 000035 000035 024 000035 030 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000035 000035 001 000035 000 RNF5410 S 30 042 The prototype for the call is not defined.
+ERROR      0 001 1 000047 000047 024 000047 030 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000047 000047 001 000047 000 RNF5410 S 30 042 The prototype for the call is not defined.
+ERROR      0 001 1 000057 000057 024 000057 030 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000057 000057 001 000057 000 RNF5410 S 30 042 The prototype for the call is not defined.
+ERROR      0 001 1 000067 000067 024 000067 030 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000067 000067 001 000067 000 RNF5410 S 30 042 The prototype for the call is not defined.
+ERROR      0 001 1 000077 000077 024 000077 030 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000077 000077 001 000077 000 RNF5410 S 30 042 The prototype for the call is not defined.
+ERROR      0 001 1 000087 000087 024 000087 030 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000087 000087 001 000087 000 RNF5410 S 30 042 The prototype for the call is not defined.
+ERROR      0 001 1 000097 000097 024 000097 030 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000097 000097 001 000097 000 RNF5410 S 30 042 The prototype for the call is not defined.
+ERROR      0 001 1 000108 000108 024 000108 030 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000108 000108 001 000108 000 RNF5410 S 30 042 The prototype for the call is not defined.
+ERROR      0 001 1 000121 000121 013 000121 019 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 1 000122 000122 012 000122 016 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 0 000000 000000 000 000000 000 RNS9308 T 50 057 Compilation stopped. Severity 30 errors found in program.
 FILEEND    0 001 000138
-ERROR      0 001 1 000000 000000 000 000000 000 CST0124 I 05 048 Attributes of the executed compilation command :
-ERROR      0 001 1 000000 000000 000 000000 000 MSG0000 I 05 085  - CRTRPGMOD   MODULE(ATUDSB0002/ART300) SRCFILE(ATUDSB0002/QRPGLESRC) OPTION(*EVENTF)
+ERROR      0 001 1 000000 000000 000 000000 000 MSG3666 I 01 044 *** Messages sent by the Compilation job ***
+ERROR      0 001 1 000000 000000 000 000000 000 MSG2796 I 01 055 Compilation of ART300 (RPGLE) in version ATU D SB.00.02
+ERROR      0 001 1 000000 000000 000 000000 000 CPD4090 W 11 079 Printer device PRT01 not found. Output queue changed to QPRINT in library QGPL.
+ERROR      0 001 1 000000 000000 000 000000 000 MSG1573 I 01 040 *** Messages sent by the Compilation ***
+ERROR      0 001 1 000000 000000 000 000000 000 RNS9308 T 51 057 Compilation stopped. Severity 30 errors found in program.
+ERROR      0 001 1 000000 000000 000 000000 000 CPC0904 I 01 046 Data area RETURNCODE created in library QTEMP.
+ERROR      0 001 1 000000 000000 000 000000 000 RNS9309 T 51 068 Compilation failed. Module ART300 not created in library ATUDSB0002.
+ERROR      0 001 1 000000 000000 000 000000 000 MSG2235 T 41 046 * Object ATUDSB0002/ART300 compilation failure

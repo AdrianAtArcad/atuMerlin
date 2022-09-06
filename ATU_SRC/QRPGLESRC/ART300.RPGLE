@@ -10,7 +10,7 @@
      d chainARTICLE1   pr
      D article                         6A    value
 
-     D artId          S                   LIKE(ARID)
+     D artId          S                     LIKE(ARID)
 
      C     kf            klist
      C                   KFLD                    artId
