@@ -2,3 +2,8 @@
 .logs/*.splf
 .logs/*.log
 .logs/joblog.json
+.logs/QPJOBLOG_2.splf
+.logs/output.log
+.logs/joblog.json
+.logs/ART300_1.splf
+.evfevent/ART300.evfevent
