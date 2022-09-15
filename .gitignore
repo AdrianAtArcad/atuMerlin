@@ -1,0 +1,4 @@
+.evfevent/ARTICLE.evfevent
+.logs/*.splf
+.logs/*.log
+.logs/joblog.json
