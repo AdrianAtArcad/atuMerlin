@@ -10,10 +10,10 @@
      d chainCOUNTRY    pr
      D P_COID                         2A    value
 
-     D K_COID          S                   LIKE(COID)
+     D keyid          S                   LIKE(COID)
 
      C     kf            klist
-     C                   KFLD                    K_COID
+     C                   KFLD                    keyid
 
       *=============================================
      PGetCountryName   B                     export
@@ -55,7 +55,7 @@
           open COUNTRY;
         endif;
          if P_COID <> COID;
-           K_COID =  P_COID;
+           keyid =  P_COID;
            clear *all FCOUN;
            chain kf COUNTRY;
          endif;

@@ -1,7 +1,7 @@
 Attributes of the executed compilation command :
   -  CRTRPGMOD   MODULE(ATUDSB0002/ART300) SRCFILE(ATUDSB0002/QRPGLESRC) OPTION(*EVEN
      TF)
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      2
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page      2
   Command  . . . . . . . . . . . . :   CRTRPGMOD
     Issued by  . . . . . . . . . . :     ATULLY
   Module . . . . . . . . . . . . . :   ART300
@@ -12,7 +12,7 @@ Attributes of the executed compilation command :
     Library  . . . . . . . . . . . :     ATUDSB0002
     CCSID  . . . . . . . . . . . . :     297
   Text 'description' . . . . . . . :   Function Article
-  Last Change  . . . . . . . . . . :   09/06/22  14:27:11
+  Last Change  . . . . . . . . . . :   09/20/22  15:09:04
   Generation severity level  . . . :   10
   Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY
                                        *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT
@@ -40,7 +40,7 @@ Attributes of the executed compilation command :
   Generate program interface . . . :   *NO
   Include directory  . . . . . . . :
   Preprocessor options . . . . . . :   *NONE
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      3
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page      3
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
                           S o u r c e   L i s t i n g
@@ -93,7 +93,7 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
     36+ *=============================================                                                           000000    1002800
     37+ * Get MINIMUM STOCK                                                                                      000000    1002900
     38+ *=============================================                                                           000000    1003000
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      4
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page      4
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
     39+DGetArtMinStock   PR             5P 0                                                                     000000    1003100
@@ -150,7 +150,7 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
     77=I                             A    1    6  ARID                            ARTICLE ID                               2000002
     78=I                             A    7   56  ARDESC                          ARTICLE DESCRPTION                       2000003
     79=I                             P   57   60 2ARSALEPR                        REF SALE PRICE                           2000004
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      5
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page      5
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
     80=I                             P   61   64 2ARWHSPR                         STOCK PRICE                              2000005
@@ -197,7 +197,7 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
 *RNF3438 30    109 003300  LIKE keyword is expected for field ARTICLE but not found;
                            definition is ignored.
    111     chainARTICLE1(article                                                                                 000000     003500
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      6
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page      6
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
    112           );                                                                                              000000     003600
@@ -246,7 +246,7 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
 *RNF3302 20 a      006500  The Data-Type entry is not valid; defaults to blank.
 *RNF3414 20 b      006500  The Decimal-Positions entry is not valid; defaults to
                            blanks.
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      7
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page      7
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
    142  /free                                                                                                    000000     006600
@@ -293,7 +293,7 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
    169 P ExistArt        B                     export                                                            000000     009300
    170 D ExistArt        PI              n                                                                       000000     009400
    171 D article                         6A    value                                                             000000     009500
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      8
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page      8
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
 ======>                                  ab
@@ -343,7 +343,7 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
 *RNF3774 20    192 011600  Specified passing mode is not the same on prototype and
                            procedure interface definitions.
 *RNF3765 30    192 011600  Not enough parameters specified in the procedure interface.
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page      9
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page      9
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
    194    if not %open(ARTICLE1);                                                                      B01       000000     011800
@@ -368,7 +368,7 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
    213                                                                                                           000000     013700
    214                                                                                                           000000     013800
        * * * * *   E N D   O F   S O U R C E   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     10
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page     10
           A d d i t i o n a l   D i a g n o s t i c   M e s s a g e s
  Msg id  Sv Number Seq     Message text
 *RNF7030 30     97 002100  The name or indicator ARTICLE is not defined.
@@ -408,7 +408,7 @@ Line   Src  RPG name   <-------- External name -------> CCSID  <- Last change ->
 Number Id              Library    File       Member            Date     Time
      8    1 ARTICLE    ATU_SRC    QPROTOSRC  ARTICLE      297  05/23/22 14:55:56
          * * * * *   E N D   O F   / C O P Y   M E M B E R S   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     11
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page     11
                     K e y   F i e l d   I n f o r m a t i o n
          File           Internal    External
            Record       field name  field name  Attributes
@@ -416,7 +416,7 @@ Number Id              Library    File       Member            Date     Time
            FARTI
                         ARID                    CHAR        6
  * * * * *   E N D   O F   K E Y   F I E L D   I N F O R M A T I O N   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     12
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page     12
                           C r o s s   R e f e r e n c e
       File and Record References:
          File              Device             References (D=Defined)
@@ -471,7 +471,7 @@ Number Id              Library    File       Member            Date     Time
                            PROTOTYPE
       Field References for subprocedure GETARTDESC
          Field             Attributes         References (D=Defined M=Modified)
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     13
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page     13
 *RNF7030 ARTICLE           **UNDEF**              97D     99
       Field References for subprocedure GETARTREFSALPRICE
          Field             Attributes         References (D=Defined M=Modified)
@@ -506,7 +506,7 @@ Number Id              Library    File       Member            Date     Time
       Indicator References:
          Indicator                            References (D=Defined M=Modified)
        * * * * *   E N D   O F   C R O S S   R E F E R E N C E   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     14
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page     14
                       E x t e r n a l   R e f e r e n c e s
       Statically bound procedures:
          Procedure                            References
@@ -519,7 +519,7 @@ Number Id              Library    File       Member            Date     Time
          Field             Attributes         Defined
          No references in the source.
    * * * * *   E N D   O F   E X T E R N A L   R E F E R E N C E S   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     15
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page     15
                           M e s s a g e   S u m m a r y
  Msg id  Sv Number Message text
 *RNF7031 00      7 The name or indicator is not referenced.
@@ -539,7 +539,7 @@ Number Id              Library    File       Member            Date     Time
 *RNF7030 30     11 The name or indicator is not defined.
 *RNF7503 30     11 Expression contains an operand that is not defined.
        * * * * *   E N D   O F   M E S S A G E   S U M M A R Y   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/06/22 14:27:12        Page     16
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0002/ART300        MONZAXIB   09/20/22 15:09:06        Page     16
                             F i n a l   S u m m a r y
   Message Totals:
     Information  (00) . . . . . . . :        7

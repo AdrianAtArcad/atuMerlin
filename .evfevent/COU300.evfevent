@@ -1,0 +1,26 @@
+TIMESTAMP  0 20220915164546
+PROCESSOR  0 000 1
+FILEID     0 001 000000 053 /home/atully/atuMerlin/ATU_SRC/QRPGLESRC/COU300.RPGLE 20220915164544 0
+FILEID     0 002 000008 057 /home/atully/atuMerlin/ATU_SRC/QPROTOSRC/COUNTRY.RPGLEINC 20220523145556 0
+FILEEND    0 002 000024
+ERROR      0 001 1 000013 000013 043 000013 043 RNF3780 E 20 064 Entry is not blank for parameter definition; defaults to blanks.
+ERROR      0 001 1 000013 000013 022 000013 023 RNF3780 E 20 064 Entry is not blank for parameter definition; defaults to blanks.
+ERROR      0 001 1 000013 000013 044 000013 046 RNF3308 E 20 050 Keyword name is not valid; the keyword is ignored.
+ERROR      0 001 1 000013 000013 008 000013 012 RNF3438 S 30 073 LIKE keyword is expected for field  but not found; definition is ignored.
+ERROR      0 001 1 000052 000052 008 000052 013 RNF3765 S 30 059 Not enough parameters specified in the procedure interface.
+ERROR      0 001 1 000016 000016 050 000016 054 RNF7030 S 30 043 The name or indicator KEYID is not defined.
+ERROR      0 002 1 000019 000019 008 000019 017 RNF7031 I 00 051 The name or indicator SLTCOUNTRY is not referenced.
+ERROR      0 001 1 000023 000023 010 000023 021 RNF5406 S 30 075 The call passed fewer parameters than the prototype indicates are required.
+ERROR      0 001 1 000033 000033 010 000033 021 RNF5406 S 30 075 The call passed fewer parameters than the prototype indicates are required.
+ERROR      0 001 1 000044 000044 010 000044 021 RNF5406 S 30 075 The call passed fewer parameters than the prototype indicates are required.
+ERROR      0 001 1 000058 000058 012 000058 016 RNF7503 S 30 051 Expression contains an operand that is not defined.
+ERROR      0 001 0 000000 000000 000 000000 000 RNS9308 T 50 057 Compilation stopped. Severity 30 errors found in program.
+FILEEND    0 001 000074
+ERROR      0 001 1 000000 000000 000 000000 000 MSG3666 I 01 044 *** Messages sent by the Compilation job ***
+ERROR      0 001 1 000000 000000 000 000000 000 MSG2796 I 01 055 Compilation of COU300 (RPGLE) in version ATU D SB.00.02
+ERROR      0 001 1 000000 000000 000 000000 000 CPD4090 W 11 079 Printer device PRT01 not found. Output queue changed to QPRINT in library QGPL.
+ERROR      0 001 1 000000 000000 000 000000 000 MSG1573 I 01 040 *** Messages sent by the Compilation ***
+ERROR      0 001 1 000000 000000 000 000000 000 RNS9308 T 51 057 Compilation stopped. Severity 30 errors found in program.
+ERROR      0 001 1 000000 000000 000 000000 000 CPC0904 I 01 046 Data area RETURNCODE created in library QTEMP.
+ERROR      0 001 1 000000 000000 000 000000 000 RNS9309 T 51 068 Compilation failed. Module COU300 not created in library ATUDSB0002.
+ERROR      0 001 1 000000 000000 000 000000 000 MSG2235 T 41 046 * Object ATUDSB0002/COU300 compilation failure
