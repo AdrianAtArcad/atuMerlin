@@ -55,7 +55,7 @@
      d crt             c                   'CRT'
      d upd             c                   'UPD'
      d prp             c                   'PRP'
-     d lod             c                   'lod'
+     d lod             c                   'LOD'
      d dsp             c                   'dsp'
      d key             c                   'key'
      d chk             c                   'chk'
