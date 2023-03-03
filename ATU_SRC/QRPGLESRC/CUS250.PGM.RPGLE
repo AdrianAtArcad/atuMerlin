@@ -33,7 +33,7 @@ Dcl-S step01          Char(3)         inz(prp);
 Dcl-S step02          Char(3)         inz(prp);
 dcl-s id              like(cuid);
 
-Dcl-C prp             'prp';
+Dcl-C prp             'PRP';
 Dcl-C lod             'lod';
 Dcl-C dsp             'dsp';
 Dcl-C key             'key';
