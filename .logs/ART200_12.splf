@@ -1,0 +1,1189 @@
+Attributes of the executed compilation command :
+  -  CRTSQLRPGI OBJ(ATUDSB0005/ART200) SRCFILE(ATU_SRC/QRPGLESRC) COMPILEOPT(' BNDDIR
+     ( QTEMP/ARCBNDDIR) ACTGRP(QILE) DFTACTGRP(*NO)') OBJTYPE(*PGM) REPLACE(*YES) TGT
+     RLS(V7R4M0) OPTION(*EVENTF)
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page      2
+  Command  . . . . . . . . . . . . :   CRTBNDRPG
+    Issued by  . . . . . . . . . . :     ATULLY
+  Program  . . . . . . . . . . . . :   ART200
+    Library  . . . . . . . . . . . :     ATUDSB0005
+  Text 'description' . . . . . . . :   *SRCMBRTXT
+  Source Member  . . . . . . . . . :   ART200
+  Source File  . . . . . . . . . . :   QSQLTEMP1
+    Library  . . . . . . . . . . . :     QTEMP
+    CCSID  . . . . . . . . . . . . :     297
+  Text 'description' . . . . . . . :   Work with article
+  Last Change  . . . . . . . . . . :   03/07/23  15:32:23
+  Generation severity level  . . . :   10
+  Default activation group . . . . :   *NO
+  Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY
+                                       *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT
+                                       *DEBUGIO   *UNREF     *EVENTF
+  Debugging views  . . . . . . . . :   *STMT
+  Debug encryption key . . . . . . :   *NONE
+  Output . . . . . . . . . . . . . :   *PRINT
+  Optimization level . . . . . . . :   *NONE
+  Source listing indentation . . . :   *NONE
+  Type conversion options  . . . . :   *NONE
+  Sort sequence  . . . . . . . . . :   *JOB
+  Language identifier  . . . . . . :   *JOB
+  Replace program  . . . . . . . . :   *YES
+  User profile . . . . . . . . . . :   *USER
+  Authority  . . . . . . . . . . . :   *LIBCRTAUT
+  Truncate numeric . . . . . . . . :   *YES
+  Fix numeric  . . . . . . . . . . :   *NONE
+  Target release . . . . . . . . . :   V7R4M0
+  Allow null values  . . . . . . . :   *NO
+  Storage model . . .  . . . . . . :   *SNGLVL
+  Binding directory  . . . . . . . :   ARCBNDDIR
+    Library  . . . . . . . . . . . :     QTEMP
+  Activation group . . . . . . . . :   QILE
+  Define condition names . . . . . :   *NONE
+  Enable performance collection  . :   *PEP
+  Profiling data . . . . . . . . . :   *NOCOL
+  Licensed Internal Code options . :
+  Generate program interface . . . :   *NO
+  Include directory  . . . . . . . :
+  Preprocessor options . . . . . . :   *NONE
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page      3
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+                          S o u r c e   L i s t i n g
+     1                                                                                                           161025     000100
+     2 h dftactgrp(*no) bnddir('SAMPLE')                                                                         161025     000200
+     3                                                                                                           161025     000300
+        *--------------------------------------------------------------------*
+        * Compiler Options in Effect:                                        *
+        *--------------------------------------------------------------------*
+        *  Text 'description' . . . . . . . :   Work with article            *
+        *  Generation severity level  . . . :   10                           *
+        *  Default activation group . . . . :   *NO                          *
+        *  Compiler options . . . . . . . . :   *XREF      *GEN              *
+        *                                       *NOSECLVL  *SHOWCPY          *
+        *                                       *EXPDDS    *EXT              *
+        *                                       *NOSHOWSKP *NOSRCSTMT        *
+        *                                       *DEBUGIO   *UNREF            *
+        *                                       *EVENTF                      *
+        *  Optimization level . . . . . . . :   *NONE                        *
+        *  Source listing indentation . . . :   *NONE                        *
+        *  Type conversion options  . . . . :   *NONE                        *
+        *  Sort sequence  . . . . . . . . . :   *JOB                         *
+        *  Language identifier  . . . . . . :   *JOB                         *
+        *  User profile . . . . . . . . . . :   *USER                        *
+        *  Authority  . . . . . . . . . . . :   *LIBCRTAUT                   *
+        *  Truncate numeric . . . . . . . . :   *YES                         *
+        *  Fix numeric  . . . . . . . . . . :   *NONE                        *
+        *  Allow null values  . . . . . . . :   *NO                          *
+        *  Storage model . . .  . . . . . . :   *SNGLVL                      *
+        *  Binding directory from Command . :   ARCBNDDIR                    *
+        *    Library  . . . . . . . . . . . :     QTEMP                      *
+        *  Binding directory from Source  . :   SAMPLE                       *
+        *    Library  . . . . . . . . . . . :     *LIBL                      *
+        *  Activation group . . . . . . . . :   QILE                         *
+        *  Enable performance collection  . :   *PEP                         *
+        *  Profiling data . . . . . . . . . :   *NOCOL                       *
+        *  Generate program interface . . . :   *NO                          *
+        *  REQUIRE PROTOTYPE FOR EXPORT . . :   *NO                          *
+        *--------------------------------------------------------------------*
+     4 farticle2  if   e           k disk    rename(farti:farti2)                                                161103     000400
+        *--------------------------------------------------------------------------------------------*
+        *                               RPG name         External name                               *
+        * File name. . . . . . . . . :  ARTICLE2         ATUDSB0005/ARTICLE2                         *
+        * Record format(s) . . . . . :  FARTI2           FARTI                                       *
+        *--------------------------------------------------------------------------------------------*
+     5 farticle1  uf a e           k disk                                                                        161103     000401
+        *--------------------------------------------------------------------------------------------*
+        *                               RPG name         External name                               *
+        * File name. . . . . . . . . :  ARTICLE1         ATUDSB0005/ARTICLE1                         *
+        * Record format(s) . . . . . :  FARTI            FARTI                                       *
+        *--------------------------------------------------------------------------------------------*
+     6 fart200d   cf   e             workstn                                                                     161024     000500
+     7 F                                     indds(indds)                                                        161024     000600
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page      4
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+     8 F                                     sfile(sfl01:rrn01)                                                  161024     000700
+     9 F                                     Infds(Info)                                                         161024     000800
+    10                                                                                                           161024     000900
+    11  *copy qprotosrc,familly                                                                                  161025     001000
+    12  *=============================================                                                           161025     000100
+    13  * Get FAMILLY DESCRIPTION                                                                                161025     000200
+    14  *=============================================                                                           161025     000300
+        *--------------------------------------------------------------------------------------------*
+        *                               RPG name         External name                               *
+        * File name. . . . . . . . . :  ART200D          ATU_OBJ/ART200D                             *
+        * Record format(s) . . . . . :  SFL01            SFL01                                       *
+        *                               CTL01            CTL01                                       *
+        *                               KEY01            KEY01                                       *
+        *                               FMT02            FMT02                                       *
+        *                               FMT03            FMT03                                       *
+        *--------------------------------------------------------------------------------------------*
+    15 DGetArtFamDesc    PR            50                                                                        161025     000400
+    16 D FAID                           3     value                                                              161025     000500
+    17  *=============================================                                                           161025     000600
+    18  * Ckeck if familly exist                                                                                 161025     000700
+    19  *=============================================                                                           161025     000800
+    20 D ExistArtFam     PR              n                                                                       161025     000900
+    21 D P_FAID                         3     value                                                              161025     001000
+    22  *=============================================                                                           161025     001100
+    23  * Get DELETE CODE X=DELETED                                                                              161025     001200
+    24  *=============================================                                                           161025     001300
+    25 DIsArtFamDeleted  PR              n                                                                       161025     001400
+    26 D FAID                           3     value                                                              161025     001500
+    27  *=============================================                                                           161025     001600
+    28  * Close FAMILLY                                                                                          161025     001700
+    29  *=============================================                                                           161025     001800
+    30 D CloseFAMILLY    PR                                                                                      161025     001900
+    31  *=============================================                                                           161025     002000
+    32  * Select a Failly code                                                                                   161025     002100
+    33  *=============================================                                                           161025     002200
+    34 d SltArtFam       pr             3                                                                        161025     002300
+    35 d pcod                           3                                                                        161025     002400
+    36                                                                                                           161025     002500
+    37                                                                                                           161025     001001
+    38 d providers       pr                  extpgm('ART201')                                                    161025     001002
+    39 d  id                                 like(arid)                                                          161025     001003
+    40                                                                                                           161025     001100
+    41 D indds           ds                                                                                      161024     001200
+    42 D  help                   1      1n                                                                       161024     001300
+    43 D  exit                   3      3n                                                                       161024     001400
+    44 D  prompt                 4      4n                                                                       161024     001500
+    45 D  refresh                5      5n                                                                       161024     001600
+    46 D  Create                 6      6n                                                                       161027     001601
+    47 D  cancel                12     12n                                                                       161024     001700
+    48 D  morekeys              24     24n                                                                       161024     001800
+    49 D  pagedown              25     25n                                                                       161024     001900
+    50 D  sflclr                30     30n                                                                       161024     002000
+    51 D  sfldsp                31     31n                                                                       161024     002100
+    52 D  sfldspctl             32     32n                                                                       161024     002200
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page      5
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+    53 D  sflnxtchg             33     33n                                                                       161024     002300
+    54 D  dspatr_ri             34     34n                                                                       161024     002400
+    55 D  sflmsg                35     35n                                                                       161024     002500
+    56 D  errFamilly            40     40n                                                                       161025     002600
+    57 D  errDesc               41     41n                                                                       161025     002700
+    58 D  sflend                80     80n                                                                       161024     002800
+    59                                                                                                           161024     002900
+    60 D info            ds                                                                                      161024     003000
+    61 D  lrrn                 378    379i 0                                                                     161024     003100
+    62                                                                                                           161024     003200
+    63 D rrn01           s              5i 0                                                                     161024     003300
+    64 D rrs01           s              5i 0                                                                     161024     003400
+    65 D err01           s               n                                                                       161024     003500
+    66                                                                                                           161024     003600
+    67 D panel           S              3i 0 INZ(1)                                                              161024     003700
+    68 D step01          S              3    inz(prp)                                                            161024     003800
+    69 D step02          S              3    inz(prp)                                                            161024     003900
+    70 D step03          S              3    inz(prp)                                                            161024     004000
+    71 d savId           s                   like(arid)                                                          161024     004100
+    72 d savDesc         s                   like(ardesc)                                                        161103     004101
+    73 d NewId           s              6  0                                                                     161027     004102
+    74 d User            s             10    inz(*user)                                                          161025     004103
+    75 d count           s              3i 0                                                                     161024     004200
+    76 d mode            s              3                                                                        161024     004300
+    77                                                                                                           161024     004400
+    78 d crt             c                   'CRT'                                                               161024     004500
+    79 d upd             c                   'UPD'                                                               161024     004600
+    80 d prp             c                   'prp'                                                               161024     004700
+    81 d lod             c                   'lod'                                                               161024     004800
+    82 d dsp             c                   'dsp'                                                               161024     004900
+    83 d key             c                   'key'                                                               161024     005000
+    84 d chk             c                   'chk'                                                               161024     005100
+    85 d act             c                   'act'                                                               161024     005400
+    86  /free                                                                                                    161103     005401
+    87                                                                                                           161024     005500
+    88   /SET CCSID(*CHAR:*JOBRUNMIX)                                                                                       005500
+    89   // SQL COMMUNICATION AREA                                                //SQL                                     005500
+    90   DCL-DS SQLCA;                                                            //SQL                                     005500
+    91     SQLCAID CHAR(8) INZ(X'0000000000000000');                              //SQL                                     005500
+    92      SQLAID CHAR(8) OVERLAY(SQLCAID);                                      //SQL                                     005500
+    93     SQLCABC INT(10);                                                       //SQL                                     005500
+    94      SQLABC BINDEC(9) OVERLAY(SQLCABC);                                    //SQL                                     005500
+    95     SQLCODE INT(10);                                                       //SQL                                     005500
+    96      SQLCOD BINDEC(9) OVERLAY(SQLCODE);                                    //SQL                                     005500
+    97     SQLERRML INT(5);                                                       //SQL                                     005500
+    98      SQLERL BINDEC(4) OVERLAY(SQLERRML);                                   //SQL                                     005500
+    99     SQLERRMC CHAR(70);                                                     //SQL                                     005500
+   100      SQLERM CHAR(70) OVERLAY(SQLERRMC);                                    //SQL                                     005500
+   101     SQLERRP CHAR(8);                                                       //SQL                                     005500
+   102      SQLERP CHAR(8) OVERLAY(SQLERRP);                                      //SQL                                     005500
+   103     SQLERR CHAR(24);                                                       //SQL                                     005500
+   104      SQLER1 BINDEC(9) OVERLAY(SQLERR:*NEXT);                               //SQL                                     005500
+   105      SQLER2 BINDEC(9) OVERLAY(SQLERR:*NEXT);                               //SQL                                     005500
+   106      SQLER3 BINDEC(9) OVERLAY(SQLERR:*NEXT);                               //SQL                                     005500
+   107      SQLER4 BINDEC(9) OVERLAY(SQLERR:*NEXT);                               //SQL                                     005500
+   108      SQLER5 BINDEC(9) OVERLAY(SQLERR:*NEXT);                               //SQL                                     005500
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page      6
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   109      SQLER6 BINDEC(9) OVERLAY(SQLERR:*NEXT);                               //SQL                                     005500
+   110      SQLERRD INT(10) DIM(6) OVERLAY(SQLERR);                               //SQL                                     005500
+   111     SQLWRN CHAR(11);                                                       //SQL                                     005500
+   112      SQLWN0 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     005500
+   113      SQLWN1 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     005500
+   114      SQLWN2 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     005500
+   115      SQLWN3 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     005500
+   116      SQLWN4 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     005500
+   117      SQLWN5 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     005500
+   118      SQLWN6 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     005500
+   119      SQLWN7 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     005500
+   120      SQLWN8 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     005500
+   121      SQLWN9 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     005500
+   122      SQLWNA CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     005500
+   123      SQLWARN CHAR(1) DIM(11) OVERLAY(SQLWRN);                              //SQL                                     005500
+   124     SQLSTATE CHAR(5);                                                      //SQL                                     005500
+   125      SQLSTT CHAR(5) OVERLAY(SQLSTATE);                                     //SQL                                     005500
+   126   END-DS SQLCA;                                                            //SQL                                     005500
+   127   DCL-PR SQLROUTE_CALL EXTPGM(SQLROUTE);                                   //SQL                                     005500
+   128     CA LIKEDS(SQLCA);                                                      //SQL                                     005500
+   129     *N BINDEC(4) OPTIONS(*NOPASS);                                         //SQL                                     005500
+   130     *N CHAR(1) OPTIONS(*NOPASS);                                           //SQL                                     005500
+   131   END-PR SQLROUTE_CALL;                                                    //SQL                                     005500
+   132   DCL-PR SQLOPEN_CALL EXTPGM(SQLOPEN);                                     //SQL                                     005500
+   133     CA LIKEDS(SQLCA);                                                      //SQL                                     005500
+   134     *N BINDEC(4);                                                          //SQL                                     005500
+   135   END-PR SQLOPEN_CALL;                                                     //SQL                                     005500
+   136   DCL-PR SQLCLSE_CALL EXTPGM(SQLCLSE);                                     //SQL                                     005500
+   137     CA LIKEDS(SQLCA);                                                      //SQL                                     005500
+   138     *N BINDEC(4);                                                          //SQL                                     005500
+   139   END-PR SQLCLSE_CALL;                                                     //SQL                                     005500
+   140   DCL-PR SQLCMIT_CALL EXTPGM(SQLCMIT);                                     //SQL                                     005500
+   141     CA LIKEDS(SQLCA);                                                      //SQL                                     005500
+   142     *N BINDEC(4);                                                          //SQL                                     005500
+   143   END-PR SQLCMIT_CALL;                                                     //SQL                                     005500
+   144   /RESTORE CCSID(*CHAR)                                                                                              005500
+   145   DCL-C SQLROUTE CONST('QSYS/QSQROUTE');                                   //SQL                                     005500
+   146   DCL-C SQLOPEN CONST('QSYS/QSQROUTE');                                    //SQL                                     005500
+   147   DCL-C SQLCLSE CONST('QSYS/QSQLCLSE');                                    //SQL                                     005500
+   148   DCL-C SQLCMIT CONST('QSYS/QSQLCMIT');                                    //SQL                                     005500
+   149   DCL-C SQFRD CONST(2);                                                    //SQL                                     005500
+   150   DCL-C SQFCRT CONST(8);                                                   //SQL                                     005500
+   151   DCL-C SQFOVR CONST(16);                                                  //SQL                                     005500
+   152   DCL-C SQFAPP CONST(32);                                                  //SQL                                     005500
+   153 D                 DS                                                       SELECT                                    027700
+   154 D  SQL_00000              1      2B 0 INZ(128)                             length of header                          027700
+   155 D  SQL_00001              3      4B 0 INZ(4)                               statement number                          027700
+   156 D  SQL_00002              5      8U 0 INZ(0)                               invocation mark                           027700
+   157 D  SQL_00003              9      9A   INZ('0') CCSID(*JOBRUNMIX)           data is okay                              027700
+   158 D  SQL_00004             10    128A   CCSID(*JOBRUNMIX)                    end of header                             027700
+   159 D  SQL_00005            129    134A   CCSID(*JOBRUNMIX)                    ARID                                      027700
+   160 D  SQL_00006            135   1654A   CCSID(*JOBRUNMIX)                    TEXT                                      027700
+   161 D                 DS                                                       UPDATE                                    030800
+   162 D  SQL_00007              1      2B 0 INZ(128)                             length of header                          030800
+   163 D  SQL_00008              3      4B 0 INZ(5)                               statement number                          030800
+   164 D  SQL_00009              5      8U 0 INZ(0)                               invocation mark                           030800
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page      7
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   165 D  SQL_00010              9      9A   INZ('0') CCSID(*JOBRUNMIX)           data is okay                              030800
+   166 D  SQL_00011             10    128A   CCSID(*JOBRUNMIX)                    end of header                             030800
+   167 D  SQL_00012            129   1648A   CCSID(*JOBRUNMIX)                    TEXT                                      030800
+   168 D  SQL_00013           1649   1654A   CCSID(*JOBRUNMIX)                    ARID                                      030800
+   169 D                 DS                                                       INSERT                                    030803
+   170 D  SQL_00014              1      2B 0 INZ(128)                             length of header                          030803
+   171 D  SQL_00015              3      4B 0 INZ(6)                               statement number                          030803
+   172 D  SQL_00016              5      8U 0 INZ(0)                               invocation mark                           030803
+   173 D  SQL_00017              9      9A   INZ('0') CCSID(*JOBRUNMIX)           data is okay                              030803
+   174 D  SQL_00018             10    128A   CCSID(*JOBRUNMIX)                    end of header                             030803
+   175 D  SQL_00019            129    134A   CCSID(*JOBRUNMIX)                    ARID                                      030803
+   176 D  SQL_00020            135   1654A   CCSID(*JOBRUNMIX)                    TEXT                                      030803
+   177=IFARTI2                                                                                                             1000001
+        *--------------------------------------------------------------------------------------------*                     1
+        * RPG record format  . . . . :  FARTI2                                                       *                     1
+        * External format  . . . . . :  FARTI : ATUDSB0005/ARTICLE2                                  *                     1
+        *--------------------------------------------------------------------------------------------*                     1
+   178=I                             A    1    6  ARID                            ARTICLE ID                               1000002
+   179=I                             A    7   56  ARDESC                          ARTICLE DESCRPTION                       1000003
+   180=I                             P   57   60 2ARSALEPR                        REF SALE PRICE                           1000004
+   181=I                             P   61   64 2ARWHSPR                         STOCK PRICE                              1000005
+   182=I                             A   65   67  ARTIFA                          FAMILLY ID                               1000006
+   183=I                             P   68   70 0ARSTOCK                         STOCK                                    1000007
+   184=I                             P   71   73 0ARMINQTY                        MINIMUM STOCK                            1000008
+   185=I                             P   74   76 0ARCUSQTY                        CUSTOMER ORDER QUANTITY                  1000009
+   186=I                             P   77   79 0ARPURQTY                        PURCHASE ORDER QUANTITY                  1000010
+   187=I                             A   80   80  ARVATCD                         VAT CODE                                 1000011
+   188=I                        *ISO-D   81   90  ARCREA                          CREATION DATE                            1000012
+   189=I                             Z   91  116  ARMOD                           LAST MODIFICATION                        1000013
+   190=I                             A  117  126  ARMODID                         LAS MOD BY                               1000014
+   191=I                             A  127  127  ARDEL                           DELETE CODE X=DELETED                    1000015
+   192=IFARTI                                                                                                              2000001
+        *--------------------------------------------------------------------------------------------*                     2
+        * RPG record format  . . . . :  FARTI                                                        *                     2
+        * External format  . . . . . :  FARTI : ATUDSB0005/ARTICLE1                                  *                     2
+        *--------------------------------------------------------------------------------------------*                     2
+   193=I                             A    1    6  ARID                            ARTICLE ID                               2000002
+   194=I                             A    7   56  ARDESC                          ARTICLE DESCRPTION                       2000003
+   195=I                             P   57   60 2ARSALEPR                        REF SALE PRICE                           2000004
+   196=I                             P   61   64 2ARWHSPR                         STOCK PRICE                              2000005
+   197=I                             A   65   67  ARTIFA                          FAMILLY ID                               2000006
+   198=I                             P   68   70 0ARSTOCK                         STOCK                                    2000007
+   199=I                             P   71   73 0ARMINQTY                        MINIMUM STOCK                            2000008
+   200=I                             P   74   76 0ARCUSQTY                        CUSTOMER ORDER QUANTITY                  2000009
+   201=I                             P   77   79 0ARPURQTY                        PURCHASE ORDER QUANTITY                  2000010
+   202=I                             A   80   80  ARVATCD                         VAT CODE                                 2000011
+   203=I                        *ISO-D   81   90  ARCREA                          CREATION DATE                            2000012
+   204=I                             Z   91  116  ARMOD                           LAST MODIFICATION                        2000013
+   205=I                             A  117  126  ARMODID                         LAS MOD BY                               2000014
+   206=I                             A  127  127  ARDEL                           DELETE CODE X=DELETED                    2000015
+   207=ISFL01                                                                                                              3000001
+        *--------------------------------------------------------------------------------------------*                     3
+        * RPG record format  . . . . :  SFL01                                                        *                     3
+        * External format  . . . . . :  SFL01 : ATU_OBJ/ART200D                                      *                     3
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page      8
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+        *--------------------------------------------------------------------------------------------*                     3
+   208=I                             S    1    2 0OPT01                                                                    3000002
+   209=I                             A    3    8  ARID                            ARTICLE ID                               3000003
+   210=I                             A    9   58  ARDESC                          ARTICLE DESCRPTION                       3000004
+   211=I                             A   59   61  ARTIFA                          FAMILLY ID                               3000005
+   212=I                             A   62   62  ARDEL                           DELETE CODE X=DELETED                    3000006
+   213=ICTL01                                                                                                              4000001
+        *--------------------------------------------------------------------------------------------*                     4
+        * RPG record format  . . . . :  CTL01                                                        *                     4
+        * External format  . . . . . :  CTL01 : ATU_OBJ/ART200D                                      *                     4
+        *--------------------------------------------------------------------------------------------*                     4
+   214=I                             S    1    4 0RRB01                                                                    4000002
+   215=I                             A    5   14  POSTO                                                                    4000003
+   216=IKEY01                                                                                                              5000001
+        *--------------------------------------------------------------------------------------------*                     5
+        * RPG record format  . . . . :  KEY01                                                        *                     5
+        * External format  . . . . . :  KEY01 : ATU_OBJ/ART200D                                      *                     5
+        *--------------------------------------------------------------------------------------------*                     5
+   217=IFMT02                                                                                                              6000001
+        *--------------------------------------------------------------------------------------------*                     6
+        * RPG record format  . . . . :  FMT02                                                        *                     6
+        * External format  . . . . . :  FMT02 : ATU_OBJ/ART200D                                      *                     6
+        *--------------------------------------------------------------------------------------------*                     6
+   218=I                             A    1   50  ARDESC                          ARTICLE DESCRPTION                       6000002
+   219=I                             A   51   53  ARTIFA                          FAMILLY ID                               6000003
+   220=I                             S   54   60 2ARSALEPR                        REF SALE PRICE                           6000004
+   221=I                             S   61   67 2ARWHSPR                         STOCK PRICE                              6000005
+   222=I                             S   68   72 0ARSTOCK                         STOCK                                    6000006
+   223=I                             S   73   77 0ARMINQTY                        MINIMUM STOCK                            6000007
+   224=I                             A   78   78  ARVATCD                         VAT CODE                                 6000008
+   225=IFMT03                                                                                                              7000001
+        *--------------------------------------------------------------------------------------------*                     7
+        * RPG record format  . . . . :  FMT03                                                        *                     7
+        * External format  . . . . . :  FMT03 : ATU_OBJ/ART200D                                      *                     7
+        *--------------------------------------------------------------------------------------------*                     7
+   226=I                             A    1 1520  TEXT                                                                     7000002
+   227   select;                                                                                       B01       161024     005600
+   228   when panel = 1;                                                                               X01       161024     005700
+   229     exsr pnl01;                                                                                  01       161024     005800
+   230   when panel = 2;                                                                               X01       161024     005900
+   231     exsr pnl02;                                                                                  01       161024     006000
+   232   when panel = 3;                                                                               X01       161024     006100
+   233     exsr pnl03;                                                                                  01       161024     006200
+   234   other;                                                                                        X01       161024     006300
+   235     exsr pnl00;                                                                                  01       161024     006400
+   236   endsl;                                                                                        E01       161024     006500
+   237   //- Subfiles  01 Subroutines --------------------------------------  ---                                161024     006600
+   238   begsr pnl01;                                                                                            161024     006700
+   239     select ;                                                                                    B01       161024     006800
+   240     when step01 = prp ;                                                                         X01       161024     006900
+   241       exsr s01prp;                                                                               01       161024     007000
+   242     when step01 = lod ;                                                                         X01       161024     007100
+   243       exsr s01lod;                                                                               01       161024     007200
+   244     when step01 = dsp ;                                                                         X01       161024     007300
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page      9
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   245       exsr s01dsp;                                                                               01       161024     007400
+   246     when step01 = key ;                                                                         X01       161024     007500
+   247       exsr s01key;                                                                               01       161024     007600
+   248     when step01 = chk ;                                                                         X01       161024     007700
+   249       exsr s01chk;                                                                               01       161024     007800
+   250     when step01 = act ;                                                                         X01       161024     007900
+   251       exsr s01act ;                                                                              01       161024     008000
+   252     endsl;                                                                                      E01       161024     008100
+   253   endsr;                                                                                                  161024     008200
+   254   //--- Clear Subfile  ----------------------------------------------------                               161024     008300
+   255   begsr s01prp;                                                                                           161024     008400
+   256     RRn01 = 0;                                                                                            161024     008500
+   257     sflclr = *on;                                                                                         161024     008600
+   258     write ctl01;                                                                                          161024     008700
+   259     sflclr = *off;                                                                                        161024     008800
+   260     step01 = lod;                                                                                         161024     008900
+   261     clear savid;                                                                                          161024     009000
+   262     savDesc = posTo;                                                                                      161103     009001
+   263     clear posTo;                                                                                          161103     009002
+   264     rrs01 = 0;                                                                                            161024     009100
+   265   endsr;                                                                                                  161024     009200
+   266   //--- Load Subfile  -----------------------------------------------------                               161024     009300
+   267   begsr s01lod;                                                                                           161024     009400
+   268     exsr s01rst;                                                                                          161024     009500
+   269     RRb01 = RRn01 + 1;                                                                                    161024     009600
+   270     opt01 = 0;                                                                                            161024     009700
+   271     count = 0;                                                                                            161024     009800
+   272     read article2;                                                                                        161103     009900
+   273     dow not %eof(article2) and count < 14;                                                      B01       161103     010000
+   274       RRN01 += 1;                                                                                01       161024     010100
+   275       count += 1;                                                                                01       161024     010200
+   276       write sfl01;                                                                               01       161024     010300
+   277       read article2;                                                                             01       161103     010400
+   278     enddo;                                                                                      E01       161024     010500
+   279     sflend = %eof(article1);                                                                              161024     010600
+   280     step01 = dsp;                                                                                         161024     010700
+   281     exsr s01sav;                                                                                          161024     010800
+   282   endsr;                                                                                                  161024     010900
+   283   //--- restore last read -------------------------------------------------                               161024     011000
+   284   begsr s01rst;                                                                                           161024     011100
+   285     setll (savdesc:savid)  article2;                                                                      161103     011200
+   286     rrn01 = rrs01;                                                                                        161024     011300
+   287   endsr;                                                                                                  161024     011400
+   288   //--- Save last read -------------------------------------------------                                  161024     011500
+   289   begsr s01sav;                                                                                           161024     011600
+   290     savid = arid;                                                                                         161024     011700
+   291     savdesc = ardesc;                                                                                     161103     011701
+   292     rrs01 = rrn01;                                                                                        161024     011800
+   293   endsr;                                                                                                  161024     011900
+   294   //--- Display Subfile  --------------------------------------------------                               161024     012000
+   295   begsr s01dsp;                                                                                           161024     012100
+   296     sfldspctl = *on;                                                                                      161024     012200
+   297     sfldsp = RRn01 > 0;                                                                                   161024     012300
+   298                                                                                                           161024     012400
+   299     write key01;                                                                                          161024     012500
+   300     exfmt ctl01;                                                                                          161024     012600
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     10
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   301     if LRRN <>0;                                                                                B01       161024     012700
+   302       RRb01 = LRRN;                                                                              01       161024     012800
+   303     endif;                                                                                      E01       161024     012900
+   304     step01 = key;                                                                                         161024     013000
+   305   endsr;                                                                                                  161024     013100
+   306   //--- Command Keys  -----------------------------------------------------                               161024     013200
+   307   begsr s01key;                                                                                           161024     013300
+   308     select;                                                                                     B01       161024     013400
+   309     when exit;                                                                                  X01       161024     013500
+   310       panel  = 0;                                                                                01       161024     013600
+   311       step01 = prp;                                                                              01       161024     013700
+   312     when cancel;                                                                                X01       161024     013800
+   313       step01 = prp;                                                                              01       161024     013900
+   314       panel  = panel  - 1;                                                                       01       161024     014000
+   315     when create;                                                                                X01       161027     014001
+   316       step01 = prp;                                                                              01       161027     014002
+   317       panel  = 2 ;                                                                               01       161027     014003
+   318       step02 = prp;                                                                              01       161027     014004
+   319       mode = crt;                                                                                01       161027     014005
+   320     when pagedown;                                                                              X01       161024     014100
+   321       step01 = lod;                                                                              01       161024     014200
+   322     other;                                                                                      X01       161024     014300
+   323       step01 = chk;                                                                              01       161024     014400
+   324     endsl;                                                                                      E01       161024     014500
+   325   endsr;                                                                                                  161024     014600
+   326   //--- Check Subfile  ----------------------------------------------------                               161024     014700
+   327   begsr s01chk;                                                                                           161024     014800
+   328     step01 = act;                                                                                         161024     014900
+   329     err01 = *off;                                                                                         161024     015000
+   330     sflnxtchg = *on;                                                                                      161024     015100
+   331     readc(e) sfl01;                                                                                       161024     015200
+   332     dow not %error and not %eof;                                                                B01       161024     015300
+   333       if opt01  > 6 or opt01 = 1 or opt01 = 5;                                                  B02       161209     015400
+   334         step01 = dsp;                                                                            02       161024     015500
+   335         dspatr_ri = *on;                                                                         02       161024     015600
+   336         sflmsg = *on;                                                                            02       161024     015700
+   337         if not err01;                                                                           B03       161024     015800
+   338           rrb01 = rrn01;                                                                         03       161024     015900
+   339           err01 = *on;                                                                           03       161024     016000
+   340         endif;                                                                                  E03       161024     016100
+   341       endif;                                                                                    E02       161024     016200
+   342       update sfl01;                                                                              01       161024     016300
+   343       dspatr_ri = *off;                                                                          01       161024     016400
+   344       readc(e) sfl01;                                                                            01       161024     016500
+   345     enddo;                                                                                      E01       161024     016600
+   346     sflnxtchg = *off;                                                                                     161024     016700
+   347   endsr;                                                                                                  161024     016800
+   348   //--- action Subfile  ---------------------------------------------------                               161024     016900
+   349   begsr s01act;                                                                                           161024     017000
+   350     readc(e) sfl01;                                                                                       161024     017100
+   351     select;                                                                                     B01       161024     017200
+   352     when %error or %eof;                                                                        X01       161024     017300
+   353       if posto > ' ';                                                                           B02       161103     017301
+   354         step01 = prp;                                                                            02       161103     017400
+   355       else;                                                                                     X02       161103     017401
+   356         step01 = dsp;                                                                            02       161103     017402
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     11
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   357       endif;                                                                                    E02       161103     017403
+   358     when opt01 = 2;                                                                             X01       161024     017500
+   359       panel = 2;                                                                                 01       161024     017600
+   360       step02 = prp;                                                                              01       161024     017700
+   361       opt01 = 0;                                                                                 01       161024     017800
+   362       update sfl01;                                                                              01       161024     017900
+   363       mode = upd;                                                                                01       161027     017901
+   364     when opt01 = 3;                                                                             X01       161024     018000
+   365       panel = 3;                                                                                 01       161024     018100
+   366       step02 = prp;                                                                              01       161024     018200
+   367       opt01 = 0;                                                                                 01       161024     018300
+   368       update sfl01;                                                                              01       161024     018400
+   369     when opt01 = 4;                                                                             X01       161027     018401
+   370       chain arid article1;                                                                       01       161027     018402
+   371       ardel = 'X';                                                                               01       161027     018403
+   372       armod = %timestamp();                                                                      01       161027     018404
+   373       armodid = user;                                                                            01       161027     018405
+   374       update farti;                                                                              01       161027     018406
+   375       step02 = dsp;                                                                              01       161027     018407
+   376       opt01 = 0;                                                                                 01       161027     018408
+   377       update sfl01;                                                                              01       161027     018409
+   378     when opt01 = 6;                                                                             X01       161025     018410
+   379       providers(arid);                                                                           01       161025     018411
+   380       opt01 = 0;                                                                                 01       161025     018412
+   381       update sfl01;                                                                              01       161025     018413
+   382     other;                                                                                      X01       161024     018500
+   383                                                                                                           161024     018600
+   384     endsl;                                                                                      E01       161024     018700
+   385   endsr;                                                                                                  161024     018800
+   386                                                                                                           161024     018900
+   387                                                                                                           161024     019000
+   388   //--- Format 02 Subroutines ------------------------------------     ---                                161024     019100
+   389   begsr pnl02;                                                                                            161024     019200
+   390     select ;                                                                                    B01       161024     019300
+   391     when step02 = prp ;                                                                         X01       161024     019400
+   392       exsr s02prp;                                                                               01       161024     019500
+   393     when step02 = dsp ;                                                                         X01       161024     019600
+   394       exsr s02dsp;                                                                               01       161024     019700
+   395     when step02 = key ;                                                                         X01       161024     019800
+   396       exsr s02key;                                                                               01       161024     019900
+   397     when step02 = chk ;                                                                         X01       161024     020000
+   398       exsr s02chk;                                                                               01       161024     020100
+   399     when step02 = act ;                                                                         X01       161024     020200
+   400       exsr s02act ;                                                                              01       161024     020300
+   401     endsl;                                                                                      E01       161024     020400
+   402                                                                                                           161024     020500
+   403   endsr;                                                                                                  161024     020600
+   404   //--- clear & Load ------------------------------------------------------                               161024     020700
+   405   begsr S02prp;                                                                                           161024     020800
+   406     if mode = crt;                                                                              B01       161027     020801
+   407       setgt *hival article1;                                                                     01       161027     020803
+   408       readp article1;                                                                            01       161027     020804
+   409       Newid = %dec(arid :6: 0)  +1;                                                              01       161027     020805
+   410       reset farti;                                                                               01       161027     020806
+   411       arid = %editc(NewId:'X');                                                                  01       161027     020807
+   412     else;                                                                                       X01       161027     020808
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     12
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   413       chain arid article1;                                                                       01       161027     020900
+   414       famdesc = getArtFamDesc(artifa);                                                           01       161027     021000
+   415     endif;                                                                                      E01       161027     021001
+   416     step02 = dsp;                                                                                         161024     021100
+   417   endsr;                                                                                                  161024     021200
+   418   //--- Display  ----------------------------------------------------------                               161024     021300
+   419   begsr S02dsp;                                                                                           161024     021400
+   420     exfmt fmt02;                                                                                          161024     021500
+   421     step02 = key;                                                                                         161024     021600
+   422   endsr;                                                                                                  161024     021700
+   423   //--- command Keys  -----------------------------------------------------                               161024     021800
+   424   begsr S02key;                                                                                           161024     021900
+   425     select;                                                                                     B01       161024     022000
+   426     when exit;                                                                                  X01       161024     022100
+   427       panel  = 1;                                                                                01       161024     022200
+   428       step02 = prp;                                                                              01       161024     022300
+   429     when cancel;                                                                                X01       161024     022400
+   430       step02 = prp;                                                                              01       161024     022500
+   431       panel  = panel  - 1;                                                                       01       161024     022600
+   432     when prompt;                                                                                X01       161025     022700
+   433       artifa = sltArtFam(artifa);                                                                01       161025     022800
+   434       famdesc = getArtFamDesc(artifa);                                                           01       161025     022900
+   435       step02 = dsp;                                                                              01       161025     023000
+   436     other;                                                                                      X01       161024     023100
+   437       step02 = chk;                                                                              01       161024     023200
+   438     endsl;                                                                                      E01       161024     023300
+   439   endsr;                                                                                                  161024     023400
+   440   //--- check -------------------------------------------------------------                               161024     023500
+   441   begsr S02chk;                                                                                           161024     023600
+   442     step02 = act;                                                                                         161024     023700
+   443     if ardesc = ' ';                                                                            B01       161025     023800
+   444       errDesc = *on;                                                                             01       161025     023900
+   445       step02 = dsp;                                                                              01       161025     024000
+   446     endif;                                                                                      E01       161025     024100
+   447     if not existArtFam(artifa);                                                                 B01       161025     024200
+   448       errFamilly = *on;                                                                          01       161025     024300
+   449       step02 = dsp;                                                                              01       161025     024400
+   450     endif;                                                                                      E01       161025     024500
+   451                                                                                                           161024     024600
+   452   endsr;                                                                                                  161024     024700
+   453   //--- Action ------------------------------------------------------------                               161024     024800
+   454   begsr S02act;                                                                                           161024     024900
+   455     step02 = prp;                                                                                         161024     025000
+   456     armod = %timestamp();                                                                                 161027     025002
+   457     armodid = user;                                                                                       161027     025003
+   458     if mode = upd;                                                                              B01       161024     025100
+   459       update farti;                                                                              01       161024     025200
+   460     else;                                                                                       X01       161027     025201
+   461       arcrea = %date();                                                                          01       161027     025202
+   462       write(e) farti;                                                                            01       161027     025203
+   463       dow %error;                                                                               B02       161027     025204
+   464         Newid += 1;                                                                              02       161027     025205
+   465         arid = %editc(NewId:'X');                                                                02       161027     025207
+   466         write(e) farti;                                                                          02       161027     025209
+   467       enddo;                                                                                    E02       161027     025210
+   468       savdesc = ardesc;                                                                          01       161103     025211
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     13
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   469       savId = arid;                                                                              01       161103     025212
+   470       step01 = lod;                                                                              01       161027     025213
+   471     endif;                                                                                      E01       161024     025300
+   472     panel = 1;                                                                                            161024     025400
+   473   endsr;                                                                                                  161024     025500
+   474                                                                                                           161024     025600
+   475   //--- Format 03 Subroutines ------------------------------------     ---                                161024     025700
+   476   begsr pnl03;                                                                                            161024     025800
+   477     select ;                                                                                    B01       161024     025900
+   478     when step03 = prp ;                                                                         X01       161024     026000
+   479       exsr s03prp;                                                                               01       161024     026100
+   480     when step03 = dsp ;                                                                         X01       161024     026200
+   481       exsr s03dsp;                                                                               01       161024     026300
+   482     when step03 = key ;                                                                         X01       161024     026400
+   483       exsr s03key;                                                                               01       161024     026500
+   484     when step03 = chk ;                                                                         X01       161024     026600
+   485       exsr s03chk;                                                                               01       161024     026700
+   486     when step03 = act ;                                                                         X01       161024     026800
+   487       exsr s03act ;                                                                              01       161024     026900
+   488     endsl;                                                                                      E01       161024     027000
+   489                                                                                                           161024     027100
+   490   endsr;                                                                                                  161024     027200
+   491   //--- clear & Load ------------------------------------------------------                               161024     027300
+   492   begsr S03prp;                                                                                           161024     027400
+   493   //*  exec sql set option commit = *none;                                                                161027     027401
+   494   //*  exec sql select ARTICLE_INFORMATION into :text                                                     161024     027500
+   495   //*           FROM artiinf                                                                              161024     027600
+   496   //*           WHERE ARTICLE_INFO_ID = :arid;                                                            161024     027700
+   497      SQL_00005 = ARID;                                                     //SQL                                     027700
+   498      SQLER6 = -4;                                                          //SQL 4                                   027700
+   499      SQLROUTE_CALL(                                                        //SQL                                     027700
+   500           SQLCA                                                            //SQL                                     027700
+   501         : SQL_00000                                                        //SQL                                     027700
+   502      );                                                                    //SQL                                     027700
+   503      IF SQL_00003 = '1';                                                   //SQL                B01                  027700
+   504      EVAL TEXT = SQL_00006;                                                //SQL                 01                  027700
+   505      ENDIF;                                                                //SQL                E01                  027700
+   506     if sqlcod <> 0;                                                                             B01       161027     027701
+   507       mode = crt;                                                                                01       161027     027702
+   508       clear text;                                                                                01       161027     027703
+   509     else;                                                                                       X01       161027     027704
+   510       mode = upd;                                                                                01       161027     027705
+   511     endif;                                                                                      E01       161027     027706
+   512     step03 = dsp;                                                                                         161024     027800
+   513   endsr;                                                                                                  161024     027900
+   514   //--- Display  ----------------------------------------------------------                               161024     028000
+   515   begsr S03dsp;                                                                                           161024     028100
+   516     exfmt fmt03;                                                                                          161024     028200
+   517     step03 = key;                                                                                         161024     028300
+   518   endsr;                                                                                                  161024     028400
+   519   //--- command Keys  -----------------------------------------------------                               161024     028500
+   520   begsr S03key;                                                                                           161024     028600
+   521     select;                                                                                     B01       161024     028700
+   522     when exit;                                                                                  X01       161024     028800
+   523       panel  = 1;                                                                                01       161024     028900
+   524       step03 = prp;                                                                              01       161024     029000
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     14
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   525     when cancel;                                                                                X01       161024     029100
+   526       step03 = prp;                                                                              01       161024     029200
+   527       panel  = 1;                                                                                01       161024     029300
+   528     other;                                                                                      X01       161024     029400
+   529       step03 = chk;                                                                              01       161024     029500
+   530     endsl;                                                                                      E01       161024     029600
+   531   endsr;                                                                                                  161024     029700
+   532   //--- check -------------------------------------------------------------                               161024     029800
+   533   begsr S03chk;                                                                                           161024     029900
+   534     step03 = act;                                                                                         161024     030000
+   535   endsr;                                                                                                  161024     030100
+   536   //--- Action ------------------------------------------------------------                               161024     030200
+   537   begsr S03act;                                                                                           161024     030300
+   538     step03 = prp;                                                                                         161024     030400
+   539     panel = 1;                                                                                            161024     030500
+   540     if mode = upd;                                                                              B01       161027     030501
+   541   //*    exec sql update artiinf                                                                          161027     030600
+   542   //*           set ARTICLE_INFORMATION = trim(:text)                                                     161025     030700
+   543   //*           WHERE ARTICLE_INFO_ID = :arid;                                                            161024     030800
+   544      SQL_00012 = TEXT;                                                     //SQL                 01                  030800
+   545      SQL_00013 = ARID;                                                     //SQL                 01                  030800
+   546      SQLER6 = -4;                                                          //SQL 5               01                  030800
+   547      SQLROUTE_CALL(                                                        //SQL                 01                  030800
+   548           SQLCA                                                            //SQL                 01                  030800
+   549         : SQL_00007                                                        //SQL                 01                  030800
+   550      );                                                                    //SQL                 01                  030800
+   551     else;                                                                                       X01       161027     030801
+   552   //*    exec sql insert into artiinf                                                                     161027     030802
+   553   //*             Values(:arid, trim(:text));                                                             161027     030803
+   554      SQL_00019 = ARID;                                                     //SQL                 01                  030803
+   555      SQL_00020 = TEXT;                                                     //SQL                 01                  030803
+   556      SQLER6 = -4;                                                          //SQL 6               01                  030803
+   557      SQLROUTE_CALL(                                                        //SQL                 01                  030803
+   558           SQLCA                                                            //SQL                 01                  030803
+   559         : SQL_00014                                                        //SQL                 01                  030803
+   560      );                                                                    //SQL                 01                  030803
+   561     endif;                                                                                      E01       161027     030805
+   562   endsr;                                                                                                  161024     031000
+   563   //--------INITIALIZATION ----------------------------------                                             161024     031100
+   564   begsr *inzsr;                                                                                           161024     031200
+   565   endsr;                                                                                                  161024     031300
+   566   //--------END SUBROUTINE ----------------------------------                                             161024     031400
+   567   begsr pnl00;                                                                                            161024     031500
+   568     *inlr = *on;                                                                                          161024     031600
+   569   endsr;                                                                                                  161024     031700
+   570  /end-free                                                                                                161103     031800
+   571=OFARTI                                                                                                              8000001
+        *--------------------------------------------------------------------------------------------*                     8
+        * RPG record format  . . . . :  FARTI                                                        *                     8
+        * External format  . . . . . :  FARTI : ATUDSB0005/ARTICLE1                                  *                     8
+        *--------------------------------------------------------------------------------------------*                     8
+   572=O                       ARID                 6A CHAR        6              ARTICLE ID                               8000002
+   573=O                       ARDESC              56A CHAR       50              ARTICLE DESCRPTION                       8000003
+   574=O                       ARSALEPR            60P PACK      7,2              REF SALE PRICE                           8000004
+   575=O                       ARWHSPR             64P PACK      7,2              STOCK PRICE                              8000005
+   576=O                       ARTIFA              67A CHAR        3              FAMILLY ID                               8000006
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     15
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   577=O                       ARSTOCK             70P PACK      5,0              STOCK                                    8000007
+   578=O                       ARMINQTY            73P PACK      5,0              MINIMUM STOCK                            8000008
+   579=O                       ARCUSQTY            76P PACK      5,0              CUSTOMER ORDER QUANTITY                  8000009
+   580=O                       ARPURQTY            79P PACK      5,0              PURCHASE ORDER QUANTITY                  8000010
+   581=O                       ARVATCD             80A CHAR        1              VAT CODE                                 8000011
+   582=O                       ARCREA              90D DATE *ISO- 10              CREATION DATE                            8000012
+   583=O                       ARMOD              116Z TMSP       26              LAST MODIFICATION                        8000013
+   584=O                       ARMODID            126A CHAR       10              LAS MOD BY                               8000014
+   585=O                       ARDEL              127A CHAR        1              DELETE CODE X=DELETED                    8000015
+   586=OSFL01                                                                                                              9000001
+        *--------------------------------------------------------------------------------------------*                     9
+        * RPG record format  . . . . :  SFL01                                                        *                     9
+        * External format  . . . . . :  SFL01 : ATU_OBJ/ART200D                                      *                     9
+        *--------------------------------------------------------------------------------------------*                     9
+   587=O                       OPT01                2S ZONE      2,0                                                       9000002
+   588=O                       ARID                 8A CHAR        6              ARTICLE ID                               9000003
+   589=O                       ARDESC              58A CHAR       50              ARTICLE DESCRPTION                       9000004
+   590=O                       ARTIFA              61A CHAR        3              FAMILLY ID                               9000005
+   591=O                       ARDEL               62A CHAR        1              DELETE CODE X=DELETED                    9000006
+   592=OCTL01                                                                                                             10000001
+        *--------------------------------------------------------------------------------------------*                    10
+        * RPG record format  . . . . :  CTL01                                                        *                    10
+        * External format  . . . . . :  CTL01 : ATU_OBJ/ART200D                                      *                    10
+        *--------------------------------------------------------------------------------------------*                    10
+   593=O                       RRB01                4S ZONE      4,0                                                      10000002
+   594=O                       POSTO               14A CHAR       10                                                      10000003
+   595=OKEY01                                                                                                             11000001
+        *--------------------------------------------------------------------------------------------*                    11
+        * RPG record format  . . . . :  KEY01                                                        *                    11
+        * External format  . . . . . :  KEY01 : ATU_OBJ/ART200D                                      *                    11
+        *--------------------------------------------------------------------------------------------*                    11
+   596=OFMT02                                                                                                             12000001
+        *--------------------------------------------------------------------------------------------*                    12
+        * RPG record format  . . . . :  FMT02                                                        *                    12
+        * External format  . . . . . :  FMT02 : ATU_OBJ/ART200D                                      *                    12
+        *--------------------------------------------------------------------------------------------*                    12
+   597=O                       ARID                 6A CHAR        6              ARTICLE ID                              12000002
+   598=O                       ARDESC              56A CHAR       50              ARTICLE DESCRPTION                      12000003
+   599=O                       ARTIFA              59A CHAR        3              FAMILLY ID                              12000004
+   600=O                       ARSALEPR            66S ZONE      7,2              REF SALE PRICE                          12000005
+   601=O                       ARWHSPR             73S ZONE      7,2              STOCK PRICE                             12000006
+   602=O                       ARSTOCK             78S ZONE      5,0              STOCK                                   12000007
+   603=O                       ARMINQTY            83S ZONE      5,0              MINIMUM STOCK                           12000008
+   604=O                       FAMDESC            113A CHAR       30                                                      12000009
+   605=O                       WITHVAT            120S ZONE      7,2              REF SALE PRICE                          12000010
+   606=O                       ARVATCD            121A CHAR        1              VAT CODE                                12000011
+   607=O                       VATRATE            125S ZONE      4,2              VAT RATE %                              12000012
+   608=O                       VATDESC            145A CHAR       20                                                      12000013
+   609=OFMT03                                                                                                             13000001
+        *--------------------------------------------------------------------------------------------*                    13
+        * RPG record format  . . . . :  FMT03                                                        *                    13
+        * External format  . . . . . :  FMT03 : ATU_OBJ/ART200D                                      *                    13
+        *--------------------------------------------------------------------------------------------*                    13
+   610=O                       ARID                 6A CHAR        6              ARTICLE ID                              13000002
+   611=O                       ARDESC              56A CHAR       50              ARTICLE DESCRPTION                      13000003
+   612=O                       TEXT              1576A CHAR     1520                                                      13000004
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     16
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+       * * * * *   E N D   O F   S O U R C E   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     17
+          A d d i t i o n a l   D i a g n o s t i c   M e s s a g e s
+ Msg id  Sv Number Seq     Message text
+*RNF7089 00      6 000500  RPG provides Separate-Indicator area for file ART200D.
+*RNF7066 00      4 000400  Record-Format FARTI2 not used for input or output.
+ * * * * *   E N D   O F   A D D I T I O N A L   D I A G N O S T I C   M E S S A G E S   * * * * *
+                 O u t p u t   B u f f e r   P o s i t i o n s
+Line   Start End   Field or Constant
+Number Pos   Pos
+   572     1     6 ARID
+   573     7    56 ARDESC
+   574    57    60 ARSALEPR
+   575    61    64 ARWHSPR
+   576    65    67 ARTIFA
+   577    68    70 ARSTOCK
+   578    71    73 ARMINQTY
+   579    74    76 ARCUSQTY
+   580    77    79 ARPURQTY
+   581    80    80 ARVATCD
+   582    81    90 ARCREA
+   583    91   116 ARMOD
+   584   117   126 ARMODID
+   585   127   127 ARDEL
+   572     1     6 ARID
+   573     7    56 ARDESC
+   574    57    60 ARSALEPR
+   575    61    64 ARWHSPR
+   576    65    67 ARTIFA
+   577    68    70 ARSTOCK
+   578    71    73 ARMINQTY
+   579    74    76 ARCUSQTY
+   580    77    79 ARPURQTY
+   581    80    80 ARVATCD
+   582    81    90 ARCREA
+   583    91   116 ARMOD
+   584   117   126 ARMODID
+   585   127   127 ARDEL
+   587     1     2 OPT01
+   588     3     8 ARID
+   589     9    58 ARDESC
+   590    59    61 ARTIFA
+   591    62    62 ARDEL
+   587     1     2 OPT01
+   588     3     8 ARID
+   589     9    58 ARDESC
+   590    59    61 ARTIFA
+   591    62    62 ARDEL
+   593     1     4 RRB01
+   594     5    14 POSTO
+   597     1     6 ARID
+   598     7    56 ARDESC
+   599    57    59 ARTIFA
+   600    60    66 ARSALEPR
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     18
+   601    67    73 ARWHSPR
+   602    74    78 ARSTOCK
+   603    79    83 ARMINQTY
+   604    84   113 FAMDESC
+   605   114   120 WITHVAT
+   606   121   121 ARVATCD
+   607   122   125 VATRATE
+   608   126   145 VATDESC
+   610     1     6 ARID
+   611     7    56 ARDESC
+   612    57  1576 TEXT
+ * * * * *   E N D   O F   O U T P U T   B U F F E R   P O S I T I O N   *  * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     19
+                    K e y   F i e l d   I n f o r m a t i o n
+         File           Internal    External
+           Record       field name  field name  Attributes
+      2  ARTICLE1
+           FARTI
+                        ARID                    CHAR        6
+      1  ARTICLE2
+           FARTI2 is the RPG name of the external format FARTI.
+                        ARDESC                  CHAR       50
+                        ARID                    CHAR        6
+ * * * * *   E N D   O F   K E Y   F I E L D   I N F O R M A T I O N   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     20
+                          C r o s s   R e f e r e n c e
+      File and Record References:
+         File              Device             References (D=Defined)
+           Record
+         ARTICLE1          DISK                    5D    279     370     407
+                                                 408     413
+           FARTI                                   5D    192     374     410M
+                                                 459     462     466     571
+         ARTICLE2          DISK                    4D    272     273     277
+                                                 285
+           FARTI2                                  4     177
+         ART200D           WORKSTN                 6D
+           SFL01                                   6D    207     276     331
+                                                 342     344     350     362
+                                                 368     377     381     586
+           CTL01                                   6D    213     258     300
+                                                 592
+           KEY01                                   6D    216     299     595
+           FMT02                                   6D    217     420     596
+           FMT03                                   6D    225     516     609
+      Global Field References:
+         Field             Attributes         References (D=Defined M=Modified)
+         *INLR             N(1)                  568M
+         *INZSR            BEGSR                 564D
+         ACT               CONST                  85D    250     328     399
+                                                 442     486     534
+         ARCREA            D(10*ISO-)            188M    203M    461M    582
+         ARCUSQTY          P(5,0)                185M    200M    579
+         ARDEL             A(1)                  191M    206M    212M    371M
+                                                 585     591
+         ARDESC            A(50)                  72     179M    194M    210M
+                                                 218M    291     443     468
+                                                 573     589     598     611
+         ARID              A(6)                   39      71     178M    193M
+                                                 209M    290     370     379
+                                                 409     411M    413     465M
+                                                 469     497     545     554
+                                                 572     588     597     610
+         ARMINQTY          P(5,0)                184M    199M    223M    578
+                                                 603
+         ARMOD             Z(26)                 189M    204M    372M    456M
+                                                 583
+         ARMODID           A(10)                 190M    205M    373M    457M
+                                                 584
+         ARPURQTY          P(5,0)                186M    201M    580
+         ARSALEPR          P(7,2)                180M    195M    220M    574
+                                                 600
+         ARSTOCK           P(5,0)                183M    198M    222M    577
+                                                 602
+         ARTIFA            A(3)                  182M    197M    211M    219M
+                                                 414     433M    433     434
+                                                 447     576     590     599
+         ARVATCD           A(1)                  187M    202M    224M    581
+                                                 606
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     21
+         ARWHSPR           P(7,2)                181M    196M    221M    575
+                                                 601
+         CANCEL            N(1)                   47D    312     429     525
+         CHK               CONST                  84D    248     323     397
+                                                 437     484     529
+*RNF7031 CLOSEFAMILLY      PROTOTYPE              30D
+         COUNT             I(3,0)                 75D    271M    273     275M
+         CREATE            N(1)                   46D    315
+         CRT               CONST                  78D    319     406     507
+         DSP               CONST                  82D    244     280     334
+                                                 356     375     393     416
+                                                 435     445     449     480
+                                                 512
+         DSPATR_RI         N(1)                   54D    335M    343M
+         ERRDESC           N(1)                   57D    444M
+         ERRFAMILLY        N(1)                   56D    448M
+         ERR01             N(1)                   65D    329M    337     339M
+         EXISTARTFAM       N(1)                   20D    447
+                           PROTOTYPE
+         EXIT              N(1)                   43D    309     426     522
+         FAMDESC           A(30)                 414M    434M    604
+         GETARTFAMDESC     A(50)                  15D    414     434
+                           PROTOTYPE
+*RNF7031 HELP              N(1)                   42D
+         INDDS             DS(99)                  7      41D
+         INFO              DS(379)                 9      60D
+*RNF7031 ISARTFAMDELETED   N(1)                   25D
+                           PROTOTYPE
+         KEY               CONST                  83D    246     304     395
+                                                 421     482     517
+         LOD               CONST                  81D    242     260     321
+                                                 470
+         LRRN              I(5,0)                 61D    301     302
+         MODE              A(3)                   76D    319M    363M    406
+                                                 458     507M    510M    540
+*RNF7031 MOREKEYS          N(1)                   48D
+         NEWID             P(6,0)                 73D    409M    411     464M
+                                                 465
+         OPT01             P(2,0)                208M    270M    333     333
+                                                 333     358     361M    364
+                                                 367M    369     376M    378
+                                                 380M    587
+         PAGEDOWN          N(1)                   49D    320
+         PANEL             I(3,0)                 67D    228     230     232
+                                                 310M    314M    314     317M
+                                                 359M    365M    427M    431M
+                                                 431     472M    523M    527M
+                                                 539M
+         PNL00             BEGSR                 235     567D
+         PNL01             BEGSR                 229     238D
+         PNL02             BEGSR                 231     389D
+         PNL03             BEGSR                 233     476D
+         POSTO             A(10)                 215M    262     263M    353
+                                                 594
+         PROMPT            N(1)                   44D    432
+         PROVIDERS         PROTOTYPE              38D    379M
+         PRP               CONST                  68      69      70      80D
+                                                 240     311     313     316
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     22
+                                                 318     354     360     366
+                                                 391     428     430     455
+                                                 478     524     526     538
+*RNF7031 REFRESH           N(1)                   45D
+         RRB01             P(4,0)                214M    269M    302M    338M
+                                                 593
+         RRN01             I(5,0)                  8      63D    256M    269
+                                                 274M    286M    292     297
+                                                 338
+         RRS01             I(5,0)                 64D    264M    286     292M
+         SAVDESC           A(50)                  72D    262M    285     291M
+                                                 468M
+         SAVID             A(6)                   71D    261M    285     290M
+                                                 469M
+         SFLCLR            N(1)                   50D    257M    259M
+         SFLDSP            N(1)                   51D    297M
+         SFLDSPCTL         N(1)                   52D    296M
+         SFLEND            N(1)                   58D    279M
+         SFLMSG            N(1)                   55D    336M
+         SFLNXTCHG         N(1)                   53D    330M    346M
+         SLTARTFAM         A(3)                   34D    433
+                           PROTOTYPE
+*RNF7031 SQFAPP            CONST                 152D
+*RNF7031 SQFCRT            CONST                 150D
+*RNF7031 SQFOVR            CONST                 151D
+*RNF7031 SQFRD             CONST                 149D
+         SQL_00000         B(4,0)                154D    501
+*RNF7031 SQL_00001         B(4,0)                155D
+*RNF7031 SQL_00002         U(10,0)               156D
+         SQL_00003         A(1)                  157D    503
+*RNF7031 SQL_00004         A(119)                158D
+         SQL_00005         A(6)                  159D    497M
+         SQL_00006         A(1520)               160D    504
+         SQL_00007         B(4,0)                162D    549
+*RNF7031 SQL_00008         B(4,0)                163D
+*RNF7031 SQL_00009         U(10,0)               164D
+*RNF7031 SQL_00010         A(1)                  165D
+*RNF7031 SQL_00011         A(119)                166D
+         SQL_00012         A(1520)               167D    544M
+         SQL_00013         A(6)                  168D    545M
+         SQL_00014         B(4,0)                170D    559
+*RNF7031 SQL_00015         B(4,0)                171D
+*RNF7031 SQL_00016         U(10,0)               172D
+*RNF7031 SQL_00017         A(1)                  173D
+*RNF7031 SQL_00018         A(119)                174D
+         SQL_00019         A(6)                  175D    554M
+         SQL_00020         A(1520)               176D    555M
+*RNF7031 SQLABC            B(9,0)                 94D
+*RNF7031 SQLAID            A(8)                   92D
+         SQLCA             DS(136)                90D    128     133     137
+                                                 141     500     548     558
+         SQLCABC           I(10,0)                93D     94
+         SQLCAID           A(8)                   91D     92
+         SQLCLSE           CONST                 136     147D
+*RNF7031 SQLCLSE_CALL      PROTOTYPE             136D
+         SQLCMIT           CONST                 140     148D
+*RNF7031 SQLCMIT_CALL      PROTOTYPE             140D
+         SQLCOD            B(9,0)                 96D    506
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     23
+         SQLCODE           I(10,0)                95D     96
+*RNF7031 SQLERL            B(4,0)                 98D
+*RNF7031 SQLERM            A(70)                 100D
+*RNF7031 SQLERP            A(8)                  102D
+         SQLERR            A(24)                 103D    104     105     106
+                                                 107     108     109     110
+*RNF7031 SQLERRD(6)        I(10,0)               110D
+         SQLERRMC          A(70)                  99D    100
+         SQLERRML          I(5,0)                 97D     98
+         SQLERRP           A(8)                  101D    102
+*RNF7031 SQLER1            B(9,0)                104D
+*RNF7031 SQLER2            B(9,0)                105D
+*RNF7031 SQLER3            B(9,0)                106D
+*RNF7031 SQLER4            B(9,0)                107D
+*RNF7031 SQLER5            B(9,0)                108D
+         SQLER6            B(9,0)                109D    498M    546M    556M
+         SQLOPEN           CONST                 132     146D
+*RNF7031 SQLOPEN_CALL      PROTOTYPE             132D
+         SQLROUTE          CONST                 127     145D
+         SQLROUTE_CALL     PROTOTYPE             127D    499M    547M    557M
+         SQLSTATE          A(5)                  124D    125
+*RNF7031 SQLSTT            A(5)                  125D
+*RNF7031 SQLWARN(11)       A(1)                  123D
+*RNF7031 SQLWNA            A(1)                  122D
+*RNF7031 SQLWN0            A(1)                  112D
+*RNF7031 SQLWN1            A(1)                  113D
+*RNF7031 SQLWN2            A(1)                  114D
+*RNF7031 SQLWN3            A(1)                  115D
+*RNF7031 SQLWN4            A(1)                  116D
+*RNF7031 SQLWN5            A(1)                  117D
+*RNF7031 SQLWN6            A(1)                  118D
+*RNF7031 SQLWN7            A(1)                  119D
+*RNF7031 SQLWN8            A(1)                  120D
+*RNF7031 SQLWN9            A(1)                  121D
+         SQLWRN            A(11)                 111D    112     113     114
+                                                 115     116     117     118
+                                                 119     120     121     122
+                                                 123
+         STEP01            A(3)                   68D    240     242     244
+                                                 246     248     250     260M
+                                                 280M    304M    311M    313M
+                                                 316M    321M    323M    328M
+                                                 334M    354M    356M    470M
+         STEP02            A(3)                   69D    318M    360M    366M
+                                                 375M    391     393     395
+                                                 397     399     416M    421M
+                                                 428M    430M    435M    437M
+                                                 442M    445M    449M    455M
+         STEP03            A(3)                   70D    478     480     482
+                                                 484     486     512M    517M
+                                                 524M    526M    529M    534M
+                                                 538M
+         S01ACT            BEGSR                 251     349D
+         S01CHK            BEGSR                 249     327D
+         S01DSP            BEGSR                 245     295D
+         S01KEY            BEGSR                 247     307D
+         S01LOD            BEGSR                 243     267D
+         S01PRP            BEGSR                 241     255D
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     24
+         S01RST            BEGSR                 268     284D
+         S01SAV            BEGSR                 281     289D
+         S02ACT            BEGSR                 400     454D
+         S02CHK            BEGSR                 398     441D
+         S02DSP            BEGSR                 394     419D
+         S02KEY            BEGSR                 396     424D
+         S02PRP            BEGSR                 392     405D
+         S03ACT            BEGSR                 487     537D
+         S03CHK            BEGSR                 485     533D
+         S03DSP            BEGSR                 481     515D
+         S03KEY            BEGSR                 483     520D
+         S03PRP            BEGSR                 479     492D
+         TEXT              A(1520)               226M    504M    508M    544
+                                                 555     612
+         UPD               CONST                  79D    363     458     510
+                                                 540
+         USER              A(10)                  74D    373     457
+         VATDESC           A(20)                 608
+         VATRATE           P(4,2)                607
+         WITHVAT           P(7,2)                605
+      Indicator References:
+         Indicator                            References (D=Defined M=Modified)
+         LR                                      568M
+       * * * * *   E N D   O F   C R O S S   R E F E R E N C E   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     25
+                      E x t e r n a l   R e f e r e n c e s
+      Statically bound procedures:
+         Procedure                            References
+         SLTARTFAM                                34     433
+         EXISTARTFAM                              20     447
+         CLOSEFAMILLY                             30
+         GETARTFAMDESC                            15     414     434
+         ISARTFAMDELETED                          25
+      Imported fields:
+         Field             Attributes         Defined
+         No references in the source.
+      Exported fields:
+         Field             Attributes         Defined
+         No references in the source.
+   * * * * *   E N D   O F   E X T E R N A L   R E F E R E N C E S   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     26
+                          M e s s a g e   S u m m a r y
+ Msg id  Sv Number Message text
+*RNF7031 00     47 The name or indicator is not referenced.
+*RNF7066 00      1 Record-Format name of Externally-Described file is not used.
+*RNF7089 00      1 RPG provides Separate-Indicator area for file.
+       * * * * *   E N D   O F   M E S S A G E   S U M M A R Y   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ART200        MONZAXIB   03/07/23 15:32:23        Page     27
+                            F i n a l   S u m m a r y
+  Message Totals:
+    Information  (00) . . . . . . . :       49
+    Warning      (10) . . . . . . . :        0
+    Error        (20) . . . . . . . :        0
+    Severe Error (30+)  . . . . . . :        0
+    ---------------------------------  -------
+    Total . . . . . . . . . . . . . :       49
+  Source Totals:
+    Records . . . . . . . . . . . . :      612
+    Specifications  . . . . . . . . :      540
+    Data records  . . . . . . . . . :        0
+    Comments  . . . . . . . . . . . :       49
+         * * * * *   E N D   O F   F I N A L   S U M M A R Y   * * * * *
+Program ART200 placed in library ATUDSB0005. 00 highest severity. Created on 03/07/23 at 15:32:24.
+          * * * * *   E N D   O F   C O M P I L A T I O N   * * * * *
+  . . . .
+MSG1573 *** Messages sent by the Compilation ***
+CPC7301 File QSQLTEMP1 created in library QTEMP.
+CPC7305 Member ART200 added to file QSQLTEMP1 in QTEMP.
+CPF4011 Buffer length longer than record for member FAMILLY.
+CPD5D1D *SRVPGM object ORDER in library *LIBL not found.
+RNS9304 Program ART200 placed in library ATUDSB0005. 00 highest severity. Created on 03/07/23 at 15:32:24.

@@ -1,0 +1,438 @@
+Attributes of the executed compilation command :
+  -  CRTBNDRPG PGM(ATUDSB0005/ORD700) SRCFILE(ATU_SRC/QRPGLESRC)  BNDDIR( QTEMP/ARCBN
+     DDIR)  ACTGRP(QILE) DFTACTGRP(*NO) REPLACE(*YES) TGTRLS(V7R4M0) OPTION(*EVENTF)
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page      2
+  Command  . . . . . . . . . . . . :   CRTBNDRPG
+    Issued by  . . . . . . . . . . :     ATULLY
+  Program  . . . . . . . . . . . . :   ORD700
+    Library  . . . . . . . . . . . :     ATUDSB0005
+  Text 'description' . . . . . . . :   *SRCMBRTXT
+  Source Member  . . . . . . . . . :   ORD700
+  Source File  . . . . . . . . . . :   QRPGLESRC
+    Library  . . . . . . . . . . . :     ATU_SRC
+    CCSID  . . . . . . . . . . . . :     297
+  Text 'description' . . . . . . . :
+  Last Change  . . . . . . . . . . :   05/23/22  14:55:56
+  Generation severity level  . . . :   10
+  Default activation group . . . . :   *NO
+  Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY
+                                       *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT
+                                       *DEBUGIO   *UNREF     *EVENTF
+  Debugging views  . . . . . . . . :   *STMT
+  Debug encryption key . . . . . . :   *NONE
+  Output . . . . . . . . . . . . . :   *PRINT
+  Optimization level . . . . . . . :   *NONE
+  Source listing indentation . . . :   *NONE
+  Type conversion options  . . . . :   *NONE
+  Sort sequence  . . . . . . . . . :   *HEX
+  Language identifier  . . . . . . :   *JOBRUN
+  Replace program  . . . . . . . . :   *YES
+  User profile . . . . . . . . . . :   *USER
+  Authority  . . . . . . . . . . . :   *LIBCRTAUT
+  Truncate numeric . . . . . . . . :   *YES
+  Fix numeric  . . . . . . . . . . :   *NONE
+  Target release . . . . . . . . . :   V7R4M0
+  Allow null values  . . . . . . . :   *NO
+  Storage model . . .  . . . . . . :   *SNGLVL
+  Binding directory  . . . . . . . :   ARCBNDDIR
+    Library  . . . . . . . . . . . :     QTEMP
+  Activation group . . . . . . . . :   QILE
+  Define condition names . . . . . :   *NONE
+  Enable performance collection  . :   *PEP
+  Profiling data . . . . . . . . . :   *NOCOL
+  Licensed Internal Code options . :
+  Generate program interface . . . :   *NO
+  Include directory  . . . . . . . :
+  Preprocessor options . . . . . . :   *NONE
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page      3
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+                          S o u r c e   L i s t i n g
+     1 H dftactgrp(*no)                                                                                          161130     000022
+     2                                                                                                           161130     000023
+        *--------------------------------------------------------------------*
+        * Compiler Options in Effect:                                        *
+        *--------------------------------------------------------------------*
+        *  Text 'description' . . . . . . . :                                *
+        *  Generation severity level  . . . :   10                           *
+        *  Default activation group . . . . :   *NO                          *
+        *  Compiler options . . . . . . . . :   *XREF      *GEN              *
+        *                                       *NOSECLVL  *SHOWCPY          *
+        *                                       *EXPDDS    *EXT              *
+        *                                       *NOSHOWSKP *NOSRCSTMT        *
+        *                                       *DEBUGIO   *UNREF            *
+        *                                       *EVENTF                      *
+        *  Optimization level . . . . . . . :   *NONE                        *
+        *  Source listing indentation . . . :   *NONE                        *
+        *  Type conversion options  . . . . :   *NONE                        *
+        *  Sort sequence  . . . . . . . . . :   *HEX                         *
+        *  Language identifier  . . . . . . :   *JOBRUN                      *
+        *  User profile . . . . . . . . . . :   *USER                        *
+        *  Authority  . . . . . . . . . . . :   *LIBCRTAUT                   *
+        *  Truncate numeric . . . . . . . . :   *YES                         *
+        *  Fix numeric  . . . . . . . . . . :   *NONE                        *
+        *  Allow null values  . . . . . . . :   *NO                          *
+        *  Storage model . . .  . . . . . . :   *SNGLVL                      *
+        *  Binding directory from Command . :   ARCBNDDIR                    *
+        *    Library  . . . . . . . . . . . :     QTEMP                      *
+        *  Binding directory from Source  . :   *NONE                        *
+        *  Activation group . . . . . . . . :   QILE                         *
+        *  Enable performance collection  . :   *PEP                         *
+        *  Profiling data . . . . . . . . . :   *NOCOL                       *
+        *  Generate program interface . . . :   *NO                          *
+        *  REQUIRE PROTOTYPE FOR EXPORT . . :   *NO                          *
+        *--------------------------------------------------------------------*
+     3 Farticle1  UF   E           K DISK                                                                        161130     000024
+     4                                                                                                           161130     000025
+     5  /copy qprotosrc,log                                                                                      161216     000026
+        *--------------------------------------------------------------------------------------------*
+        * RPG member name  . . . . . :  LOG                                                          *                     1
+        * External name  . . . . . . :  ATU_SRC/QPROTOSRC(LOG)                                       *                     1
+        * Last change  . . . . . . . :  05/23/22  14:55:56                                           *                     1
+        * Text 'description' . . . . :  Log functions                                                *                     1
+        *--------------------------------------------------------------------------------------------*
+        *--------------------------------------------------------------------------------------------*
+        *                               RPG name         External name                               *
+        * File name. . . . . . . . . :  ARTICLE1         ATUDSB0005/ARTICLE1                         *
+        * Record format(s) . . . . . :  FARTI            FARTI                                       *
+        *--------------------------------------------------------------------------------------------*
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page      4
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+     6+d AddLogEntry     pr                                                                                      161216    1000100
+     7+d  entry                       500    value                                                               161216    1000200
+     8                                                                                                           161216     000027
+     9 d UpdArt          pr                                                                                      161130     000028
+    10 d   qty                          5  0 value                                                               161130     000029
+    11 d   id                                like(new.ODARID)                                                    161130     000030
+    12                                                                                                           161130     000031
+    13 D PARM1           DS                                                                                      161130     000032
+    14  * Physical file name                                                                                     161130     000033
+    15 D  FNAME                        10                                                                        161130     000034
+    16  * Physical file library                                                                                  161130     000035
+    17 D  LNAME                        10                                                                        161130     000036
+    18  * Member name                                                                                            161130     000037
+    19 D  MNAME                        10                                                                        161130     000038
+    20  * Trigger event 1=Ins, 2=Del, 3=Upd                                                                      161130     000039
+    21 D  TEVEN                         1                                                                        161130     000040
+    22  * Trigger time  1=After, 2=Before                                                                        161130     000041
+    23 D  TTIME                         1                                                                        161130     000042
+    24  * Commit lock level                                                                                      161130     000043
+    25 D  CMTLCK                        1                                                                        161130     000044
+    26  * Reserved                                                                                               161130     000045
+    27 D                                3                                                                        161130     000046
+    28  * CCSID                                                                                                  161130     000047
+    29 D  CCSID                        10i 0                                                                     161130     000048
+    30  * Reserved                                                                                               161130     000049
+    31 D                                8                                                                        161130     000050
+    32  * Offset to the original record                                                                          161130     000051
+    33 D  OLDOFF                       10i 0                                                                     161130     000052
+    34  * length of the original record                                                                          161130     000053
+    35 D  OLDLEN                       10i 0                                                                     161130     000054
+    36  * Offset to the original record null byte map                                                            161130     000055
+    37 D  ONOFF                        10i 0                                                                     161130     000056
+    38  * length of the null byte map                                                                            161130     000057
+    39 D  ONLEN                        10i 0                                                                     161130     000058
+    40  * Offset to the new record                                                                               161130     000059
+    41 D  NEWOFF                       10i 0                                                                     161130     000060
+    42  * length of the new record                                                                               161130     000061
+    43 D  NEWLEN                       10i 0                                                                     161130     000062
+    44  * Offset to the new record null byte map                                                                 161130     000063
+    45 D  NNOFF                        10i 0                                                                     161130     000064
+    46  * length of the null byte map                                                                            161130     000065
+    47 D  NNLEN                        10i 0                                                                     161130     000066
+    48                                                                                                           161130     000067
+    49  * Trigger Buffer Length                                                                                  161130     000068
+    50 D  parm2          s             10i 0                                                                     161130     000069
+    51                                                                                                           161130     000070
+    52  * Record to be inserted or new values                                                                    161130     000071
+    53 D NEW           E DS                  EXTNAME(detord)                                                     161130     000072
+    54 D                                     qualified                                                           161130     000073
+    55 D                                     based(pn)                                                           161130     000074
+    56                                                                                                           161130     000075
+    57  * Record to be deleted or old values                                                                     161130     000076
+        *--------------------------------------------------------------------------------------------*                     2
+        * Data structure . . . . . . :  NEW                                                          *                     2
+        * External format  . . . . . :  FDETO : ATU_DTA/DETORD                                       *                     2
+        *--------------------------------------------------------------------------------------------*                     2
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page      5
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+    58=D ODORID                         6P 0                                      ORDER NUMBER                             2000001
+    59=D ODYEAR                         4P 0                                      YEAR                                     2000002
+    60=D ODLINE                         5P 0                                      ORDER LINE                               2000003
+    61=D ODARID                         6A                                        ARTICLE ID                               2000004
+    62=D ODQTY                          5P 0                                      ORDERED QUANTITY                         2000005
+    63=D ODQTYLIV                       5P 0                                      DELIVERED QUANTITY                       2000006
+    64=D ODPRICE                        7P 2                                      UNIT PRICE                               2000007
+    65=D ODTOT                          9P 2                                      TOTAL PRICE                              2000008
+    66=D ODTOTVAT                       9P 2                                      TOTAL LINE WITH VAT                      2000009
+    67 D OLD           E DS                  EXTNAME(detord)                                                     161130     000077
+    68 D                                     qualified                                                           161130     000078
+    69 D                                     based(po)                                                           161130     000079
+    70                                                                                                           161130     000080
+    71  * SET UP THE ENTRY PARAMETER LIST.                                                                       161130     000081
+    72                                                                                                           161130     000082
+        *--------------------------------------------------------------------------------------------*                     3
+        * Data structure . . . . . . :  OLD                                                          *                     3
+        * External format  . . . . . :  FDETO : ATU_DTA/DETORD                                       *                     3
+        *--------------------------------------------------------------------------------------------*                     3
+    73=D ODORID                         6P 0                                      ORDER NUMBER                             3000001
+    74=D ODYEAR                         4P 0                                      YEAR                                     3000002
+    75=D ODLINE                         5P 0                                      ORDER LINE                               3000003
+    76=D ODARID                         6A                                        ARTICLE ID                               3000004
+    77=D ODQTY                          5P 0                                      ORDERED QUANTITY                         3000005
+    78=D ODQTYLIV                       5P 0                                      DELIVERED QUANTITY                       3000006
+    79=D ODPRICE                        7P 2                                      UNIT PRICE                               3000007
+    80=D ODTOT                          9P 2                                      TOTAL PRICE                              3000008
+    81=D ODTOTVAT                       9P 2                                      TOTAL LINE WITH VAT                      3000009
+    82=IFARTI                                                                                                              4000001
+        *--------------------------------------------------------------------------------------------*                     4
+        * RPG record format  . . . . :  FARTI                                                        *                     4
+        * External format  . . . . . :  FARTI : ATUDSB0005/ARTICLE1                                  *                     4
+        *--------------------------------------------------------------------------------------------*                     4
+    83=I                             A    1    6  ARID                            ARTICLE ID                               4000002
+    84=I                             A    7   56  ARDESC                          ARTICLE DESCRPTION                       4000003
+    85=I                             P   57   60 2ARSALEPR                        REF SALE PRICE                           4000004
+    86=I                             P   61   64 2ARWHSPR                         STOCK PRICE                              4000005
+    87=I                             A   65   67  ARTIFA                          FAMILLY ID                               4000006
+    88=I                             P   68   70 0ARSTOCK                         STOCK                                    4000007
+    89=I                             P   71   73 0ARMINQTY                        MINIMUM STOCK                            4000008
+    90=I                             P   74   76 0ARCUSQTY                        CUSTOMER ORDER QUANTITY                  4000009
+    91=I                             P   77   79 0ARPURQTY                        PURCHASE ORDER QUANTITY                  4000010
+    92=I                             A   80   80  ARVATCD                         VAT CODE                                 4000011
+    93=I                        *ISO-D   81   90  ARCREA                          CREATION DATE                            4000012
+    94=I                             Z   91  116  ARMOD                           LAST MODIFICATION                        4000013
+    95=I                             A  117  126  ARMODID                         LAS MOD BY                               4000014
+    96=I                             A  127  127  ARDEL                           DELETE CODE X=DELETED                    4000015
+    97 C     *ENTRY        PLIST                                                                                 161130     000083
+    98 C                   PARM                    PARM1                                                         161130     000084
+    99 C                   PARM                    PARM2                                                         161130     000085
+   100 C                   if                      %parms = 0                                          B01       161130     000086
+   101 C                   seton                                        lr----                          01       161130     000087
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page      6
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   102 C                   return                                                                       01       161130     000088
+   103 C                   ENDIF                                                                       E01       161130     000089
+   104 C                   select                                                                      B01       161130     000090
+   105 c                   when      teven = '1'                                                       X01       161130     000091
+   106 c                   eval      pn = %addr(parm1) + newoff                                         01       161130     000092
+   107 c                   callp     UpdArt(new.odqty:new.odarid)                                       01       161130     000093
+   108 c                   when      teven = '2'                                                       X01       161130     000094
+   109 c                   eval      po = %addr(parm1) + oldoff                                         01       161130     000095
+   110 c                   callp(e)  addlogEntry('ORD700:Order Line deleted ' +                         01       161216     000096
+   111 c                             %char(Old.odorid) + ' ' + %char(Old.odline)                        01       161216     000097
+   112 c                              + ' article : ' + old.odarid                                      01       161216     000098
+   113 c                              + ' quantity : ' + %char(old.odqty))                              01       161216     000099
+   114 c                   callp     UpdArt(-Old.odqty + Old.odqtyliv:old.odarid)                       01       161130     000100
+   115 c                   when      teven = '3'                                                       X01       161130     000101
+   116 c                   eval      pn = %addr(parm1) + newoff                                         01       161130     000102
+   117 c                   eval      po = %addr(parm1) + oldoff                                         01       161130     000103
+   118 c                   if        new.odarid = Old.odarid                                           B02       161130     000104
+   119 c                   callp     UpdArt((New.odqty - Old.odqty)                                     02       161130     000105
+   120 c                              - (New.odqtyLiv - Old.odqtyLiv)                                   02       161130     000106
+   121 c                             :new.odarid)                                                       02       161130     000107
+   122 c                   else                                                                        X02       161130     000108
+   123 c                   callp     UpdArt(new.odqty- new.odqtyliv:new.odarid)                         02       161130     000109
+   124 c                   callp     UpdArt(-Old.odqty + Old.odqtyliv:old.odarid)                       02       161130     000110
+   125 c                   endif                                                                       E02       161130     000111
+   126 c                   endsl                                                                       E01       161130     000112
+   127 c                   return                                                                                161130     000113
+   128                                                                                                           161130     000114
+   129=OFARTI                                                                                                              5000001
+        *--------------------------------------------------------------------------------------------*                     5
+        * RPG record format  . . . . :  FARTI                                                        *                     5
+        * External format  . . . . . :  FARTI : ATUDSB0005/ARTICLE1                                  *                     5
+        *--------------------------------------------------------------------------------------------*                     5
+   130=O                       ARID                 6A CHAR        6              ARTICLE ID                               5000002
+   131=O                       ARDESC              56A CHAR       50              ARTICLE DESCRPTION                       5000003
+   132=O                       ARSALEPR            60P PACK      7,2              REF SALE PRICE                           5000004
+   133=O                       ARWHSPR             64P PACK      7,2              STOCK PRICE                              5000005
+   134=O                       ARTIFA              67A CHAR        3              FAMILLY ID                               5000006
+   135=O                       ARSTOCK             70P PACK      5,0              STOCK                                    5000007
+   136=O                       ARMINQTY            73P PACK      5,0              MINIMUM STOCK                            5000008
+   137=O                       ARCUSQTY            76P PACK      5,0              CUSTOMER ORDER QUANTITY                  5000009
+   138=O                       ARPURQTY            79P PACK      5,0              PURCHASE ORDER QUANTITY                  5000010
+   139=O                       ARVATCD             80A CHAR        1              VAT CODE                                 5000011
+   140=O                       ARCREA              90D DATE *ISO- 10              CREATION DATE                            5000012
+   141=O                       ARMOD              116Z TMSP       26              LAST MODIFICATION                        5000013
+   142=O                       ARMODID            126A CHAR       10              LAS MOD BY                               5000014
+   143=O                       ARDEL              127A CHAR        1              DELETE CODE X=DELETED                    5000015
+   144 P UpdArt          b                                                                                       161130     000115
+   145 d UpdArt          pi                                                                                      161130     000116
+   146 d   qty                          5  0 value                                                               161130     000117
+   147 d   id                                like(new.ODARID)                                                    161130     000118
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page      7
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   148 c                   if        qty = 0                                                           B01       161130     000119
+   149 c                   return                                                                       01       161130     000120
+   150 c                   ENDIF                                                                       E01       161130     000121
+   151 c     id            chain     article1                                                                    161130     000122
+   152 c                   if        not %found                                                        B01       161130     000123
+   153 c                   return                                                                       01       161130     000124
+   154 c                   ENDIF                                                                       E01       161130     000125
+   155 c                   eval      ARCUSQTY += qty                                                             161130     000126
+   156 c                   update    farti                                                                       161130     000127
+   157 P UpdArt          e                                                                                       161130     000128
+       * * * * *   E N D   O F   S O U R C E   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page      8
+          A d d i t i o n a l   D i a g n o s t i c   M e s s a g e s
+ Msg id  Sv Number Seq     Message text
+ * * * * *   E N D   O F   A D D I T I O N A L   D I A G N O S T I C   M E S S A G E S   * * * * *
+                 O u t p u t   B u f f e r   P o s i t i o n s
+Line   Start End   Field or Constant
+Number Pos   Pos
+   130     1     6 ARID
+   131     7    56 ARDESC
+   132    57    60 ARSALEPR
+   133    61    64 ARWHSPR
+   134    65    67 ARTIFA
+   135    68    70 ARSTOCK
+   136    71    73 ARMINQTY
+   137    74    76 ARCUSQTY
+   138    77    79 ARPURQTY
+   139    80    80 ARVATCD
+   140    81    90 ARCREA
+   141    91   116 ARMOD
+   142   117   126 ARMODID
+   143   127   127 ARDEL
+ * * * * *   E N D   O F   O U T P U T   B U F F E R   P O S I T I O N   *  * * * *
+                            / C o p y   M e m b e r s
+Line   Src  RPG name   <-------- External name -------> CCSID  <- Last change ->
+Number Id              Library    File       Member            Date     Time
+     5    1 LOG        ATU_SRC    QPROTOSRC  LOG          297  05/23/22 14:55:56
+         * * * * *   E N D   O F   / C O P Y   M E M B E R S   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page      9
+                    K e y   F i e l d   I n f o r m a t i o n
+         File           Internal    External
+           Record       field name  field name  Attributes
+      1  ARTICLE1
+           FARTI
+                        ARID                    CHAR        6
+ * * * * *   E N D   O F   K E Y   F I E L D   I N F O R M A T I O N   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page     10
+                          C r o s s   R e f e r e n c e
+      File and Record References:
+         File              Device             References (D=Defined)
+           Record
+         ARTICLE1          DISK                    3D    151
+           FARTI                                   3D     82     129     156
+      Global Field References:
+         Field             Attributes         References (D=Defined M=Modified)
+         *ENTRY            PLIST                  97D
+         ADDLOGENTRY       PROTOTYPE               6D    110
+         ARCREA            D(10*ISO-)             93M    140
+         ARCUSQTY          P(5,0)                 90M    137     155M
+         ARDEL             A(1)                   96M    143
+         ARDESC            A(50)                  84M    131
+         ARID              A(6)                   83M    130
+         ARMINQTY          P(5,0)                 89M    136
+         ARMOD             Z(26)                  94M    141
+         ARMODID           A(10)                  95M    142
+         ARPURQTY          P(5,0)                 91M    138
+         ARSALEPR          P(7,2)                 85M    132
+         ARSTOCK           P(5,0)                 88M    135
+         ARTIFA            A(3)                   87M    134
+         ARVATCD           A(1)                   92M    139
+         ARWHSPR           P(7,2)                 86M    133
+*RNF7031 CCSID             I(10,0)                29D
+*RNF7031 CMTLCK            A(1)                   25D
+*RNF7031 FNAME             A(10)                  15D
+*RNF7031 LNAME             A(10)                  17D
+*RNF7031 MNAME             A(10)                  19D
+         NEW               DS(36)                 11      53D    107     107
+                           BASED(PN)             118     119     120     121
+                                                 123     123     123     147
+           ODARID          A(6)                   11      61D    107     118
+                                                 121     123     147
+*RNF7031   ODLINE          P(5,0)                 60D
+*RNF7031   ODORID          P(6,0)                 58D
+*RNF7031   ODPRICE         P(7,2)                 64D
+           ODQTY           P(5,0)                 62D    107     119     123
+           ODQTYLIV        P(5,0)                 63D    120     123
+*RNF7031   ODTOT           P(9,2)                 65D
+*RNF7031   ODTOTVAT        P(9,2)                 66D
+*RNF7031   ODYEAR          P(4,0)                 59D
+*RNF7031 NEWLEN            I(10,0)                43D
+         NEWOFF            I(10,0)                41D    106     116
+*RNF7031 NNLEN             I(10,0)                47D
+*RNF7031 NNOFF             I(10,0)                45D
+         OLD               DS(36)                 67D    111     111     112
+                           BASED(PO)             113     114     114     114
+                                                 118     119     120     124
+                                                 124     124
+           ODARID          A(6)                   76D    112     114     118
+                                                 124
+           ODLINE          P(5,0)                 75D    111
+           ODORID          P(6,0)                 73D    111
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page     11
+*RNF7031   ODPRICE         P(7,2)                 79D
+           ODQTY           P(5,0)                 77D    113     114     119
+                                                 124
+           ODQTYLIV        P(5,0)                 78D    114     120     124
+*RNF7031   ODTOT           P(9,2)                 80D
+*RNF7031   ODTOTVAT        P(9,2)                 81D
+*RNF7031   ODYEAR          P(4,0)                 74D
+*RNF7031 OLDLEN            I(10,0)                35D
+         OLDOFF            I(10,0)                33D    109     117
+*RNF7031 ONLEN             I(10,0)                39D
+*RNF7031 ONOFF             I(10,0)                37D
+         PARM1             DS(80)                 13D     98M    106     109
+                           BASED(_QRNL_PRM+)     116     117
+         PARM2             I(10,0)                50D     99M
+                           BASED(_QRNL_PRM+)
+         PN                *(16)                  55     106M    116M
+         PO                *(16)                  69     109M    117M
+         TEVEN             A(1)                   21D    105     108     115
+*RNF7031 TTIME             A(1)                   23D
+         UPDART            PROTOTYPE               9D    107     114     119
+                                                 123     124     144     145
+                                                 157
+      Field References for subprocedure UPDART
+         Field             Attributes         References (D=Defined M=Modified)
+         ID                A(6)                  147D    151
+                           BASED(_QRNL_PST+)
+         QTY               P(5,0)                146D    148     155
+      Indicator References:
+         Indicator                            References (D=Defined M=Modified)
+         LR                                      101D
+       * * * * *   E N D   O F   C R O S S   R E F E R E N C E   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page     12
+                      E x t e r n a l   R e f e r e n c e s
+      Statically bound procedures:
+         Procedure                            References
+         ADDLOGENTRY                               6     113
+      Imported fields:
+         Field             Attributes         Defined
+         No references in the source.
+      Exported fields:
+         Field             Attributes         Defined
+         No references in the source.
+   * * * * *   E N D   O F   E X T E R N A L   R E F E R E N C E S   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page     13
+                          M e s s a g e   S u m m a r y
+ Msg id  Sv Number Message text
+*RNF7031 00     22 The name or indicator is not referenced.
+       * * * * *   E N D   O F   M E S S A G E   S U M M A R Y   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/ORD700        MONZAXIB   03/07/23 15:32:29        Page     14
+                            F i n a l   S u m m a r y
+  Message Totals:
+    Information  (00) . . . . . . . :       22
+    Warning      (10) . . . . . . . :        0
+    Error        (20) . . . . . . . :        0
+    Severe Error (30+)  . . . . . . :        0
+    ---------------------------------  -------
+    Total . . . . . . . . . . . . . :       22
+  Source Totals:
+    Records . . . . . . . . . . . . :      157
+    Specifications  . . . . . . . . :      123
+    Data records  . . . . . . . . . :        0
+    Comments  . . . . . . . . . . . :       21
+         * * * * *   E N D   O F   F I N A L   S U M M A R Y   * * * * *
+Program ORD700 placed in library ATUDSB0005. 00 highest severity. Created on 03/07/23 at 15:32:29.
+          * * * * *   E N D   O F   C O M P I L A T I O N   * * * * *
+  . . . .
+MSG1573 *** Messages sent by the Compilation ***
+RNS9304 Program ORD700 placed in library ATUDSB0005. 00 highest severity. Created on 03/07/23 at 15:32:29.
