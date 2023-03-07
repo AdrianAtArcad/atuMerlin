@@ -1,0 +1,61 @@
+15:27:56.833 [INFO] Connecting locally to instance AD/ENG.
+15:27:57.712 [INFO] Connected to Arcad Server instance AD/ENG version 22.02.14 with CCSID 37
+15:27:58.148 [INFO] Starting project synchronization
+15:28:01.213 [INFO] Linked version of application ATU not found for branch FT/ecctest
+15:28:04.432 [INFO] Cloning git repository to /ArcadIfsPrd/arcad_home/tmp/ATU1199780154202982818
+15:28:07.109 [INFO] Performing fetch on ref refs/heads/master
+15:28:09.476 [INFO] Performing reset
+15:28:09.588 [INFO] Performing push operation on branch FT/ecctest
+15:28:11.563 [INFO] Performing push operation on branch FT/ecctest
+15:28:13.551 [INFO] Starting project synchronization
+15:28:14.352 [INFO] Performing automatic dry run from Git repository
+15:28:14.368 [INFO] Copying parent version .git repository /ArcADSCM/ATU/FT.00.04/.git to /home/atully/atuMerlin
+15:28:18.395 [INFO] Fetch output:
+
+
+Pull output:
+
+Pull:                    50% (1/2)
+
+15:28:18.396 [INFO] Preparing transfer operations
+15:28:18.788 [INFO] Created 16 transfer operation(s)
+15:28:18.790 [INFO] Dry run: skipping transfers
+15:28:18.923 [INFO] Exported transfers list to /ArcADSCM/ATU/SB.00.05/transfersList.json
+15:28:19.247 [INFO] Configuration summary:
+	- Repository: git@github.com:AdrianAtArcad/atuMerlin.git
+	- Branch: -
+	- Application: ATU
+	- Project IFS directory: /home/atully/atuMerlin
+	- Target IFS directory: /ArcADSCM/ATU/SB.00.05
+	- Target version: ATU D SB.00.05
+	- Hash comparison: MD5
+	- Synchronization type: SANDBOX
+15:28:19.247 [INFO] Preparing transfer operations
+15:28:19.439 [INFO] Created 16 transfer operation(s)
+15:28:19.546 [INFO] Nothing to transfer to QRPGLESRC; all transfers were skipped.
+15:28:19.546 [INFO] Nothing to transfer to QRPGSRC; all transfers were skipped.
+15:28:19.547 [INFO] Nothing to transfer to QMSGFSRC; all transfers were skipped.
+15:28:19.547 [INFO] Nothing to transfer to QDTASRC; all transfers were skipped.
+15:28:19.548 [INFO] Transferring 1 member(s) to file QDDSSRC; 49 skipped
+15:28:20.579 [INFO] Transfer to file QDDSSRC complete
+15:28:20.580 [INFO] Nothing to transfer to QCLSRC; all transfers were skipped.
+15:28:20.580 [INFO] Nothing to transfer to QILESRC; all transfers were skipped.
+15:28:20.580 [INFO] Nothing to transfer to QILESRVSRC; all transfers were skipped.
+15:28:20.580 [INFO] Nothing to transfer to QPNLSRC; all transfers were skipped.
+15:28:20.580 [INFO] Nothing to transfer to QCMDSRC; all transfers were skipped.
+15:28:20.581 [INFO] Nothing to transfer to QSQLSRC; all transfers were skipped.
+15:28:20.581 [INFO] Nothing to transfer to QSRVSRC; all transfers were skipped.
+15:28:20.581 [INFO] Nothing to transfer to QTRGSRC; all transfers were skipped.
+15:28:20.581 [INFO] Nothing to transfer to QPROTOSRC; all transfers were skipped.
+15:28:20.581 [INFO] Nothing to transfer to QCBLSRC; all transfers were skipped.
+15:28:20.581 [INFO] Nothing to transfer to QBNDSRC; all transfers were skipped.
+15:28:20.678 [INFO] Exported transfers list to /ArcADSCM/ATU/SB.00.05/transfersList.json
+15:28:20.678 [INFO] Duration: 6 second(s)
+15:28:20.688 [INFO] Running unitary compilation for 1 component(s)
+15:28:21.083 [INFO] Created Smart Compiler list ATUDSB0005/SMARTCPL with 1 component(s) to compile:
+	- ARTICLE (PF/*PF)
+15:28:21.864 [INFO] Waiting for compilations to end...
+15:28:26.444 [INFO] 4 component(s) successfully compiled
+15:28:26.444 [INFO] Writing compilation logs
+15:28:26.502 [INFO] Writing 5 spooled file(s)
+15:28:26.630 [INFO] Writing 1 event file(s)
