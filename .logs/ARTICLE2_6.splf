@@ -1,4 +1,4 @@
- 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE2      3/23/23 15:11:58        Page    1
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE2      3/28/23 12:01:28        Page    1
  File name . . . . . . . . . . . . . . . . . . . . . :   ARTICLE2
    Library name  . . . . . . . . . . . . . . . . . . :   ATUDSB0005
  File attribute  . . . . . . . . . . . . . . . . . . :   Logical
@@ -20,7 +20,7 @@
     300                  K ARDESC                                                         11/03/16
     400                  K ARID                                                           11/03/16
                          * * * * *   E N D   O F   S O U R C E   * * * * *
- 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE2      3/23/23 15:11:58        Page    2
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE2      3/28/23 12:01:28        Page    2
                                           Expanded Source
                                                                                           Field       Buffer position
  SEQNBR  *...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8 length        Out     In
@@ -28,7 +28,7 @@
     300                  K ARDESC
     400                  K ARID
                  * * * * *   E N D   O F   E X P A N D E D   S O U R C E   * * * * *
- 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE2      3/23/23 15:11:58        Page    3
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE2      3/28/23 12:01:28        Page    3
                                           Message Summary
     Total          Informational          Warning        Error       Severe
                        (0-9)              (10-19)       (20-29)      (30-99)

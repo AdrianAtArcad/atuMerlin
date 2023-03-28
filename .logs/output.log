@@ -1,8 +1,8 @@
-11:52:37.326 [INFO] Connecting locally to instance AD/ENG.
-11:52:38.146 [INFO] Connected to Arcad Server instance AD/ENG version 22.02.14 with CCSID 37
-11:52:38.614 [INFO] Starting project synchronization
-11:52:39.088 [INFO] Importing previous transfers from /ArcADSCM/ATU/SB.00.05/transfersList.json
-11:52:39.191 [INFO] Configuration summary:
+12:02:20.817 [INFO] Connecting locally to instance AD/ENG.
+12:02:21.824 [INFO] Connected to Arcad Server instance AD/ENG version 22.02.14 with CCSID 37
+12:02:22.512 [INFO] Starting project synchronization
+12:02:23.201 [INFO] Importing previous transfers from /ArcADSCM/ATU/SB.00.05/transfersList.json
+12:02:23.343 [INFO] Configuration summary:
 	- Repository: git@github.com:AdrianAtArcad/atuMerlin.git
 	- Branch: FT/ecctest
 	- Application: ATU
@@ -11,32 +11,198 @@
 	- Target version: ATU D SB.00.05
 	- Hash comparison: MD5
 	- Synchronization type: SANDBOX
-11:52:39.192 [INFO] Preparing transfer operations
-11:52:39.571 [INFO] Created 16 transfer operation(s)
-11:52:39.715 [INFO] Transferring 1 member(s) to file QRPGLESRC; 36 skipped
-11:52:40.720 [INFO] Transfer to file QRPGLESRC complete
-11:52:40.722 [INFO] Nothing to transfer to QRPGSRC; all transfers were skipped.
-11:52:40.722 [INFO] Nothing to transfer to QMSGFSRC; all transfers were skipped.
-11:52:40.722 [INFO] Nothing to transfer to QDTASRC; all transfers were skipped.
-11:52:40.723 [INFO] Nothing to transfer to QDDSSRC; all transfers were skipped.
-11:52:40.723 [INFO] Nothing to transfer to QCLSRC; all transfers were skipped.
-11:52:40.723 [INFO] Nothing to transfer to QILESRC; all transfers were skipped.
-11:52:40.723 [INFO] Nothing to transfer to QILESRVSRC; all transfers were skipped.
-11:52:40.724 [INFO] Nothing to transfer to QPNLSRC; all transfers were skipped.
-11:52:40.724 [INFO] Nothing to transfer to QCMDSRC; all transfers were skipped.
-11:52:40.724 [INFO] Nothing to transfer to QSQLSRC; all transfers were skipped.
-11:52:40.724 [INFO] Nothing to transfer to QSRVSRC; all transfers were skipped.
-11:52:40.725 [INFO] Nothing to transfer to QTRGSRC; all transfers were skipped.
-11:52:40.725 [INFO] Nothing to transfer to QPROTOSRC; all transfers were skipped.
-11:52:40.725 [INFO] Nothing to transfer to QCBLSRC; all transfers were skipped.
-11:52:40.725 [INFO] Nothing to transfer to QBNDSRC; all transfers were skipped.
-11:52:40.849 [INFO] Exported transfers list to /ArcADSCM/ATU/SB.00.05/transfersList.json
-11:52:40.850 [INFO] Duration: 1 second(s)
-11:52:40.861 [INFO] Running unitary compilation for 1 component(s)
-11:52:41.267 [INFO] Created Smart Compiler list ATUDSB0005/SMARTCPL with 1 component(s) to compile:
-	- ART201 (RPGLE/*RPGLE)
-11:52:42.015 [INFO] Waiting for compilations to end...
-11:52:44.086 [INFO] 1 component(s) successfully compiled
-11:52:44.087 [INFO] Writing compilation logs
-11:52:44.117 [INFO] Writing 2 spooled file(s)
-11:52:44.306 [INFO] Writing 1 event file(s)
+12:02:23.343 [INFO] Preparing transfer operations
+12:02:23.874 [INFO] Created 16 transfer operation(s)
+12:02:24.031 [INFO] Nothing to transfer to QRPGLESRC; all transfers were skipped.
+12:02:24.031 [INFO] Nothing to transfer to QRPGSRC; all transfers were skipped.
+12:02:24.031 [INFO] Nothing to transfer to QMSGFSRC; all transfers were skipped.
+12:02:24.032 [INFO] Nothing to transfer to QDTASRC; all transfers were skipped.
+12:02:24.032 [INFO] Nothing to transfer to QDDSSRC; all transfers were skipped.
+12:02:24.032 [INFO] Nothing to transfer to QCLSRC; all transfers were skipped.
+12:02:24.032 [INFO] Nothing to transfer to QILESRC; all transfers were skipped.
+12:02:24.033 [INFO] Nothing to transfer to QILESRVSRC; all transfers were skipped.
+12:02:24.033 [INFO] Nothing to transfer to QPNLSRC; all transfers were skipped.
+12:02:24.033 [INFO] Nothing to transfer to QCMDSRC; all transfers were skipped.
+12:02:24.033 [INFO] Nothing to transfer to QSQLSRC; all transfers were skipped.
+12:02:24.033 [INFO] Nothing to transfer to QSRVSRC; all transfers were skipped.
+12:02:24.034 [INFO] Nothing to transfer to QTRGSRC; all transfers were skipped.
+12:02:24.034 [INFO] Nothing to transfer to QPROTOSRC; all transfers were skipped.
+12:02:24.034 [INFO] Nothing to transfer to QCBLSRC; all transfers were skipped.
+12:02:24.034 [INFO] Nothing to transfer to QBNDSRC; all transfers were skipped.
+12:02:24.162 [INFO] Exported transfers list to /ArcADSCM/ATU/SB.00.05/transfersList.json
+12:02:24.162 [INFO] Duration: 0 second(s)
+12:02:24.169 [INFO] Preparing a full build using Macro-command *LIBL/BUILD
+12:02:24.171 [INFO] Running full build on version ATU D SB.00.05 using Macro-command *LIBL/BUILD
+12:02:26.231 [INFO] Macro-command BUILD instance 108 started.
+12:02:26.257 [INFO] Macro-command submitted in job 539476/ATULLY/BUILD
+12:02:27.392 [INFO] Sequence 10: AIF COND((*IF *INTER *EQ *MULTIJOB)) THEN(INZMULJOB APP(ATU) CMD(ACPLOBJ))
+12:02:27.392 [INFO] Sequence 20: ACHGVAR VAR(WTGTRLS) VALUE('*CURRENT')
+12:02:27.393 [INFO] Sequence 30: AGETAPPVAR ENV(ATU *NONE *NONE) GRPVAR(ARCAD_STANDARD) GRPVAL(CHANGER) VAR(TGTRLS) TOVAR(WTGTRLS)
+12:02:27.393 [INFO] Sequence 40: ACHGVAR VAR(WBYPASS) VALUE('*NO')
+12:02:27.394 [INFO] Sequence 50: AGETAPPVAR ENV(ATU *NONE *NONE) GRPVAR(ARCAD_STANDARD) GRPVAL(CHANGER) VAR(BUILD_ALLOW_BYPASS) TOVAR(WBYPASS)
+12:02:27.394 [INFO] Sequence 60: ACHGVAR VAR(WSTATUS) VALUE('KO')
+12:02:27.395 [INFO] Sequence 70: ACHKLST LIST(ATUDSB0005/LSTDLVSRC)
+12:02:27.396 [ERROR] [MSG0318]: List ATUDSB0005/LSTDLVSRC does not exist.
+12:02:27.397 [INFO] Sequence 80: AIF COND((*IF MSG0318 *EQ MSG0318)) THEN(ACHGVAR VAR(PMODE) VALUE(*FULL) TYPE(*CHAR))
+12:02:27.397 [INFO] Sequence 90: ACHKVER APP(ATU) ENV(D) VERSION(SB.00.05) AUT(*YES) ACTIVE(*YES) CHKVLD(*NO)
+12:02:27.398 [INFO] Sequence 100: AINZCURENV APP(ATU) ENV(D) VERSION(SB.00.05)
+12:02:27.398 [INFO] Sequence 110: ACRTLST LIST(ATUDSB0005/LSTSRCBLD) REPLACE(*YES) TEXT('List of sources to build')
+12:02:27.399 [INFO] Sequence 120: ACRTLST LIST(ATUDSB0005/LSTXREF) REPLACE(*YES) TEXT('List of Xref compile')
+12:02:27.400 [INFO] Sequence 130: ACRTLST LIST(ATUDSB0005/LSTBYPASS) REPLACE(*YES) TEXT('List of components that doesn''t compile')
+12:02:27.400 [INFO] Sequence 130: ACRTLST LIST(ATUDSB0005/LSTBYPASS) REPLACE(*YES) TEXT('List of components that doesn''t compile')
+12:02:27.401 [INFO] Sequence 140: AIF COND((*IF *NO *EQ *YES)) THEN(ACHKLST LIST(ARC_ATULST/LSTBYPASS))
+12:02:27.401 [INFO] Sequence 150: ACRTREFLST APP(ATU) FROMVERS(SB.00.05) TOVERS(*FROMVERS) LIBTYPE(*ENV) TOSRCLIST(ATUDSB0005/LSTSRCBLD) TOOBJLIST(ATUDSB0005/LSTOBJBLD) INCDLT(*YES) GENSTEP(*MAINT)
+12:02:27.402 [INFO] Sequence 160: AEXCSQL SQLSTM('update ATUDSB0005/lstsrcbld s set LST_CZSEL7 = ( select t.TYP_CXTYPE FROM ARCAD_PRD/aARTTYPF1 t WHERE t.TYP_CISSRC = ''1'' and t.typ_ctype = s.LST_CTYPE and t.TYP_CCPLT = s.lst_ccplt  )                                        where exi
+12:02:27.403 [INFO] Sequence 170: AEXTLST FROMLIST(ATUDSB0005/LSTSRCBLD) TOLIST(ATUDSB0005/LSTDELETE) RMVELEM(*YES) SELECT(*ALL *ALL () () *ALL *ALL *ALL *NONE *NONE *ALL H ())
+12:02:27.404 [INFO] Sequence 180: AINZLST LIST(ATUDSB0005/LSTDELETE) UNHLDELEM(*YES)
+12:02:27.404 [INFO] Sequence 190: AIF COND((*IF *FULL *EQ '*DELTA')) THEN(ACALLSUBR SUBR(DELTA))
+12:02:27.405 [INFO] Sequence 200: ACHKLST LIST(ATUDSB0005/LSTSRCBLD) CHKELEM(*YES)
+12:02:27.405 [INFO] Sequence 210: AEXTLST FROMLIST(ATUDSB0005/LSTSRCBLD) TOLIST(ATUDSB0005/LSTRCPL0) TOLISTTEXT('List of sources with object') EXPR('LST_JXLIB *NE '' ''')
+12:02:27.406 [INFO] Sequence 220: AEXTLST FROMLIST(ATUDSB0005/LSTSRCBLD) TOLIST(ATUDSB0005/LSTSRCCOPY) TOLISTTEXT('List of sources without object') EXPR('LST_JXLIB = '' ''')
+12:02:27.406 [INFO] Sequence 230: ACRTSXRLST REFTYPE(*INCLUDE) RTVSUBLVL(*YES) FROMREF(*LST) LNKTYPE(*COPYPGM) INCREFOBJ(*NO) LIST(ATUDSB0005/LSTSRCCOPY) APP(ATU) VERSLVL(*CURENV) TOLIST(ATUDSB0005/LSTRCPLCPY) CHKVERCPL(*YES) USEAPPLNK(*NONE)
+12:02:27.407 [INFO] Sequence 240: AEXTLST FROMLIST(ATUDSB0005/LSTRCPLCPY) TOLIST(*NONE) RMVELEM(*YES) SELECT(*ALL *ALL () () *ALL *ALL *ALL *NONE *NONE *ALL H ())
+12:02:27.407 [INFO] Sequence 250: AEXCSQL SQLSTM('update ATUDSB0005/LSTRCPLCPY s set LST_CZSEL7 = ( select t.TYP_CXTYPE FROM ARCAD_PRD/aARTTYPF1 t WHERE t.TYP_CISSRC = ''1'' and t.typ_ctype = s.LST_CTYPE and t.TYP_CCPLT = s.lst_ccplt  )                                      where exis
+12:02:27.408 [INFO] Sequence 260: AEXCSQL SQLSTM(' delete   from ATUDSB0005/LSTRCPLCPY x   where  exists  (select lst_ctype from ATUDSB0005/lstsrcbld s  where  s.LST_CZSEL7 = x.LST_CZSEL7 and s.lst_jobj = x.lst_jobj  and s.lst_ctype <> x.lst_ctype)')
+12:02:27.408 [INFO] Sequence 270: AEXCSQL SQLSTM('delete   from ATUDSB0005/LSTRCPLCPY           WHERE LST_JXLIB = '' ''')
+12:02:27.409 [INFO] Sequence 280: ACALLSUBR SUBR(CPL1)
+12:02:27.409 [INFO] Sequence 400: AEXTLST FROMLIST(ATUDSB0005/LSTRCPL0) TOLIST(ATUDSB0005/LSTRCPL1) TOLISTTEXT('List of source for *FILE') EXPR('LST_NORD *LE 7')
+12:02:27.409 [INFO] Sequence 410: ACALLSUBR SUBR(DBR)
+12:02:27.410 [INFO] Sequence 490: AEXTLST FROMLIST(ATUDSB0005/LSTRCPL1) TOLIST(ATUDSB0005/LSTDBR0) TOLISTTEXT('List of files for ACRTDBRLST') RMVELEM(*NO) SELECT(*ALL *ALL (TABLE PF* VIEW) () *ALL *ALL *ALL *NONE *NONE *ALL *ALL ())
+12:02:27.410 [INFO] Sequence 500: AINZCURENV APP(ATU) ENV(*NONE) VERSION(*NONE)
+12:02:29.010 [INFO] Sequence 510: ACVTLST LIST(ATUDSB0005/LSTDBR0) CVTTYPE(*MBRTOOBJ)
+12:02:29.011 [INFO] Sequence 520: ACRTLST LIST(ATUDSB0005/LSTDBR1) REPLACE(*YES) TEXT('List of dependant files')
+12:02:29.011 [INFO] Sequence 530: ACRTLST LIST(ATUDSB0005/LSTDBR4) REPLACE(*YES) TEXT('List of triggers ')
+12:02:29.012 [INFO] Sequence 540: AEXCLST LIST(ATUDSB0005/LSTDBR0) CMD(ACRTDBRLST REFFILE(*LIBL/$LOBJ) TOLIST(ATUDSB0005/LSTDBR1) OPTION(*ADD) DBRTYPE(*LGL) INCREFFILE(*NO) LSTTYPE(M))
+12:02:29.012 [INFO] Sequence 550: AEXCSQL SQLSTM('delete from ATUDSB0005/LSTDBR1 where LST_JXLIB = ''ARRPLOBJ''')
+12:02:29.013 [INFO] Sequence 560: AEXCLST LIST(ATUDSB0005/LSTDBR0) CMD(ACRTDBRLST REFFILE(*LIBL/$LOBJ) TOLIST(ATUDSB0005/LSTDBR4) OPTION(*ADD) DBRTYPE(*TRG) INCREFFILE(*NO) LSTTYPE(M))
+12:02:29.013 [INFO] Sequence 570: ACHGLST LIST(ATUDSB0005/LSTDBR1) CORRESP((*ANY ATUDSB0005)) CHGLIB(*NO)
+12:02:29.014 [INFO] Sequence 580: ACHGLST LIST(ATUDSB0005/LSTDBR4) CORRESP((*ANY ATUDSB0005)) CHGLIB(*NO)
+12:02:29.014 [INFO] Sequence 590: AMRGLST FIRSTLIST(ATUDSB0005/LSTDBR1) SECONDLIST(ATUDSB0005/LSTRCPL1) TOLIST(*SECNDLST) RMVDUP(*YES)
+12:02:29.014 [INFO] Sequence 600: AINZCURENV APP(ATU) ENV(D) VERSION(SB.00.05)
+12:02:29.015 [INFO] Sequence 610: /* */
+12:02:29.015 [INFO] Sequence 420: AEXTLST FROMLIST(ATUDSB0005/LSTRCPL1) TOLIST(*NONE) RMVELEM(*YES) EXPR('LST_CTYPE *CT ''*''')
+12:02:29.016 [INFO] Sequence 430: ACHGVAR VAR(WLSTCPL) VALUE(LSTRCPL1)
+12:02:29.016 [INFO] Sequence 440: AADJLSTORD LIST(ATUDSB0005/LSTRCPL1) SRCLIB(*LIBL) FILE(*YES) SRVPGM(*NO)
+12:02:30.634 [INFO] Sequence 450: ACPLOBJ OBJ(*LST) LIST(ATUDSB0005/LSTRCPL1) SRCLIB(*LIBL) ORDLIST(*YES) MODE(*INTER) MLJOBNBR(*APPVAR) MLJOBDLY(*APPVAR) MLJOBJOBQ(*APPVAR) MLJOBNAME(BUILD) DEPLGLCPL(*NO) XREFLIST(*YES) TOLIST(*CURENV/LSTXREF) CPLMOD1DEP(*NO) TGTRLS(*CURRENT)
+12:02:37.546 [ERROR] [MSG2796]: Compilation of ARTICLE (PF) in version ATU D SB.00.05
+12:02:37.546 [ERROR] [MSG0168]: List ARRPLOBJ/LSJWX3J38 created. 4 record(s).
+12:02:37.547 [ERROR] [MSG1343]: 1 element(s) removed from the ARRPLOBJ/LSJWX3J38 list.
+12:02:37.547 [ERROR] [CPC7303]: File LSJWX3J38 in library ARRPLOBJ changed.
+12:02:37.547 [ERROR] [MSG0168]: List QTEMP/ZZLSTVIEW created. 1 record(s).
+12:02:37.547 [ERROR] [MSG2197]: No ranking changes of component(s) required for list LSJWX3J38 in library ARRPLOBJ
+12:02:37.547 [ERROR] [MSG0168]: List ARRPLOBJ/ZSJWX3J38 created. 5 record(s).
+12:02:37.547 [ERROR] [MSG0516]: Object/member ATUDSB0005/ARTICLE type *FILE Held from the list ARRPLOBJ/ZSJWX3J38.
+12:02:37.548 [ERROR] [CPF4123]: Open options ignored for shared open of member AARTLSTF1.
+12:02:37.548 [ERROR] [CPI2201]: Authority given to user ATULLY for object CSJVWZYWI in ARRPLOBJ object type *FILE.
+12:02:37.548 [ERROR] [CPC2201]: Object authority granted.
+12:02:37.548 [ERROR] [MSG0728]: Command GRTOBJAUT ended normally, 1 objects processed, 1 OK.
+12:02:37.548 [ERROR] [CPD4090]: Printer device PRT01 not found. Output queue changed to QPRINT in library QGPL.
+12:02:37.549 [ERROR] [CPC7303]: File ARTICLE1 in library ATUDSB0005 changed.
+12:02:37.549 [ERROR] [CPC7303]: File ARTICLE in library ARRP539476 changed.
+12:02:37.549 [ERROR] [CPI2218]: Authority *ALL or *AUTL revoked from *PUBLIC.
+12:02:37.549 [ERROR] [CPI2201]: Authority given to user *PUBLIC for object CSJWYZQXY in ARRP539476 object type *FILE.
+12:02:37.549 [ERROR] [CPI2201]: Authority given to user ATULLY for object CSJWYZQXY in ARRP539476 object type *FILE.
+12:02:37.549 [ERROR] [CPD4090]: Printer device PRT01 not found. Output queue changed to QPRINT in library QGPL.
+12:02:37.550 [ERROR] [CPC7303]: File ARTICLE2 in library ATUDSB0005 changed.
+12:02:37.550 [ERROR] [CPC7303]: File ARTICLE in library ARRP539476 changed.
+12:02:37.550 [ERROR] [CPI2218]: Authority *ALL or *AUTL revoked from *PUBLIC.
+12:02:37.550 [ERROR] [CPI2201]: Authority given to user *PUBLIC for object CSJWZKPKY in ARRP539476 object type *FILE.
+12:02:37.550 [ERROR] [CPI2201]: Authority given to user ATULLY for object CSJWZKPKY in ARRP539476 object type *FILE.
+12:02:37.551 [ERROR] [CPD4090]: Printer device PRT01 not found. Output queue changed to QPRINT in library QGPL.
+12:02:37.551 [ERROR] [CPC7303]: File ARTLSTDAT in library ATUDSB0005 changed.
+12:02:37.551 [ERROR] [CPC7303]: File ARTICLE in library ARRP539476 changed.
+12:02:37.551 [ERROR] [CPI2218]: Authority *ALL or *AUTL revoked from *PUBLIC.
+12:02:37.551 [ERROR] [CPI2201]: Authority given to user *PUBLIC for object CSJX038PB in ARRP539476 object type *FILE.
+12:02:37.551 [ERROR] [CPI2201]: Authority given to user ATULLY for object CSJX038PB in ARRP539476 object type *FILE.
+12:02:37.552 [ERROR] [CPD4090]: Printer device PRT01 not found. Output queue changed to QPRINT in library QGPL.
+12:02:37.552 [ERROR] [MSG0877]: Deletion executed for 4 element(s), 4 OK.
+12:02:37.552 [ERROR] [MSG0516]: Object/member ATUDSB0005/ARTICLE type *FILE Released from the list ARRPLOBJ/ZSJWX3J38.
+12:02:37.552 [ERROR] [CPC7303]: File ARTICLE in library ATUDSB0005 changed.
+12:02:37.552 [ERROR] [CPC2103]: Object changed for ARTICLE in ATUDSB0005 type *FILE.
+12:02:37.553 [ERROR] [CPF9801]: Object CSJWX3J38 in library QTEMP not found.
+12:02:37.553 [ERROR] [CPC0904]: Data area CSJWX3J38 created in library QTEMP.
+12:02:37.553 [ERROR] [CPI2201]: Authority given to user *PUBLIC for object CSJWX3J38 in QTEMP object type *DTAARA.
+12:02:37.554 [ERROR] [CPI2201]: Authority given to user ATULLY for object CSJWX3J38 in QTEMP object type *DTAARA.
+12:02:37.554 [ERROR] [CPC2201]: Object authority granted.
+12:02:37.554 [ERROR] [CPI2201]: Authority given to user ATULLY for object CSJWX3J38 in QTEMP object type *DTAARA.
+12:02:37.554 [ERROR] [CPC2201]: Object authority granted.
+12:02:37.555 [ERROR] [CPI2201]: Authority given to user ATULLY for object ARTICLE in ATUDSB0005 object type *FILE.
+12:02:37.555 [ERROR] [CPC2201]: Object authority granted.
+12:02:37.555 [ERROR] [CPC2192]: Object ARTICLE in ATUDSB0005 type *FILE renamed CSJWX3J38.
+12:02:37.555 [ERROR] [CPC2193]: Object CSJWX3J38 in ATUDSB0005 type *FILE moved to library ARRPLOBJ.
+12:02:37.556 [ERROR] [CPC2191]: Object CSJWX3J38 in ARRPLOBJ type *DTAARA deleted.
+12:02:37.556 [ERROR] [ *IMMED]: CRTPF FILE(ATUDSB0005/ARTICLE) SRCFILE(ATUDSB0005/QDDSSRC)
+12:02:37.556 [ERROR] [CPD4090]: Printer device PRT01 not found. Output queue changed to QPRINT in library QGPL.
+12:02:37.556 [ERROR] [CPF7311]: Errors in DDS not allowed with specified GENLVL.
+12:02:37.556 [ERROR] [CPF7302]: File ARTICLE not created in library ATUDSB0005.
+12:02:37.556 [ERROR] [CPF9801]: Object ARTICLE in library ATUDSB0005 not found.
+12:02:37.557 [ERROR] [MSG0168]: List QTEMP/ZLSTDBR1 created. 1 record(s).
+12:02:37.557 [ERROR] [MSG1343]: 1 element(s) removed from the QTEMP/ZLSTDBR1 list.
+12:02:37.557 [ERROR] [CPI2101]: Object ARTICLE in ATUDSB0005 type *FILE created.
+12:02:37.557 [ERROR] [CPC2130]: 1 objects duplicated.
+12:02:37.558 [ERROR] [CPI2218]: Authority *ALL or *AUTL revoked from *PUBLIC.
+12:02:37.558 [ERROR] [CPC2202]: Object authority revoked.
+12:02:37.558 [ERROR] [CPI2201]: Authority given to user *PUBLIC for object ARTICLE in ATUDSB0005 object type *FILE.
+12:02:37.558 [ERROR] [CPI2201]: Authority given to user ATULLY for object ARTICLE in ATUDSB0005 object type *FILE.
+12:02:37.559 [ERROR] [CPC2201]: Object authority granted.
+12:02:37.559 [ERROR] [CPC7303]: File ARTICLE in library ATUDSB0005 changed.
+12:02:37.559 [ERROR] [CPF3292]: File ARTICLE in library ATUDSB0005 restored.
+12:02:37.559 [ERROR] [CPF3292]: File ARTICLE1 in library ATUDSB0005 restored.
+12:02:37.559 [ERROR] [CPF3292]: File ARTICLE2 in library ATUDSB0005 restored.
+12:02:37.559 [ERROR] [CPF3292]: File ARTLSTDAT in library ATUDSB0005 restored.
+12:02:37.560 [ERROR] [MSG2235]: * Object ATUDSB0005/ARTICLE compilation failure
+12:02:39.302 [INFO] Sequence 450: CRTLF FILE(ATUDSB0005/ARTICLE1) SRCFILE(ATU_SRC/QDDSSRC)
+12:02:40.783 [INFO] Sequence 450: CRTLF FILE(ATUDSB0005/ARTICLE2) SRCFILE(ATU_SRC/QDDSSRC)
+12:02:42.167 [ERROR] [MSG2796]: Compilation of ARTLSTDAT (VIEW) in version ATU D SB.00.05
+12:02:42.167 [ERROR] [MSG0168]: List ARRPLOBJ/LSJX2Z0WF created. 0 record(s).
+12:02:42.168 [ERROR] [MSG0201]: No element in list ARRPLOBJ/LSJX2Z0WF.
+12:02:42.168 [ERROR] [CPC7303]: File LSJX2Z0WF in library ARRPLOBJ changed.
+12:02:42.168 [ERROR] [MSG0201]: No element in list ARRPLOBJ/LSJX2Z0WF.
+12:02:42.168 [ERROR] [CPC7303]: File ARTLSTDAT in library ATUDSB0005 changed.
+12:02:42.168 [ERROR] [CPC2103]: Object changed for ARTLSTDAT in ATUDSB0005 type *FILE.
+12:02:42.168 [ERROR] [CPF9801]: Object CSJX2Z0WF in library QTEMP not found.
+12:02:42.169 [ERROR] [CPC0904]: Data area CSJX2Z0WF created in library QTEMP.
+12:02:42.169 [ERROR] [CPI2201]: Authority given to user *PUBLIC for object CSJX2Z0WF in QTEMP object type *DTAARA.
+12:02:42.169 [ERROR] [CPI2201]: Authority given to user ATULLY for object CSJX2Z0WF in QTEMP object type *DTAARA.
+12:02:42.169 [ERROR] [CPC2201]: Object authority granted.
+12:02:42.170 [ERROR] [CPC2206]: Ownership of object CSJX2Z0WF in QTEMP type *DTAARA changed.
+12:02:42.170 [ERROR] [CPI2201]: Authority given to user ATULLY for object CSJX2Z0WF in QTEMP object type *DTAARA.
+12:02:42.170 [ERROR] [CPC2201]: Object authority granted.
+12:02:42.170 [ERROR] [CPI2201]: Authority given to user ATULLY for object ARTLSTDAT in ATUDSB0005 object type *FILE.
+12:02:42.170 [ERROR] [CPC2201]: Object authority granted.
+12:02:42.170 [ERROR] [CPC2192]: Object ARTLSTDAT in ATUDSB0005 type *FILE renamed CSJX2Z0WF.
+12:02:42.171 [ERROR] [CPC2193]: Object CSJX2Z0WF in ATUDSB0005 type *FILE moved to library ARRPLOBJ.
+12:02:42.171 [ERROR] [CPC2191]: Object CSJX2Z0WF in ARRPLOBJ type *DTAARA deleted.
+12:02:42.171 [ERROR] [CPD4090]: Printer device PRT01 not found. Output queue changed to QPRINT in library QGPL.
+12:02:42.171 [ERROR] [ *IMMED]: ACRTSQLOBJ OBJ(ATUDSB0005/ARTLSTDAT) SRCFILE(ATU_SRC/QSQLSRC) SRCTYPE('VIEW') REPLACE(*YES) TGTRLS(V7R4M0)
+12:02:42.171 [ERROR] [MSG1573]: *** Messages sent by the Compilation ***
+12:02:42.172 [ERROR] [CPF9812]: File ARTLSTDAT in library ATUDSB0005 not found.
+12:02:42.172 [ERROR] [MSG0159]: Library QTEMP does not belong to any application.
+12:02:42.172 [ERROR] [CPC7301]: File ZZQSQLSRC1 created in library QTEMP.
+12:02:42.172 [ERROR] [MSG0704]: Source file QTEMP/ZZQSQLSRC1 created in standard format.
+12:02:42.172 [ERROR] [CPC7303]: File ZZQSQLSRC1 in library QTEMP changed.
+12:02:42.172 [ERROR] [CPC2198]: Current library changed to ATUDSB0005.
+12:02:42.173 [ERROR] [CPC2198]: Current library changed to ATUDSB0005.
+12:02:42.173 [ERROR] [CPC7303]: File ARTLSTDAT in library ATUDSB0005 changed.
+12:02:42.173 [ERROR] [CPC2103]: Object changed for ARTLSTDAT in ATUDSB0005 type *FILE.
+12:02:42.173 [ERROR] [MSG0876]: Object ATUDSB0005/ARTLSTDAT of type *FILE stamped.
+12:02:42.173 [ERROR] [CPI2218]: Authority *ALL or *AUTL revoked from *PUBLIC.
+12:02:42.174 [ERROR] [CPF3234]: Data authority ignored for file ARTLSTDAT in library ATUDSB0005.
+12:02:42.174 [ERROR] [CPI2201]: Authority given to user *PUBLIC for object ARTLSTDAT in ATUDSB0005 object type *FILE.
+12:02:42.174 [ERROR] [CPF3234]: Data authority ignored for file ARTLSTDAT in library ATUDSB0005.
+12:02:42.174 [ERROR] [CPI2201]: Authority given to user ATULLY for object ARTLSTDAT in ATUDSB0005 object type *FILE.
+12:02:42.174 [ERROR] [CPC7303]: File ARTLSTDAT in library ATUDSB0005 changed.
+12:02:42.174 [ERROR] [MSG0916]: Attributes of object ATUDSB0005/ARTLSTDAT applied according to the object ARRPLOBJ/CSJX2Z0WF.
+12:02:42.175 [ERROR] [MSG2480]: Source retrieved for the SQL object ATUDSB0005/ARTLSTDAT of type *FILE.
+12:02:42.175 [ERROR] [MSG0569]: List QTEMP/ZZFILXREF created.
+12:02:42.175 [ERROR] [MSG1569]: ABNORMAL end of compilations, 1 compilation(s) out of 4 abnormally ended.
+12:02:42.175 [INFO] Sequence 950: AIF COND((*IF *NO *EQ *NO)) THEN(AGOTO STEP(ERMSG))
+12:02:42.176 [INFO] Sequence 990: AERROR MSG('Error during the main Build process. See list LSTRCPL1')
+12:02:42.176 [ERROR] [MSG4226]: An error was raised: Error during the main Build process. See list LSTRCPL1.
+12:02:43.425 [INFO] Job 539476/ATULLY/BUILD ended normally
+12:02:43.427 [ERROR] Version ATU D SB.00.05 build failed.
+12:02:43.915 [ERROR] 3 component(s) compiled; 1 failed to compile:
+	- ARTICLE (PF/*FILE)
+12:02:43.916 [INFO] Writing compilation logs
+12:02:44.048 [INFO] Writing 4 spooled file(s)
+12:02:44.117 [INFO] Writing 0 event file(s)
