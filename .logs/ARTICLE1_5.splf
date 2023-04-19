@@ -1,4 +1,4 @@
- 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE1      3/28/23 12:01:26        Page    1
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE1      4/19/23 12:13:43        Page    1
  File name . . . . . . . . . . . . . . . . . . . . . :   ARTICLE1
    Library name  . . . . . . . . . . . . . . . . . . :   ATUDSB0005
  File attribute  . . . . . . . . . . . . . . . . . . :   Logical
@@ -20,7 +20,7 @@
     200                  R FARTI                     PFILE(ARTICLE)                       07/18/00
     300                  K ARID                                                           10/24/16
                          * * * * *   E N D   O F   S O U R C E   * * * * *
- 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE1      3/28/23 12:01:26        Page    2
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE1      4/19/23 12:13:43        Page    2
                                           Expanded Source
                                                                                           Field       Buffer position
  SEQNBR  *...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8 length        Out     In
@@ -28,7 +28,7 @@
     200                  R FARTI                     PFILE(ARTICLE)
     300                  K ARID
                  * * * * *   E N D   O F   E X P A N D E D   S O U R C E   * * * * *
- 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE1      3/28/23 12:01:26        Page    3
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE1      4/19/23 12:13:43        Page    3
                                           Message Summary
     Total          Informational          Warning        Error       Severe
                        (0-9)              (10-19)       (20-29)      (30-99)

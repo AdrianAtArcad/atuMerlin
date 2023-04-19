@@ -27,7 +27,7 @@
                                             COLHDG('CUS' 'ORDER' 'QTY')
                   ARPURQTY  R               REFFLD(QUANTITY)
                                             TEXT('PURCHASE ORDER QUANTITY')
-                                            COLHDG('Pur' 'Ord' 'QTY')
+                                            COLHDG('Purc' 'Ord' 'QTY')
                                             EDTCDE(2)
                   ARVATCD   R               REFFLD(VATCODE)
                   ARCREA          L         TEXT('CREATION DATE')
