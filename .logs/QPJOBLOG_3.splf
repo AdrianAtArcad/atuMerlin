@@ -1,0 +1,210 @@
+ 5770SS1 V7R4M0 190621                           Job Log                           MONZAXIB  04/05/23  14:42:25 CEST     Page    1
+  Job name . . . . . . . . . . :   ART202          User  . . . . . . :   ATULLY       Number . . . . . . . . . . . :   543249
+  Job description  . . . . . . :   QDFTJOBD        Library . . . . . :   QGPL
+MSGID      TYPE                    SEV  DATE      TIME             FROM PGM     LIBRARY     INST     TO PGM      LIBRARY     INST
+CPC1129    Completion              00   04/05/23  14:42:23.659295  QWTCHGJB     QSYS        0B59     *EXT                    *N
+                                     Message . . . . :   Job 543249/ATULLY/ART202 changed by ATULLY.
+CPF1124    Information             00   04/05/23  14:42:23.664494  QWTPIIPP     QSYS        04CC     *EXT                    *N
+                                     Message . . . . :   Job 543249/ATULLY/ART202 started on 04/05/23 at 14:42:23
+                                       in subsystem QBATCH in QSYS. Job entered system on 04/05/23 at 14:42:23.
+CPI1125    Information             00   04/05/23  14:42:23.664705  QWTPCRJA     QSYS        0110     *EXT                    *N
+                                     Message . . . . :   Job 543249/ATULLY/ART202 submitted.
+                                     Cause . . . . . :   Job 543249/ATULLY/ART202 submitted to job queue QBATCH in
+                                       QGPL from job 543083/QUSER/QZRCSRVS. Job 543249/ATULLY/ART202 was started
+                                       using the Submit Job (SBMJOB) command with the following job attributes:
+                                       JOBPTY(5) OUTPTY(5) PRTTXT() RTGDTA(QCMDB) SYSLIBL(ARCAD_ENG  QSYS
+                                       QSYS2      QHLPSYS    QUSRSYS) CURLIB(ATUDSB0005) INLLIBL(ATUDFT0004 ATU_DTA
+                                          ATU_OBJ    ATU_SRC    QTEMP      QGPL) INLASPGRP(*NONE) LOG(4 00 *SECLVL)
+                                       LOGCLPGM(*NO) LOGOUTPUT(*PND) OUTQ(/*DEV) PRTDEV(PRT01) INQMSGRPY(*RQD)
+                                       HOLD(*NO) DATE(*SYSVAL) SWS(00000000)  MSGQ(QUSRSYS/ATULLY) CCSID(37)
+                                       SRTSEQ(*N/*HEX) LANGID(ENU) CNTRYID(US) JOBMSGQMX(16) JOBMSGQFL(*NOWRAP)
+                                       ALWMLTTHD(*NO) SPLFACN(*KEEP) ACGCDE().
+*NONE      Request                      04/05/23  14:42:23.664847  QWTSCSBJ                 *N       QCMD        QSYS        0195
+                                     Message . . . . :  -ACPLOBJ OBJ(ATUDSB0005/ART202) CPLTYPE('*RPGLE')
+                                       SRCLIB(ATUDSB0005) SRCFILE(QRPGLESRC) INZCURENV(*NO) MODE(*CPLOBJ)
+                                       DEPLGLCPL(*YES) JOBD(QGPL/QDFTJOBD) REPLACE(*YES) DLTRPLOBJ(*DLY)
+                                       DTAMNG(*FILE) DTANEWPF(*DATAMNG) DTALIB(*LIBL) FMTOPT(*FILE) KEEPATR(*YES)
+                                       JRNPF(*YES) SRVRSLVREF(*DFT) UPDXREF(*NO) XREFLIST(*NO)
+                                       TOLIST(*CURENV/LSTXREF) CPLMOD1DEP(*YES) OPTION(*ADD) CHKOBJREF(*YES)
+                                       CPLVERSLVL('*DFT') TGTRLS(*DFT) NEWOWN(*ENVDFT) AUT(*SAME) AUTMODEL(*NONE)
+                                       UPDTFRLOG(*YES) LCKMODE(*NONE) EVENTF(*EVENTF) DEFINE('*NONE')
+CPF5815    Diagnostic              40   04/05/23  14:42:23.708463  QDMROUTE     QSYS        04DC     AART050G1   ARCAD_PRD   *STMT
+                                     To module . . . . . . . . . :   AART050X1
+                                     To procedure  . . . . . . . :   AART050X1
+                                     Statement . . . . . . . . . :   267504
+                                     Message . . . . :   Member ART202 for file ZZARCSRCF in library QTEMP not
+                                       found.
+                                     Cause . . . . . :   Either the member or library does not exist. Recovery  . .
+                                       . :   Correct the member, file, or library name, and then try the request
+                                       again.
+CPC7301    Completion              00   04/05/23  14:42:23.723313  QDDCPF       QSYS        054B     QQDAPROC    QSYS        0773
+                                     Message . . . . :   File EVFEVENT created in library ATUDSB0005.
+CPC7305    Completion              00   04/05/23  14:42:23.730069  QDDCPFM      QSYS        005B     QQDAPROC    QSYS        0773
+                                     Message . . . . :   Member ART202 added to file EVFEVENT in ATUDSB0005.
+MSG2796    Information             00   04/05/23  14:42:23.783048  AART051G1    ARCAD_PRD   *STMT    AART050G1   ARCAD_PRD   *STMT
+                                     From module . . . . . . . . :   AART051X1
+                                     From procedure  . . . . . . :   AART051X1
+                                     Statement . . . . . . . . . :   71314
+                                     To module . . . . . . . . . :   AART050X1
+                                     To procedure  . . . . . . . :   AART050X1
+                                     Statement . . . . . . . . . :   219200
+                                     Message . . . . :   Compilation of ART202 (RPGLE) in version ATU D SB.00.05
+                                     ATU>D>SB.00.05>ART202>RPGLE
+CPD4090    Diagnostic              10   04/05/23  14:42:24.042622  QDMCOPEN     QSYS        17CB     AART055R4   ARCAD_PRD   *STMT
+                                     To module . . . . . . . . . :   AART055R4
+                                     To procedure  . . . . . . . :   AART055R4
+                                     Statement . . . . . . . . . :   5600
+ 5770SS1 V7R4M0 190621                           Job Log                           MONZAXIB  04/05/23  14:42:25 CEST     Page    2
+  Job name . . . . . . . . . . :   ART202          User  . . . . . . :   ATULLY       Number . . . . . . . . . . . :   543249
+  Job description  . . . . . . :   QDFTJOBD        Library . . . . . :   QGPL
+MSGID      TYPE                    SEV  DATE      TIME             FROM PGM     LIBRARY     INST     TO PGM      LIBRARY     INST
+                                     Message . . . . :   Printer device PRT01 not found. Output queue changed to
+                                       QPRINT in library QGPL.
+                                     Cause . . . . . :   The printer device PRT01 not found.  The output queue was
+                                       changed for the spooled printer file QSYSPRT in library QSYS. Recovery  . .
+                                       . :   Do one of the following before you run the program again: -- Change or
+                                       override the printer device name for the spooled printer file QSYSPRT in
+                                       library QSYS using either the Change Printer File (CHGPRTF) command or the
+                                       Override Printer File (OVRPRTF) command. -- Add or create the configuration
+                                       for the printer (CRTDEVPRT command).
+*NONE      Request                      04/05/23  14:42:24.054087  AART055G1    ARCAD_PRD   *STMT    *EXT                    *N
+                                     From module . . . . . . . . :   AART055X1
+                                     From procedure  . . . . . . :   AART055X1
+                                     Statement . . . . . . . . . :   124801
+                                     Message . . . . :  -CRTBNDRPG PGM(ATUDSB0005/ART202)
+                                       SRCFILE(ATUDSB0005/QRPGLESRC) REPLACE(*YES) OPTION(*EVENTF)
+MSG1573    Information             00   04/05/23  14:42:24.054282  AART055G1    ARCAD_PRD   *STMT    AART055G1   ARCAD_PRD   *STMT
+                                     From module . . . . . . . . :   AART055X1
+                                     From procedure  . . . . . . :   AART055X1
+                                     Statement . . . . . . . . . :   125500
+                                     To module . . . . . . . . . :   AART055X1
+                                     To procedure  . . . . . . . :   AART055X1
+                                     Statement . . . . . . . . . :   125500
+                                     Message . . . . :   *** Messages sent by the Compilation ***
+CPD5D1D    Diagnostic              20   04/05/23  14:42:24.164221  QBNBIND      QSYS        *STMT    QBNBIND     QSYS        *STMT
+                                     From module . . . . . . . . :   QBNBNDIR
+                                     From procedure  . . . . . . :   QBNBNDIR__ProcessBindingDirectory__handleObjec
+                                       t__resolveObjectInBndDir__objectNotFound
+                                     Statement . . . . . . . . . :   13
+                                     To module . . . . . . . . . :   QBNBNDIR
+                                     To procedure  . . . . . . . :   QBNBNDIR__ProcessBindingDirectory__handleObjec
+                                       t__resolveObjectInBndDir
+                                     Statement . . . . . . . . . :   5
+                                     Message . . . . :   *SRVPGM object ORDER in library *LIBL not found.
+                                     Cause . . . . . :   *SRVPGM object ORDER in library *LIBL was specified in
+                                       binding directory SAMPLE in library ATU_OBJ, but was not found for binding.
+                                       Recovery  . . . :   Contact your application provider or service
+                                       representative.
+RNS9304    Completion              00   04/05/23  14:42:24.202377  QRN4CPP      QDEVTOOLS   *STMT    AART055G1   ARCAD_PRD   *STMT
+                                     From module . . . . . . . . :   GRP4CPP
+                                     From procedure  . . . . . . :   cleanup
+                                     Statement . . . . . . . . . :   19
+                                     To module . . . . . . . . . :   AART055X1
+                                     To procedure  . . . . . . . :   AART055X1
+                                     Statement . . . . . . . . . :   139900
+                                     Message . . . . :   Program ART202 placed in library ATUDSB0005. 00 highest
+                                       severity. Created on 04/05/23 at 14:42:24.
+                                     Cause . . . . . :   Program ART202 was successfully created in library
+                                       ATUDSB0005. The highest message severity that resulted was 00. The program
+                                       creation date and time are 04/05/23 and 14:42:24.
+CPC0904    Completion              00   04/05/23  14:42:24.204712  QWCCCRVC     QSYS        00B0     QRN4CPP     QDEVTOOLS   *STMT
+                                     To module . . . . . . . . . :   GRP4CPP
+                                     To procedure  . . . . . . . :   update_dtaara
+ 5770SS1 V7R4M0 190621                           Job Log                           MONZAXIB  04/05/23  14:42:25 CEST     Page    3
+  Job name . . . . . . . . . . :   ART202          User  . . . . . . :   ATULLY       Number . . . . . . . . . . . :   543249
+  Job description  . . . . . . :   QDFTJOBD        Library . . . . . :   QGPL
+MSGID      TYPE                    SEV  DATE      TIME             FROM PGM     LIBRARY     INST     TO PGM      LIBRARY     INST
+                                     Statement . . . . . . . . . :   8
+                                     Message . . . . :   Data area RETURNCODE created in library QTEMP.
+MSG0876    Completion              00   04/05/23  14:42:24.296888  AARM116C1    ARCAD_PRD   061E     AART055G1   ARCAD_PRD   *STMT
+                                     To module . . . . . . . . . :   AART055X1
+                                     To procedure  . . . . . . . :   AART055X1
+                                     Statement . . . . . . . . . :   169306
+                                     Message . . . . :   Object ATUDSB0005/ART202 of type *PGM stamped.
+                                     The object ART202 of the library ATUDSB0005 was changed. The updated
+                                       information includes : - the licenced software (app ID + version #) - the
+                                       PTF number (7 last digits of the version #)  - the APAR ID (last document #
+                                       attached (WI, MR or IR/CR)) - the user defined attribute (version # or
+                                       system function tree) They can be consulted using the OS/400 command
+                                       DSPOBJD.
+CPI2218    Information             10   04/05/23  14:42:24.312589  QSYRVAUT     QSYS        1230     QSYRVAUT    QSYS        1230
+                                     Message . . . . :   Authority *ALL or *AUTL revoked from *PUBLIC.
+                                     Cause . . . . . :   The user revoked object authority (RVKOBJAUT command)
+                                       AUT(*ALL) or AUT(*AUTL) and USER(*PUBLIC).  The revoke of *ALL or *AUTL from
+                                       *PUBLIC for object ART202 in library ATUDSB0005 type *PGM was successful.
+                                       The authority for *PUBLIC in the object is now *EXCLUDE.
+CPI2201    Information             00   04/05/23  14:42:24.313511  QSYGRAUT     QSYS        1661     QSYGRAUT    QSYS        1661
+                                     Message . . . . :   Authority given to user *PUBLIC for object ART202 in
+                                       ATUDSB0005 object type *PGM.
+CPI2201    Information             00   04/05/23  14:42:24.313537  QSYGRAUT     QSYS        1661     QSYGRAUT    QSYS        1661
+                                     Message . . . . :   Authority given to user ATULLY for object ART202 in
+                                       ATUDSB0005 object type *PGM.
+CPI2201    Information             00   04/05/23  14:42:24.314500  QSYGRAUT     QSYS        1661     QSYGRAUT    QSYS        1661
+                                     Message . . . . :   Authority given to user QPGMR for object ART202 in
+                                       ATUDSB0005 object type *PGM.
+CPD4090    Diagnostic              10   04/05/23  14:42:24.756975  QDMCOPEN     QSYS        17CB     QDMDSPOV    QSYS        00F9
+                                     Message . . . . :   Printer device PRT01 not found. Output queue changed to
+                                       QPRINT in library QGPL.
+                                     Cause . . . . . :   The printer device PRT01 not found.  The output queue was
+                                       changed for the spooled printer file QPDSPOVR in library QSYS. Recovery  . .
+                                       . :   Do one of the following before you run the program again: -- Change or
+                                       override the printer device name for the spooled printer file QPDSPOVR in
+                                       library QSYS using either the Change Printer File (CHGPRTF) command or the
+                                       Override Printer File (OVRPRTF) command. -- Add or create the configuration
+                                       for the printer (CRTDEVPRT command).
+MSG0483    Completion              00   04/05/23  14:42:24.763513  AART050G1    ARCAD_PRD   *STMT    QCMD        QSYS        01C8
+                                     From module . . . . . . . . :   AART050X1
+                                     From procedure  . . . . . . :   AART050X1
+                                     Statement . . . . . . . . . :   226610
+                                     Message . . . . :   Compilation ended for object ATUDSB0005/ART202, type
+                                       *RPGLE.
+CPC2191    Completion              00   04/05/23  14:42:24.772474  QLIDLOBJ     QSYS        0702     QLICLLIB    QSYS        09AF
+                                     Message . . . . :   Object ZZSPLL in QTEMP type *USRSPC deleted.
+CPC2191    Completion              00   04/05/23  14:42:24.773617  QLIDLOBJ     QSYS        0702     QLICLLIB    QSYS        09AF
+                                     Message . . . . :   Object ZZMODL in QTEMP type *USRSPC deleted.
+CPC2191    Completion              00   04/05/23  14:42:24.774764  QLIDLOBJ     QSYS        0702     QLICLLIB    QSYS        09AF
+                                     Message . . . . :   Object ZZJOBL in QTEMP type *USRSPC deleted.
+CPC2191    Completion              00   04/05/23  14:42:24.775992  QLIDLOBJ     QSYS        0702     QLICLLIB    QSYS        09AF
+                                     Message . . . . :   Object ZZDTCRCD in QTEMP type *USRSPC deleted.
+ 5770SS1 V7R4M0 190621                           Job Log                           MONZAXIB  04/05/23  14:42:25 CEST     Page    4
+  Job name . . . . . . . . . . :   ART202          User  . . . . . . :   ATULLY       Number . . . . . . . . . . . :   543249
+  Job description  . . . . . . :   QDFTJOBD        Library . . . . . :   QGPL
+MSGID      TYPE                    SEV  DATE      TIME             FROM PGM     LIBRARY     INST     TO PGM      LIBRARY     INST
+CPC2191    Completion              00   04/05/23  14:42:24.776955  QLIDLOBJ     QSYS        0702     QLICLLIB    QSYS        09AF
+                                     Message . . . . :   Object RETURNCODE in QTEMP type *DTAARA deleted.
+CPC2191    Completion              00   04/05/23  14:42:24.778345  QLIDLOBJ     QSYS        0702     QLICLLIB    QSYS        09AF
+                                     Message . . . . :   Object ARCINSACT in QTEMP type *DTAARA deleted.
+CPC2191    Completion              00   04/05/23  14:42:24.871521  QLIDLFIL     QSYS        00A0     QLICLLIB    QSYS        096A
+                                     Message . . . . :   Object AARD32FF1 in QTEMP type *FILE deleted.
+CPC2191    Completion              00   04/05/23  14:42:24.871531  QLIDLFIL     QSYS        00A0     QLICLLIB    QSYS        096A
+                                     Message . . . . :   Object AARD32SF1 in QTEMP type *FILE deleted.
+CPC2191    Completion              00   04/05/23  14:42:24.871538  QLIDLFIL     QSYS        00A0     QLICLLIB    QSYS        096A
+                                     Message . . . . :   Object AARD322F1 in QTEMP type *FILE deleted.
+CPC2191    Completion              00   04/05/23  14:42:24.871545  QLIDLFIL     QSYS        00A0     QLICLLIB    QSYS        096A
+                                     Message . . . . :   Object FLDREFM in QTEMP type *FILE deleted.
+CPC2191    Completion              00   04/05/23  14:42:24.871552  QLIDLFIL     QSYS        00A0     QLICLLIB    QSYS        096A
+                                     Message . . . . :   Object FLDREFSQ in QTEMP type *FILE deleted.
+CPC2191    Completion              00   04/05/23  14:42:24.871558  QLIDLFIL     QSYS        00A0     QLICLLIB    QSYS        096A
+                                     Message . . . . :   Object FLDREFW in QTEMP type *FILE deleted.
+CPC2191    Completion              00   04/05/23  14:42:24.871564  QLIDLFIL     QSYS        00A0     QLICLLIB    QSYS        096A
+                                     Message . . . . :   Object ZZARCSRCF in QTEMP type *FILE deleted.
+CPC2191    Completion              00   04/05/23  14:42:24.871571  QLIDLFIL     QSYS        00A0     QLICLLIB    QSYS        096A
+                                     Message . . . . :   Object ZZSPLF in QTEMP type *FILE deleted.
+CPF1164    Completion              00   04/05/23  14:42:24.871829  QWTMCEOJ     QSYS        0161     *EXT                    *N
+                                     Message . . . . :   Job 543249/ATULLY/ART202 ended on 04/05/23 at 14:42:24;
+                                       .363 seconds used; end code 0 .
+                                     Cause . . . . . :   Job 543249/ATULLY/ART202 completed on 04/05/23 at 14:42:24
+                                       after it used .363 seconds processing unit time. The maximum temporary
+                                       storage used was 95 megabytes. The job had ending code 0. The job ended
+                                       after 1 routing steps with a secondary ending code of 0.  The job ending
+                                       codes and their meanings are as follows:  0 - The job completed normally. 10
+                                       - The job completed normally during controlled ending or controlled
+                                       subsystem ending. 20 - The job exceeded end severity (ENDSEV job attribute).
+                                       30 - The job ended abnormally. 40 - The job ended before becoming active. 50
+                                       - The job ended while the job was active. 60 - The subsystem ended
+                                       abnormally while the job was active. 70 - The system ended abnormally while
+                                       the job was active. 80 - The job ended (ENDJOBABN command). 90 - The job was
+                                       forced to end after the time limit ended (ENDJOBABN command). Recovery  . .
+                                       . :   For more information, see the Work management topic collection in the
+                                       Systems management category in the IBM i Information Center,
+                                       http://www.ibm.com/systems/i/infocenter/.

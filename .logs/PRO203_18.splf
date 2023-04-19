@@ -1,0 +1,956 @@
+Attributes of the executed compilation command :
+  -  CRTSQLRPGI OBJ(ATUDSB0005/PRO203) SRCFILE(ATU_SRC/QRPGLESRC) COMPILEOPT(' BNDDIR
+     ( QTEMP/ARCBNDDIR) ACTGRP(QILE) DFTACTGRP(*NO)') OBJTYPE(*PGM) REPLACE(*YES) TGT
+     RLS(V7R4M0) OPTION(*EVENTF)
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page      2
+  Command  . . . . . . . . . . . . :   CRTBNDRPG
+    Issued by  . . . . . . . . . . :     ATULLY
+  Program  . . . . . . . . . . . . :   PRO203
+    Library  . . . . . . . . . . . :     ATUDSB0005
+  Text 'description' . . . . . . . :   *SRCMBRTXT
+  Source Member  . . . . . . . . . :   PRO203
+  Source File  . . . . . . . . . . :   QSQLTEMP1
+    Library  . . . . . . . . . . . :     QTEMP
+    CCSID  . . . . . . . . . . . . :     297
+  Text 'description' . . . . . . . :
+  Last Change  . . . . . . . . . . :   03/07/23  15:32:30
+  Generation severity level  . . . :   10
+  Default activation group . . . . :   *NO
+  Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY
+                                       *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT
+                                       *DEBUGIO   *UNREF     *EVENTF
+  Debugging views  . . . . . . . . :   *STMT
+  Debug encryption key . . . . . . :   *NONE
+  Output . . . . . . . . . . . . . :   *PRINT
+  Optimization level . . . . . . . :   *NONE
+  Source listing indentation . . . :   *NONE
+  Type conversion options  . . . . :   *NONE
+  Sort sequence  . . . . . . . . . :   *JOB
+  Language identifier  . . . . . . :   *JOB
+  Replace program  . . . . . . . . :   *YES
+  User profile . . . . . . . . . . :   *USER
+  Authority  . . . . . . . . . . . :   *LIBCRTAUT
+  Truncate numeric . . . . . . . . :   *YES
+  Fix numeric  . . . . . . . . . . :   *NONE
+  Target release . . . . . . . . . :   V7R4M0
+  Allow null values  . . . . . . . :   *NO
+  Storage model . . .  . . . . . . :   *SNGLVL
+  Binding directory  . . . . . . . :   ARCBNDDIR
+    Library  . . . . . . . . . . . :     QTEMP
+  Activation group . . . . . . . . :   QILE
+  Define condition names . . . . . :   *NONE
+  Enable performance collection  . :   *PEP
+  Profiling data . . . . . . . . . :   *NOCOL
+  Licensed Internal Code options . :
+  Generate program interface . . . :   *NO
+  Include directory  . . . . . . . :
+  Preprocessor options . . . . . . :   *NONE
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page      3
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+                          S o u r c e   L i s t i n g
+     1 h dftactgrp(*no)                                                                                          161208     000021
+        *--------------------------------------------------------------------*
+        * Compiler Options in Effect:                                        *
+        *--------------------------------------------------------------------*
+        *  Text 'description' . . . . . . . :                                *
+        *  Generation severity level  . . . :   10                           *
+        *  Default activation group . . . . :   *NO                          *
+        *  Compiler options . . . . . . . . :   *XREF      *GEN              *
+        *                                       *NOSECLVL  *SHOWCPY          *
+        *                                       *EXPDDS    *EXT              *
+        *                                       *NOSHOWSKP *NOSRCSTMT        *
+        *                                       *DEBUGIO   *UNREF            *
+        *                                       *EVENTF                      *
+        *  Optimization level . . . . . . . :   *NONE                        *
+        *  Source listing indentation . . . :   *NONE                        *
+        *  Type conversion options  . . . . :   *NONE                        *
+        *  Sort sequence  . . . . . . . . . :   *JOB                         *
+        *  Language identifier  . . . . . . :   *JOB                         *
+        *  User profile . . . . . . . . . . :   *USER                        *
+        *  Authority  . . . . . . . . . . . :   *LIBCRTAUT                   *
+        *  Truncate numeric . . . . . . . . :   *YES                         *
+        *  Fix numeric  . . . . . . . . . . :   *NONE                        *
+        *  Allow null values  . . . . . . . :   *NO                          *
+        *  Storage model . . .  . . . . . . :   *SNGLVL                      *
+        *  Binding directory from Command . :   ARCBNDDIR                    *
+        *    Library  . . . . . . . . . . . :     QTEMP                      *
+        *  Binding directory from Source  . :   *NONE                        *
+        *  Activation group . . . . . . . . :   QILE                         *
+        *  Enable performance collection  . :   *PEP                         *
+        *  Profiling data . . . . . . . . . :   *NOCOL                       *
+        *  Generate program interface . . . :   *NO                          *
+        *  REQUIRE PROTOTYPE FOR EXPORT . . :   *NO                          *
+        *--------------------------------------------------------------------*
+     2 fpro202d   cf   e             workstn                                                                     161208     000022
+     3                                                                                                           161208     000023
+     4  *copy qprotosrc,Xss                                                                                      161208     000024
+     5  *%CSTD===========================================================*                                       888888     000001
+     6  ** Application. : ARC_DEMO   PRD:Tools used by Demo appli.       *                                       888888     000002
+     7  ** Composant. . : XSS                           Type: RPGLE      *                                       888888     000003
+     8  **===============================================================*                                       888888     000004
+     9  ** Sous-syst}me :                                                *                                       888888     000005
+    10  ** Fonction . . :                                                *                                       888888     000006
+    11  ** Sous-fonction:                                                *                                       888888     000007
+    12  **%S=============================================================*                                       888888     000008
+    13  ** Description des fonctionnalit{s:                              *                                       888888     000009
+    14  **                                                               *                                       888888     000011
+    15  **                                                               *                                       888888     000012
+    16  **                                                               *                                       888888     000013
+    17  **%E=============================================================*                                       888888     000014
+    18  ** AUTEUR:                          00:00                        *                                       888888     000015
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page      4
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+    19  ** MODIFS: 05 VTAQUIN    27/08/2019 17:45  01.00.21    00/       *                                       888888     000016
+    20  **         04 VTAQUIN    17/03/2017 15:35  01.00.07    00/       *                                       888888     000017
+    21  **         03 VTAQUIN    15/02/2017 15:47  01.00.04    00/       *                                       888888     000018
+    22  **         02 VTAQUIN    12/01/2017 12:21  01.00.03    00/       *                                       888888     000019
+    23  **         01 VTAQUIN    10/01/2017 16:15  01.00.02    00/       *                                       888888     000020
+    24  *%ECSTD==========================================================*                                       888888     000021
+    25                                                                                                           170109     002100
+        *--------------------------------------------------------------------------------------------*
+        *                               RPG name         External name                               *
+        * File name. . . . . . . . . :  PRO202D          ATU_OBJ/PRO202D                             *
+        * Record format(s) . . . . . :  SFL01            SFL01                                       *
+        *                               CTL01            CTL01                                       *
+        *                               KEY01            KEY01                                       *
+        *                               FMT03            FMT03                                       *
+        *--------------------------------------------------------------------------------------------*
+    26 Dxssopenfile      PR                                                                                      170109     002200
+    27 D  File                       1024A   value                                                               170109     002300
+    28                                                                                                           170109     002400
+    29 D XssSetDocProperties...                                                                                  170109     002500
+    30 D                 Pr                                                                                      170109     002600
+    31 D  author                       20    value                                                               170109     002700
+    32 D  LastAuthor                   20    value                                                               170109     002800
+    33 D  version                       4  2 value                                                               170109     002900
+    34                                                                                                           170109     003000
+    35 Dxsscreatestyle   Pr             3u 0                                                                     170109     003100
+    36 DXsssetbold       PR                                                                                      170109     003200
+    37                                                                                                           170109     003300
+    38 DXssSetItalic     PR                                                                                      170109     003400
+    39                                                                                                           170109     003500
+    40 dxssSetFontSize   pr                                                                                      170109     003600
+    41 d  size                          5i 0 value                                                               170109     003700
+    42                                                                                                           170109     003800
+    43 DXssSetFontName   PR                                                                                      170109     003900
+    44 d  Name                         50    value                                                               170109     004000
+    45 d  family                       50    value options(*nopass)                                              170109     004100
+    46                                                                                                           170109     004200
+    47 DXssSetFormat     PR                                                                                      170109     004300
+    48 d  format                       20    value                                                               170109     004400
+    49                                                                                                           170109     004500
+    50 DXssSetalign      PR                                                                                      170109     004600
+    51 d  alignment                    10    value                                                               170109     004700
+    52                                                                                                           170109     004800
+    53 DXsssetVertAlign  PR                                                                                      170109     004900
+    54 d  alignment                    10    value                                                               170109     005000
+    55                                                                                                           170109     005100
+    56                                                                                                           170109     005200
+    57 DXsssetcolor      PR                                                                                      170109     005300
+    58 d  color                         6    value                                                               170317     005400
+    59                                                                                                           170109     005500
+    60 DXsssetForcolor   PR                                                                                      170109     005600
+    61 d  color                         6    value                                                               170317     005700
+    62                                                                                                           170109     005800
+    63 DXsssetBorder     PR                                                                                      170317     005900
+    64 d  Weight                        2  0 value                                                               170317     006000
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page      5
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+    65 d  Position                      1    value OPTIONS(*NOPASS)                                              170317     006100
+    66                                                                                                           170317     006200
+    67 DXsssetwrap       PR                                                                                      170109     006300
+    68                                                                                                           170109     006400
+    69 DXssaddsheet      PR                                                                                      170109     006500
+    70 D sheet                        100A   value OPTIONS(*NOPASS)                                              170109     006600
+    71 DxssSetColWidth   PR                                                                                      170109     006700
+    72 D Width                          5  2 Const                                                               170109     006800
+    73 D ColId                          5i 0 CONST OPTIONS(*NOPASS)                                              170109     006900
+    74 Dxssaddrow        PR                                                                                      170109     007000
+    75 D height                         5  2 CONST OPTIONS(*NOPASS)                                              170109     007100
+    76 DxssaddcellChar   PR                                                                                      170109     007200
+    77 D value                       1024A   value                                                               170109     007300
+    78 D style                          3u 0 VALUE  OPTIONS(*NOPASS)                                             170109     007400
+    79 D idx                            5u 0 VALUE  OPTIONS(*NOPASS)                                             170109     007500
+    80 D merge                          3u 0 VALUE  OPTIONS(*NOPASS)                                             170109     007600
+    81 DxssaddcellNum    PR                                                                                      170109     007700
+    82 d value                          8F   VALUE                                                               170109     007800
+    83 D style                          3u 0 VALUE  OPTIONS(*NOPASS)                                             170109     007900
+    84 D idx                            5u 0 VALUE  OPTIONS(*NOPASS)                                             170109     008000
+    85 D merge                          3u 0 VALUE  OPTIONS(*NOPASS)                                             170109     008100
+    86 DxssaddcellDat    PR                                                                                      170109     008200
+    87 D DateNum                        8  0 VALUE                                                               170109     008300
+    88 D format                         5    value                                                               170109     008400
+    89 D style                          3u 0 VALUE  OPTIONS(*NOPASS)                                             170109     008500
+    90 D idx                            5u 0 VALUE  OPTIONS(*NOPASS)                                             170109     008600
+    91 D merge                          3u 0 VALUE  OPTIONS(*NOPASS)                                             170109     008700
+    92 DXssclosefile     PR                                                                                      170109     008800
+    93 D XssGetRowId     PR             6                                                                        170109     008900
+    94 D XssGetColId     pr             5                                                                        170109     009000
+    95 D XssGetCellId    pr            12                                                                        170109     009100
+    96 D XssSetAutoFilter...                                                                                     170109     009200
+    97 D                 pr                                                                                      170109     009300
+    98 D  range1                       12    Value                                                               170109     009400
+    99 D  range2                       12    value                                                               170109     009500
+   100 D XssFreezePane   Pr                                                                                      190827     009600
+   101 d  Row                           5i 0 value                                                               190827     009700
+   102 d  Col                           5i 0 value                                                               190827     009800
+   103 d                                     OPTIONS(*NOPASS)                                                    190827     009900
+   104                                                                                                           170109     010000
+   105  *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                       170109     010100
+   106  * Set color                                                                                              170109     010200
+   107  *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                       170109     010300
+   108 D COLOR_BLACK     c                   '000000'                                                            170215     010400
+   109 D COLOR_WHITE     c                   'FFFFFF'                                                            170215     010500
+   110 D COLOR_RED       c                   'FF0000'                                                            170215     010600
+   111 D COLOR_BRIGHT_...                                                                                        170109     010700
+   112 D    GREEN        c                   '92D050'                                                            170215     010800
+   113 D COLOR_BLUE      c                   '0070C0'                                                            170215     010900
+   114 D COLOR_YELLOW    c                   'FFFF00'                                                            170215     011000
+   115 D COLOR_GREEN     c                   '00B050'                                                            170215     011100
+   116 D COLOR_GREY      c                   'BFBFBF'                                                            170215     011200
+   117 D COLOR_LIGHT_GREY...                                                                                     170317     011300
+   118 D                 c                   'D9D9D9'                                                            170317     011400
+   119                                                                                                           170109     011500
+   120  *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                       170109     011600
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page      6
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   121  * ALIGN_XXX                                                                                              170109     011700
+   122  *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                       170109     011800
+   123 D ALIGN_CENTER...                                                                                         170109     011900
+   124 D                 C                   'Center'                                                            170109     012000
+   125 D ALIGN_FILL...                                                                                           170109     012100
+   126 D                 C                   'Fill'                                                              170109     012200
+   127 D ALIGN_LEFT...                                                                                           170109     012300
+   128 D                 C                   'Left'                                                              170109     012400
+   129 D ALIGN_RIGHT...                                                                                          170109     012500
+   130 D                 C                   'Right'                                                             170109     012600
+   131 D ALIGN_BOT       C                   'Bottom'                                                            170109     012700
+   132 D ALIGN_TOP       C                   'Top'                                                               170109     012800
+   133  *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                       170109     012900
+   134  * Date format to be used with excellDat                                                                  170109     013000
+   135  *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                       170109     013100
+   136 d F_CYMD          c                   '*CYMD'                                                             170109     013200
+   137 d F_YMD           c                   '*YMD'                                                              170109     013300
+   138 d F_DMY           c                   '*DMY'                                                              170109     013400
+   139 d F_MDY           c                   '*MDY'                                                              170109     013500
+   140 d F_ISO           c                   '*ISO'                                                              170109     013600
+   141  *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                       170109     013700
+   142  * Set data format                                                                                        170109     013800
+   143  *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                       170109     013900
+   144 d FORMAT_DEC0     c                   'q,qq0'                                                             170215     014000
+   145 d FORMAT_DEC1     c                   'q,qq0.0'                                                           170215     014100
+   146 d FORMAT_DEC2     c                   'q,qq0.00'                                                          170215     014200
+   147 d FORMAT_DEC3     c                   'q,qq0.000'                                                         170215     014300
+   148 d FORMAT_PCT0     c                   '0%'                                                                170109     014400
+   149 d FORMAT_PCT1     c                   '0.0%'                                                              170109     014500
+   150 d FORMAT_PCT2     c                   '0.00%'                                                             170109     014600
+   151 d FORMAT_DATE_SHORT...                                                                                    170110     014700
+   152 d                 c                   'Short Date'                                                        170110     014800
+   153                                                                                                           170317     014900
+   154  *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                       170317     015000
+   155  * Set Border - Position                                                                                  170317     015100
+   156  *+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++                                       170317     015200
+   157 d BORDER_BOTTOM   c                   'B'                                                                 170317     015300
+   158 d BORDER_LEFT     c                   'L'                                                                 170317     015400
+   159 d BORDER_RIGHT    c                   'R'                                                                 170317     015500
+   160 d BORDER_TOP      c                   'T'                                                                 170317     015600
+   161                                                                                                           170317     015700
+   162  *copy qprotosrc,Parameter                                                                                161209     000025
+   163  *=============================================                                                           161209     000100
+   164  * Get Parameter 1                                                                                        161209     000200
+   165  *=============================================                                                           161209     000300
+   166 DGetPARM1         PR            10A                                                                       161209     000400
+   167 D PACODE                        10A    value                                                              161209     000500
+   168 D PASUBCODE                     10A    value                                                              161209     000600
+   169  *=============================================                                                           161209     000700
+   170  * Get Parameter 2                                                                                        161209     000800
+   171  *=============================================                                                           161209     000900
+   172 DGetPARM2         PR           100A                                                                       161209     001000
+   173 D PACODE                        10A    value                                                              161209     001100
+   174 D PASUBCODE                     10A    value                                                              161209     001200
+   175  *=============================================                                                           161209     001300
+   176  * Get Parameter 3                                                                                        161209     001400
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page      7
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   177  *=============================================                                                           161209     001500
+   178 DGetPARM3         PR             2A                                                                       161209     001600
+   179 D PACODE                        10A    value                                                              161209     001700
+   180 D PASUBCODE                     10A    value                                                              161209     001800
+   181  *=============================================                                                           161209     001900
+   182  * Get Parameter 4                                                                                        161209     002000
+   183  *=============================================                                                           161209     002100
+   184 DGetPARM4         PR             1P 0                                                                     161209     002200
+   185 D PACODE                        10A    value                                                              161209     002300
+   186 D PASUBCODE                     10A    value                                                              161209     002400
+   187  *=============================================                                                           161209     002500
+   188  * Get Parameter 5                                                                                        161209     002600
+   189  *=============================================                                                           161209     002700
+   190 DGetPARM5         PR             3P 0                                                                     161209     002800
+   191 D PACODE                        10A    value                                                              161209     002900
+   192 D PASUBCODE                     10A    value                                                              161209     003000
+   193  *=============================================                                                           161209     003100
+   194  * Close PARAMETER                                                                                        161209     003200
+   195  *=============================================                                                           161209     003300
+   196 D ClosePARAMETER  PR                                                                                      161209     003400
+   197                                                                                                           161208     000026
+   198 d data            ds                  inz                                                                 161208     000027
+   199 d   ARID                         6                                                                        161208     000028
+   200 d   ARDESC                      50A                                                                       161208     000029
+   201 d   ARSTOCK                      5P 0                                                                     161208     000030
+   202 d   ARMINQTY                     5P 0                                                                     161208     000031
+   203 d   ARCUSQTY                     5P 0                                                                     161208     000032
+   204 d   ARPURQTY                     5P 0                                                                     161208     000033
+   205 d   PRID                         5P 0                                                                     161208     000034
+   206 d   PROVNM                      30A                                                                       161208     000035
+   207 d   APPRICE                      7P 2                                                                     161208     000036
+   208 d   APREF                       10A                                                                       161208     000037
+   209 d   TOT                          3  0                                                                     161208     000038
+   210                                                                                                           161208     000039
+   211 d r1              s             12                                                                        161208     000040
+   212 d r2              s             12                                                                        161208     000041
+   213 d head            s              3u 0                                                                     161208     000042
+   214 d dec2            s              3u 0                                                                     161208     000043
+   215 d Yellow          s              3u 0                                                                     161208     000044
+   216                                                                                                           161208     000045
+   217  /free                                                                                                    161208     000046
+   218   /SET CCSID(*CHAR:*JOBRUNMIX)                                                                                       000046
+   219   // SQL COMMUNICATION AREA                                                //SQL                                     000046
+   220   DCL-DS SQLCA;                                                            //SQL                                     000046
+   221     SQLCAID CHAR(8) INZ(X'0000000000000000');                              //SQL                                     000046
+   222      SQLAID CHAR(8) OVERLAY(SQLCAID);                                      //SQL                                     000046
+   223     SQLCABC INT(10);                                                       //SQL                                     000046
+   224      SQLABC BINDEC(9) OVERLAY(SQLCABC);                                    //SQL                                     000046
+   225     SQLCODE INT(10);                                                       //SQL                                     000046
+   226      SQLCOD BINDEC(9) OVERLAY(SQLCODE);                                    //SQL                                     000046
+   227     SQLERRML INT(5);                                                       //SQL                                     000046
+   228      SQLERL BINDEC(4) OVERLAY(SQLERRML);                                   //SQL                                     000046
+   229     SQLERRMC CHAR(70);                                                     //SQL                                     000046
+   230      SQLERM CHAR(70) OVERLAY(SQLERRMC);                                    //SQL                                     000046
+   231     SQLERRP CHAR(8);                                                       //SQL                                     000046
+   232      SQLERP CHAR(8) OVERLAY(SQLERRP);                                      //SQL                                     000046
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page      8
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   233     SQLERR CHAR(24);                                                       //SQL                                     000046
+   234      SQLER1 BINDEC(9) OVERLAY(SQLERR:*NEXT);                               //SQL                                     000046
+   235      SQLER2 BINDEC(9) OVERLAY(SQLERR:*NEXT);                               //SQL                                     000046
+   236      SQLER3 BINDEC(9) OVERLAY(SQLERR:*NEXT);                               //SQL                                     000046
+   237      SQLER4 BINDEC(9) OVERLAY(SQLERR:*NEXT);                               //SQL                                     000046
+   238      SQLER5 BINDEC(9) OVERLAY(SQLERR:*NEXT);                               //SQL                                     000046
+   239      SQLER6 BINDEC(9) OVERLAY(SQLERR:*NEXT);                               //SQL                                     000046
+   240      SQLERRD INT(10) DIM(6) OVERLAY(SQLERR);                               //SQL                                     000046
+   241     SQLWRN CHAR(11);                                                       //SQL                                     000046
+   242      SQLWN0 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     000046
+   243      SQLWN1 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     000046
+   244      SQLWN2 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     000046
+   245      SQLWN3 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     000046
+   246      SQLWN4 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     000046
+   247      SQLWN5 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     000046
+   248      SQLWN6 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     000046
+   249      SQLWN7 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     000046
+   250      SQLWN8 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     000046
+   251      SQLWN9 CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     000046
+   252      SQLWNA CHAR(1) OVERLAY(SQLWRN:*NEXT);                                 //SQL                                     000046
+   253      SQLWARN CHAR(1) DIM(11) OVERLAY(SQLWRN);                              //SQL                                     000046
+   254     SQLSTATE CHAR(5);                                                      //SQL                                     000046
+   255      SQLSTT CHAR(5) OVERLAY(SQLSTATE);                                     //SQL                                     000046
+   256   END-DS SQLCA;                                                            //SQL                                     000046
+   257   DCL-PR SQLROUTE_CALL EXTPGM(SQLROUTE);                                   //SQL                                     000046
+   258     CA LIKEDS(SQLCA);                                                      //SQL                                     000046
+   259     *N BINDEC(4) OPTIONS(*NOPASS);                                         //SQL                                     000046
+   260     *N CHAR(1) OPTIONS(*NOPASS);                                           //SQL                                     000046
+   261   END-PR SQLROUTE_CALL;                                                    //SQL                                     000046
+   262   DCL-PR SQLOPEN_CALL EXTPGM(SQLOPEN);                                     //SQL                                     000046
+   263     CA LIKEDS(SQLCA);                                                      //SQL                                     000046
+   264     *N BINDEC(4);                                                          //SQL                                     000046
+   265   END-PR SQLOPEN_CALL;                                                     //SQL                                     000046
+   266   DCL-PR SQLCLSE_CALL EXTPGM(SQLCLSE);                                     //SQL                                     000046
+   267     CA LIKEDS(SQLCA);                                                      //SQL                                     000046
+   268     *N BINDEC(4);                                                          //SQL                                     000046
+   269   END-PR SQLCLSE_CALL;                                                     //SQL                                     000046
+   270   DCL-PR SQLCMIT_CALL EXTPGM(SQLCMIT);                                     //SQL                                     000046
+   271     CA LIKEDS(SQLCA);                                                      //SQL                                     000046
+   272     *N BINDEC(4);                                                          //SQL                                     000046
+   273   END-PR SQLCMIT_CALL;                                                     //SQL                                     000046
+   274   /RESTORE CCSID(*CHAR)                                                                                              000046
+   275   DCL-C SQLROUTE CONST('QSYS/QSQROUTE');                                   //SQL                                     000046
+   276   DCL-C SQLOPEN CONST('QSYS/QSQROUTE');                                    //SQL                                     000046
+   277   DCL-C SQLCLSE CONST('QSYS/QSQLCLSE');                                    //SQL                                     000046
+   278   DCL-C SQLCMIT CONST('QSYS/QSQLCMIT');                                    //SQL                                     000046
+   279   DCL-C SQFRD CONST(2);                                                    //SQL                                     000046
+   280   DCL-C SQFCRT CONST(8);                                                   //SQL                                     000046
+   281   DCL-C SQFOVR CONST(16);                                                  //SQL                                     000046
+   282   DCL-C SQFAPP CONST(32);                                                  //SQL                                     000046
+   283 D                 DS                                                       OPEN                                      000085
+   284 D  SQL_00000              1      2B 0 INZ(128)                             length of header                          000085
+   285 D  SQL_00001              3      4B 0 INZ(2)                               statement number                          000085
+   286 D  SQL_00002              5      8U 0 INZ(0)                               invocation mark                           000085
+   287 D  SQL_00003              9      9A   INZ('0') CCSID(*JOBRUNMIX)           data is okay                              000085
+   288 D  SQL_00004             10    127A   CCSID(*JOBRUNMIX)                    end of header                             000085
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page      9
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   289 D  SQL_00005            128    128A   CCSID(*JOBRUNMIX)                    end of header                             000085
+   290 D                 DS                                                       FETCH                                     000087
+   291 D  SQL_00006              1      2B 0 INZ(128)                             length of header                          000087
+   292 D  SQL_00007              3      4B 0 INZ(3)                               statement number                          000087
+   293 D  SQL_00008              5      8U 0 INZ(0)                               invocation mark                           000087
+   294 D  SQL_00009              9      9A   INZ('0') CCSID(*JOBRUNMIX)           data is okay                              000087
+   295 D  SQL_00010             10    127A   CCSID(*JOBRUNMIX)                    end of header                             000087
+   296 D  SQL_00011            129    134A   CCSID(*JOBRUNMIX)                    ARID                                      000087
+   297 D  SQL_00012            135    184A   CCSID(*JOBRUNMIX)                    ARDESC                                    000087
+   298 D  SQL_00013            185    187P 0                                      ARSTOCK                                   000087
+   299 D  SQL_00014            188    190P 0                                      ARMINQTY                                  000087
+   300 D  SQL_00015            191    193P 0                                      ARCUSQTY                                  000087
+   301 D  SQL_00016            194    196P 0                                      ARPURQTY                                  000087
+   302 D  SQL_00017            197    199P 0                                      PRID                                      000087
+   303 D  SQL_00018            200    229A   CCSID(*JOBRUNMIX)                    PROVNM                                    000087
+   304 D  SQL_00019            230    233P 2                                      APPRICE                                   000087
+   305 D  SQL_00020            234    243A   CCSID(*JOBRUNMIX)                    APREF                                     000087
+   306 D  SQL_00021            244    246S 0                                      TOT                                       000087
+   307 D                 DS                                                       FETCH                                     000106
+   308 D  SQL_00022              1      2B 0 INZ(128)                             length of header                          000106
+   309 D  SQL_00023              3      4B 0 INZ(4)                               statement number                          000106
+   310 D  SQL_00024              5      8U 0 INZ(0)                               invocation mark                           000106
+   311 D  SQL_00025              9      9A   INZ('0') CCSID(*JOBRUNMIX)           data is okay                              000106
+   312 D  SQL_00026             10    127A   CCSID(*JOBRUNMIX)                    end of header                             000106
+   313 D  SQL_00027            129    134A   CCSID(*JOBRUNMIX)                    ARID                                      000106
+   314 D  SQL_00028            135    184A   CCSID(*JOBRUNMIX)                    ARDESC                                    000106
+   315 D  SQL_00029            185    187P 0                                      ARSTOCK                                   000106
+   316 D  SQL_00030            188    190P 0                                      ARMINQTY                                  000106
+   317 D  SQL_00031            191    193P 0                                      ARCUSQTY                                  000106
+   318 D  SQL_00032            194    196P 0                                      ARPURQTY                                  000106
+   319 D  SQL_00033            197    199P 0                                      PRID                                      000106
+   320 D  SQL_00034            200    229A   CCSID(*JOBRUNMIX)                    PROVNM                                    000106
+   321 D  SQL_00035            230    233P 2                                      APPRICE                                   000106
+   322 D  SQL_00036            234    243A   CCSID(*JOBRUNMIX)                    APREF                                     000106
+   323 D  SQL_00037            244    246S 0                                      TOT                                       000106
+   324 D                 DS                                                       CLOSE                                     000108
+   325 D  SQL_00038              1      2B 0 INZ(128)                             length of header                          000108
+   326 D  SQL_00039              3      4B 0 INZ(5)                               statement number                          000108
+   327 D  SQL_00040              5      8U 0 INZ(0)                               invocation mark                           000108
+   328 D  SQL_00041              9      9A   INZ('0') CCSID(*JOBRUNMIX)           data is okay                              000108
+   329 D  SQL_00042             10    127A   CCSID(*JOBRUNMIX)                    end of header                             000108
+   330 D  SQL_00043            128    128A   CCSID(*JOBRUNMIX)                    end of header                             000108
+   331=ISFL01                                                                                                              1000001
+        *--------------------------------------------------------------------------------------------*                     1
+        * RPG record format  . . . . :  SFL01                                                        *                     1
+        * External format  . . . . . :  SFL01 : ATU_OBJ/PRO202D                                      *                     1
+        *--------------------------------------------------------------------------------------------*                     1
+   332=I                             A    1    6  ARID                            ARTICLE ID                               1000002
+   333=I                             A    7   31  NAME25                                                                   1000003
+   334=I                             S   32   36 0ARSTOCK                         STOCK                                    1000004
+   335=I                             S   37   41 0ARMINQTY                        MINIMUM STOCK                            1000005
+   336=I                             S   42   46 0ARCUSQTY                        CUSTOMER ORDER QUANTITY                  1000006
+   337=I                             S   47   51 0ARPURQTY                        PURCHASE ORDER QUANTITY                  1000007
+   338=I                             S   52   56 0NEWORD                                                                   1000008
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page     10
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   339=I                             S   57   63 2APPRICE                         BUY PRICE                                1000009
+   340=I                             A   64   73  APREF                           PROVIDER REFERENCE                       1000010
+   341=I                             A   74  123  ARDESC                          ARTICLE DESCRPTION                       1000011
+   342=ICTL01                                                                                                              2000001
+        *--------------------------------------------------------------------------------------------*                     2
+        * RPG record format  . . . . :  CTL01                                                        *                     2
+        * External format  . . . . . :  CTL01 : ATU_OBJ/PRO202D                                      *                     2
+        *--------------------------------------------------------------------------------------------*                     2
+   343=I                             S    1    4 0RRB01                                                                    2000002
+   344=IKEY01                                                                                                              3000001
+        *--------------------------------------------------------------------------------------------*                     3
+        * RPG record format  . . . . :  KEY01                                                        *                     3
+        * External format  . . . . . :  KEY01 : ATU_OBJ/PRO202D                                      *                     3
+        *--------------------------------------------------------------------------------------------*                     3
+   345=IFMT03                                                                                                              4000001
+        *--------------------------------------------------------------------------------------------*                     4
+        * RPG record format  . . . . :  FMT03                                                        *                     4
+        * External format  . . . . . :  FMT03 : ATU_OBJ/PRO202D                                      *                     4
+        *--------------------------------------------------------------------------------------------*                     4
+   346    fileName = 'Goods to purchase' + '_' +                                                                 161208     000047
+   347                %char(%dec(%date:*YMD)) + '.xml';                                                          161208     000048
+   348    path = GetParm2('PATH':' ');                                                                           161209     000049
+   349    xssopenfile(%trim(path) + fileName);                                                                   161208     000050
+   350    XssSetDocProperties('SAMPLE Company':' ':1);                                                           161208     000051
+   351    head = xsscreatestyle();                                                                               161208     000052
+   352    xssSetFontSize(12);                                                                                    170109     000053
+   353    XssSetalign(ALIGN_CENTER);                                                                             161208     000054
+   354    Xsssetwrap();                                                                                          161208     000055
+   355    dec2 = xsscreatestyle();                                                                               161208     000056
+   356    XssSetFormat(FORMAT_DEC2);                                                                             161208     000057
+   357    Yellow = xsscreatestyle();                                                                             161208     000058
+   358    XsssetForcolor(COLOR_YELLOW);                                                                          161208     000059
+   359    Xssaddsheet('Purchasing');                                                                             161208     000060
+   360    XssSetColWidth(150 :2);                                                                                170109     000061
+   361    xssaddrow(40);                                                                                         161208     000062
+   362    xssaddcellChar('Art Id':head);                                                                         161208     000063
+   363    r1 = XssGetCellId();                                                                                   161208     000064
+   364    xssaddcellChar('Description':head);                                                                    161208     000065
+   365    xssaddcellChar('Stock':head);                                                                          161208     000066
+   366    xssaddcellChar('Minimun Stock':head);                                                                  161208     000067
+   367    xssaddcellChar('Customer Order Qty':head);                                                             161208     000068
+   368    xssaddcellChar('Purchase Order Qty':head);                                                             161208     000069
+   369    xssaddcellChar('Proposed Order Qty':head);                                                             161208     000070
+   370    xssaddcellChar('Provider Id':head);                                                                    161208     000071
+   371    xssaddcellChar('Name':head);                                                                           161208     000072
+   372    xssaddcellChar('Purchase Price':head);                                                                 161208     000073
+   373    xssaddcellChar('Provider Reference':head);                                                             161208     000074
+   374                                                                                                           161208     000075
+   375   //* exec sql declare c1 cursor for                                                                      161208     000076
+   376   //*    SELECT ARID, ARDESC, arstock, ARMINQTY, ARCUSQTY, ARPURQTY, PRID,                                161208     000077
+   377   //*           PROVnm,  APPRICE, apref,                                                                  161208     000078
+   378   //*           (select count(*) from artiprov b where a.aparid = b.aparid                                161208     000079
+   379   //*    FROM article, artiprov a, provider                                                               161208     000080
+   380   //*    WHERE arstock < ARMINQTY - arcusqty + arpurqty                                                   161208     000081
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page     11
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   381   //*      and Arcusqty > 0                                                                               161208     000082
+   382   //*      and arid = aparid AND apprid = prid                                                            161208     000083
+   383   //*   ORDER BY arid, apprid;                                                                            161208     000084
+   384   //* exec sql open c1;                                                                                   161208     000085
+   385      SQLER6 = -4;                                                          //SQL                                     000085
+   386      IF SQL_00002 = 0                                                      //SQL                B01                  000085
+   387      OR SQL_00003 <> *LOVAL;                                               //SQL                B01                  000085
+   388      SQLROUTE_CALL(                                                        //SQL                 01                  000085
+   389           SQLCA                                                            //SQL                 01                  000085
+   390         : SQL_00000                                                        //SQL                 01                  000085
+   391      );                                                                    //SQL                 01                  000085
+   392      ELSE;                                                                 //SQL                X01                  000085
+   393      SQLOPEN_CALL(                                                         //SQL                 01                  000085
+   394           SQLCA                                                            //SQL                 01                  000085
+   395         : SQL_00000                                                        //SQL                 01                  000085
+   396      );                                                                    //SQL                 01                  000085
+   397      ENDIF;                                                                //SQL                E01                  000085
+   398                                                                                                           161208     000086
+   399   //* exec sql fetch c1 into :data;                                                                       161208     000087
+   400      SQLER6 = -4;                                                          //SQL 3                                   000087
+   401      SQLROUTE_CALL(                                                        //SQL                                     000087
+   402           SQLCA                                                            //SQL                                     000087
+   403         : SQL_00006                                                        //SQL                                     000087
+   404      );                                                                    //SQL                                     000087
+   405      IF SQL_00009 = '1';                                                   //SQL                B01                  000087
+   406      EVAL ARID = SQL_00011;                                                //SQL                 01                  000087
+   407      EVAL ARDESC = SQL_00012;                                              //SQL                 01                  000087
+   408      EVAL ARSTOCK = SQL_00013;                                             //SQL                 01                  000087
+   409      EVAL ARMINQTY = SQL_00014;                                            //SQL                 01                  000087
+   410      EVAL ARCUSQTY = SQL_00015;                                            //SQL                 01                  000087
+   411      EVAL ARPURQTY = SQL_00016;                                            //SQL                 01                  000087
+   412      EVAL PRID = SQL_00017;                                                //SQL                 01                  000087
+   413      EVAL PROVNM = SQL_00018;                                              //SQL                 01                  000087
+   414      EVAL APPRICE = SQL_00019;                                             //SQL                 01                  000087
+   415      EVAL APREF = SQL_00020;                                               //SQL                 01                  000087
+   416      EVAL TOT = SQL_00021;                                                 //SQL                 01                  000087
+   417      ENDIF;                                                                //SQL                E01                  000087
+   418    dow sqlcod = 0;                                                                              B01       161208     000088
+   419      xssaddrow();                                                                                01       161208     000089
+   420      if tot = 1;                                                                                B02       161208     000090
+   421        XssAddCellChar(ARID);                                                                     02       161208     000091
+   422        XssAddCellChar(ARDESC);                                                                   02       161208     000092
+   423      else;                                                                                      X02       161208     000093
+   424        XssAddCellChar(ARID:Yellow);                                                              02       161208     000094
+   425        XssAddCellChar(ARDESC:Yellow);                                                            02       161208     000095
+   426      ENDIF;                                                                                     E02       161208     000096
+   427      xssaddcellNum(ARSTOCK);                                                                     01       161208     000097
+   428      XssAddCellNum(ARMINQTY);                                                                    01       161208     000098
+   429      XssAddCellNum(ARCUSQTY);                                                                    01       161208     000099
+   430      XssAddCellNum(ARPURQTY);                                                                    01       161208     000100
+   431      XssAddCellNum(ARMINQTY + ARCUSQTY - arpurqty - arstock);                                    01       161208     000101
+   432      XssAddCellNum(PRID);                                                                        01       161208     000102
+   433      XssAddCellChar(PROVNM);                                                                     01       161208     000103
+   434      XssAddCellNum(APPRICE:dec2);                                                                01       161208     000104
+   435      XssAddCellChar(APREF);                                                                      01       161208     000105
+   436   //*   exec sql fetch c1 into :data;                                                                     161208     000106
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page     12
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   437      SQLER6 = -4;                                                          //SQL 4               01                  000106
+   438      SQLROUTE_CALL(                                                        //SQL                 01                  000106
+   439           SQLCA                                                            //SQL                 01                  000106
+   440         : SQL_00022                                                        //SQL                 01                  000106
+   441      );                                                                    //SQL                 01                  000106
+   442      IF SQL_00025 = '1';                                                   //SQL                B02                  000106
+   443      EVAL ARID = SQL_00027;                                                //SQL                 02                  000106
+   444      EVAL ARDESC = SQL_00028;                                              //SQL                 02                  000106
+   445      EVAL ARSTOCK = SQL_00029;                                             //SQL                 02                  000106
+   446      EVAL ARMINQTY = SQL_00030;                                            //SQL                 02                  000106
+   447      EVAL ARCUSQTY = SQL_00031;                                            //SQL                 02                  000106
+   448      EVAL ARPURQTY = SQL_00032;                                            //SQL                 02                  000106
+   449      EVAL PRID = SQL_00033;                                                //SQL                 02                  000106
+   450      EVAL PROVNM = SQL_00034;                                              //SQL                 02                  000106
+   451      EVAL APPRICE = SQL_00035;                                             //SQL                 02                  000106
+   452      EVAL APREF = SQL_00036;                                               //SQL                 02                  000106
+   453      EVAL TOT = SQL_00037;                                                 //SQL                 02                  000106
+   454      ENDIF;                                                                //SQL                E02                  000106
+   455    ENDDO;                                                                                       E01       161208     000107
+   456   //* exec sql close c1;                                                                                  161208     000108
+   457      SQLER6 = 5;                                                           //SQL                                     000108
+   458      IF SQL_00040 = 0;                                                     //SQL                B01                  000108
+   459      SQLROUTE_CALL(                                                        //SQL                 01                  000108
+   460           SQLCA                                                            //SQL                 01                  000108
+   461         : SQL_00038                                                        //SQL                 01                  000108
+   462      );                                                                    //SQL                 01                  000108
+   463      ELSE;                                                                 //SQL                X01                  000108
+   464      SQLCLSE_CALL(                                                         //SQL                 01                  000108
+   465           SQLCA                                                            //SQL                 01                  000108
+   466         : SQL_00038                                                        //SQL                 01                  000108
+   467      );                                                                    //SQL                 01                  000108
+   468      ENDIF;                                                                //SQL                E01                  000108
+   469    r2 = XssGetCellId();                                                                                   161208     000109
+   470    XssSetAutoFilter(r1:r2);                                                                               161208     000110
+   471    Xssclosefile();                                                                                        161208     000111
+   472    exfmt fmt03;                                                                                           161208     000112
+   473                                                                                                           161208     000113
+   474    *inlr = *on;                                                                                           161208     000114
+   475  /end-free                                                                                                161208     000115
+   476                                                                                                           161208     000116
+   477=OFMT03                                                                                                              5000001
+        *--------------------------------------------------------------------------------------------*                     5
+        * RPG record format  . . . . :  FMT03                                                        *                     5
+        * External format  . . . . . :  FMT03 : ATU_OBJ/PRO202D                                      *                     5
+        *--------------------------------------------------------------------------------------------*                     5
+   478=O                       FILENAME            30A CHAR       30                                                       5000002
+   479=O                       PATH                65A CHAR       35                                                       5000003
+       * * * * *   E N D   O F   S O U R C E   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page     13
+          A d d i t i o n a l   D i a g n o s t i c   M e s s a g e s
+ Msg id  Sv Number Seq     Message text
+*RNF7066 00      2 000022  Record-Format CTL01 not used for input or output.
+*RNF7066 00      2 000022  Record-Format KEY01 not used for input or output.
+*RNF7089 00      2 000022  RPG provides Separate-Indicator area for file PRO202D.
+*RNF7066 00      2 000022  Record-Format SFL01 not used for input or output.
+ * * * * *   E N D   O F   A D D I T I O N A L   D I A G N O S T I C   M E S S A G E S   * * * * *
+                 O u t p u t   B u f f e r   P o s i t i o n s
+Line   Start End   Field or Constant
+Number Pos   Pos
+   478     1    30 FILENAME
+   479    31    65 PATH
+ * * * * *   E N D   O F   O U T P U T   B U F F E R   P O S I T I O N   *  * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page     14
+                          C r o s s   R e f e r e n c e
+      File and Record References:
+         File              Device             References (D=Defined)
+           Record
+         PRO202D           WORKSTN                 2D
+           SFL01                                   2D    331
+           CTL01                                   2D    342
+           KEY01                                   2D    344
+           FMT03                                   2D    345     472     477
+      Global Field References:
+         Field             Attributes         References (D=Defined M=Modified)
+         *INLR             N(1)                  474M
+*RNF7031 ALIGN_BOT         CONST                 131D
+         ALIGN_CENTER      CONST                 123D    353
+*RNF7031 ALIGN_FILL        CONST                 125D
+*RNF7031 ALIGN_LEFT        CONST                 127D
+*RNF7031 ALIGN_RIGHT       CONST                 129D
+*RNF7031 ALIGN_TOP         CONST                 132D
+         APPRICE           P(7,2)                207D    339M    414M    434
+                                                 451M
+         APREF             A(10)                 208D    340M    415M    435
+                                                 452M
+         ARCUSQTY          P(5,0)                203D    336M    410M    429
+                                                 431     447M
+         ARDESC            A(50)                 200D    341M    407M    422
+                                                 425     444M
+         ARID              A(6)                  199D    332M    406M    421
+                                                 424     443M
+         ARMINQTY          P(5,0)                202D    335M    409M    428
+                                                 431     446M
+         ARPURQTY          P(5,0)                204D    337M    411M    430
+                                                 431     448M
+         ARSTOCK           P(5,0)                201D    334M    408M    427
+                                                 431     445M
+*RNF7031 BORDER_BOTTOM     CONST                 157D
+*RNF7031 BORDER_LEFT       CONST                 158D
+*RNF7031 BORDER_RIGHT      CONST                 159D
+*RNF7031 BORDER_TOP        CONST                 160D
+*RNF7031 CLOSEPARAMETER    PROTOTYPE             196D
+*RNF7031 COLOR_BLACK       CONST                 108D
+*RNF7031 COLOR_BLUE        CONST                 113D
+*RNF7031 COLOR_BRIGHT_GREEN...
+                           CONST                 111D
+*RNF7031 COLOR_GREEN       CONST                 115D
+*RNF7031 COLOR_GREY        CONST                 116D
+*RNF7031 COLOR_LIGHT_GREY  CONST                 117D
+*RNF7031 COLOR_RED         CONST                 110D
+*RNF7031 COLOR_WHITE       CONST                 109D
+         COLOR_YELLOW      CONST                 114D    358
+*RNF7031 DATA              DS(118)               198D
+         DEC2              U(3,0)                214D    355M    434
+*RNF7031 F_CYMD            CONST                 136D
+*RNF7031 F_DMY             CONST                 138D
+*RNF7031 F_ISO             CONST                 140D
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page     15
+*RNF7031 F_MDY             CONST                 139D
+*RNF7031 F_YMD             CONST                 137D
+         FILENAME          A(30)                 346M    349     478
+*RNF7031 FORMAT_DATE_SHORT CONST                 151D
+*RNF7031 FORMAT_DEC0       CONST                 144D
+*RNF7031 FORMAT_DEC1       CONST                 145D
+         FORMAT_DEC2       CONST                 146D    356
+*RNF7031 FORMAT_DEC3       CONST                 147D
+*RNF7031 FORMAT_PCT0       CONST                 148D
+*RNF7031 FORMAT_PCT1       CONST                 149D
+*RNF7031 FORMAT_PCT2       CONST                 150D
+*RNF7031 GETPARM1          A(10)                 166D
+                           PROTOTYPE
+         GETPARM2          A(100)                172D    348
+                           PROTOTYPE
+*RNF7031 GETPARM3          A(2)                  178D
+                           PROTOTYPE
+*RNF7031 GETPARM4          P(1,0)                184D
+                           PROTOTYPE
+*RNF7031 GETPARM5          P(3,0)                190D
+                           PROTOTYPE
+         HEAD              U(3,0)                213D    351M    362     364
+                                                 365     366     367     368
+                                                 369     370     371     372
+                                                 373
+*RNF7031 NAME25            A(25)                 333D
+*RNF7031 NEWORD            P(5,0)                338D
+         PATH              A(35)                 348M    349     479
+         PRID              P(5,0)                205D    412M    432     449M
+         PROVNM            A(30)                 206D    413M    433     450M
+*RNF7031 RRB01             P(4,0)                343D
+         R1                A(12)                 211D    363M    470
+         R2                A(12)                 212D    469M    470
+*RNF7031 SQFAPP            CONST                 282D
+*RNF7031 SQFCRT            CONST                 280D
+*RNF7031 SQFOVR            CONST                 281D
+*RNF7031 SQFRD             CONST                 279D
+         SQL_00000         B(4,0)                284D    390     395
+*RNF7031 SQL_00001         B(4,0)                285D
+         SQL_00002         U(10,0)               286D    386
+         SQL_00003         A(1)                  287D    387
+*RNF7031 SQL_00004         A(118)                288D
+*RNF7031 SQL_00005         A(1)                  289D
+         SQL_00006         B(4,0)                291D    403
+*RNF7031 SQL_00007         B(4,0)                292D
+*RNF7031 SQL_00008         U(10,0)               293D
+         SQL_00009         A(1)                  294D    405
+*RNF7031 SQL_00010         A(118)                295D
+         SQL_00011         A(6)                  296D    406
+         SQL_00012         A(50)                 297D    407
+         SQL_00013         P(5,0)                298D    408
+         SQL_00014         P(5,0)                299D    409
+         SQL_00015         P(5,0)                300D    410
+         SQL_00016         P(5,0)                301D    411
+         SQL_00017         P(5,0)                302D    412
+         SQL_00018         A(30)                 303D    413
+         SQL_00019         P(7,2)                304D    414
+         SQL_00020         A(10)                 305D    415
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page     16
+         SQL_00021         S(3,0)                306D    416
+         SQL_00022         B(4,0)                308D    440
+*RNF7031 SQL_00023         B(4,0)                309D
+*RNF7031 SQL_00024         U(10,0)               310D
+         SQL_00025         A(1)                  311D    442
+*RNF7031 SQL_00026         A(118)                312D
+         SQL_00027         A(6)                  313D    443
+         SQL_00028         A(50)                 314D    444
+         SQL_00029         P(5,0)                315D    445
+         SQL_00030         P(5,0)                316D    446
+         SQL_00031         P(5,0)                317D    447
+         SQL_00032         P(5,0)                318D    448
+         SQL_00033         P(5,0)                319D    449
+         SQL_00034         A(30)                 320D    450
+         SQL_00035         P(7,2)                321D    451
+         SQL_00036         A(10)                 322D    452
+         SQL_00037         S(3,0)                323D    453
+         SQL_00038         B(4,0)                325D    461     466
+*RNF7031 SQL_00039         B(4,0)                326D
+         SQL_00040         U(10,0)               327D    458
+*RNF7031 SQL_00041         A(1)                  328D
+*RNF7031 SQL_00042         A(118)                329D
+*RNF7031 SQL_00043         A(1)                  330D
+*RNF7031 SQLABC            B(9,0)                224D
+*RNF7031 SQLAID            A(8)                  222D
+         SQLCA             DS(136)               220D    258     263     267
+                                                 271     389     394     402
+                                                 439     460     465
+         SQLCABC           I(10,0)               223D    224
+         SQLCAID           A(8)                  221D    222
+         SQLCLSE           CONST                 266     277D
+         SQLCLSE_CALL      PROTOTYPE             266D    464M
+         SQLCMIT           CONST                 270     278D
+*RNF7031 SQLCMIT_CALL      PROTOTYPE             270D
+         SQLCOD            B(9,0)                226D    418
+         SQLCODE           I(10,0)               225D    226
+*RNF7031 SQLERL            B(4,0)                228D
+*RNF7031 SQLERM            A(70)                 230D
+*RNF7031 SQLERP            A(8)                  232D
+         SQLERR            A(24)                 233D    234     235     236
+                                                 237     238     239     240
+*RNF7031 SQLERRD(6)        I(10,0)               240D
+         SQLERRMC          A(70)                 229D    230
+         SQLERRML          I(5,0)                227D    228
+         SQLERRP           A(8)                  231D    232
+*RNF7031 SQLER1            B(9,0)                234D
+*RNF7031 SQLER2            B(9,0)                235D
+*RNF7031 SQLER3            B(9,0)                236D
+*RNF7031 SQLER4            B(9,0)                237D
+*RNF7031 SQLER5            B(9,0)                238D
+         SQLER6            B(9,0)                239D    385M    400M    437M
+                                                 457M
+         SQLOPEN           CONST                 262     276D
+         SQLOPEN_CALL      PROTOTYPE             262D    393M
+         SQLROUTE          CONST                 257     275D
+         SQLROUTE_CALL     PROTOTYPE             257D    388M    401M    438M
+                                                 459M
+         SQLSTATE          A(5)                  254D    255
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page     17
+*RNF7031 SQLSTT            A(5)                  255D
+*RNF7031 SQLWARN(11)       A(1)                  253D
+*RNF7031 SQLWNA            A(1)                  252D
+*RNF7031 SQLWN0            A(1)                  242D
+*RNF7031 SQLWN1            A(1)                  243D
+*RNF7031 SQLWN2            A(1)                  244D
+*RNF7031 SQLWN3            A(1)                  245D
+*RNF7031 SQLWN4            A(1)                  246D
+*RNF7031 SQLWN5            A(1)                  247D
+*RNF7031 SQLWN6            A(1)                  248D
+*RNF7031 SQLWN7            A(1)                  249D
+*RNF7031 SQLWN8            A(1)                  250D
+*RNF7031 SQLWN9            A(1)                  251D
+         SQLWRN            A(11)                 241D    242     243     244
+                                                 245     246     247     248
+                                                 249     250     251     252
+                                                 253
+         TOT               S(3,0)                209D    416M    420     453M
+         XSSADDCELLCHAR    PROTOTYPE              76D    362M    364M    365M
+                                                 366M    367M    368M    369M
+                                                 370M    371M    372M    373M
+                                                 421M    422M    424M    425M
+                                                 433M    435M
+*RNF7031 XSSADDCELLDAT     PROTOTYPE              86D
+         XSSADDCELLNUM     PROTOTYPE              81D    427M    428M    429M
+                                                 430M    431M    432M    434M
+         XSSADDROW         PROTOTYPE              74D    361M    419M
+         XSSADDSHEET       PROTOTYPE              69D    359M
+         XSSCLOSEFILE      PROTOTYPE              92D    471M
+         XSSCREATESTYLE    U(3,0)                 35D    351     355     357
+                           PROTOTYPE
+*RNF7031 XSSFREEZEPANE     PROTOTYPE             100D
+         XSSGETCELLID      A(12)                  95D    363     469
+                           PROTOTYPE
+*RNF7031 XSSGETCOLID       A(5)                   94D
+                           PROTOTYPE
+*RNF7031 XSSGETROWID       A(6)                   93D
+                           PROTOTYPE
+         XSSOPENFILE       PROTOTYPE              26D    349M
+         XSSSETALIGN       PROTOTYPE              50D    353M
+         XSSSETAUTOFILTER  PROTOTYPE              96D    470M
+*RNF7031 XSSSETBOLD        PROTOTYPE              36D
+*RNF7031 XSSSETBORDER      PROTOTYPE              63D
+*RNF7031 XSSSETCOLOR       PROTOTYPE              57D
+         XSSSETCOLWIDTH    PROTOTYPE              71D    360M
+         XSSSETDOCPROPERTIES...
+                           PROTOTYPE              29D    350M
+*RNF7031 XSSSETFONTNAME    PROTOTYPE              43D
+         XSSSETFONTSIZE    PROTOTYPE              40D    352M
+         XSSSETFORCOLOR    PROTOTYPE              60D    358M
+         XSSSETFORMAT      PROTOTYPE              47D    356M
+*RNF7031 XSSSETITALIC      PROTOTYPE              38D
+*RNF7031 XSSSETVERTALIGN   PROTOTYPE              53D
+         XSSSETWRAP        PROTOTYPE              67D    354M
+         YELLOW            U(3,0)                215D    357M    424     425
+      Indicator References:
+         Indicator                            References (D=Defined M=Modified)
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page     18
+*RNF7031 03                                      331D    342D    344D    345D
+*RNF7031 08                                      342D
+*RNF7031 12                                      331D    342D    344D    345D
+*RNF7031 25                                      342D
+*RNF7031 30                                      342D
+*RNF7031 31                                      342D
+*RNF7031 32                                      342D
+*RNF7031 33                                      331D
+*RNF7031 35                                      342D
+*RNF7031 36                                      342D
+*RNF7031 37                                      342D
+*RNF7031 80                                      342D
+         LR                                      474M
+       * * * * *   E N D   O F   C R O S S   R E F E R E N C E   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page     19
+                      E x t e r n a l   R e f e r e n c e s
+      Statically bound procedures:
+         Procedure                            References
+         GETPARM1                                166
+         GETPARM2                                172     348
+         GETPARM3                                178
+         GETPARM4                                184
+         GETPARM5                                190
+         XSSADDROW                                74     361     419
+         XSSSETBOLD                               36
+         XSSSETWRAP                               67     354
+         XSSOPENFILE                              26     349
+         XSSSETALIGN                              50     353
+         XSSSETCOLOR                              57
+         XSSADDSHEET                              69     359
+         XSSGETROWID                              93
+         XSSGETCOLID                              94
+         XSSSETITALIC                             38
+         XSSSETFORMAT                             47     356
+         XSSSETBORDER                             63
+         XSSCLOSEFILE                             92     471
+         XSSGETCELLID                             95     363     469
+         XSSADDCELLNUM                            81     427     428     429
+                                                 430     431     432     434
+         XSSADDCELLDAT                            86
+         XSSFREEZEPANE                           100
+         XSSCREATESTYLE                           35     351     355     357
+         XSSSETFONTSIZE                           40     352
+         XSSSETFONTNAME                           43
+         XSSSETFORCOLOR                           60     358
+         XSSSETCOLWIDTH                           71     360
+         XSSADDCELLCHAR                           76     362     364     365
+                                                 366     367     368     369
+                                                 370     371     372     373
+                                                 421     422     424     425
+                                                 433     435
+         CLOSEPARAMETER                          196
+         XSSSETVERTALIGN                          53
+         XSSSETAUTOFILTER                         96     470
+         XSSSETDOCPROPERTIES                      29     350
+      Imported fields:
+         Field             Attributes         Defined
+         No references in the source.
+      Exported fields:
+         Field             Attributes         Defined
+         No references in the source.
+   * * * * *   E N D   O F   E X T E R N A L   R E F E R E N C E S   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page     20
+                          M e s s a g e   S u m m a r y
+ Msg id  Sv Number Message text
+*RNF7031 00    102 The name or indicator is not referenced.
+*RNF7066 00      3 Record-Format name of Externally-Described file is not used.
+*RNF7089 00      1 RPG provides Separate-Indicator area for file.
+       * * * * *   E N D   O F   M E S S A G E   S U M M A R Y   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0005/PRO203        MONZAXIB   03/07/23 15:32:30        Page     21
+                            F i n a l   S u m m a r y
+  Message Totals:
+    Information  (00) . . . . . . . :      106
+    Warning      (10) . . . . . . . :        0
+    Error        (20) . . . . . . . :        0
+    Severe Error (30+)  . . . . . . :        0
+    ---------------------------------  -------
+    Total . . . . . . . . . . . . . :      106
+  Source Totals:
+    Records . . . . . . . . . . . . :      479
+    Specifications  . . . . . . . . :      379
+    Data records  . . . . . . . . . :        0
+    Comments  . . . . . . . . . . . :       69
+         * * * * *   E N D   O F   F I N A L   S U M M A R Y   * * * * *
+Program PRO203 placed in library ATUDSB0005. 00 highest severity. Created on 03/07/23 at 15:32:30.
+          * * * * *   E N D   O F   C O M P I L A T I O N   * * * * *
+  . . . .
+MSG1573 *** Messages sent by the Compilation ***
+CPC7305 Member PRO203 added to file QSQLTEMP1 in QTEMP.
+CPF4011 Buffer length longer than record for member XSS.
+CPF4011 Buffer length longer than record for member PARAMETER.
+RNS9304 Program PRO203 placed in library ATUDSB0005. 00 highest severity. Created on 03/07/23 at 15:32:30.

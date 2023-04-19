@@ -1,0 +1,169 @@
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE       3/07/23 15:28:22        Page    1
+ File name . . . . . . . . . . . . . . . . . . . . . :   ARTICLE
+   Library name  . . . . . . . . . . . . . . . . . . :   ATUDSB0005
+ File attribute  . . . . . . . . . . . . . . . . . . :   Physical
+ Source file containing DDS  . . . . . . . . . . . . :   QDDSSRC
+   Library name  . . . . . . . . . . . . . . . . . . :   ATUDSB0005
+ Source member containing DDS  . . . . . . . . . . . :   ARTICLE
+ Source member last changed  . . . . . . . . . . . . :   03/07/23  15:28:20
+ Source listing options  . . . . . . . . . . . . . . :   *SOURCE    *LIST      *NOSECLVL  *EVENTF
+ DDS generation severity level . . . . . . . . . . . :   20
+ DDS flagging severity level . . . . . . . . . . . . :   00
+ File type . . . . . . . . . . . . . . . . . . . . . :   *DATA
+ Authority . . . . . . . . . . . . . . . . . . . . . :   *LIBCRTAUT
+ Replace file  . . . . . . . . . . . . . . . . . . . :   *NO
+ Text  . . . . . . . . . . . . . . . . . . . . . . . :   Article File
+ Compiler  . . . . . . . . . . . . . . . . . . . . . :   IBM System i5 Data Description Processor
+                                      Data Description Source
+ SEQNBR  *...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8  Date
+    100        *%METADATA                                                      *
+    200        * %TEXT Article File                                            *
+    300        *%EMETADATA                                                     *
+    400                                              REF(SAMREF)
+    500                  R FARTI
+    600                    ARID      R
+    700                    ARDESC    R
+    800                    ARSALEPR  R               REFFLD(UNITPRICE)
+    900                                              TEXT('REF SALE PRICE')
+   1000                                              COLHDG('REF' 'SALE' 'PRICE')
+   1100                                              EDTCDE(2)
+   1200                    ARWHSPR   R               REFFLD(UNITPRICE)
+   1300                                              TEXT('STOCK PRICE')
+   1400                                              COLHDG('STOCK' 'PRICE')
+   1500                                              EDTCDE(2)
+   1600                    ARTIFA    R               REFFLD(FAID)
+   1700                    ARSTOCK   R               REFFLD(QUANTITY)
+   1800                                              TEXT('STOCK')
+   1900                                              COLHDG('STOCK')
+   2000                                              EDTCDE(2)
+   2100                    ARMINQTY  R               REFFLD(QUANTITY)
+   2200                                              TEXT('MINIMUM STOCK')
+   2300                                              COLHDG('MIN' 'STOCK')
+   2400                                              EDTCDE(2)
+   2500                    ARCUSQTY  R               REFFLD(QUANTITY)
+   2600                                              TEXT('CUSTOMER ORDER QUANTITY')
+   2700                                              COLHDG('CUSTOMER' 'ORDER' 'QTY')
+   2800                    ARPURQTY  R               REFFLD(QUANTITY)
+   2900                                              TEXT('PURCHASE ORDER QUANTITY')
+   3000                                              COLHDG('PRUCHASE' 'ORDER' 'QTY')
+   3100                                              EDTCDE(2)
+   3200                    ARVATCD   R               REFFLD(VATCODE)
+   3300                    ARCREA          L         TEXT('CREATION DATE')
+   3400                                              COLHDG('CREAETION' 'DATE')
+   3500                    ARMOD           Z         TEXT('LAST MODIFICATION')
+   3600                                              COLHDG('LAST' 'MODIFICATION')
+   3700                    ARMODID       10          TEXT('LAS MOD BY')
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE       3/07/23 15:28:22        Page    2
+                                      Data Description Source
+ SEQNBR  *...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8  Date
+   3800                                              COLHDG('LAST' 'MODIF.' 'BY')
+   3900                    ARDEL     R               REFFLD(DLCODE)
+                         * * * * *   E N D   O F   S O U R C E   * * * * *
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE       3/07/23 15:28:22        Page    3
+                                          Expanded Source
+                                                                                          Field       Buffer position
+ SEQNBR  *...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8 length        Out     In
+    500                  R FARTI
+    600                    ARID           6A  B                                               6            1       1
+ * Referenced Field  . . . . . . . . . . . :   ARID
+ *   Format  . . . . . . . . . . . . . . . :   REFER
+ *   File  . . . . . . . . . . . . . . . . :   SAMREF
+ *   Library . . . . . . . . . . . . . . . :   ATU_DTA
+    600                                              TEXT('ARTICLE ID                   -
+    600                                                                   ') +
+    600                                              COLHDG('ART.' 'ID')
+    700                    ARDESC        50A  B                                              50            7       7
+ * Referenced Field  . . . . . . . . . . . :   ARDESC
+ *   Format  . . . . . . . . . . . . . . . :   REFER
+ *   File  . . . . . . . . . . . . . . . . :   SAMREF
+ *   Library . . . . . . . . . . . . . . . :   ATU_DTA
+    700                                              TEXT('ARTICLE DESCRPTION           -
+    700                                                                   ') +
+    700                                              COLHDG('DESCRIPTION')
+    800                    ARSALEPR       7P 2B                                               4           57      57
+ * Referenced Field  . . . . . . . . . . . :   UNITPRICE
+ *   Format  . . . . . . . . . . . . . . . :   REFER
+ *   File  . . . . . . . . . . . . . . . . :   SAMREF
+ *   Library . . . . . . . . . . . . . . . :   ATU_DTA
+    900                                              TEXT('REF SALE PRICE') +
+   1000                                              COLHDG('REF' 'SALE' 'PRICE') +
+   1100                                              EDTCDE(2)
+   1200                    ARWHSPR        7P 2B                                               4           61      61
+ * Referenced Field  . . . . . . . . . . . :   UNITPRICE
+ *   Format  . . . . . . . . . . . . . . . :   REFER
+ *   File  . . . . . . . . . . . . . . . . :   SAMREF
+ *   Library . . . . . . . . . . . . . . . :   ATU_DTA
+   1300                                              TEXT('STOCK PRICE') +
+   1400                                              COLHDG('STOCK' 'PRICE') EDTCDE(2)
+   1600                    ARTIFA         3A  B                                               3           65      65
+ * Referenced Field  . . . . . . . . . . . :   FAID
+ *   Format  . . . . . . . . . . . . . . . :   REFER
+ *   File  . . . . . . . . . . . . . . . . :   SAMREF
+ *   Library . . . . . . . . . . . . . . . :   ATU_DTA
+   1600                                              TEXT('FAMILLY ID                   -
+   1600                                                                   ') +
+   1600                                              COLHDG('FAM' 'ID')
+   1700                    ARSTOCK        5P 0B                                               3           68      68
+ * Referenced Field  . . . . . . . . . . . :   QUANTITY
+ *   Format  . . . . . . . . . . . . . . . :   REFER
+ *   File  . . . . . . . . . . . . . . . . :   SAMREF
+ *   Library . . . . . . . . . . . . . . . :   ATU_DTA
+   1800                                              TEXT('STOCK') COLHDG('STOCK') +
+   2000                                              EDTCDE(2)
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE       3/07/23 15:28:22        Page    4
+                                          Expanded Source
+                                                                                          Field       Buffer position
+ SEQNBR  *...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8 length        Out     In
+   2100                    ARMINQTY       5P 0B                                               3           71      71
+ * Referenced Field  . . . . . . . . . . . :   QUANTITY
+ *   Format  . . . . . . . . . . . . . . . :   REFER
+ *   File  . . . . . . . . . . . . . . . . :   SAMREF
+ *   Library . . . . . . . . . . . . . . . :   ATU_DTA
+   2200                                              TEXT('MINIMUM STOCK') +
+   2300                                              COLHDG('MIN' 'STOCK') EDTCDE(2)
+   2500                    ARCUSQTY       5P 0B                                               3           74      74
+ * Referenced Field  . . . . . . . . . . . :   QUANTITY
+ *   Format  . . . . . . . . . . . . . . . :   REFER
+ *   File  . . . . . . . . . . . . . . . . :   SAMREF
+ *   Library . . . . . . . . . . . . . . . :   ATU_DTA
+   2600                                              TEXT('CUSTOMER ORDER QUANTITY') +
+   2700                                              COLHDG('CUSTOMER' 'ORDER' 'QTY')
+   2500                                              EDTCDE(Z)
+   2800                    ARPURQTY       5P 0B                                               3           77      77
+ * Referenced Field  . . . . . . . . . . . :   QUANTITY
+ *   Format  . . . . . . . . . . . . . . . :   REFER
+ *   File  . . . . . . . . . . . . . . . . :   SAMREF
+ *   Library . . . . . . . . . . . . . . . :   ATU_DTA
+   2900                                              TEXT('PURCHASE ORDER QUANTITY') +
+   3000                                              COLHDG('PRUCHASE' 'ORDER' 'QTY') +
+   3100                                              EDTCDE(2)
+   3200                    ARVATCD        1A  B                                               1           80      80
+ * Referenced Field  . . . . . . . . . . . :   VATCODE
+ *   Format  . . . . . . . . . . . . . . . :   REFER
+ *   File  . . . . . . . . . . . . . . . . :   SAMREF
+ *   Library . . . . . . . . . . . . . . . :   ATU_DTA
+   3200                                              TEXT('VAT CODE                     -
+   3200                                                                   ') +
+   3200                                              COLHDG('VAT' 'CODE') DFT('2')
+   3300                    ARCREA        10L  B      TEXT('CREATION DATE') +                 10           81      81
+   3400                                              COLHDG('CREAETION' 'DATE')
+   3500                    ARMOD         26Z  B      TEXT('LAST MODIFICATION') +             26           91      91
+   3600                                              COLHDG('LAST' 'MODIFICATION')
+   3700                    ARMODID       10A  B      TEXT('LAS MOD BY') +                    10          117     117
+   3800                                              COLHDG('LAST' 'MODIF.' 'BY')
+   3900                    ARDEL          1A  B                                               1          127     127
+ * Referenced Field  . . . . . . . . . . . :   DLCODE
+ *   Format  . . . . . . . . . . . . . . . :   REFER
+ *   File  . . . . . . . . . . . . . . . . :   SAMREF
+ *   Library . . . . . . . . . . . . . . . :   ATU_DTA
+   3900                                              TEXT('DELETE CODE X=DELETED        -
+   3900                                                                   ') +
+   3900                                              COLHDG('DEL' 'CD')
+                 * * * * *   E N D   O F   E X P A N D E D   S O U R C E   * * * * *
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0005/ARTICLE       3/07/23 15:28:22        Page    5
+                                          Message Summary
+    Total          Informational          Warning        Error       Severe
+                       (0-9)              (10-19)       (20-29)      (30-99)
+        0                 0                    0             0            0
+* CPC7301      00               Message . . . . :   File ARTICLE created in library ATUDSB0005.
+                         * * * * *   E N D   O F   C O M P I L A T I O N   * * * * *
