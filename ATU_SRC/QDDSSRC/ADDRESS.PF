@@ -14,6 +14,6 @@
                                             COLHDG('CREAETION' 'DATE')
                   ADMOD           Z         TEXT('LAST MODIFICATION')
                                             COLHDG('LAST' 'MODIFICATION')
-                  ADMODID       10          TEXT('LAS MOD BY')
+                  ADMODID       10          TEXT('LAST MOD BY')
                                             COLHDG('LAST' 'MODIF.' 'BY')
                   ADDEL     R               REFFLD(DLCODE)
