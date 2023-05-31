@@ -24,7 +24,7 @@
                                             EDTCDE(2)
                   ARCUSQTY  R               REFFLD(QUANTITY)
                                             TEXT('CUSTOMER ORDER QUANTITY')
-                                            COLHDG('CUSTOMER' 'ORDER' 'QTY')
+                                            COLHDG('CUS' 'ORDER' 'QTY')
                   ARPURQTY  R               REFFLD(QUANTITY)
                                             TEXT('PURCHASE ORDER QUANTITY')
                                             COLHDG('PRUCHASE' 'ORDER' 'QTY')

@@ -1,0 +1,86 @@
+Attributes of the executed compilation command :
+  -  ACRTSQLOBJ OBJ(ATUDSB0006/ARTLSTDAT) SRCFILE(ATU_SRC/QSQLSRC) SRCTYPE('VIEW') RE
+     PLACE(*YES)
+5770SS1 V7R4M0 190621               Run SQL Statements             ARTLSTDAT                          05/31/23 13:23:48   PAGE   1
+Source file...............QTEMP/ZZQSQLSRC1
+Member....................ARTLSTDAT
+Target release............V7R4M0
+Commit....................*CHG
+Naming....................*SYS
+Generation level..........10
+Date format...............*JOB
+Date separator............*JOB
+Time format...............*HMS
+Time separator ...........*JOB
+Right margin..............80
+Default collection........ATUDSB0006
+IBM SQL flagging..........*NOFLAG
+ANS flagging..............*NONE
+Decimal point.............*PERIOD
+Sort sequence.............*JOB
+Language ID...............*JOB
+Printer file..............*LIBL/QSYSPRT
+Source file CCSID.........297
+Job CCSID.................37
+Statement processing......*RUN
+Allow copy of data........*OPTIMIZE
+Allow blocking............*ALLREAD
+SQL rules.................*DB2
+Decimal result options:
+  Maximum precision.......31
+  Maximum scale...........31
+  Minimum divide scale....0
+Concurrent access
+  resolution..............*DFT
+System time sensitive.....*YES
+Source member changed on 05/31/23  13:23:48
+5770SS1 V7R4M0 190621               Run SQL Statements             ARTLSTDAT                          05/31/23 13:23:48   PAGE     2
+Record  *...+... 1 ...+... 2 ...+... 3 ...+... 4 ...+... 5 ...+... 6 ...+... 7 ...+... 8   SEQNBR  Last change
+      1
+      2 CREATE VIEW ARTLSTDAT (
+      3   ARID ,
+      4   ARDESC ,
+      5   LASTORDER ,
+      6   QUANTITY )
+      7   AS
+      8   SELECT ARID, ARDESC,     MAX(ORDATE) AS LASTORDER , SUM(ODQTY) AS QUANTITY
+      9     FROM  ARTICLE,
+     10                  "ATU_DTA"/   "ORDER",
+     11                                      "ATU_DTA"/   DETORD
+     12     WHERE ARID = ODARID AND ODORID = ORID GROUP BY ARID, ARDESC
+     13   ;
+     14
+     15 LABEL ON COLUMN ARTLSTDAT
+     16 ( ARID IS 'ART.                ID' ,
+     17   ARDESC IS 'DESCRIPTION' ) ;
+     18
+     19 LABEL ON COLUMN ARTLSTDAT
+     20 ( ARID TEXT IS 'ARTICLE ID' ,
+     21   ARDESC TEXT IS 'ARTICLE DESCRPTION' ) ;
+     22
+                                 * * * * *  E N D  O F  S O U R C E  * * * * *
+5770SS1 V7R4M0 190621               Run SQL Statements             ARTLSTDAT                          05/31/23 13:23:48   PAGE     3
+Record  *...+... 1 ...+... 2 ...+... 3 ...+... 4 ...+... 5 ...+... 6 ...+... 7 ...+... 8   SEQNBR  Last change
+MSG ID  SEV  RECORD  TEXT
+SQL7951   0       1  Position 1 View ARTLSTDAT created in ATUDSB0006.
+SQL7965   0      15  Position 1 LABEL ON for ARTLSTDAT in ATUDSB0006
+                     completed.
+SQL7965   0      19  Position 1 LABEL ON for ARTLSTDAT in ATUDSB0006
+                     completed.
+SQL7960   0          Commit completed.
+                    Message Summary
+  Total     Info   Warning      Error   Severe  Terminal
+      4        4         0          0        0         0
+00 level severity errors found in source
+                                * * * * *  E N D  O F  L I S T I N G  * * * * *
+  . . . .
+MSG1573 *** Messages sent by the Compilation ***
+CPF9812 File ARTLSTDAT in library ATUDSB0006 not found.
+MSG0159 Library QTEMP does not belong to any application.
+CPC7301 File ZZQSQLSRC1 created in library QTEMP.
+MSG0704 Source file QTEMP/ZZQSQLSRC1 created in standard format.
+CPC7303 File ZZQSQLSRC1 in library QTEMP changed.
+CPC2198 Current library changed to ATUDSB0006.
+CPC2198 Current library changed to ATUDSB0006.
+CPC7303 File ARTLSTDAT in library ATUDSB0006 changed.
+CPC2103 Object changed for ARTLSTDAT in ATUDSB0006 type *FILE.
