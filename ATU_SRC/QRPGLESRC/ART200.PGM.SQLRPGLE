@@ -19,9 +19,9 @@ Dcl-Pr providers extpgm('ART201');
 End-Pr;
 
 Dcl-Ds indds;
-  help            Ind             Pos(1);
-  exit            Ind             Pos(3);
-  prompt          Ind             Pos(4);
+    help            Ind             Pos(1);
+    exit            Ind             Pos(3);
+    prompt          Ind             Pos(4);
   refresh         Ind             Pos(5);
   Create          Ind             Pos(6);
   cancel          Ind             Pos(12);
