@@ -1,4 +1,4 @@
- 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0006/ARTICLE       5/31/23 13:23:46        Page    1
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0006/ARTICLE       5/31/23 13:25:50        Page    1
  File name . . . . . . . . . . . . . . . . . . . . . :   ARTICLE
    Library name  . . . . . . . . . . . . . . . . . . :   ATUDSB0006
  File attribute  . . . . . . . . . . . . . . . . . . :   Physical
@@ -6,7 +6,7 @@
    Library name  . . . . . . . . . . . . . . . . . . :   ATUDSB0006
  Source member containing DDS  . . . . . . . . . . . :   ARTICLE
  Source member last changed  . . . . . . . . . . . . :   05/31/23  13:23:39
- Source listing options  . . . . . . . . . . . . . . :   *SOURCE    *LIST      *NOSECLVL  *EVENTF
+ Source listing options  . . . . . . . . . . . . . . :   *SOURCE    *LIST      *NOSECLVL  *NOEVENTF
  DDS generation severity level . . . . . . . . . . . :   20
  DDS flagging severity level . . . . . . . . . . . . :   00
  File type . . . . . . . . . . . . . . . . . . . . . :   *DATA
@@ -53,13 +53,13 @@
    3500                    ARMOD           Z         TEXT('LAST MODIFICATION')
    3600                                              COLHDG('LAST' 'MODIFICATION')
    3700                    ARMODID       10          TEXT('LAS MOD BY')
- 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0006/ARTICLE       5/31/23 13:23:46        Page    2
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0006/ARTICLE       5/31/23 13:25:50        Page    2
                                       Data Description Source
  SEQNBR  *...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8  Date
    3800                                              COLHDG('LAST' 'MODIF.' 'BY')
    3900                    ARDEL     R               REFFLD(DLCODE)
                          * * * * *   E N D   O F   S O U R C E   * * * * *
- 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0006/ARTICLE       5/31/23 13:23:46        Page    3
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0006/ARTICLE       5/31/23 13:25:50        Page    3
                                           Expanded Source
                                                                                           Field       Buffer position
  SEQNBR  *...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8 length        Out     In
@@ -110,7 +110,7 @@
  *   Library . . . . . . . . . . . . . . . :   ATU_DTA
    1800                                              TEXT('STOCK') COLHDG('STK') +
    2000                                              EDTCDE(2)
- 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0006/ARTICLE       5/31/23 13:23:46        Page    4
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0006/ARTICLE       5/31/23 13:25:50        Page    4
                                           Expanded Source
                                                                                           Field       Buffer position
  SEQNBR  *...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8 length        Out     In
@@ -160,7 +160,7 @@
    3900                                                                   ') +
    3900                                              COLHDG('DEL' 'CD')
                  * * * * *   E N D   O F   E X P A N D E D   S O U R C E   * * * * *
- 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0006/ARTICLE       5/31/23 13:23:46        Page    5
+ 5770SS1 V7R4M0  190621                  Data Description               ATUDSB0006/ARTICLE       5/31/23 13:25:50        Page    5
                                           Message Summary
     Total          Informational          Warning        Error       Severe
                        (0-9)              (10-19)       (20-29)      (30-99)

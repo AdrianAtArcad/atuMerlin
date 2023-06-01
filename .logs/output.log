@@ -1,8 +1,8 @@
-13:23:36.428 [INFO] Connecting locally to instance AD/ENG.
-13:23:37.339 [INFO] Connected to Arcad Server instance AD/ENG version 22.02.14 with CCSID 37
-13:23:37.811 [INFO] Starting project synchronization
-13:23:38.310 [INFO] Importing previous transfers from /ArcADSCM/ATU/SB.00.06/transfersList.json
-13:23:38.401 [INFO] Configuration summary:
+13:32:24.344 [INFO] Connecting locally to instance AD/ENG.
+13:32:25.160 [INFO] Connected to Arcad Server instance AD/ENG version 22.02.14 with CCSID 37
+13:32:25.633 [INFO] Starting project synchronization
+13:32:26.150 [INFO] Importing previous transfers from /ArcADSCM/ATU/SB.00.06/transfersList.json
+13:32:26.251 [INFO] Configuration summary:
 	- Repository: git@github.com:AdrianAtArcad/atuMerlin.git
 	- Branch: FT/countryfile
 	- Application: ATU
@@ -11,32 +11,32 @@
 	- Target version: ATU D SB.00.06
 	- Hash comparison: MD5
 	- Synchronization type: SANDBOX
-13:23:38.401 [INFO] Preparing transfer operations
-13:23:38.760 [INFO] Created 16 transfer operation(s)
-13:23:38.879 [INFO] Nothing to transfer to QRPGLESRC; all transfers were skipped.
-13:23:38.880 [INFO] Nothing to transfer to QRPGSRC; all transfers were skipped.
-13:23:38.880 [INFO] Nothing to transfer to QMSGFSRC; all transfers were skipped.
-13:23:38.880 [INFO] Nothing to transfer to QDTASRC; all transfers were skipped.
-13:23:38.881 [INFO] Transferring 1 member(s) to file QDDSSRC; 49 skipped
-13:23:39.936 [INFO] Transfer to file QDDSSRC complete
-13:23:39.938 [INFO] Nothing to transfer to QCLSRC; all transfers were skipped.
-13:23:39.938 [INFO] Nothing to transfer to QILESRC; all transfers were skipped.
-13:23:39.938 [INFO] Nothing to transfer to QILESRVSRC; all transfers were skipped.
-13:23:39.939 [INFO] Nothing to transfer to QPNLSRC; all transfers were skipped.
-13:23:39.939 [INFO] Nothing to transfer to QCMDSRC; all transfers were skipped.
-13:23:39.939 [INFO] Nothing to transfer to QSQLSRC; all transfers were skipped.
-13:23:39.939 [INFO] Nothing to transfer to QSRVSRC; all transfers were skipped.
-13:23:39.939 [INFO] Nothing to transfer to QTRGSRC; all transfers were skipped.
-13:23:39.940 [INFO] Nothing to transfer to QPROTOSRC; all transfers were skipped.
-13:23:39.940 [INFO] Nothing to transfer to QCBLSRC; all transfers were skipped.
-13:23:39.940 [INFO] Nothing to transfer to QBNDSRC; all transfers were skipped.
-13:23:40.056 [INFO] Exported transfers list to /ArcADSCM/ATU/SB.00.06/transfersList.json
-13:23:40.056 [INFO] Duration: 1 second(s)
-13:23:40.068 [INFO] Running unitary compilation for 1 component(s)
-13:23:40.529 [INFO] Created Smart Compiler list ATUDSB0006/SMARTCPL with 1 component(s) to compile:
-	- ARTICLE (PF/*PF)
-13:23:41.305 [INFO] Waiting for compilations to end...
-13:23:49.856 [INFO] 4 component(s) successfully compiled
-13:23:49.859 [INFO] Writing compilation logs
-13:23:49.955 [INFO] Writing 5 spooled file(s)
-13:23:50.154 [INFO] Writing 1 event file(s)
+13:32:26.252 [INFO] Preparing transfer operations
+13:32:26.615 [INFO] Created 16 transfer operation(s)
+13:32:26.738 [INFO] Transferring 1 member(s) to file QRPGLESRC; 36 skipped
+13:32:27.803 [INFO] Transfer to file QRPGLESRC complete
+13:32:27.804 [INFO] Nothing to transfer to QRPGSRC; all transfers were skipped.
+13:32:27.805 [INFO] Nothing to transfer to QMSGFSRC; all transfers were skipped.
+13:32:27.805 [INFO] Nothing to transfer to QDTASRC; all transfers were skipped.
+13:32:27.805 [INFO] Nothing to transfer to QDDSSRC; all transfers were skipped.
+13:32:27.806 [INFO] Nothing to transfer to QCLSRC; all transfers were skipped.
+13:32:27.806 [INFO] Nothing to transfer to QILESRC; all transfers were skipped.
+13:32:27.806 [INFO] Nothing to transfer to QILESRVSRC; all transfers were skipped.
+13:32:27.806 [INFO] Nothing to transfer to QPNLSRC; all transfers were skipped.
+13:32:27.807 [INFO] Nothing to transfer to QCMDSRC; all transfers were skipped.
+13:32:27.807 [INFO] Nothing to transfer to QSQLSRC; all transfers were skipped.
+13:32:27.807 [INFO] Nothing to transfer to QSRVSRC; all transfers were skipped.
+13:32:27.807 [INFO] Nothing to transfer to QTRGSRC; all transfers were skipped.
+13:32:27.808 [INFO] Nothing to transfer to QPROTOSRC; all transfers were skipped.
+13:32:27.808 [INFO] Nothing to transfer to QCBLSRC; all transfers were skipped.
+13:32:27.808 [INFO] Nothing to transfer to QBNDSRC; all transfers were skipped.
+13:32:27.923 [INFO] Exported transfers list to /ArcADSCM/ATU/SB.00.06/transfersList.json
+13:32:27.924 [INFO] Duration: 1 second(s)
+13:32:27.934 [INFO] Running unitary compilation for 1 component(s)
+13:32:28.351 [INFO] Created Smart Compiler list ATUDSB0006/SMARTCPL with 1 component(s) to compile:
+	- ART301 (SQLRPGLE/*SQLRPM)
+13:32:29.083 [INFO] Waiting for compilations to end...
+13:32:31.165 [INFO] 1 component(s) successfully compiled
+13:32:31.165 [INFO] Writing compilation logs
+13:32:31.199 [INFO] Writing 2 spooled file(s)
+13:32:31.392 [INFO] Writing 1 event file(s)

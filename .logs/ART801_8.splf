@@ -1,0 +1,809 @@
+Attributes of the executed compilation command :
+  -  ACRTSQLOBJ OBJ(ATUDSB0006/ART801) SRCFILE(ATU_SRC/QSQLSRC) SRCTYPE('SQLPRC') REP
+     LACE(*YES) TGTRLS(V7R4M0)
+5770SS1 V7R4M0 190621               Run SQL Statements             ART801                             05/31/23 13:25:54   PAGE   1
+Source file...............QTEMP/ZZQSQLSRC1
+Member....................ART801
+Target release............V7R4M0
+Commit....................*CHG
+Naming....................*SYS
+Generation level..........10
+Date format...............*JOB
+Date separator............*JOB
+Time format...............*HMS
+Time separator ...........*JOB
+Right margin..............80
+Default collection........*NONE
+IBM SQL flagging..........*NOFLAG
+ANS flagging..............*NONE
+Decimal point.............*PERIOD
+Sort sequence.............*JOB
+Language ID...............*JOB
+Printer file..............*LIBL/QSYSPRT
+Source file CCSID.........297
+Job CCSID.................37
+Statement processing......*RUN
+Allow copy of data........*OPTIMIZE
+Allow blocking............*ALLREAD
+SQL rules.................*DB2
+Decimal result options:
+  Maximum precision.......31
+  Maximum scale...........31
+  Minimum divide scale....0
+Concurrent access
+  resolution..............*DFT
+System time sensitive.....*YES
+Source member changed on 05/31/23  13:25:54
+5770SS1 V7R4M0 190621               Run SQL Statements             ART801                             05/31/23 13:25:54   PAGE     2
+Record  *...+... 1 ...+... 2 ...+... 3 ...+... 4 ...+... 5 ...+... 6 ...+... 7 ...+... 8   SEQNBR  Last change
+      1  SET PATH *LIBL ;
+      2
+      3  CREATE PROCEDURE
+      4      "ATUDSB0006"/UPDATE_ON_CUS_ORD_QTY ( )
+      5    LANGUAGE SQL
+      6    SPECIFIC ART801
+      7    NOT DETERMINISTIC
+      8    MODIFIES SQL DATA
+      9    CALLED ON NULL INPUT
+     10    SET OPTION  ALWBLK = *ALLREAD ,
+     11    ALWCPYDTA = *YES ,
+     12    COMMIT = *NONE ,
+     13    DECRESULT = (31, 31, 00) ,
+     14
+     15   DLYPRP = *NO ,
+     16   DYNDFTCOL = *NO ,
+     17   DYNUSRPRF = *USER ,
+     18   SRTSEQ = *HEX
+     19 BEGIN
+     20  -- UPDATE ON CUST ORDER QUANTITY ON ARTICLE
+     21   UPDATE ARTICLE A SET ARCUSQTY = ( SELECT SUM ( ODQTY - ODQTYLIV) FROM "ORDER"
+     21
+     22          , DETORD
+     23     WHERE ORID = ODORID AND ORDATCLO = 0 AND A.ARID = ODARID GROUP BY ODARID )
+     24     WHERE EXISTS ( SELECT ODARID FROM "ORDER" , DETORD WHERE ORID = ODORID AND
+     25     ORDATCLO = 0 AND A.ARID = ODARID );
+     26  -- UPDATE CURRENT CREDIT FROM CUSTOMER
+     27   UPDATE CUSTOMER  C SET CUCREDIT = ( SELECT SUM ( ODTOTVAT ) FROM "ORDER"
+     28          , DETORD
+     29     WHERE ORID = ODORID AND ORDATCLO = 0 AND C.CUID = ORCUID GROUP BY ORCUID )
+     30     WHERE EXISTS ( SELECT ORCUID FROM "ORDER" , DETORD WHERE ORID = ODORID AND
+     31     ORDATCLO = 0 AND C.CUID = ORCUID );
+     32  -- UPDATE LAST ORDER DATE FROM CUSTOMER
+     33      UPDATE CUSTOMER  C SET CULASTORD = ( SELECT MAX ( ORDATE ) FROM "ORDER"
+     34      WHERE C.CUID = ORCUID )
+     35      WHERE EXISTS ( SELECT ORCUID FROM "ORDER" WHERE C.CUID = ORCUID );
+     36 END;
+     37
+     38
+     39
+     40
+                                 * * * * *  E N D  O F  S O U R C E  * * * * *
+5770SS1 V7R4M0 190621               Run SQL Statements             ART801                             05/31/23 13:25:54   PAGE     3
+Record  *...+... 1 ...+... 2 ...+... 3 ...+... 4 ...+... 5 ...+... 6 ...+... 7 ...+... 8   SEQNBR  Last change
+MSG ID  SEV  RECORD  TEXT
+5770SS1 V7R4M0 190621Position 1 SECreate SQLtILEnC Objectte.       ART801                      05/31/23 13:25:54          Page     1
+Source type...............C
+Object name...............ATUDSB0006/ART801
+Source file...............QTEMP/QSQLSRC
+Member....................ART801
+To source file............QTEMP/QSQLT00000
+Options...................*NOGEN     *SYS       *PERIOD    *SYSTIME
+Listing option............*PRINT
+Target release............V7R4M0
+INCLUDE file..............*SRCFILE
+Commit....................*NONE
+Allow copy of data........*YES
+Close SQL cursor..........*ENDMOD
+Allow blocking............*ALLREAD
+Delay PREPARE.............*NO
+Concurrent access
+  resolution..............*DFT
+Generation level..........10
+Margins...................*SRCFILE
+Printer file..............*LIBL/QSYSPRT
+Date format...............*MDY
+Date separator............/
+Time format...............*HMS
+Time separator ...........:
+Replace...................*NO
+Relational database.......*LOCAL
+User .....................*CURRENT
+RDB connect method........*DUW
+Default collection........*NONE
+Dynamic default
+  collection..............*NO
+Package name..............*OBJLIB/*OBJ
+Path......................*LIBL
+SQL rules.................*DB2
+Created object type.......*MODULE
+Debugging view............*NONE
+User profile .............*NAMING
+Dynamic user profile......*USER
+Sort sequence.............*HEX
+Language ID...............ENU
+IBM SQL flagging..........*NOFLAG
+ANS flagging..............*NONE
+Text......................SQL PROCEDURE UPDATE_ON_CUS_ORD_QTY
+Source file CCSID.........297
+Job CCSID.................37
+Decimal result options:
+  Maximum precision.......31
+  Maximum scale...........31
+  Minimum divide scale....0
+DECFLOAT rounding mode....*HALFEVEN
+Source member changed on 05/31/23  13:25:54
+5770SS1 V7R4M0 190621             Create SQL ILE C Object          ART801                      05/31/23 13:25:54          Page     2
+Record  *...+... 1 ...+... 2 ...+... 3 ...+... 4 ...+... 5 ...+... 6 ...+... 7 ...+... 8 ...+... 9 ...+... 0   SEQNBR  Last change
+    1   £include "qsys/qasqh/stdlib"                                                                           000001
+    1+                                                                                                         000001
+    2   £include "qsys/qasqh/stdio"                                                                            000002
+    2+                                                                                                         000002
+    3   £include "qsys/qasqh/string"                                                                           000003
+    3+                                                                                                         000003
+    4   £include "qsys/qasqh/decimal"                                                                          000004
+    4+                                                                                                         000004
+    5   £include "qsys/qasqh/wcstr"                                                                            000005
+    5+                                                                                                         000005
+    6   £include "qsys/qasqh/wchar"                                                                            000006
+    6+                                                                                                         000006
+    7   £include "qsys/qasqh/stddef"                                                                           000007
+    7+                                                                                                         000007
+    8   £include "qsys/qasqh/trgbuf"                                                                           000008
+    8+                                                                                                         000008
+    9   £include "qsys/qasqh/pointer"                                                                          000009
+    9+                                                                                                         000009
+   10   £include "qsys/qasqh/micommon"                                                                         000010
+   10+                                                                                                         000010
+   11   £include "qsys/qasqh/cpyblap"                                                                          000011
+   11+                                                                                                         000011
+   12   £include "qsys/qasqh/sqlproc"                                                                          000012
+   12+                                                                                                         000012
+   13   £include "qsys/qasqh/cpybytes"                                                                         000013
+   13+                                                                                                         000013
+   14   £define cpybytes _CPYBYTES                                                                             000014
+   14+                                                                                                         000014
+   15   EXEC SQL SET OPTION SQLMODE = *SQLPROC;                                                                000015
+   15+                                                                                                         000015
+   16   EXEC SQL BEGIN DECLARE SECTION;                                                                        000016
+   16+                                                                                                         000016
+   17   static struct SQLDLINK * SQLDLPTR;                                                                     000017
+   17+                                                                                                         000017
+   18   typedef _Packed struct SQLDLINK é                                                                      000018
+   18+                                                                                                         000018
+   19       short SQL_DL_LEN;                                                                                  000019
+   19+                                                                                                         000019
+   20       char SQL_DL_VERS°5§;                                                                               000020
+   20+                                                                                                         000020
+   21       char SQL_DL_TYPE°4§;                                                                               000021
+   21+                                                                                                         000021
+   22       char SQL_DL_URLLEN°5§;                                                                             000022
+   22+                                                                                                         000022
+   23       char pad8°8§;                                                                                      000023
+   23+                                                                                                         000023
+   24       char SQL_DL_URLCMMT°32718§; è;                                                                     000024
+   24+                                                                                                         000024
+   25   static long SQLP_INT_VAR;                                                                              000025
+   25+                                                                                                         000025
+   26   static short SQLP_INT_VAR_IND;                                                                         000026
+   26+                                                                                                         000026
+   27   static char sqlcontrol;                                                                                000027
+   27+                                                                                                         000027
+   28   £define SQLnlvl_1 0x80                                                                                 000028
+   28+                                                                                                         000028
+5770SS1 V7R4M0 190621             Create SQL ILE C Object          ART801                      05/31/23 13:25:54          Page     3
+Record  *...+... 1 ...+... 2 ...+... 3 ...+... 4 ...+... 5 ...+... 6 ...+... 7 ...+... 8 ...+... 9 ...+... 0   SEQNBR  Last change
+   29   £define SQLnlvl_0 0x7F                                                                                 000029
+   29+                                                                                                         000029
+   30   static unsigned short SQL_JobCCSID;                                                                    000030
+   30+                                                                                                         000030
+   31   static long SQL_RETURN_CODE;                                                                           000031
+   31+                                                                                                         000031
+   32   static long long SQL_ARRAY_INDEX;                                                                      000032
+   32+                                                                                                         000032
+   33   static long SQL_ARRAY_SOURCE;                                                                          000033
+   33+                                                                                                         000033
+   34   typedef _Packed struct é                                                                               000034
+   34+                                                                                                         000034
+   35   long totalL;                                                                                           000035
+   35+                                                                                                         000035
+   36   short itemIdent;                                                                                       000036
+   36+                                                                                                         000036
+   37   VARCHAR tokens°1025§;                                                                                  000037
+   37+                                                                                                         000037
+   38    è SQLMsgT;                                                                                            000038
+   38+                                                                                                         000038
+   39   static SQLMsgT SQLMsg;                                                                                 000039
+   39+                                                                                                         000039
+   40   static short SQLmsgL;                                                                                  000040
+   40+                                                                                                         000040
+   41   static char SQLmsgTxt°1025§;                                                                           000041
+   41+                                                                                                         000041
+   42   void SQLGetDiagValue(long, void*);                                                                     000042
+   42+                                                                                                         000042
+   43   typedef struct é                                                                                       000043
+   43+                                                                                                         000043
+   44   long SQLP_OUTPUT;                                                                                      000044
+   44+                                                                                                         000044
+   45   short SQLP_I1;                                                                                         000045
+   45+                                                                                                         000045
+   46   è SQL_RETURN_T;                                                                                        000046
+   46+                                                                                                         000046
+   47   EXEC SQL END DECLARE SECTION;                                                                          000047
+   47+                                                                                                         000047
+   48   /*----------------------------------*/                                                                 000048
+   48+                                                                                                         000048
+   49   static int SQLPROCH(const char *);                                                                     000049
+   49+                                                                                                         000049
+   50   EXEC SQL BEGIN DECLARE SECTION;                                                                        000050
+   50+                                                                                                         000050
+   51   int main(int argc, char * argv°§) é                                                                    000051
+   51+                                                                                                         000051
+   52   short SQLP_IND0 = 0;                                                                                   000052
+   52+                                                                                                         000052
+   53   long SQLCODE;                                                                                          000053
+   53+                                                                                                         000053
+   54   char SQLSTATE°5§;                                                                                      000054
+   54+                                                                                                         000054
+   55   long sqlcode_sav;                                                                                      000055
+   55+                                                                                                         000055
+   56   char sqlstate_sav°5§;                                                                                  000056
+   56+                                                                                                         000056
+5770SS1 V7R4M0 190621             Create SQL ILE C Object          ART801                      05/31/23 13:25:54          Page     4
+Record  *...+... 1 ...+... 2 ...+... 3 ...+... 4 ...+... 5 ...+... 6 ...+... 7 ...+... 8 ...+... 9 ...+... 0   SEQNBR  Last change
+   57   short sqlp_len;                                                                                        000057
+   57+                                                                                                         000057
+   58   long long SQL_ROW_COUNT;                                                                               000058
+   58+                                                                                                         000058
+   59   long SQL_RETURN_STATUS;                                                                                000059
+   59+                                                                                                         000059
+   60   SQL_RETURN_T SQL_RETURN;                                                                               000060
+   60+                                                                                                         000060
+   61   SQL_RETURN_T * SQL_RETURN_x;                                                                           000061
+   61+                                                                                                         000061
+   62   EXEC SQL END DECLARE SECTION;                                                                          000062
+   62+                                                                                                         000062
+   63   SQLCODE = 0;                                                                                           000063
+   63+                                                                                                         000063
+   64   memset(SQLSTATE, '0', 5);                                                                              000064
+   64+                                                                                                         000064
+   65   SQL_JobCCSID = SQLRetrieveJobCCSIDOpt();                                                               000065
+   65+                                                                                                         000065
+   66   sqlcontrol = 0x00;                                                                                     000066
+   66+                                                                                                         000066
+   67   SQL_RETURN.SQLP_I1 = SQLP_NULLIND;                                                                     000067
+   67+                                                                                                         000067
+   68   SQLP_L2:                                                                                               000068
+   68+                                                                                                         000068
+   69   EXEC SQL UPDATE ARTICLE A SET ARCUSQTY = ( SELECT SUM ( ODQTY - ODQTYLIV ) FROM "ORDER" , DETORD WHE   000069
+   69+  RE ORID = ODORID AND ORDATCLO = 0 AND A.ARID =                                                         000069
+   70   ODARID GROUP BY ODARID ) WHERE EXISTS ( SELECT ODARID FROM "ORDER" , DETORD WHERE ORID = ODORID AND    000070
+   70+  ORDATCLO = 0 AND A.ARID = ODARID ) ;                                                                   000070
+   71   if (memcmp(SQLSTATE,"00000",5) |= 0)                                                                   000071
+   71+                                                                                                         000071
+   72   é                                                                                                      000072
+   72+                                                                                                         000072
+   73   if (SQLPROCH(SQLSTATE) == 1) é                                                                         000073
+   73+                                                                                                         000073
+   74     goto SQL_END_UPDATE_ON_CUS_ORD_QTY;                                                                  000074
+   74+                                                                                                         000074
+   75   è                                                                                                      000075
+   75+                                                                                                         000075
+   76   è                                                                                                      000076
+   76+                                                                                                         000076
+   77   EXEC SQL UPDATE CUSTOMER C SET CUCREDIT = ( SELECT SUM ( ODTOTVAT ) FROM "ORDER" , DETORD WHERE ORID   000077
+   77+   = ODORID AND ORDATCLO = 0 AND C.CUID = ORCUID                                                         000077
+   78   GROUP BY ORCUID ) WHERE EXISTS ( SELECT ORCUID FROM "ORDER" , DETORD WHERE ORID = ODORID AND ORDATCL   000078
+   78+  O = 0 AND C.CUID = ORCUID ) ;                                                                          000078
+   79   if (memcmp(SQLSTATE,"00000",5) |= 0)                                                                   000079
+   79+                                                                                                         000079
+   80   é                                                                                                      000080
+   80+                                                                                                         000080
+   81   if (SQLPROCH(SQLSTATE) == 1) é                                                                         000081
+   81+                                                                                                         000081
+   82     goto SQL_END_UPDATE_ON_CUS_ORD_QTY;                                                                  000082
+   82+                                                                                                         000082
+   83   è                                                                                                      000083
+   83+                                                                                                         000083
+   84   è                                                                                                      000084
+   84+                                                                                                         000084
+5770SS1 V7R4M0 190621             Create SQL ILE C Object          ART801                      05/31/23 13:25:54          Page     5
+Record  *...+... 1 ...+... 2 ...+... 3 ...+... 4 ...+... 5 ...+... 6 ...+... 7 ...+... 8 ...+... 9 ...+... 0   SEQNBR  Last change
+   85   EXEC SQL UPDATE CUSTOMER C SET CULASTORD = ( SELECT MAX ( ORDATE ) FROM "ORDER" WHERE C.CUID = ORCUI   000085
+   85+  D ) WHERE EXISTS ( SELECT ORCUID FROM "ORDER"                                                          000085
+   86   WHERE C.CUID = ORCUID ) ;                                                                              000086
+   86+                                                                                                         000086
+   87   if (memcmp(SQLSTATE,"00000",5) |= 0)                                                                   000087
+   87+                                                                                                         000087
+   88   é                                                                                                      000088
+   88+                                                                                                         000088
+   89   if (SQLPROCH(SQLSTATE) == 1) é                                                                         000089
+   89+                                                                                                         000089
+   90     goto SQL_END_UPDATE_ON_CUS_ORD_QTY;                                                                  000090
+   90+                                                                                                         000090
+   91   è                                                                                                      000091
+   91+                                                                                                         000091
+   92   è                                                                                                      000092
+   92+                                                                                                         000092
+   93   SQL_END_SQLP_L2: ;                                                                                     000093
+   93+                                                                                                         000093
+   94   SQL_END_UPDATE_ON_CUS_ORD_QTY:                                                                         000094
+   94+                                                                                                         000094
+   95     ;                                                                                                    000095
+   95+                                                                                                         000095
+   96   if (SQL_RETURN.SQLP_I1 < 0)                                                                            000096
+   96+                                                                                                         000096
+   97       é                                                                                                  000097
+   97+                                                                                                         000097
+   98       if (SQLCODE >= 0)                                                                                  000098
+   98+                                                                                                         000098
+   99           SQL_RETURN.SQLP_OUTPUT = 0;                                                                    000099
+   99+                                                                                                         000099
+  100       else                                                                                               000100
+  100+                                                                                                         000100
+  101           SQL_RETURN.SQLP_OUTPUT = -1;                                                                   000101
+  101+                                                                                                         000101
+  102       è                                                                                                  000102
+  102+                                                                                                         000102
+  103   return SQL_RETURN.SQLP_OUTPUT; è                                                                       000103
+  103+                                                                                                         000103
+  104   /*----------------------------------*/                                                                 000104
+  104+                                                                                                         000104
+  105   static int SQLPROCH(char SQLSTATE°5§) é                                                                000105
+  105+                                                                                                         000105
+  106     if ((SQLSTATE°0§ == '0') &&                                                                          000106
+  106+                                                                                                         000106
+  107         ((SQLSTATE°1§ >= '0') && (SQLSTATE°1§ <= '2')))                                                  000107
+  107+                                                                                                         000107
+  108       return 0;                                                                                          000108
+  108+                                                                                                         000108
+  109     return 1;                                                                                            000109
+  109+                                                                                                         000109
+  110   è                                                                                                      000110
+  110+                                                                                                         000110
+  111   /*----------------------------------*/                                                                 000111
+  111+                                                                                                         000111
+                                * * * * *  E N D  O F  S O U R C E  * * * * *
+5770SS1 V7R4M0 190621             Create SQL ILE C Object          ART801                      05/31/23 13:25:54          Page     6
+Record  *...+... 1 ...+... 2 ...+... 3 ...+... 4 ...+... 5 ...+... 6 ...+... 7 ...+... 8 ...+... 9 ...+... 0   SEQNBR  Last change
+5770SS1 V7R4M0 190621             Create SQL ILE C Object          ART801                      05/31/23 13:25:54          Page     7
+                                               CROSS REFERENCE
+Data Names                    Define    Reference
+*SQL_RETURN_x                    61       STRUCTURE
+"ORDER"                          ****     TABLE
+                                          69 70 77 78 85 85
+itemIdent                        36       SMALL INTEGER PRECISION(4,0) IN SQLMsg
+sqlcode_sav                      55       INTEGER PRECISION(9,0)
+sqlcontrol                       27       CHARACTER(1)
+sqlp_len                         57       SMALL INTEGER PRECISION(4,0)
+sqlstate_sav                     56       CHARACTER(5)
+tokens                           37       VARCHAR(1025) IN SQLMsg
+totalL                           35       INTEGER PRECISION(9,0) IN SQLMsg
+A                                ****     TABLE
+                                          69 69 70
+ARCREA                           69       DATE(10) COLUMN (NOT NULL) IN ARTICLE
+ARCUSQTY                         ****     COLUMN
+                                          69
+ARCUSQTY                         69       DECIMAL(5,0) COLUMN (NOT NULL) IN ARTICLE
+ARDEL                            69       CHARACTER(1) CCSID 37 COLUMN (NOT NULL) IN ARTICLE
+ARDESC                           69       CHARACTER(50) CCSID 37 COLUMN (NOT NULL) IN ARTICLE
+ARID                             ****     COLUMN IN A
+                                          69 70
+ARID                             69       CHARACTER(6) CCSID 37 COLUMN (NOT NULL) IN ARTICLE
+ARMINQTY                         69       DECIMAL(5,0) COLUMN (NOT NULL) IN ARTICLE
+ARMOD                            69       TIMESTAMP(26) COLUMN (NOT NULL) IN ARTICLE
+ARMODID                          69       CHARACTER(10) CCSID 37 COLUMN (NOT NULL) IN ARTICLE
+ARPURQTY                         69       DECIMAL(5,0) COLUMN (NOT NULL) IN ARTICLE
+ARSALEPR                         69       DECIMAL(7,2) COLUMN (NOT NULL) IN ARTICLE
+ARSTOCK                          69       DECIMAL(5,0) COLUMN (NOT NULL) IN ARTICLE
+ARTICLE                          ****     TABLE
+                                          69
+ARTIFA                           69       CHARACTER(3) CCSID 37 COLUMN (NOT NULL) IN ARTICLE
+ARVATCD                          69       CHARACTER(1) CCSID 37 COLUMN (NOT NULL) IN ARTICLE
+ARWHSPR                          69       DECIMAL(7,2) COLUMN (NOT NULL) IN ARTICLE
+5770SS1 V7R4M0 190621             Create SQL ILE C Object          ART801                      05/31/23 13:25:54          Page     8
+                                               CROSS REFERENCE
+C                                ****     TABLE
+                                          77 77 78 85 85 86
+CUCITY                           77       CHARACTER(30) CCSID 500 COLUMN (NOT NULL) IN CUSTOMER
+CUCOUN                           77       CHARACTER(2) CCSID 500 COLUMN (NOT NULL) IN CUSTOMER
+CUCREA                           77       DATE(10) COLUMN (NOT NULL) IN CUSTOMER
+CUCREDIT                         ****     COLUMN
+                                          77
+CUCREDIT                         77       DECIMAL(9,2) COLUMN (NOT NULL) IN CUSTOMER
+CUDEL                            77       CHARACTER(1) CCSID 500 COLUMN (NOT NULL) IN CUSTOMER
+CUID                             ****     COLUMN IN C
+                                          77 78 85 86
+CUID                             77       DECIMAL(5,0) COLUMN (NOT NULL) IN CUSTOMER
+CULASTORD                        77       DECIMAL(8,0) COLUMN (NOT NULL) IN CUSTOMER
+CULASTORD                        ****     COLUMN
+                                          85
+CULIMCRE                         77       DECIMAL(9,2) COLUMN (NOT NULL) IN CUSTOMER
+CULINE1                          77       CHARACTER(50) CCSID 500 COLUMN (NOT NULL) IN CUSTOMER
+CULINE2                          77       CHARACTER(50) CCSID 500 COLUMN (NOT NULL) IN CUSTOMER
+CULINE3                          77       CHARACTER(50) CCSID 500 COLUMN (NOT NULL) IN CUSTOMER
+CUMAIL                           77       CHARACTER(50) CCSID 500 COLUMN (NOT NULL) IN CUSTOMER
+CUMOD                            77       TIMESTAMP(26) COLUMN (NOT NULL) IN CUSTOMER
+CUMODID                          77       CHARACTER(10) CCSID 500 COLUMN (NOT NULL) IN CUSTOMER
+CUPHONE                          77       CHARACTER(15) CCSID 500 COLUMN (NOT NULL) IN CUSTOMER
+CUSTNM                           77       CHARACTER(30) CCSID 500 COLUMN (NOT NULL) IN CUSTOMER
+CUSTOMER                         ****     TABLE
+                                          77 85
+CUVAT                            77       CHARACTER(12) CCSID 500 COLUMN (NOT NULL) IN CUSTOMER
+CUZIP                            77       CHARACTER(10) CCSID 500 COLUMN (NOT NULL) IN CUSTOMER
+DETORD                           ****     TABLE
+                                          69 70 77 78
+ODARID                           ****     COLUMN
+                                          70 70 70 70
+ODARID                           69       CHARACTER(6) CCSID 297 COLUMN (NOT NULL) IN DETORD
+ODLINE                           69       DECIMAL(5,0) COLUMN (NOT NULL) IN DETORD
+ODORID                           ****     COLUMN
+                                          69 70 77 78
+5770SS1 V7R4M0 190621             Create SQL ILE C Object          ART801                      05/31/23 13:25:54          Page     9
+                                               CROSS REFERENCE
+ODORID                           69       DECIMAL(6,0) COLUMN (NOT NULL) IN DETORD
+ODPRICE                          69       DECIMAL(7,2) COLUMN (NOT NULL) IN DETORD
+ODQTY                            ****     COLUMN
+                                          69
+ODQTY                            69       DECIMAL(5,0) COLUMN (NOT NULL) IN DETORD
+ODQTYLIV                         ****     COLUMN
+                                          69
+ODQTYLIV                         69       DECIMAL(5,0) COLUMN (NOT NULL) IN DETORD
+ODTOT                            69       DECIMAL(9,2) COLUMN (NOT NULL) IN DETORD
+ODTOTVAT                         69       DECIMAL(9,2) COLUMN (NOT NULL) IN DETORD
+ODTOTVAT                         ****     COLUMN
+                                          77
+ODYEAR                           69       DECIMAL(4,0) COLUMN (NOT NULL) IN DETORD
+ORCUID                           69       DECIMAL(5,0) COLUMN (NOT NULL) IN ORDER
+ORCUID                           ****     COLUMN
+                                          77 78 78 78 85 85 86
+ORDATCLO                         ****     COLUMN
+                                          69 70 77 78
+ORDATCLO                         69       DECIMAL(8,0) COLUMN (NOT NULL) IN ORDER
+ORDATDEL                         69       DECIMAL(8,0) COLUMN (NOT NULL) IN ORDER
+ORDATE                           69       DECIMAL(8,0) COLUMN (NOT NULL) IN ORDER
+ORDATE                           ****     COLUMN
+                                          85
+                                 ****     TABLE
+ORID                             ****     COLUMN
+                                          69 70 77 78
+ORID                             69       DECIMAL(6,0) COLUMN (NOT NULL) IN ORDER
+ORYEAR                           69       DECIMAL(4,0) COLUMN (NOT NULL) IN ORDER
+SQL_ARRAY_INDEX                  32       BIG INTEGER PRECISION(18,0)
+SQL_ARRAY_SOURCE                 33       INTEGER PRECISION(9,0)
+SQL_RETURN                       60       STRUCTURE
+SQL_RETURN_CODE                  31       INTEGER PRECISION(9,0)
+SQL_RETURN_STATUS                59       INTEGER PRECISION(9,0)
+SQL_ROW_COUNT                    58       BIG INTEGER PRECISION(18,0)
+SQLmsgL                          40       SMALL INTEGER PRECISION(4,0)
+5770SS1 V7R4M0 190621             Create SQL ILE C Object          ART801                      05/31/23 13:25:54          Page    10
+                                               CROSS REFERENCE
+SQLmsgTxt                        41       CHARACTER(1025)
+SQLCODE                          53       INTEGER PRECISION(9,0)
+SQLMsg                           39       STRUCTURE
+SQLP_IND0                        52       SMALL INTEGER PRECISION(4,0)
+SQLP_INT_VAR                     25       INTEGER PRECISION(9,0)
+SQLP_INT_VAR_IND                 26       SMALL INTEGER PRECISION(4,0)
+SQLP_I1                          45       SMALL INTEGER PRECISION(4,0) IN SQL_RETURN
+SQLP_I1                          45       SMALL INTEGER PRECISION(4,0) IN *SQL_RETURN_x
+SQLP_OUTPUT                      44       INTEGER PRECISION(9,0) IN SQL_RETURN
+SQLP_OUTPUT                      44       INTEGER PRECISION(9,0) IN *SQL_RETURN_x
+SQLSTATE                         54       CHARACTER(5)
+No errors found in source
+  111 Source records processed
+                               * * * * *  E N D  O F  L I S T I N G  * * * * *
+5770WDS V7R4M0  190419   IBM ILE C compiler      QTEMP/QSQLT00000(ART801)           MONZAXIB    05/31/23 13:25:54 Page           1
+                                                * * * * *   P R O L O G   * * * * *
+ Module  . . . . . . . . . . . . :   ART801
+   Library . . . . . . . . . . . :      QTEMP
+ Source file . . . . . . . . . . :   QSQLT00000
+   Library . . . . . . . . . . . :      QTEMP
+ Source member . . . . . . . . . :   ART801
+ Text description  . . . . . . . :   SQL PROCEDURE UPDATE_ON_CUS_ORD_QTY
+ Output options:
+   Output file . . . . . . . . . :   *PRINT
+   Title . . . . . . . . . . . . :   *BLANK
+   Subtitle  . . . . . . . . . . :   *BLANK
+ Compiler options  . . . . . . . :   *NOFULL  *SHOWSRC  *NOSHOWSYS  *NOSHOWUSR  *NOSHOWINC  *NOEXPMAC
+                                     *NOSECLVL  *NOSHOWSKP  *DIGRAPH  *NOAGR  *NOSTRUCREF  *NOXREF  *NOXREFREF
+                                     *NOEVENTF  *LOGMSG  *NOSTDLOGMSG  *NOSYSINCPATH  *STDINC  *NOINCDIRFIRST  *GEN  *NOPPONLY
+ Checkout options  . . . . . . . :   *NOCOND  *NOEFFECT  *NOGENERAL  *NOPARM  *NOPORT  *NOREACH  *NOTRUNC  *NOUNUSED
+                                     *NOGOTO  *NOINIT  *NOCONST  *NOENUM  *NOPPCHECK  *NOPPTRACE  *NOEXTERN
+ Optimization  . . . . . . . . . :   40
+ Inline options:
+   Inliner . . . . . . . . . . . :   *OFF
+   Mode  . . . . . . . . . . . . :   *NOAUTO
+   Threshold . . . . . . . . . . :   250
+   Limit . . . . . . . . . . . . :   2000
+   Report  . . . . . . . . . . . :   *NO
+ Module creation options . . . . :   *NOKEEPILDTA
+ Debugging view  . . . . . . . . :   *NONE
+ Debug encryption key  . . . . . :   *NONE
+ Define names  . . . . . . . . . :   *NONE
+ Language level  . . . . . . . . :   *EXTENDED
+ Alias . . . . . . . . . . . . . :   *ANSI
+ System interface options  . . . :   *NOIFSIO  *NOASYNCSIGNAL
+ Locale object type  . . . . . . :   *CLD
+ Message flagging level  . . . . :   0
+ Compiler messages:
+   Message limit . . . . . . . . :   *NOMAX
+   Message limit severity  . . . :   30
+ Replace module object . . . . . :   *NO
+ Authority . . . . . . . . . . . :   *LIBCRTAUT
+ Target release  . . . . . . . . :   V7R4M0
+ Performance collection  . . . . :   *PEP
+ Performance options . . . . . . :   *SETFPCA  *NOSTRDONLY
+ Profiling data  . . . . . . . . :   *NOCOL
+ Teraspace options . . . . . . . :   *YES  *NOTSIFC
+ Storage model . . . . . . . . . :   *INHERIT
+ Data model  . . . . . . . . . . :   *P128
+ Preprocessor generation options :   *NONE
+ Include directory . . . . . . . :   *NONE
+ Pack structure  . . . . . . . . :   *NATURAL
+ Enum size . . . . . . . . . . . :   *SMALL
+ Dependency information  . . . . :   *NONE
+ Default char type . . . . . . . :   *UNSIGNED
+ Compiler services option  . . . :   *BLANK
+ Licensed internal code options  :   LOOPUNROLLING=0
+ Target CCSID  . . . . . . . . . :   *SOURCE
+ Decimal float round mode  . . . :   *HALFEVEN
+ Last change . . . . . . . . . . :   05/31/23 13:25:54
+ Source description  . . . . . . :   SQL PROCEDURE UPDATE_ON_CUS_ORD_QTY
+ Compiler  . . . . . . . . . . . :   IBM ILE C compiler
+                                         * * * * *   E N D   O F   P R O L O G   * * * * *
+5770WDS V7R4M0  190419   IBM ILE C compiler      QTEMP/QSQLT00000(ART801)           MONZAXIB    05/31/23 13:25:54 Page           2
+5770WDS V7R4M0  190419   IBM ILE C compiler      QTEMP/QSQLT00000(ART801)           MONZAXIB    05/31/23 13:25:54 Page           3
+                                                * * * * *   S O U R C E   * * * * *
+ LINE  STMT                                                                                                       SEQNBR INCNO
+             *...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9........
+    1       !#define SQL_BLOB_INIT(s) {sizeof(s)-1, s }                                                        !      1
+    2       !#define SQL_CLOB_INIT(s) {sizeof(s)-1, s }                                                        !      2
+    3       !#define SQL_DBCLOB_INIT(s) {(sizeof(s)/2)-1,s}                                                    !      3
+    4       !#define SQL_VARBINARY_INIT(s) {sizeof(s)-1, s}                                                    !      4
+    5       !#define SQL_FILE_READ  2                                                                          !      5
+    6       !#define SQL_FILE_CREATE 8                                                                         !      6
+    7       !#define SQL_FILE_OVERWRITE 16                                                                     !      7
+    8       !#define SQL_FILE_APPEND 32                                                                        !      8
+    9       !#pragma linkage (QSQROUTE,OS)                                                                     !      9
+   10       !#pragma map (QSQROUTE,"QSYS/QSQROUTE")                                                            !     10
+   11       !#pragma linkage (QSQLOPEN,OS)                                                                     !     11
+   12       !#pragma map (QSQLOPEN,"QSYS/QSQLOPEN")                                                            !     12
+   13       !#pragma linkage (QSQLCLSE,OS)                                                                     !     13
+   14       !#pragma map (QSQLCLSE,"QSYS/QSQLCLSE")                                                            !     14
+   15       !#pragma linkage (QSQLCMIT,OS)                                                                     !     15
+   16       !#pragma map (QSQLCMIT,"QSYS/QSQLCMIT")                                                            !     16
+   17       !typedef _Packed struct QSQROUTE_COMM_AREA {                                                       !     17
+   18       !   unsigned char sql_eye_catcher[8];                                                              !     18
+   19       !            short sql_stmt_num;                                                                   !     19
+   20       !   unsigned char sql_sqlstate[5];                                                                 !     20
+   21       !            char sql_control;                                                                     !     21
+   22       !            long sql_sqlcode;                                                                     !     22
+   23       !            long sql_rows;                                                                        !     23
+   24       !            long sql_rel_pos1;                                                                    !     24
+   25       !            long sql_rel_pos2;                                                                    !     25
+   26       !            char sql_reserved[40];                                                                !     26
+   27       !   } QSQROUTE_COMM_AREA;                                                                          !     27
+   28       !#pragma datamodel(P128)                                                                           !     28
+   29       !void extern QSQROUTE(QSQROUTE_COMM_AREA *, ... );                                                 !     29
+   30       !void extern QSQLOPEN(QSQROUTE_COMM_AREA *, ... );                                                 !     30
+   31       !void extern QSQLCLSE(QSQROUTE_COMM_AREA *, ... );                                                 !     31
+   32       !void extern QSQLCMIT(QSQROUTE_COMM_AREA *, ... );                                                 !     32
+   33       !void extern SQL_Route3(QSQROUTE_COMM_AREA *, ... );                                               !     33
+   34       !#pragma datamodel(pop)                                                                            !     34
+   35       !#include "qsys/qasqh/stdlib"                                                                      !     35
+   36       !#include "qsys/qasqh/stdio"                                                                       !     36
+   37       !#include "qsys/qasqh/string"                                                                      !     37
+   38       !#include "qsys/qasqh/decimal"                                                                     !     38
+   39       !#include "qsys/qasqh/wcstr"                                                                       !     39
+   40       !#include "qsys/qasqh/wchar"                                                                       !     40
+   41       !#include "qsys/qasqh/stddef"                                                                      !     41
+   42       !#include "qsys/qasqh/trgbuf"                                                                      !     42
+   43       !#include "qsys/qasqh/pointer"                                                                     !     43
+   44       !#include "qsys/qasqh/micommon"                                                                    !     44
+   45       !#include "qsys/qasqh/cpyblap"                                                                     !     45
+   46       !#include "qsys/qasqh/sqlproc"                                                                     !     46
+   47       !#include "qsys/qasqh/cpybytes"                                                                    !     47
+   48       !#define cpybytes _CPYBYTES                                                                        !     48
+   49       !/***$$$                                                                                           !     49
+   50       !EXEC SQL SET OPTION SQLMODE = *SQLPROC                                                            !     50
+   51       !$$$***/                                                                                           !     51
+   52       !/***$$$                                                                                           !     52
+   53       !EXEC SQL BEGIN DECLARE SECTION                                                                    !     53
+   54       !$$$***/                                                                                           !     54
+   55       !static struct SQLDLINK * SQLDLPTR;                                                                !     55
+5770WDS V7R4M0  190419   IBM ILE C compiler      QTEMP/QSQLT00000(ART801)           MONZAXIB    05/31/23 13:25:54 Page           4
+   56       !typedef _Packed struct SQLDLINK {                                                                 !     56
+   57       !    short SQL_DL_LEN;                                                                             !     57
+   58       !    char SQL_DL_VERS[5];                                                                          !     58
+   59       !    char SQL_DL_TYPE[4];                                                                          !     59
+   60       !    char SQL_DL_URLLEN[5];                                                                        !     60
+   61       !    char pad8[8];                                                                                 !     61
+   62       !    char SQL_DL_URLCMMT[32718]; };                                                                !     62
+   63       !static long SQLP_INT_VAR;                                                                         !     63
+   64       !static short SQLP_INT_VAR_IND;                                                                    !     64
+   65       !static char sqlcontrol;                                                                           !     65
+   66       !#define SQLnlvl_1 0x80                                                                            !     66
+   67       !#define SQLnlvl_0 0x7F                                                                            !     67
+   68       !static unsigned short SQL_JobCCSID;                                                               !     68
+   69       !static long SQL_RETURN_CODE;                                                                      !     69
+   70       !static long long SQL_ARRAY_INDEX;                                                                 !     70
+   71       !static long SQL_ARRAY_SOURCE;                                                                     !     71
+   72       !typedef _Packed struct {                                                                          !     72
+   73       !long totalL;                                                                                      !     73
+   74       !short itemIdent;                                                                                  !     74
+   75       !/***$$$                                                                                           !     75
+   76       !VARCHAR tokens[1025];                                                                             !     76
+   77       !$$$***/                                                                                           !     77
+   78       ! _Packed struct { short len;                                                                      !     78
+   79       !         char data[1025];}                                                                        !     79
+   80       !tokens;                                                                                           !     80
+   81       ! } SQLMsgT;                                                                                       !     81
+   82       !static SQLMsgT SQLMsg;                                                                            !     82
+   83       !static short SQLmsgL;                                                                             !     83
+   84       !static char SQLmsgTxt[1025];                                                                      !     84
+   85       !void SQLGetDiagValue(long, void*);                                                                !     85
+   86       !typedef struct {                                                                                  !     86
+   87       !long SQLP_OUTPUT;                                                                                 !     87
+   88       !short SQLP_I1;                                                                                    !     88
+   89       !} SQL_RETURN_T;                                                                                   !     89
+   90       !/***$$$                                                                                           !     90
+   91       !EXEC SQL END DECLARE SECTION                                                                      !     91
+   92       !$$$***/                                                                                           !     92
+   93       !/*----------------------------------*/                                                            !     93
+   94       !static int SQLPROCH(const char *);                                                                !     94
+   95       !/***$$$                                                                                           !     95
+   96       !EXEC SQL BEGIN DECLARE SECTION                                                                    !     96
+   97       !$$$***/                                                                                           !     97
+   98       !int main(int argc, char * argv[]) {                                                               !     98
+   99     1 !short SQLP_IND0 = 0;                                                                              !     99
+  100       !long SQLCODE;                                                                                     !    100
+  101       !char SQLSTATE[5];                                                                                 !    101
+  102       !long sqlcode_sav;                                                                                 !    102
+  103       !char sqlstate_sav[5];                                                                             !    103
+  104       !short sqlp_len;                                                                                   !    104
+  105       !long long SQL_ROW_COUNT;                                                                          !    105
+  106       !long SQL_RETURN_STATUS;                                                                           !    106
+  107       !SQL_RETURN_T SQL_RETURN;                                                                          !    107
+  108       !SQL_RETURN_T * SQL_RETURN_x;                                                                      !    108
+  109       !/***$$$                                                                                           !    109
+  110       !EXEC SQL END DECLARE SECTION                                                                      !    110
+  111       !$$$***/                                                                                           !    111
+  112     2 !SQLCODE = 0;                                                                                      !    112
+  113     3 !memset(SQLSTATE, '0', 5);                                                                         !    113
+5770WDS V7R4M0  190419   IBM ILE C compiler      QTEMP/QSQLT00000(ART801)           MONZAXIB    05/31/23 13:25:54 Page           5
+  114     4 !SQL_JobCCSID = SQLRetrieveJobCCSIDOpt();                                                          !    114
+  115     5 !sqlcontrol = 0x00;                                                                                !    115
+  116     6 !SQL_RETURN.SQLP_I1 = SQLP_NULLIND;                                                                !    116
+  117       !SQLP_L2:                                                                                          !    117
+  118       !/***$$$                                                                                           !    118
+  119       !EXEC SQL UPDATE ARTICLE A SET ARCUSQTY = ( SELECT SUM ( ODQTY - ODQTYLIV ) FROM "ORDER" , DETORD ç!    119
+  119       !WHERE ORID = ODORID AND ORDATCLO = 0 AND A.ARID =                                                 !    119
+  120       !ODARID GROUP BY ODARID ) WHERE EXISTS ( SELECT ODARID FROM "ORDER" , DETORD WHERE ORID = ODORID Aç!    120
+  120       !ND ORDATCLO = 0 AND A.ARID = ODARID )                                                             !    120
+  121       !$$$***/                                                                                           !    121
+  122       !{                                                                                                 !    122
+  123       !#pragma datamodel(P128)                                                                           !    123
+  124       !struct QSQROUTE_COMM_AREA                                                                         !    124
+  125     7 !qsqroute_comm_area = {"QSQNOTCA",     7, "00000", '\0'};                                          !    125
+  126    11 !qsqroute_comm_area.sql_control=sqlcontrol;                                                        !    126
+  127    12 !  QSQROUTE ((QSQROUTE_COMM_AREA * )&qsqroute_comm_area);                                          !    127
+  128    13 !  SQLCODE=qsqroute_comm_area.sql_sqlcode;                                                         !    128
+  129    14 !  cpybytes(SQLSTATE,qsqroute_comm_area.sql_sqlstate,5);                                           !    129
+  130       !#pragma datamodel(pop)                                                                            !    130
+  131       !}                                                                                                 !    131
+  132    15 !if (memcmp(SQLSTATE,"00000",5) != 0)                                                              !    132
+  133       !{                                                                                                 !    133
+  134    16 !if (SQLPROCH(SQLSTATE) == 1) {                                                                    !    134
+  135    17 !  goto SQL_END_UPDATE_ON_CUS_ORD_QTY;                                                             !    135
+  136       !}                                                                                                 !    136
+  137       !}                                                                                                 !    137
+  138       !/***$$$                                                                                           !    138
+  139       !EXEC SQL UPDATE CUSTOMER C SET CUCREDIT = ( SELECT SUM ( ODTOTVAT ) FROM "ORDER" , DETORD WHERE Oç!    139
+  139       !RID = ODORID AND ORDATCLO = 0 AND C.CUID = ORCUID                                                 !    139
+  140       !GROUP BY ORCUID ) WHERE EXISTS ( SELECT ORCUID FROM "ORDER" , DETORD WHERE ORID = ODORID AND ORDAç!    140
+  140       !TCLO = 0 AND C.CUID = ORCUID )                                                                    !    140
+  141       !$$$***/                                                                                           !    141
+  142       !{                                                                                                 !    142
+  143       !#pragma datamodel(P128)                                                                           !    143
+  144       !struct QSQROUTE_COMM_AREA                                                                         !    144
+  145    18 !qsqroute_comm_area = {"QSQNOTCA",     8, "00000", '\0'};                                          !    145
+  146    22 !qsqroute_comm_area.sql_control=sqlcontrol;                                                        !    146
+  147    23 !  QSQROUTE ((QSQROUTE_COMM_AREA * )&qsqroute_comm_area);                                          !    147
+  148    24 !  SQLCODE=qsqroute_comm_area.sql_sqlcode;                                                         !    148
+  149    25 !  cpybytes(SQLSTATE,qsqroute_comm_area.sql_sqlstate,5);                                           !    149
+  150       !#pragma datamodel(pop)                                                                            !    150
+  151       !}                                                                                                 !    151
+  152    26 !if (memcmp(SQLSTATE,"00000",5) != 0)                                                              !    152
+  153       !{                                                                                                 !    153
+  154    27 !if (SQLPROCH(SQLSTATE) == 1) {                                                                    !    154
+  155    28 !  goto SQL_END_UPDATE_ON_CUS_ORD_QTY;                                                             !    155
+  156       !}                                                                                                 !    156
+  157       !}                                                                                                 !    157
+  158       !/***$$$                                                                                           !    158
+  159       !EXEC SQL UPDATE CUSTOMER C SET CULASTORD = ( SELECT MAX ( ORDATE ) FROM "ORDER" WHERE C.CUID = ORç!    159
+  159       !CUID ) WHERE EXISTS ( SELECT ORCUID FROM "ORDER"                                                  !    159
+  160       !WHERE C.CUID = ORCUID )                                                                           !    160
+  161       !$$$***/                                                                                           !    161
+  162       !{                                                                                                 !    162
+  163       !#pragma datamodel(P128)                                                                           !    163
+  164       !struct QSQROUTE_COMM_AREA                                                                         !    164
+  165    29 !qsqroute_comm_area = {"QSQNOTCA",     9, "00000", '\0'};                                          !    165
+  166    33 !qsqroute_comm_area.sql_control=sqlcontrol;                                                        !    166
+5770WDS V7R4M0  190419   IBM ILE C compiler      QTEMP/QSQLT00000(ART801)           MONZAXIB    05/31/23 13:25:54 Page           6
+  167    34 !  QSQROUTE ((QSQROUTE_COMM_AREA * )&qsqroute_comm_area);                                          !    167
+  168    35 !  SQLCODE=qsqroute_comm_area.sql_sqlcode;                                                         !    168
+  169    36 !  cpybytes(SQLSTATE,qsqroute_comm_area.sql_sqlstate,5);                                           !    169
+  170       !#pragma datamodel(pop)                                                                            !    170
+  171       !}                                                                                                 !    171
+  172    37 !if (memcmp(SQLSTATE,"00000",5) != 0)                                                              !    172
+  173       !{                                                                                                 !    173
+  174    38 !if (SQLPROCH(SQLSTATE) == 1) {                                                                    !    174
+  175    39 !  goto SQL_END_UPDATE_ON_CUS_ORD_QTY;                                                             !    175
+  176       !}                                                                                                 !    176
+  177       !}                                                                                                 !    177
+  178    40 !SQL_END_SQLP_L2: ;                                                                                !    178
+  179       !SQL_END_UPDATE_ON_CUS_ORD_QTY:                                                                    !    179
+  180    41 !  ;                                                                                               !    180
+  181    42 !if (SQL_RETURN.SQLP_I1 < 0)                                                                       !    181
+  182       !    {                                                                                             !    182
+  183    43 !    if (SQLCODE >= 0)                                                                             !    183
+  184    44 !        SQL_RETURN.SQLP_OUTPUT = 0;                                                               !    184
+  185       !    else                                                                                          !    185
+  186    45 !        SQL_RETURN.SQLP_OUTPUT = -1;                                                              !    186
+  187       !    }                                                                                             !    187
+  188    46 !return SQL_RETURN.SQLP_OUTPUT; }                                                                  !    188
+  189       !/*----------------------------------*/                                                            !    189
+  190       !static int SQLPROCH(char SQLSTATE[5]) {                                                           !    190
+  191       !  if ((SQLSTATE[0] == '0') &&                                                                     !    191
+  192     1 !      ((SQLSTATE[1] >= '0') && (SQLSTATE[1] <= '2')))                                             !    192
+  193     2 !    return 0;                                                                                     !    193
+  194     3 !  return 1;                                                                                       !    194
+  195       !}                                                                                                 !    195
+  196       !/*----------------------------------*/                                                            !    196
+                                         * * * * *   E N D   O F   S O U R C E   * * * * *
+5770WDS V7R4M0  190419   IBM ILE C compiler      QTEMP/QSQLT00000(ART801)           MONZAXIB    05/31/23 13:25:54 Page           7
+                                              * * * * *   I N C L U D E S   * * * * *
+INCNBR  Include Name                     Last change        Actual Include Name
+    1   qsys/qasqh/stdlib                02/17/19 10:00:20  QSYS/QASQH(STDLIB)
+    2   mallocinfo.qasqh                 02/17/19 10:00:23  QSYS/QASQH(MALLOCINFO)
+    3   qsys/qasqh/stdio                 02/17/19 10:00:20  QSYS/QASQH(STDIO)
+    4   qsys/qasqh/string                02/17/19 10:00:18  QSYS/QASQH(STRING)
+    5   qsys/qasqh/decimal               02/17/19 09:59:58  QSYS/QASQH(DECIMAL)
+    6   qsys/qasqh/wcstr                 02/17/19 10:00:21  QSYS/QASQH(WCSTR)
+    7   qsys/qasqh/wchar                 02/17/19 10:00:20  QSYS/QASQH(WCHAR)
+    8   qsys/qasqh/stddef                02/17/19 10:00:18  QSYS/QASQH(STDDEF)
+    9   qsys/qasqh/trgbuf                02/17/19 10:00:18  QSYS/QASQH(TRGBUF)
+   10   qsys/qasqh/pointer               02/17/19 10:00:22  QSYS/QASQH(POINTER)
+   11   qsys/qasqh/micommon              02/17/19 10:00:18  QSYS/QASQH(MICOMMON)
+   12   qasqh/miobjtyp.h                 02/17/19 10:00:19  QSYS/QASQH(MIOBJTYP)
+   13   qsys/qasqh/cpyblap               02/17/19 10:00:19  QSYS/QASQH(CPYBLAP)
+   14   qsys/qasqh/sqlproc               02/17/19 10:00:20  QSYS/QASQH(SQLPROC)
+   15   qsys/qasqh/cpybytes              02/17/19 10:00:18  QSYS/QASQH(CPYBYTES)
+                                      * * * * *   E N D   O F   I N C L U D E S   * * * * *
+5770WDS V7R4M0  190419   IBM ILE C compiler      QTEMP/QSQLT00000(ART801)           MONZAXIB    05/31/23 13:25:54 Page           8
+                                       * * * * *   M E S S A G E   S U M M A R Y   * * * * *
+      Total      Informational(00)      Warning(10)      Error(20)      Severe Error(30)      Unrecoverable Error(40)
+        0              0                    0               0                  0                        0
+                               * * * * *   E N D   O F   M E S S A G E   S U M M A R Y   * * * * *
+Module ART801 was created in library QTEMP on 05/31/23 at 13:25:54.
+                                   * * * * *   E N D   O F   C O M P I L A T I O N   * * * * *
+                                   * * * * *   E N D   O F   C O M P I L A T I O N   * * * * *
+SQL7989   0       3  Position 2 Procedure UPDATE_ON_CUS_ORD_QTY was created
+                     in ATUDSB0006.
+SQL7960   0          Commit completed.
+                    Message Summary
+  Total     Info   Warning      Error   Severe  Terminal
+      3        3         0          0        0         0
+00 level severity errors found in source
+                                * * * * *  E N D  O F  L I S T I N G  * * * * *
+  . . . .
+MSG1573 *** Messages sent by the Compilation ***
+CPC2198 Current library changed to ATUDSB0006.
+CPF5813 File QSQLSRC in library QTEMP already exists.
+CPC7303 File QSQLSRC in library QTEMP changed.
+CPC7305 Member ART801 added to file QSQLSRC in QTEMP.
+CPC7301 File QSQLT00000 created in library QTEMP.
+CPC7305 Member ART801 added to file QSQLT00000 in QTEMP.
+CZS0607 Module ART801 was created in library QTEMP on 05/31/23 at 13:25:54.
+CPC5D07 Program ART801 created in library ATUDSB0006.
+CPC2191 Object ART801 in QTEMP type *MODULE deleted.
+CPC2198 Current library changed to ATUDSB0006.
