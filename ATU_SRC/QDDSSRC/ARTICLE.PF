@@ -31,7 +31,7 @@
                                             EDTCDE(2)
                   ARVATCD   R               REFFLD(VATCODE)
                   ARCREA          L         TEXT('CREATION DATE')
-                                            COLHDG('CREAETION' 'DATE')
+                                            COLHDG('CRT' 'DAT')
                   ARMOD           Z         TEXT('LAST MODIFICATION')
                                             COLHDG('LAST' 'MODIFICATION')
                   ARMODID       10          TEXT('LAS MOD BY')

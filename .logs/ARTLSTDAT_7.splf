@@ -1,7 +1,7 @@
 Attributes of the executed compilation command :
   -  ACRTSQLOBJ OBJ(ATUDSB0006/ARTLSTDAT) SRCFILE(ATU_SRC/QSQLSRC) SRCTYPE('VIEW') RE
      PLACE(*YES) TGTRLS(V7R4M0)
-5770SS1 V7R4M0 190621               Run SQL Statements             ARTLSTDAT                          05/31/23 13:25:52   PAGE   1
+5770SS1 V7R4M0 190621               Run SQL Statements             ARTLSTDAT                          06/01/23 12:24:12   PAGE   1
 Source file...............QTEMP/ZZQSQLSRC1
 Member....................ARTLSTDAT
 Target release............V7R4M0
@@ -33,8 +33,8 @@ Decimal result options:
 Concurrent access
   resolution..............*DFT
 System time sensitive.....*YES
-Source member changed on 05/31/23  13:25:52
-5770SS1 V7R4M0 190621               Run SQL Statements             ARTLSTDAT                          05/31/23 13:25:52   PAGE     2
+Source member changed on 06/01/23  12:24:12
+5770SS1 V7R4M0 190621               Run SQL Statements             ARTLSTDAT                          06/01/23 12:24:12   PAGE     2
 Record  *...+... 1 ...+... 2 ...+... 3 ...+... 4 ...+... 5 ...+... 6 ...+... 7 ...+... 8   SEQNBR  Last change
       1
       2 CREATE VIEW ARTLSTDAT (
@@ -59,7 +59,7 @@ Record  *...+... 1 ...+... 2 ...+... 3 ...+... 4 ...+... 5 ...+... 6 ...+... 7 .
      21   ARDESC TEXT IS 'ARTICLE DESCRPTION' ) ;
      22
                                  * * * * *  E N D  O F  S O U R C E  * * * * *
-5770SS1 V7R4M0 190621               Run SQL Statements             ARTLSTDAT                          05/31/23 13:25:52   PAGE     3
+5770SS1 V7R4M0 190621               Run SQL Statements             ARTLSTDAT                          06/01/23 12:24:12   PAGE     3
 Record  *...+... 1 ...+... 2 ...+... 3 ...+... 4 ...+... 5 ...+... 6 ...+... 7 ...+... 8   SEQNBR  Last change
 MSG ID  SEV  RECORD  TEXT
 SQL7951   0       1  Position 1 View ARTLSTDAT created in ATUDSB0006.
