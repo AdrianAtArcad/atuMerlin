@@ -1,7 +1,7 @@
 Attributes of the executed compilation command :
   -  CRTSQLRPGI OBJ(ATUDSB0006/ART301) SRCFILE(ATUDSB0006/QRPGLESRC) OBJTYPE(*MODULE)
       TGTRLS(V7R4M0)
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page      2
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page      2
   Command  . . . . . . . . . . . . :   CRTRPGMOD
     Issued by  . . . . . . . . . . :     ATULLY
   Module . . . . . . . . . . . . . :   ART301
@@ -12,7 +12,7 @@ Attributes of the executed compilation command :
     Library  . . . . . . . . . . . :     QTEMP
     CCSID  . . . . . . . . . . . . :     297
   Text 'description' . . . . . . . :   Function Select an article
-  Last Change  . . . . . . . . . . :   06/01/23  12:24:15
+  Last Change  . . . . . . . . . . :   06/21/23  18:40:39
   Generation severity level  . . . :   10
   Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY
                                        *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT
@@ -40,7 +40,7 @@ Attributes of the executed compilation command :
   Generate program interface . . . :   *NO
   Include directory  . . . . . . . :
   Preprocessor options . . . . . . :   *NONE
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page      3
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page      3
 Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq
 Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
                           S o u r c e   L i s t i n g
@@ -91,7 +91,7 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
     36  *=============================================                                                                      002000
     37 DGetArtFam        PR             3A                                                                                  002100
     38 D ARID                           6A    value                                                                         002200
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page      4
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page      4
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
     39  *=============================================                                                                      002300
@@ -146,7 +146,7 @@ Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+...
     84 DGetArtFamDesc    PR            50                                                                        161025     000400
     85 D FAID                           3     value                                                              161025     000500
     86  *=============================================                                                           161025     000600
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page      5
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page      5
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
     87  * Ckeck if familly exist                                                                                 161025     000700
@@ -203,7 +203,7 @@ Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7...
    136                                                                                                                      004600
    137 Dcl-S rrn01           Int(5);                                                                                        004700
    138                                                                                                                      004800
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page      6
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page      6
 Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq
 Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
    139 Dcl-C prp             'prp';                                                                                         004900
@@ -262,7 +262,7 @@ Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7...
    192        DCL-PR SQLOPEN_CALL EXTPGM(SQLOPEN);                                     //SQL                                005700
    193          CA LIKEDS(SQLCA);                                                      //SQL                                005700
    194          *N BINDEC(4);                                                          //SQL                                005700
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page      7
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page      7
 Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq
 Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
    195        END-PR SQLOPEN_CALL;                                                     //SQL                                005700
@@ -317,7 +317,7 @@ Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7...
    228=O                       ARTIFA              60A CHAR        3              FAMILLY ID                               4000005
    229=O                       ARSALEPR            67S ZONE      7,2              REF SALE PRICE                           4000006
    230=OCTL01                                                                                                              5000001
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page      8
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page      8
 Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq
 Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
         *--------------------------------------------------------------------------------------------*                     5
@@ -369,7 +369,7 @@ Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7...
    265          P0001 LIKE(STM);                                                       //SQL                                012300
    266        END-PR SQCALL000003;                                                     //SQL                                012300
    267 **END-FREE                                                                                                           012500
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page      9
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page      9
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
    268 D                 DS                  STATIC                               OPEN                                      012500
@@ -415,7 +415,7 @@ Line   <---------------------- Source Specifications ---------------------------
 Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
    299 **FREE                                                                                                               014200
    300 **END-FREE                                                                                                           017000
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     10
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     10
 Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
 Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
    301 D                 DS                  STATIC                               CLOSE                                     017000
@@ -462,7 +462,7 @@ Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7...
    332 dow step01 <> ' ';                                                                                   B01             008100
    333   select ;                                                                                           B02             008200
    334   when step01 = prp ;                                                                                X02             008300
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     11
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     11
 Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq
 Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
    335     exsr s01prp;                                                                                      02             008400
@@ -521,7 +521,7 @@ Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7...
    388           SQCALL000003(                                                         //SQL                                012300
    389                SQLCA                                                            //SQL                                012300
    390              : STM                                                              //SQL                                012300
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     12
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     12
 Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq
 Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
    391           );                                                                    //SQL                                012300
@@ -580,7 +580,7 @@ Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7...
    444           EVAL ARSALEPR = SQL_00029;                                            //SQL                 02             014200
    445           ENDIF;                                                                //SQL                E02             014200
    446   enddo;                                                                                             E01             014300
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     13
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     13
 Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq
 Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
    447   sflend = sqlcod <> 0;                                                                                              014400
@@ -639,7 +639,7 @@ Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7...
    500   readc(E) SFL01;                                                                                                    018500
    501   SflNxtChg = *ON;                                                                                                   018600
    502   dow not %error and not %eof;                                                                       B01             018700
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     14
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     14
 Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq
 Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
    503     select;                                                                                          B02             018800
@@ -698,7 +698,7 @@ Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7...
    556       if OPT01 = 1;                                                                                  B03             022900
    557 //*        exec sql close c1;                                                                                        023000
    558           SQLER6 = 9;                                                           //SQL                 03             023000
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     15
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     15
 Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq
 Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
    559           IF SQL_00044 = 0;                                                     //SQL                B04             023000
@@ -721,7 +721,7 @@ Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7...
    576                                                                                 //                                   023700
    577 End-Proc sltarticle;                                                                                                 023800
        * * * * *   E N D   O F   S O U R C E   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     16
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     16
           A d d i t i o n a l   D i a g n o s t i c   M e s s a g e s
  Msg id  Sv Number Seq     Message text
 *RNF7089 00      7 000700  RPG provides Separate-Indicator area for file ART301D.
@@ -750,7 +750,7 @@ Number Pos   Pos
    233    15    17 SRCHFAM
    234    18    37 FAMDESC
  * * * * *   E N D   O F   O U T P U T   B U F F E R   P O S I T I O N   *  * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     17
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     17
                           C r o s s   R e f e r e n c e
       File and Record References:
          File              Device             References (D=Defined)
@@ -805,7 +805,7 @@ Number Pos   Pos
                            PROTOTYPE
 *RNF7031 GETARTSTOCK       P(5,0)                 42D
                            PROTOTYPE
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     18
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     18
 *RNF7031 GETARTSTOCKPRICE  P(7,2)                 31D
                            PROTOTYPE
 *RNF7031 GETARTVATCODE     A(1)                   52D
@@ -864,7 +864,7 @@ Number Pos   Pos
 *RNF7031 SQLCMIT_CALL      PROTOTYPE             200D
          SQLCOD            B(9,0)                156D    429     447
          SQLCODE           I(10,0)               155D    156
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     19
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     19
 *RNF7031 SQLERL            B(4,0)                158D
 *RNF7031 SQLERM            A(70)                 160D
 *RNF7031 SQLERP            A(8)                  162D
@@ -922,7 +922,7 @@ Number Pos   Pos
          SAVDATA           DS(66)                241D    419M    424     448M
          SAVDESC           A(10)                 251D    383M    538
          SAVFAM            A(3)                  252D    384M    538
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     20
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     20
          SLT01             N(1)                  250D    494M    516     526M
          SQCALL000003      PROTOTYPE             263D    388M
          SQL_00000         B(4,0)                256D    353     358
@@ -981,7 +981,7 @@ Number Pos   Pos
                                                  539M
          STM               A(500)                253D    265     371M    373M
                            VARYING(2)            377M    380M    382M    390
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     21
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     21
          STS01             N(1)                  246D    496M    507M    527M
          S01ACT            BEGSR                 345     535D
          S01CHK            BEGSR                 343     492D
@@ -994,7 +994,7 @@ Number Pos   Pos
       Indicator References:
          Indicator                            References (D=Defined M=Modified)
        * * * * *   E N D   O F   C R O S S   R E F E R E N C E   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     22
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     22
                       E x t e r n a l   R e f e r e n c e s
       Statically bound procedures:
          Procedure                            References
@@ -1021,14 +1021,14 @@ Number Pos   Pos
          Field             Attributes         Defined
          No references in the source.
    * * * * *   E N D   O F   E X T E R N A L   R E F E R E N C E S   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     23
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     23
                           M e s s a g e   S u m m a r y
  Msg id  Sv Number Message text
 *RNF7031 00     80 The name or indicator is not referenced.
 *RNF7089 00      1 RPG provides Separate-Indicator area for file.
 *RNF7534 10      1 Files should be closed explicitly in a non-cycle module.
        * * * * *   E N D   O F   M E S S A G E   S U M M A R Y   * * * * *
- 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/01/23 12:24:15        Page     24
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ART301        MONZAXIB   06/21/23 18:40:39        Page     24
                             F i n a l   S u m m a r y
   Message Totals:
     Information  (00) . . . . . . . :       81
@@ -1043,7 +1043,7 @@ Number Pos   Pos
     Data records  . . . . . . . . . :        0
     Comments  . . . . . . . . . . . :       91
          * * * * *   E N D   O F   F I N A L   S U M M A R Y   * * * * *
-Module ART301 placed in library ATUDSB0006. 10 highest severity. Created on 06/01/23 at 12:24:15.
+Module ART301 placed in library ATUDSB0006. 10 highest severity. Created on 06/21/23 at 18:40:39.
           * * * * *   E N D   O F   C O M P I L A T I O N   * * * * *
   . . . .
 MSG1573 *** Messages sent by the Compilation ***
@@ -1051,5 +1051,5 @@ CPC7301 File QSQLTEMP1 created in library QTEMP.
 CPC7305 Member ART301 added to file QSQLTEMP1 in QTEMP.
 CPF4011 Buffer length longer than record for member ARTICLE.
 CPF4011 Buffer length longer than record for member FAMILLY.
-RNS9305 Module ART301 placed in library ATUDSB0006. 10 highest severity. Created on 06/01/23 at 12:24:15.
+RNS9305 Module ART301 placed in library ATUDSB0006. 10 highest severity. Created on 06/21/23 at 18:40:39.
 CPC0904 Data area RETURNCODE created in library QTEMP.

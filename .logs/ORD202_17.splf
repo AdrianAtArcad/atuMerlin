@@ -1,0 +1,627 @@
+Attributes of the executed compilation command :
+  -  CRTBNDRPG PGM(ATUDSB0006/ORD202) SRCFILE(ATU_SRC/QRPGLESRC)   ACTGRP(QILE) DFTAC
+     TGRP(*NO) REPLACE(*YES) TGTRLS(V7R4M0)
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page      2
+  Command  . . . . . . . . . . . . :   CRTBNDRPG
+    Issued by  . . . . . . . . . . :     ATULLY
+  Program  . . . . . . . . . . . . :   ORD202
+    Library  . . . . . . . . . . . :     ATUDSB0006
+  Text 'description' . . . . . . . :   *SRCMBRTXT
+  Source Member  . . . . . . . . . :   ORD202
+  Source File  . . . . . . . . . . :   QRPGLESRC
+    Library  . . . . . . . . . . . :     ATU_SRC
+    CCSID  . . . . . . . . . . . . :     297
+  Text 'description' . . . . . . . :   Order detail
+  Last Change  . . . . . . . . . . :   05/23/22  14:55:56
+  Generation severity level  . . . :   10
+  Default activation group . . . . :   *NO
+  Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY
+                                       *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT
+                                       *DEBUGIO   *UNREF     *NOEVENTF
+  Debugging views  . . . . . . . . :   *STMT
+  Debug encryption key . . . . . . :   *NONE
+  Output . . . . . . . . . . . . . :   *PRINT
+  Optimization level . . . . . . . :   *NONE
+  Source listing indentation . . . :   *NONE
+  Type conversion options  . . . . :   *NONE
+  Sort sequence  . . . . . . . . . :   *HEX
+  Language identifier  . . . . . . :   *JOBRUN
+  Replace program  . . . . . . . . :   *YES
+  User profile . . . . . . . . . . :   *USER
+  Authority  . . . . . . . . . . . :   *LIBCRTAUT
+  Truncate numeric . . . . . . . . :   *YES
+  Fix numeric  . . . . . . . . . . :   *NONE
+  Target release . . . . . . . . . :   V7R4M0
+  Allow null values  . . . . . . . :   *NO
+  Storage model . . .  . . . . . . :   *SNGLVL
+  Binding directory  . . . . . . . :   *NONE
+  Activation group . . . . . . . . :   QILE
+  Define condition names . . . . . :   *NONE
+  Enable performance collection  . :   *PEP
+  Profiling data . . . . . . . . . :   *NOCOL
+  Licensed Internal Code options . :
+  Generate program interface . . . :   *NO
+  Include directory  . . . . . . . :
+  Preprocessor options . . . . . . :   *NONE
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page      3
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+                          S o u r c e   L i s t i n g
+     1                                                                                                           161103     000100
+     2 h dftactgrp(*no) bnddir('SAMPLE')                                                                         161103     000200
+     3                                                                                                           161103     000300
+        *--------------------------------------------------------------------*
+        * Compiler Options in Effect:                                        *
+        *--------------------------------------------------------------------*
+        *  Text 'description' . . . . . . . :   Order detail                 *
+        *  Generation severity level  . . . :   10                           *
+        *  Default activation group . . . . :   *NO                          *
+        *  Compiler options . . . . . . . . :   *XREF      *GEN              *
+        *                                       *NOSECLVL  *SHOWCPY          *
+        *                                       *EXPDDS    *EXT              *
+        *                                       *NOSHOWSKP *NOSRCSTMT        *
+        *                                       *DEBUGIO   *UNREF            *
+        *                                       *NOEVENTF                    *
+        *  Optimization level . . . . . . . :   *NONE                        *
+        *  Source listing indentation . . . :   *NONE                        *
+        *  Type conversion options  . . . . :   *NONE                        *
+        *  Sort sequence  . . . . . . . . . :   *HEX                         *
+        *  Language identifier  . . . . . . :   *JOBRUN                      *
+        *  User profile . . . . . . . . . . :   *USER                        *
+        *  Authority  . . . . . . . . . . . :   *LIBCRTAUT                   *
+        *  Truncate numeric . . . . . . . . :   *YES                         *
+        *  Fix numeric  . . . . . . . . . . :   *NONE                        *
+        *  Allow null values  . . . . . . . :   *NO                          *
+        *  Storage model . . .  . . . . . . :   *SNGLVL                      *
+        *  Binding directory from Command . :   *NONE                        *
+        *  Binding directory from Source  . :   SAMPLE                       *
+        *    Library  . . . . . . . . . . . :     *LIBL                      *
+        *  Activation group . . . . . . . . :   QILE                         *
+        *  Enable performance collection  . :   *PEP                         *
+        *  Profiling data . . . . . . . . . :   *NOCOL                       *
+        *  Generate program interface . . . :   *NO                          *
+        *  REQUIRE PROTOTYPE FOR EXPORT . . :   *NO                          *
+        *--------------------------------------------------------------------*
+     4 fcustome1  if   e           k disk                                                                        161103     000500
+        *--------------------------------------------------------------------------------------------*
+        *                               RPG name         External name                               *
+        * File name. . . . . . . . . :  CUSTOME1         ATU_DTA/CUSTOME1                            *
+        * Record format(s) . . . . . :  FCUST            FCUST                                       *
+        *--------------------------------------------------------------------------------------------*
+     5 farticle1  if   e           k disk                                                                        161103     000600
+        *--------------------------------------------------------------------------------------------*
+        *                               RPG name         External name                               *
+        * File name. . . . . . . . . :  ARTICLE1         ATUDSB0006/ARTICLE1                         *
+        * Record format(s) . . . . . :  FARTI            FARTI                                       *
+        *--------------------------------------------------------------------------------------------*
+     6 fdetord1   if   e           k disk                                                                        161103     000700
+        *--------------------------------------------------------------------------------------------*
+        *                               RPG name         External name                               *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page      4
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+        * File name. . . . . . . . . :  DETORD1          ATU_DTA/DETORD1                             *
+        * Record format(s) . . . . . :  FDETO            FDETO                                       *
+        *--------------------------------------------------------------------------------------------*
+     7 forder1    if   e           k disk                                                                        161103     000701
+        *--------------------------------------------------------------------------------------------*
+        *                               RPG name         External name                               *
+        * File name. . . . . . . . . :  ORDER1           ATU_DTA/ORDER1                              *
+        * Record format(s) . . . . . :  FORDE            FORDE                                       *
+        *--------------------------------------------------------------------------------------------*
+     8 ford202d   cf   e             workstn                                                                     161103     000800
+     9 F                                     indds(indds)                                                        161103     000900
+    10 F                                     sfile(sfl01:rrn01)                                                  161103     001000
+    11 F                                     Infds(Info)                                                         161103     001100
+    12                                                                                                           161103     001200
+        *--------------------------------------------------------------------------------------------*
+        *                               RPG name         External name                               *
+        * File name. . . . . . . . . :  ORD202D          ATU_OBJ/ORD202D                             *
+        * Record format(s) . . . . . :  SFL01            SFL01                                       *
+        *                               CTL01            CTL01                                       *
+        *                               KEY01            KEY01                                       *
+        *--------------------------------------------------------------------------------------------*
+    13 d ord202          pr                                                                                      161103     001201
+    14 d  id                                 like(orid)                                                          161103     001202
+    15 d ord202          pi                                                                                      161103     001203
+    16 d  id                                 like(orid)                                                          161103     001204
+    17 D indds           ds                                                                                      161103     001600
+    18 D  help                   1      1n                                                                       161103     001700
+    19 D  exit                   3      3n                                                                       161103     001800
+    20 D  prompt                 4      4n                                                                       161103     001900
+    21 D  refresh                5      5n                                                                       161103     002000
+    22 D  create                 6      6n                                                                       161103     002100
+    23 D  cancel                12     12n                                                                       161103     002200
+    24 D  morekeys              24     24n                                                                       161103     002300
+    25 D  pagedown              25     25n                                                                       161103     002400
+    26 D  sflclr                30     30n                                                                       161103     002500
+    27 D  sfldsp                31     31n                                                                       161103     002600
+    28 D  sfldspctl             32     32n                                                                       161103     002700
+    29 D  sflnxtchg             33     33n                                                                       161103     002800
+    30 D  dspatr_ri             34     34n                                                                       161103     002900
+    31 D  sflmsg                35     35n                                                                       161103     003000
+    32 D  sflend                80     80n                                                                       161103     003100
+    33                                                                                                           161103     003200
+    34 D info            ds                                                                                      161103     003300
+    35 D  lrrn                 378    379i 0                                                                     161103     003400
+    36                                                                                                           161103     003500
+    37 D rrn01           s              5i 0                                                                     161103     003600
+    38 D rrs01           s              5i 0                                                                     161103     003700
+    39 D err01           s               n                                                                       161103     003800
+    40                                                                                                           161103     003900
+    41 D panel           S              3i 0 INZ(1)                                                              161103     004000
+    42 D step01          S              3    inz(prp)                                                            161103     004100
+    43 d User            s             10    inz(*user)                                                          161103     004200
+    44 d count           s              3i 0                                                                     161103     004300
+    45 d mode            s              3                                                                        161103     004400
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page      5
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+    46                                                                                                           161103     004500
+    47 d crt             c                   'CRT'                                                               161103     004600
+    48 d upd             c                   'UPD'                                                               161103     004700
+    49 d prp             c                   'prp'                                                               161103     004800
+    50 d lod             c                   'lod'                                                               161103     004900
+    51 d dsp             c                   'dsp'                                                               161103     005000
+    52 d key             c                   'key'                                                               161103     005100
+    53 d chk             c                   'chk'                                                               161103     005200
+    54 d act             c                   'act'                                                               161103     005300
+    55 d datBlank        c                   d'1940-01-01'                                                       161103     005400
+    56  /free                                                                                                    161103     005500
+    57=IFCUST                                                                                                              1000001
+        *--------------------------------------------------------------------------------------------*                     1
+        * RPG record format  . . . . :  FCUST                                                        *                     1
+        * External format  . . . . . :  FCUST : ATU_DTA/CUSTOME1                                     *                     1
+        *--------------------------------------------------------------------------------------------*                     1
+    58=I                             P    1    3 0CUID                            CUSTOMER ID                              1000002
+    59=I                             A    4   33  CUSTNM                          CUSTOMER NAME                            1000003
+    60=I                             A   34   48  CUPHONE                         PHONE NUMBER                             1000004
+    61=I                             A   49   60  CUVAT                           VAT NUMBER                               1000005
+    62=I                             A   61  110  CUMAIL                          ADDRESS MAIL                             1000006
+    63=I                             A  111  160  CULINE1                         ADDRESS LINE                             1000007
+    64=I                             A  161  210  CULINE2                         ADDRESS LINE                             1000008
+    65=I                             A  211  260  CULINE3                         ADDRESS LINE                             1000009
+    66=I                             A  261  270  CUZIP                           ZIP CODE                                 1000010
+    67=I                             A  271  300  CUCITY                          CITY                                     1000011
+    68=I                             A  301  302  CUCOUN                          COUNTRY CODE                             1000012
+    69=I                             P  303  307 2CULIMCRE                        LIMIT CREDIT                             1000013
+    70=I                             P  308  312 2CUCREDIT                        CREDIT                                   1000014
+    71=I                             P  313  317 0CULASTORD                       Last Order Date                          1000015
+    72=I                        *ISO-D  318  327  CUCREA                          CREATION DATE                            1000016
+    73=I                             Z  328  353  CUMOD                           LAST MODIFICATION                        1000017
+    74=I                             A  354  363  CUMODID                         LAS MOD BY                               1000018
+    75=I                             A  364  364  CUDEL                           DELETE CODE X=DELETED                    1000019
+    76=IFARTI                                                                                                              2000001
+        *--------------------------------------------------------------------------------------------*                     2
+        * RPG record format  . . . . :  FARTI                                                        *                     2
+        * External format  . . . . . :  FARTI : ATUDSB0006/ARTICLE1                                  *                     2
+        *--------------------------------------------------------------------------------------------*                     2
+    77=I                             A    1    6  ARID                            ARTICLE ID                               2000002
+    78=I                             A    7   56  ARDESC                          ARTICLE DESCRPTION                       2000003
+    79=I                             P   57   60 2ARSALEPR                        REF SALE PRICE                           2000004
+    80=I                             P   61   64 2ARWHSPR                         STOCK PRICE                              2000005
+    81=I                             A   65   67  ARTIFA                          FAMILLY ID                               2000006
+    82=I                             P   68   70 0ARSTOCK                         STOCK                                    2000007
+    83=I                             P   71   73 0ARMINQTY                        MINIMUM STOCK                            2000008
+    84=I                             P   74   76 0ARCUSQTY                        CUSTOMER ORDER QUANTITY                  2000009
+    85=I                             P   77   79 0ARPURQTY                        PURCHASE ORDER QUANTITY                  2000010
+    86=I                             A   80   80  ARVATCD                         VAT CODE                                 2000011
+    87=I                        *ISO-D   81   90  ARCREA                          CREATION DATE                            2000012
+    88=I                             Z   91  116  ARMOD                           LAST MODIFICATION                        2000013
+    89=I                             A  117  126  ARMODID                         LAS MOD BY                               2000014
+    90=I                             A  127  127  ARDEL                           DELETE CODE X=DELETED                    2000015
+    91=IFDETO                                                                                                              3000001
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page      6
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+        *--------------------------------------------------------------------------------------------*                     3
+        * RPG record format  . . . . :  FDETO                                                        *                     3
+        * External format  . . . . . :  FDETO : ATU_DTA/DETORD1                                      *                     3
+        *--------------------------------------------------------------------------------------------*                     3
+    92=I                             P    1    4 0ODORID                          ORDER NUMBER                             3000002
+    93=I                             P    5    7 0ODYEAR                          YEAR                                     3000003
+    94=I                             P    8   10 0ODLINE                          ORDER LINE                               3000004
+    95=I                             A   11   16  ODARID                          ARTICLE ID                               3000005
+    96=I                             P   17   19 0ODQTY                           ORDERED QUANTITY                         3000006
+    97=I                             P   20   22 0ODQTYLIV                        DELIVERED QUANTITY                       3000007
+    98=I                             P   23   26 2ODPRICE                         UNIT PRICE                               3000008
+    99=I                             P   27   31 2ODTOT                           TOTAL PRICE                              3000009
+   100=I                             P   32   36 2ODTOTVAT                        TOTAL LINE WITH VAT                      3000010
+   101=IFORDE                                                                                                              4000001
+        *--------------------------------------------------------------------------------------------*                     4
+        * RPG record format  . . . . :  FORDE                                                        *                     4
+        * External format  . . . . . :  FORDE : ATU_DTA/ORDER1                                       *                     4
+        *--------------------------------------------------------------------------------------------*                     4
+   102=I                             P    1    4 0ORID                            ORDER NUMBER                             4000002
+   103=I                             P    5    7 0ORYEAR                          YEAR                                     4000003
+   104=I                             P    8   10 0ORCUID                          CUSTOMER ID                              4000004
+   105=I                             P   11   15 0ORDATE                          ORDER DATE                               4000005
+   106=I                             P   16   20 0ORDATDEL                        DELIVERY DATE                            4000006
+   107=I                             P   21   25 0ORDATCLO                        CLOSE DATE                               4000007
+   108=ISFL01                                                                                                              5000001
+        *--------------------------------------------------------------------------------------------*                     5
+        * RPG record format  . . . . :  SFL01                                                        *                     5
+        * External format  . . . . . :  SFL01 : ATU_OBJ/ORD202D                                      *                     5
+        *--------------------------------------------------------------------------------------------*                     5
+   109=I                             S    1    5 0ODLINE                          ORDER LINE                               5000002
+   110=I                             A    6   11  ODARID                          ARTICLE ID                               5000003
+   111=I                             S   12   16 0ODQTY                           ORDERED QUANTITY                         5000004
+   112=I                             S   17   21 0ODQTYLIV                        DELIVERED QUANTITY                       5000005
+   113=I                             S   22   28 2ODPRICE                         UNIT PRICE                               5000006
+   114=I                             S   29   37 2ODTOT                           TOTAL PRICE                              5000007
+   115=I                             S   38   46 2ODTOTVAT                        TOTAL LINE WITH VAT                      5000008
+   116=I                             A   47   96  ARDESC                          ARTICLE DESCRPTION                       5000009
+   117=ICTL01                                                                                                              6000001
+        *--------------------------------------------------------------------------------------------*                     6
+        * RPG record format  . . . . :  CTL01                                                        *                     6
+        * External format  . . . . . :  CTL01 : ATU_OBJ/ORD202D                                      *                     6
+        *--------------------------------------------------------------------------------------------*                     6
+   118=I                             S    1    4 0RRB01                                                                    6000002
+   119=IKEY01                                                                                                              7000001
+        *--------------------------------------------------------------------------------------------*                     7
+        * RPG record format  . . . . :  KEY01                                                        *                     7
+        * External format  . . . . . :  KEY01 : ATU_OBJ/ORD202D                                      *                     7
+        *--------------------------------------------------------------------------------------------*                     7
+   120   select;                                                                                       B01       161103     005600
+   121   when panel = 1;                                                                               X01       161103     005700
+   122     exsr pnl01;                                                                                  01       161103     005800
+   123   other;                                                                                        X01       161103     005900
+   124     exsr pnl00;                                                                                  01       161103     006000
+   125   endsl;                                                                                        E01       161103     006100
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page      7
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   126   //- Subfiles  01 Subroutines --------------------------------------  ---                                161103     006200
+   127   begsr pnl01;                                                                                            161103     006300
+   128     select ;                                                                                    B01       161103     006400
+   129     when step01 = prp ;                                                                         X01       161103     006500
+   130       exsr s01prp;                                                                               01       161103     006600
+   131     when step01 = lod ;                                                                         X01       161103     006700
+   132       exsr s01lod;                                                                               01       161103     006800
+   133     when step01 = dsp ;                                                                         X01       161103     006900
+   134       exsr s01dsp;                                                                               01       161103     007000
+   135     when step01 = key ;                                                                         X01       161103     007100
+   136       exsr s01key;                                                                               01       161103     007200
+   137     when step01 = act ;                                                                         X01       161103     007500
+   138       exsr s01act ;                                                                              01       161103     007600
+   139     endsl;                                                                                      E01       161103     007700
+   140   endsr;                                                                                                  161103     007800
+   141   //--- Clear Subfile  ----------------------------------------------------                               161103     007900
+   142   begsr s01prp;                                                                                           161103     008000
+   143     chain id order1;                                                                                      161103     008001
+   144     chain orcuid custome1;                                                                                161103     008002
+   145     datord = %date(ordate:*iso);                                                                          161103     008003
+   146     if ordatdel > 0;                                                                            B01       161103     008004
+   147       datliv = %date(ordatdel:*iso);                                                             01       161103     008005
+   148     endif;                                                                                      E01       161103     008006
+   149     if ordatclo > 0;                                                                            B01       161103     008007
+   150       datclo = %date(ordatclo:*iso);                                                             01       161103     008008
+   151     endif;                                                                                      E01       161103     008009
+   152     RRn01 = 0;                                                                                            161103     008100
+   153     sflclr = *on;                                                                                         161103     008200
+   154     write ctl01;                                                                                          161103     008300
+   155     sflclr = *off;                                                                                        161103     008400
+   156     step01 = lod;                                                                                         161103     009100
+   157   endsr;                                                                                                  161103     009300
+   158   //--- Load Subfile  -----------------------------------------------------                               161103     009400
+   159   begsr s01lod;                                                                                           161103     009500
+   160     RRb01 = RRn01 + 1;                                                                                    161103     009700
+   161     tot = 0;                                                                                              161201     009701
+   162     totvat = 0;                                                                                           161201     009702
+   163     setll id detord1;                                                                                     161103     009901
+   164     reade id detord1;                                                                                     161103     009902
+   165     dow not %eof(detord1);                                                                      B01       161103     010000
+   166       tot += odtot;                                                                              01       161201     010001
+   167       totvat += odtotvat;                                                                        01       161201     010002
+   168       chain odarid article1;                                                                     01       161103     010003
+   169       RRN01 += 1;                                                                                01       161103     010500
+   170       write sfl01;                                                                               01       161103     010700
+   171       reade id detord1;                                                                          01       161103     010701
+   172     enddo;                                                                                      E01       161103     010900
+   173     sflend = *on;                                                                                         161201     010901
+   174     step01 = dsp;                                                                                         161103     011100
+   175   endsr;                                                                                                  161103     011300
+   176   //--- Display Subfile  --------------------------------------------------                               161103     011400
+   177   begsr s01dsp;                                                                                           161103     011500
+   178     sfldspctl = *on;                                                                                      161103     011600
+   179     sfldsp = RRn01 > 0;                                                                                   161103     011700
+   180                                                                                                           161103     011800
+   181     write key01;                                                                                          161103     011900
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page      8
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   182     exfmt ctl01;                                                                                          161103     012000
+   183     if LRRN <>0;                                                                                B01       161103     012100
+   184       RRb01 = LRRN;                                                                              01       161103     012200
+   185     endif;                                                                                      E01       161103     012300
+   186     step01 = key;                                                                                         161103     012400
+   187   endsr;                                                                                                  161103     012500
+   188   //--- Command Keys  -----------------------------------------------------                               161103     012600
+   189   begsr s01key;                                                                                           161103     012700
+   190     select;                                                                                     B01       161103     012800
+   191     when exit;                                                                                  X01       161103     012900
+   192       panel  = 0;                                                                                01       161103     013000
+   193       step01 = prp;                                                                              01       161103     013100
+   194     when cancel;                                                                                X01       161103     013200
+   195       step01 = prp;                                                                              01       161103     013300
+   196       panel  = 0 ;                                                                               01       161103     013400
+   197     other;                                                                                      X01       161103     013700
+   198       step01 = act;                                                                              01       161103     013800
+   199     endsl;                                                                                      E01       161103     013900
+   200   endsr;                                                                                                  161103     014000
+   201   //--- action Subfile  ---------------------------------------------------                               161103     016300
+   202   begsr s01act;                                                                                           161103     016400
+   203     panel = 0;                                                                                            161103     016401
+   204   endsr;                                                                                                  161103     017900
+   205                                                                                                           161103     018000
+   206   //--------INITIALIZATION ----------------------------------                                             161103     018100
+   207   begsr *inzsr;                                                                                           161103     018200
+   208     datord = datBlank;                                                                                    161103     018300
+   209     datclo = datBlank;                                                                                    161103     018400
+   210     datliv = datBlank;                                                                                    161103     018500
+   211   endsr;                                                                                                  161103     018600
+   212   //--------END SUBROUTINE ----------------------------------                                             161103     018700
+   213   begsr pnl00;                                                                                            161103     018800
+   214     *inlr = *on;                                                                                          161103     019000
+   215   endsr;                                                                                                  161103     019100
+   216  /end-free                                                                                                161103     019200
+   217=OSFL01                                                                                                              8000001
+        *--------------------------------------------------------------------------------------------*                     8
+        * RPG record format  . . . . :  SFL01                                                        *                     8
+        * External format  . . . . . :  SFL01 : ATU_OBJ/ORD202D                                      *                     8
+        *--------------------------------------------------------------------------------------------*                     8
+   218=O                       ODLINE               5S ZONE      5,0              ORDER LINE                               8000002
+   219=O                       ODARID              11A CHAR        6              ARTICLE ID                               8000003
+   220=O                       ODQTY               16S ZONE      5,0              ORDERED QUANTITY                         8000004
+   221=O                       ODQTYLIV            21S ZONE      5,0              DELIVERED QUANTITY                       8000005
+   222=O                       ODPRICE             28S ZONE      7,2              UNIT PRICE                               8000006
+   223=O                       ODTOT               37S ZONE      9,2              TOTAL PRICE                              8000007
+   224=O                       ODTOTVAT            46S ZONE      9,2              TOTAL LINE WITH VAT                      8000008
+   225=O                       ARDESC              96A CHAR       50              ARTICLE DESCRPTION                       8000009
+   226=OCTL01                                                                                                              9000001
+        *--------------------------------------------------------------------------------------------*                     9
+        * RPG record format  . . . . :  CTL01                                                        *                     9
+        * External format  . . . . . :  CTL01 : ATU_OBJ/ORD202D                                      *                     9
+        *--------------------------------------------------------------------------------------------*                     9
+   227=O                       RRB01                4S ZONE      4,0                                                       9000002
+   228=O                       ORID                10S ZONE      6,0              ORDER NUMBER                             9000003
+   229=O                       ORYEAR              14S ZONE      4,0              YEAR                                     9000004
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page      9
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+   230=O                       CUID                19S ZONE      5,0              CUSTOMER ID                              9000005
+   231=O                       CUSTNM              49A CHAR       30              CUSTOMER NAME                            9000006
+   232=O                       DATORD              57D DATE *DMY/  8                                                       9000007
+   233=O                       DATLIV              65D DATE *DMY/  8                                                       9000008
+   234=O                       DATCLO              73D DATE *DMY/  8                                                       9000009
+   235=OKEY01                                                                                                             10000001
+        *--------------------------------------------------------------------------------------------*                    10
+        * RPG record format  . . . . :  KEY01                                                        *                    10
+        * External format  . . . . . :  KEY01 : ATU_OBJ/ORD202D                                      *                    10
+        *--------------------------------------------------------------------------------------------*                    10
+   236=O                       TOT                  9S ZONE      9,2              TOTAL PRICE                             10000002
+   237=O                       TOTVAT              18S ZONE      9,2              TOTAL LINE WITH VAT                     10000003
+       * * * * *   E N D   O F   S O U R C E   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page     10
+          A d d i t i o n a l   D i a g n o s t i c   M e s s a g e s
+ Msg id  Sv Number Seq     Message text
+*RNF7066 00      5 000600  Record-Format FARTI not used for input or output.
+*RNF7066 00      4 000500  Record-Format FCUST not used for input or output.
+*RNF7066 00      6 000700  Record-Format FDETO not used for input or output.
+*RNF7066 00      7 000701  Record-Format FORDE not used for input or output.
+*RNF7089 00      8 000800  RPG provides Separate-Indicator area for file ORD202D.
+ * * * * *   E N D   O F   A D D I T I O N A L   D I A G N O S T I C   M E S S A G E S   * * * * *
+                 O u t p u t   B u f f e r   P o s i t i o n s
+Line   Start End   Field or Constant
+Number Pos   Pos
+   218     1     5 ODLINE
+   219     6    11 ODARID
+   220    12    16 ODQTY
+   221    17    21 ODQTYLIV
+   222    22    28 ODPRICE
+   223    29    37 ODTOT
+   224    38    46 ODTOTVAT
+   225    47    96 ARDESC
+   227     1     4 RRB01
+   228     5    10 ORID
+   229    11    14 ORYEAR
+   230    15    19 CUID
+   231    20    49 CUSTNM
+   232    50    57 DATORD
+   233    58    65 DATLIV
+   234    66    73 DATCLO
+   236     1     9 TOT
+   237    10    18 TOTVAT
+ * * * * *   E N D   O F   O U T P U T   B U F F E R   P O S I T I O N   *  * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page     11
+                    K e y   F i e l d   I n f o r m a t i o n
+         File           Internal    External
+           Record       field name  field name  Attributes
+      2  ARTICLE1
+           FARTI
+                        ARID                    CHAR        6
+      1  CUSTOME1
+           FCUST
+                        CUID                    PACK      5,0 SIGNED
+      3  DETORD1
+           FDETO
+                        ODORID                  PACK      6,0 SIGNED
+                        ODLINE                  PACK      5,0 SIGNED
+      4  ORDER1
+           FORDE
+                        ORID                    PACK      6,0 SIGNED
+ * * * * *   E N D   O F   K E Y   F I E L D   I N F O R M A T I O N   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page     12
+                          C r o s s   R e f e r e n c e
+      File and Record References:
+         File              Device             References (D=Defined)
+           Record
+         ARTICLE1          DISK                    5D    168
+           FARTI                                   5D     76
+         CUSTOME1          DISK                    4D    144
+           FCUST                                   4D     57
+         DETORD1           DISK                    6D    163     164     165
+                                                 171
+           FDETO                                   6D     91
+         ORDER1            DISK                    7D    143
+           FORDE                                   7D    101
+         ORD202D           WORKSTN                 8D
+           SFL01                                   8D    108     170     217
+           CTL01                                   8D    117     154     182
+                                                 226
+           KEY01                                   8D    119     181     235
+      Global Field References:
+         Field             Attributes         References (D=Defined M=Modified)
+         *INLR             N(1)                  214M
+         *INZSR            BEGSR                 207D
+         ACT               CONST                  54D    137     198
+*RNF7031 ARCREA            D(10*ISO-)             87D
+*RNF7031 ARCUSQTY          P(5,0)                 84D
+*RNF7031 ARDEL             A(1)                   90D
+         ARDESC            A(50)                  78M    116M    225
+*RNF7031 ARID              A(6)                   77D
+*RNF7031 ARMINQTY          P(5,0)                 83D
+*RNF7031 ARMOD             Z(26)                  88D
+*RNF7031 ARMODID           A(10)                  89D
+*RNF7031 ARPURQTY          P(5,0)                 85D
+*RNF7031 ARSALEPR          P(7,2)                 79D
+*RNF7031 ARSTOCK           P(5,0)                 82D
+*RNF7031 ARTIFA            A(3)                   81D
+*RNF7031 ARVATCD           A(1)                   86D
+*RNF7031 ARWHSPR           P(7,2)                 80D
+         CANCEL            N(1)                   23D    194
+*RNF7031 CHK               CONST                  53D
+*RNF7031 COUNT             I(3,0)                 44D
+*RNF7031 CREATE            N(1)                   22D
+*RNF7031 CRT               CONST                  47D
+*RNF7031 CUCITY            A(30)                  67D
+*RNF7031 CUCOUN            A(2)                   68D
+*RNF7031 CUCREA            D(10*ISO-)             72D
+*RNF7031 CUCREDIT          P(9,2)                 70D
+*RNF7031 CUDEL             A(1)                   75D
+         CUID              P(5,0)                 58M    230
+*RNF7031 CULASTORD         P(8,0)                 71D
+*RNF7031 CULIMCRE          P(9,2)                 69D
+*RNF7031 CULINE1           A(50)                  63D
+*RNF7031 CULINE2           A(50)                  64D
+*RNF7031 CULINE3           A(50)                  65D
+*RNF7031 CUMAIL            A(50)                  62D
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page     13
+*RNF7031 CUMOD             Z(26)                  73D
+*RNF7031 CUMODID           A(10)                  74D
+*RNF7031 CUPHONE           A(15)                  60D
+         CUSTNM            A(30)                  59M    231
+*RNF7031 CUVAT             A(12)                  61D
+*RNF7031 CUZIP             A(10)                  66D
+         DATBLANK          CONST                  55D    208     209     210
+         DATCLO            D(10*ISO-)            150M    209M    234
+         DATLIV            D(10*ISO-)            147M    210M    233
+         DATORD            D(10*ISO-)            145M    208M    232
+         DSP               CONST                  51D    133     174
+*RNF7031 DSPATR_RI         N(1)                   30D
+*RNF7031 ERR01             N(1)                   39D
+         EXIT              N(1)                   19D    191
+*RNF7031 HELP              N(1)                   18D
+         ID                P(6,0)                 16D    143     163     164
+                           BASED(_QRNL_PRM+)     171
+         INDDS             DS(99)                  9      17D
+         INFO              DS(379)                11      34D
+         KEY               CONST                  52D    135     186
+         LOD               CONST                  50D    131     156
+         LRRN              I(5,0)                 35D    183     184
+*RNF7031 MODE              A(3)                   45D
+*RNF7031 MOREKEYS          N(1)                   24D
+         ODARID            A(6)                   95M    110M    168     219
+         ODLINE            P(5,0)                 94M    109M    218
+*RNF7031 ODORID            P(6,0)                 92D
+         ODPRICE           P(7,2)                 98M    113M    222
+         ODQTY             P(5,0)                 96M    111M    220
+         ODQTYLIV          P(5,0)                 97M    112M    221
+         ODTOT             P(9,2)                 99M    114M    166     223
+         ODTOTVAT          P(9,2)                100M    115M    167     224
+*RNF7031 ODYEAR            P(4,0)                 93D
+         ORCUID            P(5,0)                104D    144
+         ORDATCLO          P(8,0)                107D    149     150
+         ORDATDEL          P(8,0)                106D    146     147
+         ORDATE            P(8,0)                105D    145
+*RNF7031 ORD202            PROTOTYPE              13D
+         ORID              P(6,0)                 14      16     102M    228
+         ORYEAR            P(4,0)                103M    229
+*RNF7031 PAGEDOWN          N(1)                   25D
+         PANEL             I(3,0)                 41D    121     192M    196M
+                                                 203M
+         PNL00             BEGSR                 124     213D
+         PNL01             BEGSR                 122     127D
+*RNF7031 PROMPT            N(1)                   20D
+         PRP               CONST                  42      49D    129     193
+                                                 195
+*RNF7031 REFRESH           N(1)                   21D
+         RRB01             P(4,0)                118M    160M    184M    227
+         RRN01             I(5,0)                 10      37D    152M    160
+                                                 169M    179
+*RNF7031 RRS01             I(5,0)                 38D
+         SFLCLR            N(1)                   26D    153M    155M
+         SFLDSP            N(1)                   27D    179M
+         SFLDSPCTL         N(1)                   28D    178M
+         SFLEND            N(1)                   32D    173M
+*RNF7031 SFLMSG            N(1)                   31D
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page     14
+*RNF7031 SFLNXTCHG         N(1)                   29D
+         STEP01            A(3)                   42D    129     131     133
+                                                 135     137     156M    174M
+                                                 186M    193M    195M    198M
+         S01ACT            BEGSR                 138     202D
+         S01DSP            BEGSR                 134     177D
+         S01KEY            BEGSR                 136     189D
+         S01LOD            BEGSR                 132     159D
+         S01PRP            BEGSR                 130     142D
+         TOT               P(9,2)                161M    166M    236
+         TOTVAT            P(9,2)                162M    167M    237
+*RNF7031 UPD               CONST                  48D
+*RNF7031 USER              A(10)                  43D
+      Indicator References:
+         Indicator                            References (D=Defined M=Modified)
+         LR                                      214M
+       * * * * *   E N D   O F   C R O S S   R E F E R E N C E   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page     15
+                      E x t e r n a l   R e f e r e n c e s
+      Statically bound procedures:
+         Procedure                            References
+         ORD202                                   13
+      Imported fields:
+         Field             Attributes         Defined
+         No references in the source.
+      Exported fields:
+         Field             Attributes         Defined
+         No references in the source.
+   * * * * *   E N D   O F   E X T E R N A L   R E F E R E N C E S   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page     16
+                          M e s s a g e   S u m m a r y
+ Msg id  Sv Number Message text
+*RNF7031 00     49 The name or indicator is not referenced.
+*RNF7066 00      4 Record-Format name of Externally-Described file is not used.
+*RNF7089 00      1 RPG provides Separate-Indicator area for file.
+       * * * * *   E N D   O F   M E S S A G E   S U M M A R Y   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/ORD202        MONZAXIB   06/21/23 18:40:48        Page     17
+                            F i n a l   S u m m a r y
+  Message Totals:
+    Information  (00) . . . . . . . :       54
+    Warning      (10) . . . . . . . :        0
+    Error        (20) . . . . . . . :        0
+    Severe Error (30+)  . . . . . . :        0
+    ---------------------------------  -------
+    Total . . . . . . . . . . . . . :       54
+  Source Totals:
+    Records . . . . . . . . . . . . :      237
+    Specifications  . . . . . . . . :      218
+    Data records  . . . . . . . . . :        0
+    Comments  . . . . . . . . . . . :        8
+         * * * * *   E N D   O F   F I N A L   S U M M A R Y   * * * * *
+Program ORD202 placed in library ATUDSB0006. 00 highest severity. Created on 06/21/23 at 18:40:48.
+          * * * * *   E N D   O F   C O M P I L A T I O N   * * * * *
+  . . . .
+MSG1573 *** Messages sent by the Compilation ***
+CPD5D1D *SRVPGM object ORDER in library *LIBL not found.
+CPI2119 AUT and USRPRF parameter values were ignored.
+CPI2121 Replaced object ORD202 type *PGM was moved to QRPLOBJ.
+RNS9304 Program ORD202 placed in library ATUDSB0006. 00 highest severity. Created on 06/21/23 at 18:40:48.

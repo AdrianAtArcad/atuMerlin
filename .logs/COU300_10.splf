@@ -1,0 +1,260 @@
+Attributes of the executed compilation command :
+  -  CRTRPGMOD   MODULE(ATUDSB0006/COU300) SRCFILE(ATUDSB0006/QRPGLESRC) TGTRLS(V7R4M
+     0)
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/COU300        MONZAXIB   06/21/23 18:40:40        Page      2
+  Command  . . . . . . . . . . . . :   CRTRPGMOD
+    Issued by  . . . . . . . . . . :     ATULLY
+  Module . . . . . . . . . . . . . :   COU300
+    Library  . . . . . . . . . . . :     ATUDSB0006
+  Text 'description' . . . . . . . :   *SRCMBRTXT
+  Source Member  . . . . . . . . . :   COU300
+  Source File  . . . . . . . . . . :   QRPGLESRC
+    Library  . . . . . . . . . . . :     ATUDSB0006
+    CCSID  . . . . . . . . . . . . :     297
+  Text 'description' . . . . . . . :   Functions Country
+  Last Change  . . . . . . . . . . :   06/21/23  18:39:18
+  Generation severity level  . . . :   10
+  Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY
+                                       *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT
+                                       *DEBUGIO   *UNREF     *NOEVENTF
+  Debugging views  . . . . . . . . :   *STMT
+  Debug encryption key . . . . . . :   *NONE
+  Output . . . . . . . . . . . . . :   *PRINT
+  Optimization level . . . . . . . :   *NONE
+  Source listing indentation . . . :   *NONE
+  Type conversion options  . . . . :   *NONE
+  Sort sequence  . . . . . . . . . :   *HEX
+  Language identifier  . . . . . . :   *JOBRUN
+  Replace module . . . . . . . . . :   *YES
+  Authority  . . . . . . . . . . . :   *LIBCRTAUT
+  Truncate numeric . . . . . . . . :   *YES
+  Fix numeric  . . . . . . . . . . :   *NONE
+  Target release . . . . . . . . . :   V7R4M0
+  Allow null values  . . . . . . . :   *NO
+  Storage model . . .  . . . . . . :   *INHERIT
+  Binding directory  . . . . . . . :   *NONE
+  Define condition names . . . . . :   *NONE
+  Enable performance collection  . :   *PEP
+  Profiling data . . . . . . . . . :   *NOCOL
+  Licensed Internal Code options . :
+  Generate program interface . . . :   *NO
+  Include directory  . . . . . . . :
+  Preprocessor options . . . . . . :   *NONE
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/COU300        MONZAXIB   06/21/23 18:40:40        Page      3
+Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq
+Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
+                          S o u r c e   L i s t i n g
+     1 **FREE                                                                                                    000000     000100
+     2 //%METADATA                                                                          *                    000000     000200
+     3 // %TEXT Functions Country                                                           *                    000000     000300
+     4 //%EMETADATA                                                                         *                    000000     000400
+     5 Ctl-Opt nomain;                                                                                           000000     000500
+     6                                                                                                           000000     000600
+     7 Dcl-F COUNTRY    Keyed usropn;                                                                            000000     000700
+        *--------------------------------------------------------------------------------------------*
+        *                               RPG name         External name                               *
+        * File name. . . . . . . . . :  COUNTRY          ATU_DTA/COUNTRY                             *
+        * Record format(s) . . . . . :  FCOUN            FCOUN                                       *
+        *--------------------------------------------------------------------------------------------*
+     8                                                                                                           000000     000800
+     9 /COPY QPROTOSRC,COUNTRY                                                                                   000000     000900
+Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq
+Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number
+        *--------------------------------------------------------------------------------------------*
+        * RPG member name  . . . . . :  COUNTRY                                                      *                     1
+        * External name  . . . . . . :  ATU_SRC/QPROTOSRC(COUNTRY)                                   *                     1
+        * Last change  . . . . . . . :  05/23/22  14:55:56                                           *                     1
+        * Text 'description' . . . . :  Functions Country                                            *                     1
+        *--------------------------------------------------------------------------------------------*
+    10+ *=============================================                                                           000000    1000100
+    11+ * Get COUNTRY NAME                                                                                       000000    1000200
+    12+ *=============================================                                                           000000    1000300
+    13+DGetCountryName   PR            30A                                                                       000000    1000400
+    14+D COID                           2A    value                                                              000000    1000500
+    15+ *=============================================                                                           000000    1000600
+    16+ * Get Iso Code alpha-3                                                                                   000000    1000700
+    17+ *=============================================                                                           000000    1000800
+    18+DGetCountryIso3   PR             3A                                                                       000000    1000900
+    19+D COID                           2A    value                                                              000000    1001000
+    20+ *=============================================                                                           161025    1001100
+    21+ * Check if country code exist                                                                            161025    1001200
+    22+ *=============================================                                                           161025    1001300
+    23+D ExistCountry    PR              n                                                                       161025    1001400
+    24+D COID                           2A    value                                                              161025    1001500
+    25+ *=============================================                                                           161025    1001501
+    26+ * Select a country code                                                                                  161025    1001502
+    27+ *=============================================                                                           161025    1001503
+    28+D SltCountry      PR             2a                                                                       161025    1001504
+    29+D COID                           2A                                                                       161025    1001505
+    30+ *=============================================                                                           000000    1001600
+    31+ * Close COUNTRY                                                                                          000000    1001700
+    32+ *=============================================                                                           000000    1001800
+    33+D CloseCOUNTRY    PR                                                                                      000000    1001900
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/COU300        MONZAXIB   06/21/23 18:40:40        Page      4
+Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq
+Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
+    34                                                                                                           000000     001000
+    35 Dcl-Pr chainCOUNTRY;                                                                                      000000     001100
+    36   P_COID          Char(2)         value;                                                                  000000     001200
+    37 End-Pr;                                                                                                   000000     001300
+    38                                                                                                           000000     001400
+    39 Dcl-S K_COID          LIKE(COID);                                                                         000000     001500
+    40                                                                                                           000000     001600
+    41 //=============================================                                                           000000     001700
+    42=IFCOUN                                                                                                              2000001
+        *--------------------------------------------------------------------------------------------*                     2
+        * RPG record format  . . . . :  FCOUN                                                        *                     2
+        * External format  . . . . . :  FCOUN : ATU_DTA/COUNTRY                                      *                     2
+        *--------------------------------------------------------------------------------------------*                     2
+    43=I                             A    1    2  COID                            COUNTRY CODE                             2000002
+    44=I                             A    3   32  COUNTR                          COUNTRY NAME                             2000003
+    45=I                             A   33   35  COISO                                                                    2000004
+    46 Dcl-Proc GetCountryName export;                                                                           000000     001800
+    47   Dcl-Pi GetCountryName like(countr);                                                                     000000     001900
+    48     P_COID          Char(2)         value;                                                                000000     002000
+    49   End-Pi;                                                                                                 000000     002100
+    50   chainCOUNTRY(P_COID                                                                                     000000     002200
+    51         );                                                                                                000000     002300
+    52   return COUNTR;                                                                                          000000     002400
+    53 End-Proc GetCountryName;                                                                                  000000     002500
+    54 //=============================================                                                           000000     002600
+    55 Dcl-Proc GetCountryIso3 export;                                                                           000000     002700
+    56   Dcl-Pi GetCountryIso3 like(coiso);                                                                      000000     002800
+    57     P_COID          Char(2)         value;                                                                000000     002900
+    58   End-Pi;                                                                                                 000000     003000
+    59   chainCOUNTRY(P_COID                                                                                     000000     003100
+    60         );                                                                                                000000     003200
+    61   return COISO;                                                                                           000000     003300
+    62 End-Proc GetCountryIso3;                                                                                  000000     003400
+    63                                                                                                           000000     003500
+    64 //=============================================                                                           000000     003600
+    65 Dcl-Proc ExistCountry export;                                                                             000000     003700
+    66   Dcl-Pi ExistCountry Ind;                                                                                000000     003800
+    67     P_COID          Char(2)         value;                                                                000000     003900
+    68   End-Pi;                                                                                                 000000     004000
+    69   chainCOUNTRY(P_COID                                                                                     000000     004100
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/COU300        MONZAXIB   06/21/23 18:40:40        Page      5
+Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq
+Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number
+    70         );                                                                                                000000     004200
+    71   return %found(country);                                                                                 000000     004300
+    72 End-Proc ExistCountry;                                                                                    000000     004400
+    73                                                                                                           000000     004500
+    74 Dcl-Proc chainCOUNTRY;                                                                                    000000     004600
+    75   Dcl-Pi chainCOUNTRY;                                                                                    000000     004700
+    76     P_COID          Char(2)         value;                                                                000000     004800
+    77   End-Pi;                                                                                                 000000     004900
+    78  if not %open(COUNTRY);                                                                              B01  000000     005000
+    79    open COUNTRY;                                                                                      01  000000     005100
+    80  endif;                                                                                              E01  000000     005200
+    81   if P_COID <> COID;                                                                                 B01  000000     005300
+    82     K_COID =  P_COID;                                                                                 01  000000     005400
+    83     clear *all FCOUN;                                                                                 01  000000     005500
+    84     chain K_COID COUNTRY;                                                                             01  000000     005600
+    85   endif;                                                                                             E01  000000     005700
+    86 End-Proc chainCOUNTRY;                                                                                    000000     005800
+    87                                                                                                           000000     005900
+    88 Dcl-Proc closeCOUNTRY;                                                                                    000000     006000
+    89   Dcl-Pi closeCOUNTRY End-Pi;                                                                             000000     006100
+    90  if %open(COUNTRY);                                                                                  B01  000000     006200
+    91    close COUNTRY;                                                                                     01  000000     006300
+    92  endif;                                                                                              E01  000000     006400
+    93 End-Proc closeCOUNTRY;                                                                                    000000     006500
+       * * * * *   E N D   O F   S O U R C E   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/COU300        MONZAXIB   06/21/23 18:40:40        Page      6
+          A d d i t i o n a l   D i a g n o s t i c   M e s s a g e s
+ Msg id  Sv Number Seq     Message text
+ * * * * *   E N D   O F   A D D I T I O N A L   D I A G N O S T I C   M E S S A G E S   * * * * *
+                            / C o p y   M e m b e r s
+Line   Src  RPG name   <-------- External name -------> CCSID  <- Last change ->
+Number Id              Library    File       Member            Date     Time
+     9    1 COUNTRY    ATU_SRC    QPROTOSRC  COUNTRY      297  05/23/22 14:55:56
+         * * * * *   E N D   O F   / C O P Y   M E M B E R S   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/COU300        MONZAXIB   06/21/23 18:40:40        Page      7
+                    K e y   F i e l d   I n f o r m a t i o n
+         File           Internal    External
+           Record       field name  field name  Attributes
+      1  COUNTRY
+           FCOUN
+                        COID                    CHAR        2
+ * * * * *   E N D   O F   K E Y   F I E L D   I N F O R M A T I O N   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/COU300        MONZAXIB   06/21/23 18:40:40        Page      8
+                          C r o s s   R e f e r e n c e
+      File and Record References:
+         File              Device             References (D=Defined)
+           Record
+         COUNTRY           DISK                    7D     71      78      79
+                                                  84      90      91
+           FCOUN                                   7D     42      83M
+      Global Field References:
+         Field             Attributes         References (D=Defined M=Modified)
+         CHAINCOUNTRY      PROTOTYPE              35D     50M     59M     69M
+                                                  74      75      86
+         CLOSECOUNTRY      PROTOTYPE              33D     88      89      93
+         COID              A(2)                   39      43D     81
+         COISO             A(3)                   45D     56      61
+         COUNTR            A(30)                  44D     47      52
+         EXISTCOUNTRY      N(1)                   23D     65      66      72
+                           PROTOTYPE
+         GETCOUNTRYISO3    A(3)                   18D     55      56      62
+                           PROTOTYPE
+         GETCOUNTRYNAME    A(30)                  13D     46      47      53
+                           PROTOTYPE
+         K_COID            A(2)                   39D     82M     84
+*RNF7031 SLTCOUNTRY        A(2)                   28D
+                           PROTOTYPE
+      Field References for subprocedure GETCOUNTRYNAME
+         Field             Attributes         References (D=Defined M=Modified)
+         P_COID            A(2)                   48D     50
+      Field References for subprocedure GETCOUNTRYISO3
+         Field             Attributes         References (D=Defined M=Modified)
+         P_COID            A(2)                   57D     59
+      Field References for subprocedure EXISTCOUNTRY
+         Field             Attributes         References (D=Defined M=Modified)
+         P_COID            A(2)                   67D     69
+      Field References for subprocedure CHAINCOUNTRY
+         Field             Attributes         References (D=Defined M=Modified)
+         P_COID            A(2)                   76D     81      82
+      Field References for subprocedure CLOSECOUNTRY
+         Field             Attributes         References (D=Defined M=Modified)
+         No references in the source.
+      Indicator References:
+         Indicator                            References (D=Defined M=Modified)
+       * * * * *   E N D   O F   C R O S S   R E F E R E N C E   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/COU300        MONZAXIB   06/21/23 18:40:40        Page      9
+                      E x t e r n a l   R e f e r e n c e s
+      Statically bound procedures:
+         Procedure                            References
+         SLTCOUNTRY                               28
+      Imported fields:
+         Field             Attributes         Defined
+         No references in the source.
+      Exported fields:
+         Field             Attributes         Defined
+         No references in the source.
+   * * * * *   E N D   O F   E X T E R N A L   R E F E R E N C E S   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/COU300        MONZAXIB   06/21/23 18:40:40        Page     10
+                          M e s s a g e   S u m m a r y
+ Msg id  Sv Number Message text
+*RNF7031 00      1 The name or indicator is not referenced.
+       * * * * *   E N D   O F   M E S S A G E   S U M M A R Y   * * * * *
+ 5770WDS V7R4M0  190419 RN        IBM ILE RPG             ATUDSB0006/COU300        MONZAXIB   06/21/23 18:40:40        Page     11
+                            F i n a l   S u m m a r y
+  Message Totals:
+    Information  (00) . . . . . . . :        1
+    Warning      (10) . . . . . . . :        0
+    Error        (20) . . . . . . . :        0
+    Severe Error (30+)  . . . . . . :        0
+    ---------------------------------  -------
+    Total . . . . . . . . . . . . . :        1
+  Source Totals:
+    Records . . . . . . . . . . . . :       93
+    Specifications  . . . . . . . . :       52
+    Data records  . . . . . . . . . :        0
+    Comments  . . . . . . . . . . . :       29
+         * * * * *   E N D   O F   F I N A L   S U M M A R Y   * * * * *
+Module COU300 placed in library ATUDSB0006. 00 highest severity. Created on 06/21/23 at 18:40:40.
+          * * * * *   E N D   O F   C O M P I L A T I O N   * * * * *
+  . . . .
+MSG1573 *** Messages sent by the Compilation ***
+RNS9305 Module COU300 placed in library ATUDSB0006. 00 highest severity. Created on 06/21/23 at 18:40:40.
