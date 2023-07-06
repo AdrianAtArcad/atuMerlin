@@ -2,7 +2,7 @@
       * %TEXT Parameters functions                                                        *
       *%EMETADATA                                                                         *
      h nomain
-
+      * git change
      FPARAMETER if   e           k disk    usropn
 
       /COPY ../QPROTOSRC/PARAMETER.RPGLEINC
