@@ -2,7 +2,7 @@
       * %TEXT Function Article                                                            *
       *%EMETADATA                                                                         *
      h nomain
-
+    * no change here
      FARTICLE1  if   e           k disk    usropn
 
       /COPY ../QPROTOSRC/ARTICLE.RPGLEINC

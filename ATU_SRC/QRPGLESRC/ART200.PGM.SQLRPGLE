@@ -3,7 +3,7 @@
       *%EMETADATA                                                                         *
 
      h dftactgrp(*no) bnddir('SAMPLE')
-
+      * not staged
      farticle2  if   e           k disk    rename(farti:farti2)
      farticle1  uf a e           k disk
      fart200d   cf   e             workstn
