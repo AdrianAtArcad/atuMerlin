@@ -16,7 +16,7 @@
                   ARTIFA    R               REFFLD(FAID)
                   ARSTOCK   R               REFFLD(QUANTITY)
                                             TEXT('STOCK')
-                                            COLHDG('STOCK')
+                                            COLHDG('STK')
                                             EDTCDE(2)
                   ARMINQTY  R               REFFLD(QUANTITY)
                                             TEXT('MINIMUM STOCK')

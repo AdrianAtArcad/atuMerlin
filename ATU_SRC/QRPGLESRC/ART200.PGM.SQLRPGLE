@@ -15,7 +15,7 @@ Dcl-F art200d    WORKSTN
 /COPY ../QPROTOSRC/FAMILLY.RPGLEINC
 
 Dcl-Pr providers extpgm('ART201');
-  id              like(arid);
+  id              like(articleID);
 End-Pr;
 
 Dcl-Ds indds;
@@ -50,7 +50,7 @@ Dcl-S panel           Int(3)          INZ(1);
 Dcl-S step01          Char(3)         inz(prp);
 Dcl-S step02          Char(3)         inz(prp);
 Dcl-S step03          Char(3)         inz(prp);
-Dcl-S savId           like(arid);
+Dcl-S savId           like(articleID);
 Dcl-S savDesc         like(ardesc);
 Dcl-S NewId           Packed(6:0);
 Dcl-S User            Char(10)        inz(*user);
@@ -129,7 +129,7 @@ begsr s01rst;
 endsr;
 //--- Save last read -------------------------------------------------
 begsr s01sav;
-  savid = arid;
+  savid = articleID;
   savdesc = ardesc;
   rrs01 = rrn01;
 endsr;
@@ -209,7 +209,7 @@ begsr s01act;
     opt01 = 0;
     update sfl01;
   when opt01 = 4;
-    chain arid article1;
+    chain articleID article1;
     ardel = 'X';
     armod = %timestamp();
     armodid = user;
@@ -218,7 +218,7 @@ begsr s01act;
     opt01 = 0;
     update sfl01;
   when opt01 = 6;
-    providers(arid);
+    providers(articleID);
     opt01 = 0;
     update sfl01;
   other;
@@ -248,11 +248,11 @@ begsr S02prp;
   if mode = crt;
     setgt *hival article1;
     readp article1;
-    Newid = %dec(arid :6: 0)  +1;
+    Newid = %dec(articleID :6: 0)  +1;
     reset farti;
-    arid = %editc(NewId:'X');
+    articleID = %editc(NewId:'X');
   else;
-    chain arid article1;
+    chain articleID article1;
     famdesc = getArtFamDesc(artifa);
   endif;
   step02 = dsp;
@@ -304,11 +304,11 @@ begsr S02act;
     write(e) farti;
     dow %error;
       Newid += 1;
-      arid = %editc(NewId:'X');
+      articleID = %editc(NewId:'X');
       write(e) farti;
     enddo;
     savdesc = ardesc;
-    savId = arid;
+    savId = articleID;
     step01 = lod;
   endif;
   panel = 1;
@@ -335,7 +335,7 @@ begsr S03prp;
   exec sql set option commit = *none;
   exec sql select ARTICLE_INFORMATION into :text
            FROM artiinf
-           WHERE ARTICLE_INFO_ID = :arid;
+           WHERE ARTICLE_INFO_ID = :articleID;
   if sqlcod <> 0;
     mode = crt;
     clear text;
@@ -373,10 +373,10 @@ begsr S03act;
   if mode = upd;
     exec sql update artiinf
            set ARTICLE_INFORMATION = trim(:text)
-           WHERE ARTICLE_INFO_ID = :arid;
+           WHERE ARTICLE_INFO_ID = :articleID;
   else;
     exec sql insert into artiinf
-             Values(:arid, trim(:text));
+             Values(:articleID, trim(:text));
   endif;
 endsr;
 //--------INITIALIZATION ----------------------------------

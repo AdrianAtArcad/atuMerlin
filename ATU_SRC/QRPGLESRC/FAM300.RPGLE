@@ -1,74 +1,65 @@
-      *%METADATA                                                                          *
-      * %TEXT Functions article familly                                                   *
-      *%EMETADATA                                                                         *
-     h nomain
+**FREE
+//%METADATA                                                                          *
+// %TEXT Functions article familly                                                   *
+//%EMETADATA                                                                         *
+Ctl-Opt nomain;
 
-     FFAMILLY   if   e           k disk    usropn
+Dcl-F FAMILLY    Keyed usropn;
 
-      /COPY ../QPROTOSRC/FAMILLY.RPGLEINC
+/COPY ../QPROTOSRC/FAMILLY.RPGLEINC
 
-     d chainFAMILLY    pr
-     D P_FAID                         3     value
+Dcl-Pr chainFAMILLY;
+  P_FAID          Char(3)         value;
+End-Pr;
 
-     D K_FAID          S                   LIKE(FAID)
+Dcl-S K_FAID          LIKE(FAID);
 
-     C     kf            klist
-     C                   KFLD                    K_FAID
+//=============================================
+Dcl-Proc GetArtFamDesc export;
+  Dcl-Pi GetArtFamDesc like(fadesc);
+    P_FAID          Char(3)         value;
+  End-Pi;
+  chainFAMILLY(P_FAID
+        );
+  return FADESC;
+End-Proc GetArtFamDesc;
+//=============================================
+Dcl-Proc ExistArtFam export;
+  Dcl-Pi ExistArtFam Ind;
+    P_FAID          Char(3)         value;
+  End-Pi;
+  chainFAMILLY(P_FAID
+        );
+  return %found(familly);
+End-Proc ExistArtFam;
 
-      *=============================================
-     PGetArtFamDesc    B                     export
-     DGetArtFamDesc    PI                   like(fadesc)
-     D P_FAID                         3     value
-      /free
-         chainFAMILLY(P_FAID
-               );
-         return FADESC;
-      /end-free
-     pGetArtFamDesc    e
-      *=============================================
-     P ExistArtFam     B                     export
-     D ExistArtFam     PI              n
-     D P_FAID                         3     value
-      /free
-         chainFAMILLY(P_FAID
-               );
-         return %found(familly);
-      /end-free
-     p ExistArtFam     e
+//=============================================
+Dcl-Proc IsArtFamDeleted export;
+  Dcl-Pi IsArtFamDeleted Ind;
+    P_FAID          Char(3)         value;
+  End-Pi;
+  chainFAMILLY(P_FAID
+        );
+  return FADEL = 'X';
+End-Proc IsArtFamDeleted;
 
-      *=============================================
-     PIsArtFamDeleted  B                     export
-     DIsArtFamDeleted  PI              n
-     D P_FAID                         3     value
-      /free
-         chainFAMILLY(P_FAID
-               );
-         return FADEL = 'X';
-      /end-free
-     pIsArtFamDeleted  e
+Dcl-Proc chainFAMILLY;
+  Dcl-Pi chainFAMILLY;
+    P_FAID          Char(3)         value;
+  End-Pi;
+ if not %open(FAMILLY);
+   open FAMILLY;
+ endif;
+  if P_FAID <> FAID;
+    K_FAID =  P_FAID;
+    clear *all FFAMI;
+    chain K_FAID FAMILLY;
+  endif;
+End-Proc chainFAMILLY;
 
-     p chainFAMILLY    b
-     d chainFAMILLY    pi
-     D P_FAID                         3     value
-      /free
-        if not %open(FAMILLY);
-          open FAMILLY;
-        endif;
-         if P_FAID <> FAID;
-           K_FAID =  P_FAID;
-           clear *all FFAMI;
-           chain kf FAMILLY;
-         endif;
-      /end-free
-     p chainFAMILLY    e
-
-     p closeFAMILLY    b
-     d closeFAMILLY    pi
-      /free
-        if %open(FAMILLY);
-          close FAMILLY;
-        endif;
-      /end-free
-     p closeFAMILLY    e
-
-
+Dcl-Proc closeFAMILLY;
+  Dcl-Pi closeFAMILLY End-Pi;
+ if %open(FAMILLY);
+   close FAMILLY;
+ endif;
+End-Proc closeFAMILLY;
