@@ -7,11 +7,11 @@
                   ARDESC    R
                   ARSALEPR  R               REFFLD(UNITPRICE)
                                             TEXT('REF SALE PRICE')
-                                            COLHDG('REF' 'SALE' 'PRICE')
+                                            COLHDG('REF' 'SALE' 'PR')
                                             EDTCDE(2)
                   ARWHSPR   R               REFFLD(UNITPRICE)
                                             TEXT('STOCK PRICE')
-                                            COLHDG('STOCK' 'PRICE')
+                                            COLHDG('STK' 'PR')
                                             EDTCDE(2)
                   ARTIFA    R               REFFLD(FAID)
                   ARSTOCK   R               REFFLD(QUANTITY)

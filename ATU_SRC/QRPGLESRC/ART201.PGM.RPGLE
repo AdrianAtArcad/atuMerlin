@@ -10,7 +10,7 @@ Dcl-F art201d    WORKSTN
                          indds(indds)
                          sfile(sfl01:rrn01)
                          Infds(Info);
-
+    
 /COPY ../QPROTOSRC/PROVIDER.RPGLEINC
 /COPY ../QPROTOSRC/ARTICLE.RPGLEINC
 
